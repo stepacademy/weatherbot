@@ -1,4 +1,4 @@
-Each individual module must be included in the project WeatherBot.sln
+Each individual module must be included in the solution WeatherBot.sln
 
 The settings of each individual project:
 
