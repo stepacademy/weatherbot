@@ -27,14 +27,14 @@ Project structure example:
             ...json
             ...
             *ttoken.*
-    [WeatherBot]                            <-- commit
+    [WeatherBot]                            <-- commit (solution)
         [TeleInteraction]
             TeleInteraction.csproj
         [ModuleA]
-			ModuleA.csproj
+            ModuleA.csproj
         [ModuleN..]
-			ModuleN...**proj
+            ModuleN...**proj
     WeatherBot.sln
 
 
- ~
+ ~ must be supplemented...
