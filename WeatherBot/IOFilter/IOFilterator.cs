@@ -9,7 +9,7 @@ namespace WeatherBot.IOFilter
     public class IOFilterator
     {
         ///
-        ///
+        ///  IOFilterator
         ///
 
     }
