@@ -54,7 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ITeleInteractor.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeleInteractor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ConfigFiles\app.config" />

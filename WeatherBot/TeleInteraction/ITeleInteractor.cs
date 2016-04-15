@@ -10,8 +10,9 @@ namespace WeatherBot.TeleInteraction {
     public interface ITeleInteractor {
 
         /// <summary>
-        /// GetUpdatesAsync(); - A temporary dummy, will be return the built-in type or Generic
+        /// GetNextMessageAsync();
         /// </summary>
+        Task<Message> GetNextMessageAsync();
 
     }
 }
