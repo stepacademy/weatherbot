@@ -14,7 +14,7 @@ Build > Output path = ..\..\Build\Debug\   - for debug
 Build > Output path = ..\..\Build\Release\ - for release
 
 Project structure example:
-
+```
 [weatherbot]                                <-- master
     [Build]
         [Debug]                             <-- NO commit
@@ -39,6 +39,6 @@ Project structure example:
         [ModuleN..]
             ModuleN...**proj
     WeatherBot.sln
-
+```
 
  ~ must be supplemented...
