@@ -22,7 +22,7 @@ namespace WeatherBot.TeleInteraction {
             }
         }
 
-        private async Task RequestAsync() {
+        private async void RequestAsync() {
 
             _updates = await _bot.GetUpdates();
 
@@ -46,12 +46,13 @@ namespace WeatherBot.TeleInteraction {
             }
         }
 
-        public async Task<Message> GetNextMessageAsync() {
+        public Message GetNextMessage() {
 
-            await RequestAsync();
+            RequestAsync();
 
-            if (_updatesQueue.Count > 0)
+            if (_updatesQueue != null && _updatesQueue.Count > 0) {
                 return new Message(_updatesQueue.Dequeue());
+            }
 
             return null;
         }

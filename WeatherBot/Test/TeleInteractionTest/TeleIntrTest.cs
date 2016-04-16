@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using WeatherBot.TeleInteraction;
 
 namespace Test.TeleInteractionTest {
 
     class TeleIntrTest {
 
-        static async void TestProcess(ITeleInteractor ti) {
+        static void TestProcess(ITeleInteractor ti) {
 
-            Message m = await ti.GetNextMessageAsync();
-            Console.WriteLine(m.Text);
+            Message m = ti.GetNextMessage();
+            if (m != null) {
+                Console.WriteLine(m.Text);
+            }            
         }
 
         static void Main(string[] args) {
@@ -22,9 +20,8 @@ namespace Test.TeleInteractionTest {
 
             while (true) {
                 TestProcess(test);
+                Thread.Sleep(1000);
             }
-
-            Thread.Sleep(Timeout.Infinite);
         }
 
     }

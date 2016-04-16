@@ -11,7 +11,7 @@
         /// <summary>
         /// GetNextMessageAsync();
         /// </summary>
-        Task<Message> GetNextMessageAsync();
+        Message GetNextMessage();
 
     }
 }
