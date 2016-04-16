@@ -1,17 +1,17 @@
-# weatherbot
+# WeatherBot
 Бот погоды для Telegram
 
-# Solution conventions
+### Solution conventions
 Each individual module must be included in the solution WeatherBot.sln
 
 The settings of each individual project:
 
-Application > Assembly name     = ProjectName
-Application > Default namespace = WeatherBot.ProjectName
+Application > Assembly name     = ProjectName<br>
+Application > Default namespace = WeatherBot.ProjectName<br>
 Application > Target Framework  = .NET Framework 4.5
 
-Build > Output path = ..\..\Build\Debug\   - for debug
-Build > Output path = ..\..\Build\Release\ - for release
+Build > Output path = ..\..\Build\Debug\   - for debug<br>
+Build > Output path = ..\..\Build\Release\ - for release<br>
 
 Project structure example:
 ```
