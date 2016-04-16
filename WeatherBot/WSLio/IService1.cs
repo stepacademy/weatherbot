@@ -39,8 +39,8 @@ namespace WeatherBot.WSLio
 
     public interface IWeatherDbQuery
     {
-        public QDataWeatherDay GetWeatherDay(DateTime dataTime);
-        public QDataWeatherDay GetWeatherCityDataWeatherDay(string city);
+        QDataWeatherDay GetWeatherDay(DateTime dataTime);
+        QDataWeatherDay GetWeatherCityDataWeatherDay(string city);
 
 
     }

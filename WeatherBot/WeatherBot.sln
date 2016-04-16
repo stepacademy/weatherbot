@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserMessageParser", "Test\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSLio", "WSLio\WSLio.csproj", "{BB2EDEB6-BE44-4AFF-9393-EBE744E642A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSLweather", "WSLweather\WSLweather.csproj", "{779BB30D-9DAD-4BA7-89DD-9A2B3EBAB4F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{BB2EDEB6-BE44-4AFF-9393-EBE744E642A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB2EDEB6-BE44-4AFF-9393-EBE744E642A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB2EDEB6-BE44-4AFF-9393-EBE744E642A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{779BB30D-9DAD-4BA7-89DD-9A2B3EBAB4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779BB30D-9DAD-4BA7-89DD-9A2B3EBAB4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779BB30D-9DAD-4BA7-89DD-9A2B3EBAB4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779BB30D-9DAD-4BA7-89DD-9A2B3EBAB4F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
