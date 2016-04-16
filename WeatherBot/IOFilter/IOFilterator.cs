@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//using WeatherBot.TeleInteraction;
-
+using WeatherBot.TeleInteraction;
+using Weatherbot.WSLweather;
 namespace WeatherBot.IOFilter
 {
     ///
@@ -14,32 +10,46 @@ namespace WeatherBot.IOFilter
     ///
     public class IOFilterator
     {
-        //
-        //ITeleInteractor test = new TeleInteractor();
-        //
-        List<string> tokens = new List<string>();
-        List<string> Cities = new List<string>();
+        ITeleInteractor test = new TeleInteractor();
+
+        /*
+       public async void GetMessages()
+       {
+          Message  m   =  await test.GetNextMessageAsync();
+          IncomeMessage(m.Text);
+          string txt = OutcomeMessage();
+       }
+        */
+
+        public  void GetMessages()
+        {
+            Message m = test.GetNextMessage();
+            IncomeMessage(m.Text);
+            string txt = OutcomeMessage();
+
+        }
+
+
+        private List<string> _Tokens = new List<string>();
+        private List<string> _Cities = new List<string>();
+
 
         public IOFilterator()
         {
-            Cities = new DBEmulator().GetCountries();
+            _Cities = new DBEmulator().GetCountries();
         }
 
         public void IncomeMessage(string message)
         {
-            tokens.Clear();
-            if (message.Length == 0)
-                throw (new ErrorMessage("Пустая строка сообщения!"));
-
-            tokens = BreakWords(message);
+            _Tokens.Clear();
+            _Tokens = BreakWords(message);
         }
 
         private string PrepareMessage(string message)
         {
             // предусмотреть пользовательские символы диапазона и т.п.
             // тире может использоваться в городах!!!
-            // точки в датах!!!
-            // учитываем перевод строки
+            // точки в датах!!! учитываем перевод строки
             const string breaksymols = "!@#$%^&*()+=:,;_'?<>{}\n";
             string ret = new string(message.ToCharArray());
             foreach (char ch in breaksymols.ToCharArray())
@@ -47,6 +57,7 @@ namespace WeatherBot.IOFilter
                     ret = ret.Replace(ch, ' ');
             return ret;
         }
+
         private List<string> BreakWords(string message)
         {
             message = PrepareMessage(message);
@@ -82,7 +93,7 @@ namespace WeatherBot.IOFilter
             return false;
         }
 
-        public bool IntToDate(int day, ref DateTime dateret)
+        private bool IntToDate(int day, ref DateTime dateret)
         {
             DateTime dt;
             try
@@ -105,6 +116,36 @@ namespace WeatherBot.IOFilter
             }
         }
 
+        private bool IsDayPart(string str, ref int subscr)
+        {
+            Dictionary<string, int> day_parts = new Dictionary<string, int>();
+            day_parts.Add("утро", (int)ClimatInfo.SUBSCRIPT.MORNING);
+            day_parts.Add("день", (int)ClimatInfo.SUBSCRIPT.DAY);
+            day_parts.Add("вечер", (int)ClimatInfo.SUBSCRIPT.EVENING);
+            day_parts.Add("ночь", (int)ClimatInfo.SUBSCRIPT.NIGHT);
+            day_parts.Add("утром", (int)ClimatInfo.SUBSCRIPT.MORNING);
+            day_parts.Add("днем", (int)ClimatInfo.SUBSCRIPT.DAY);
+            day_parts.Add("вечером", (int)ClimatInfo.SUBSCRIPT.EVENING);
+            day_parts.Add("ночью", (int)ClimatInfo.SUBSCRIPT.NIGHT);
+            day_parts.Add("утру", (int)ClimatInfo.SUBSCRIPT.MORNING);
+            day_parts.Add("дню", (int)ClimatInfo.SUBSCRIPT.DAY);
+            day_parts.Add("вечеру", (int)ClimatInfo.SUBSCRIPT.EVENING);
+            day_parts.Add("ночи", (int)ClimatInfo.SUBSCRIPT.NIGHT);
+
+            string test = new string(str.ToCharArray());
+            foreach (string day_part in day_parts.Keys)
+            {
+                if (day_part == test)
+                {
+                    int ret;
+                    day_parts.TryGetValue(day_part, out ret);
+                    subscr |= ret;
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public bool WordToDate(string word, ref DateTime dateret)
         {
             Dictionary<string, int> words = new Dictionary<string, int>(); //из базы или файла
@@ -118,7 +159,6 @@ namespace WeatherBot.IOFilter
             DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
             string test = word.ToLower();
-
             foreach (string baseword in words.Keys)
             {
                 if (test == baseword)
@@ -140,9 +180,33 @@ namespace WeatherBot.IOFilter
             cli.AddDateInfo(dcli);
         }
 
+        private void FindDateInWord(ClimatInfo cli, string  str)
+        {
+            DateTime dt = new DateTime();
+            int day;
+            if (WordToDate(str, ref dt))
+            {
+                AddDateToClimatInfo(cli, dt);
+            }
+            else if (DateTime.TryParse(str, out dt))
+            {
+                AddDateToClimatInfo(cli, dt);
+            }
+            else if (int.TryParse(str, out day))
+            {
+                if (IntToDate(day, ref dt))
+                {
+                    AddDateToClimatInfo(cli, dt);
+                }
+            }
+            else if (DayOfWeekToDate(str, ref dt))
+            {
+                AddDateToClimatInfo(cli, dt);
+            }
+        }
         /// <summary>
-        ///    Тут будет происходить разбор
-        ///    нужно добавить обработку ключевых слов (неделя,утро и т.п.)
+        ///    Тут происходит разбор
+        ///    нужно добавить обработку ключевых слов (неделя, и т.п.)
         ///    Сделав разбор
         ///    Отправит составленную структуру для заполнения данными
         ///    После заполнения функция сформирует текст (картинку) для пользователя
@@ -152,239 +216,49 @@ namespace WeatherBot.IOFilter
         public string OutcomeMessage()
         {
             ClimatInfo cli = new ClimatInfo();
-            int day = 0;
-            foreach (string str in tokens)
+            if (_Tokens.Count == 0) return "Введите что-нибудь...";  // запрос к базе
+            foreach (string str in _Tokens)
             {
                 string token = new string(str.ToArray());
-                DateTime dt = new DateTime();
 
-                if (WordToDate(str, ref dt))
-                {
-                    AddDateToClimatInfo(cli, dt);
-                }
-                else if (DateTime.TryParse(str, out dt))
-                {
-                    AddDateToClimatInfo(cli, dt);
-                }
-                else if (int.TryParse(str, out day))
-                {
-                    if (IntToDate(day, ref dt))
-                    {
-                        AddDateToClimatInfo(cli, dt);
-                    }
-                }
-                else if (DayOfWeekToDate(str, ref dt))
-                {
-                    AddDateToClimatInfo(cli, dt);
-                }
+                FindDateInWord(cli, str);
 
-                if (Cities.Contains(str))
-                {
+                if (_Cities.Contains(str))
                     cli.SetCity(str);
-                }
+
+                int subscr = cli.subsrib;
+                if (IsDayPart(str, ref subscr))
+                    cli.subsrib = subscr;
+
             }
+            if (cli.subsrib == 0)
+                cli.subsrib = (int)ClimatInfo.SUBSCRIPT.MORNING + (int)ClimatInfo.SUBSCRIPT.DAY
+                            + (int)ClimatInfo.SUBSCRIPT.EVENING + (int)ClimatInfo.SUBSCRIPT.NIGHT;
+
+            string check = "";
+            if (NotCorrectMessageAnswer(cli, ref check))
+                return check;
+
+            Weatherbot.WSLweather.QData qdata = new QData();
+            Weatherbot.WSLweather.QDataWeatherDay qdataweatherday = new QDataWeatherDay();
+            Weatherbot.WSLweather.QDataWeatherDayPart qdataweatherdaypart = new QDataWeatherDayPart();
+            
+
             return cli.ToString();
         }
-    }
 
-    /// <summary>
-    ///  Эмуляция запросов к базе
-    /// </summary>
-    public class DBEmulator
-    {
-        public List<string> GetCountries()
+        private bool NotCorrectMessageAnswer(ClimatInfo cli, ref string answer)
         {
-            List<string> ret = new List<string>();
-            using (StreamReader sr = new StreamReader(new FileStream("..\\..\\Resources\\Cities.txt", FileMode.Open), Encoding.UTF8))
-            {
-                while (sr.EndOfStream != true)
-                {
-                    ret.Add(sr.ReadLine());
-                }
-            }
-            return ret;
+            if (cli.city == null) answer = "Вы не указали свой город";   // запросы к базе
+            if (cli.Count == 0) answer += ", не выбрали дни";
+            return answer != "";
         }
     }
 
-    public class DayPartClimatInfo
-    {
-        public double temperature { get; private set; }
-        public int pressure { get; private set; }
-        public DayPartClimatInfo(double t, int p)
-        {
-            temperature = t;
-            pressure = p;
-        }
-        public void SetTemperature(double t)
-        {
-            temperature = t;
-        }
-        public void SetPressure(int p)
-        {
-            pressure = p;
-        }
 
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("температура" + string.Format("{0:.00}", temperature));
-            sb.Append(",давление" + string.Format("{0:}", pressure));
-            return sb.ToString();
-        }
-    }
 
-    public class DayClimatInfo
-    {
-        public DayPartClimatInfo morning { get; private set; }
-        public DayPartClimatInfo day { get; private set; }
-        public DayPartClimatInfo evening { get; private set; }
-        public DayPartClimatInfo night { get; private set; }
-        public DateTime date { get; private set; }
-        public void SetDate(DateTime dt)
-        {
-            date = dt;
-        }
-        public void SetInfo(DayPartClimatInfo m,
-                           DayPartClimatInfo d,
-                           DayPartClimatInfo e,
-                           DayPartClimatInfo n)
-        {
-            morning = m; day = d; evening = e; night = n;
-        }
+  
 
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine(String.Format("{0:ddd, d MMM yyyy}", date));
-            if (morning != null) sb.AppendLine("  утром:" + morning.ToString());
-            if (day != null) sb.AppendLine("   днем:" + day.ToString());
-            if (evening != null) sb.AppendLine("вечером:" + evening.ToString());
-            if (night != null) sb.AppendLine("  ночью:" + night.ToString());
-            return sb.ToString();
-        }
-    }
+ 
 
-    public class ClimatInfo : IEnumerable<DayClimatInfo>, IEnumerator<DayClimatInfo>
-    {
-        public string city { get; private set; }
-        private Dictionary<DateTime, DayClimatInfo> dates { get; set; }
-
-        // для подписки на определенное время вероятно будет храниться в настройках пользователя
-        public enum SUBSCRIPT { MORNING = 1, DAY = 2, EVENING = 4, NIGHT = 8 };
-
-        private int index;
-
-        public ClimatInfo()
-        {
-            index = -1;
-            dates = new Dictionary<DateTime, DayClimatInfo>();
-        }
-
-        public void SetCity(string cityname)
-        {
-            city = cityname;
-        }
-
-        public int Count
-        {
-            get { return dates.Count; }
-        }
-
-        public void AddDateInfo(DayClimatInfo ci)
-        {
-            dates[ci.date] = ci;
-        }
-
-        public DayClimatInfo this[int index]
-        {
-            get
-            {
-                return dates.ElementAt(index).Value;
-            }
-        }
-
-        public void Clear()
-        {
-            dates.Clear();
-        }
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("В городе:" + city);
-            foreach (DayClimatInfo dci in this)
-            {
-                sb.AppendLine(dci.ToString());
-            }
-            return sb.ToString();
-        }
-
-        public DayClimatInfo Current
-        {
-            get
-            {
-                try
-                {
-                    return dates.ElementAt(index).Value;
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    throw new InvalidOperationException();
-                }
-            }
-        }
-
-        object IEnumerator.Current
-        {
-            get
-            {
-                return (Object)dates.ElementAt(index).Value; //throw new NotImplementedException();
-            }
-        }
-
-        public void Dispose()
-        {
-            dates.Clear();
-        }
-
-        public bool MoveNext()
-        {
-            ++index;
-            return (index < dates.Count);
-        }
-
-        public void Reset()
-        {
-            index = -1;
-        }
-
-        public IEnumerator<DayClimatInfo> GetEnumerator()
-        {
-            return this;
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
-
-    public class ErrorMessage : SystemException
-    {
-        public string error { get; private set; }
-
-        public ErrorMessage() : base()
-        {
-
-        }
-        public ErrorMessage(string message) : base(message)
-        {
-            error = message;
-        }
-        public ErrorMessage(string message, Exception innerException) : base(message, innerException)
-        {
-
-        }
-        //protected ErrorMessage(SerializationInfo info, StreamingContext context)
-    }
 }

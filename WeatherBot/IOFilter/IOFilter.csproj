@@ -38,8 +38,16 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WSLweather, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Build\Debug\WSLweather.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClimatInfo.cs" />
+    <Compile Include="DayClimatInfo.cs" />
+    <Compile Include="DayPartClimatInfo.cs" />
+    <Compile Include="DBEmulator.cs" />
     <Compile Include="IOFilterator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
