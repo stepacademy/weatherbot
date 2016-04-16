@@ -44,6 +44,12 @@
     <Compile Include="IOFilterator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeleInteraction\TeleInteraction.csproj">
+      <Project>{d812a40f-68c2-44c1-a91b-ee32e9dee401}</Project>
+      <Name>TeleInteraction</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
