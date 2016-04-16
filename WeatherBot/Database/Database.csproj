@@ -55,7 +55,7 @@
     <Compile Include="Entities\Weather.cs" />
     <Compile Include="Entities\WeatherDate.cs" />
     <Compile Include="Entities\Location.cs" />
-    <Compile Include="Entities\WeatherDbContext.cs" />
+    <Compile Include="WeatherDbContext.cs" />
     <Compile Include="Entities\WeatherState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
