@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOFilter", "IOFilter\IOFilt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{991327E4-08EC-47F2-8A50-99094AF77F93}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{BD8A2866-059D-4673-8C31-491F42FB268B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserMessageParser", "Test\UserMessageParser\UserMessageParser.csproj", "{A5A2184D-1CDF-47D4-89EC-490ADC9475D0}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSLio", "WSLio\WSLio.csproj", "{BB2EDEB6-BE44-4AFF-9393-EBE744E642A7}"
 EndProject
 Global
@@ -29,6 +33,10 @@ Global
 		{991327E4-08EC-47F2-8A50-99094AF77F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{991327E4-08EC-47F2-8A50-99094AF77F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{991327E4-08EC-47F2-8A50-99094AF77F93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BB2EDEB6-BE44-4AFF-9393-EBE744E642A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BB2EDEB6-BE44-4AFF-9393-EBE744E642A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB2EDEB6-BE44-4AFF-9393-EBE744E642A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,5 +44,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 	EndGlobalSection
 EndGlobal
