@@ -7,39 +7,48 @@ using System.Text;
 
 namespace Weatherbot.WSLweather
 {
-    // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени интерфейса "IService1" в коде и файле конфигурации.
-    [ServiceContract]
-    public interface IService1
+    [DataContract]
+    public class QData
     {
-        [OperationContract]
-        string GetData(int value);
+        [DataMember]
+        string City;
 
-        [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
-
-        // TODO: Добавьте здесь операции служб
+        [DataMember]
+        Dictionary<DateTime, QDataWeatherDay> itemsDays;
     }
 
-    // Используйте контракт данных, как показано на следующем примере, чтобы добавить сложные типы к сервисным операциям.
-    // В проект можно добавлять XSD-файлы. После построения проекта вы можете напрямую использовать в нем определенные типы данных с пространством имен "WSLweather.ContractType".
     [DataContract]
-    public class CompositeType
+    public class QDataWeatherDay
     {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
         [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
+        List<QDataWeatherDayPart> itemsParts;
+    }
 
+    [DataContract]
+    public class QDataWeatherDayPart
+    {
         [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
+        double temp;
+        [DataMember]
+        string dayPart;
+        [DataMember]
+        string state;
+    }
+
+    public interface IModuleIO
+    {
+
+    }
+
+
+    [ServiceContract]
+    public interface IWeatherDbQuery
+    {
+        [OperationContract]
+        QDataWeatherDay GetWeatherDay(DateTime dataTime);
+        [OperationContract]
+        QDataWeatherDay GetWeatherCityDataWeatherDay(string city);
+
+
     }
 }

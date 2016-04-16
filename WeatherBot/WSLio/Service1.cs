@@ -7,8 +7,5 @@ using System.Text;
 
 namespace WeatherBot.WSLio
 {
-    class MyClass : IWeatherDbQuery
-    {
-         
-    }
+
 }

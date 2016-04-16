@@ -4,28 +4,20 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Weatherbot.WSLweather;
 
 namespace WSLweather
 {
-    // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени класса "Service1" в коде и файле конфигурации.
-    public class Service1 : IService1
+    public class MyClass : IWeatherDbQuery
     {
-        public string GetData(int value)
+        public QDataWeatherDay GetWeatherDay(DateTime dataTime)
         {
-            return string.Format("You entered: {0}", value);
+            throw new NotImplementedException();
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public QDataWeatherDay GetWeatherCityDataWeatherDay(string city)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            throw new NotImplementedException();
         }
     }
 }
