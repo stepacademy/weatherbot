@@ -36,5 +36,9 @@
                 return _message.Text;
             }
         }
+
+        public Message(Telegram.Bot.Types.Update update) {
+            _message = update.Message;
+        }
     }
 }
