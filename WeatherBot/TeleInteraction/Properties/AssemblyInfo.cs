@@ -7,12 +7,12 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("WeatherBot.TeleInteraction")]
 [assembly: AssemblyDescription("Telegram API Interaction library for WeatherBot")]
-[assembly: AssemblyConfiguration("Any CPU")]
+[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Stepacademy")]
 [assembly: AssemblyProduct("WeatherBot.TeleInteraction")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("Stepacademy WeatherBot")]
-[assembly: AssemblyCulture(".NET Framework 4.5")]
+[assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

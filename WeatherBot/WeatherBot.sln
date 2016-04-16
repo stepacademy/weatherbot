@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleInteraction", "TeleInteraction\TeleInteraction.csproj", "{D812A40F-68C2-44C1-A91B-EE32E9DEE401}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOFilter", "IOFilter\IOFilter.csproj", "{9870F5DD-2B09-4F7A-B63C-DCF8433C9653}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D812A40F-68C2-44C1-A91B-EE32E9DEE401} = {D812A40F-68C2-44C1-A91B-EE32E9DEE401}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

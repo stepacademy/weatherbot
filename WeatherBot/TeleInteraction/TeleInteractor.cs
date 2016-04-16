@@ -1,7 +1,7 @@
-﻿using System.IO;
-using System.Threading.Tasks;
+﻿namespace WeatherBot.TeleInteraction {
 
-namespace WeatherBot.TeleInteraction {
+    using System.IO;
+    using System.Threading.Tasks;
 
     class TeleInteractor : ITeleInteractor {
 
