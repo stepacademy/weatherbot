@@ -59,8 +59,7 @@
     <Compile Include="TeleInteractor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ConfigFiles\app.config" />
-    <None Include="ConfigFiles\packages.config" />
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
