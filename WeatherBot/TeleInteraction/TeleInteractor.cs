@@ -3,7 +3,7 @@
     using System.IO;
     using System.Threading.Tasks;
 
-    class TeleInteractor : ITeleInteractor {
+    public class TeleInteractor : ITeleInteractor {
 
         private string _botToken;
 

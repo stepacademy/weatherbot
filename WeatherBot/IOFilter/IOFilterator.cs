@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherBot.TeleInteraction;
 
 namespace WeatherBot.IOFilter
 {
@@ -11,6 +12,11 @@ namespace WeatherBot.IOFilter
     ///
     public class IOFilterator
     {
+
+        //
+        ITeleInteractor test = new TeleInteractor();
+        //
+
         List<string> tokens = new List<string>();
         public void IncomeMessage(string message)
         {
