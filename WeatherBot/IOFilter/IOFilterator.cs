@@ -18,6 +18,7 @@ namespace WeatherBot.IOFilter
         private List<string> _Cities = new List<string>();
         public MsgOut MsgOutput;
 
+
         private Message MessageProcessing(Message message)
         {
 
