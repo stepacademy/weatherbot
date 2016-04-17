@@ -21,6 +21,7 @@ namespace IOFilerTest
         private void Form1_Load(object sender, EventArgs e)
         {
             iof = new IOFilterator();
+            iof.MsgOutput += Messaging;
         }
 
         private void Messaging(string msgin, string msgout)
