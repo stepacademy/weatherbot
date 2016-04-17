@@ -6,19 +6,21 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Test.CheckCities {
-
-    class Program {
-
+namespace Test.CheckCities
+{
+    class Program
+    {
         private static Semaphore _pool;
 
-        static void Main(string[] args) {
+        static void Main(string[] args)
+        {
 
             UpdateCities();
 
         }
 
-        static void Worker(object countryElement) {
+        static void Worker(object countryElement)
+        {
             var country = (XmlElement)countryElement;
 
             Console.WriteLine("Поток {0} ждет", country.GetAttribute("name"));
@@ -27,31 +29,36 @@ namespace Test.CheckCities {
 
             Console.WriteLine("Старт {0}", country.GetAttribute("name"));
 
-            foreach (XmlNode cityNode in country) {
-                if (cityNode.Attributes != null) {
+            foreach (XmlNode cityNode in country)
+            {
+                if (cityNode.Attributes != null)
+                {
                     //Console.WriteLine("\t"+cityNode.Attributes.GetNamedItem("id").InnerText + " " + cityNode.InnerText);
                     var weatherInfo = new XmlDocument();
-                    try {
+                    try
+                    {
                         weatherInfo.Load(
                             $@"http://export.yandex.ru/weather-ng/forecasts/{cityNode.Attributes.GetNamedItem("id")
                                 .InnerText}.xml");
                     }
-                    catch (Exception ex) {
+                    catch (Exception ex)
+                    {
                         Console.WriteLine("----no load city: {0}, country: {1}----", cityNode.InnerText, country.GetAttribute("name"));
                         Console.WriteLine("\t{0}", ex.Message);
                     }
                 }
-
+                
             }
 
             _pool.Release();
             Console.WriteLine("Готово {0}", country.GetAttribute("name"));
         }
 
-        static void UpdateCities() {
+        static void UpdateCities()
+        {
             var doc = new XmlDocument();
             doc.Load(@"https://pogoda.yandex.ru/static/cities.xml");
-
+            
             //<cities>
             //    <country name="Абхазия">
             //        <city id="37188" region="27028" head="" type="3" country="Абхазия" part="" resort="" climate="">Новый Афон</city>
@@ -62,18 +69,19 @@ namespace Test.CheckCities {
             //    </country>
 
             if (doc.DocumentElement == null) return;
-
+            
             //свободных 2
             _pool = new Semaphore(2, 10);
 
-            foreach (XmlElement countryElement in doc.DocumentElement) {
+            foreach (XmlElement countryElement in doc.DocumentElement)
+            {
                 //Console.WriteLine(countryElement.GetAttribute("name"));
 
                 var t = new Thread(new ParameterizedThreadStart(Worker));
                 t.Start(countryElement);
-
+                
             }
-
+            
         }
     }
 }
