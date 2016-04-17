@@ -3,7 +3,7 @@
 
 namespace WeatherBot.TeleInteraction {
 
-    public interface ITeleInteractor {
+    interface ITeleInteractor {
 
         /// <summary>
         /// returns the next message from the queue if present, otherwise - returns null

@@ -7,7 +7,7 @@ using WeatherBot.TeleInteraction.TelegramAdapters;
 
 namespace WeatherBot.TeleInteraction {
 
-    public class TeleInteractor : ITeleInteractor {
+    class TeleInteractor : ITeleInteractor {
 
         private string _botToken;
 
