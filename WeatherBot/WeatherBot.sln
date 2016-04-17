@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleInteraction", "TeleInteraction\TeleInteraction.csproj", "{D812A40F-68C2-44C1-A91B-EE32E9DEE401}"
 EndProject
@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSLweather", "WSLweather\WS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleInteractionTest", "Test\TeleInteractionTest\TeleInteractionTest.csproj", "{303118C7-6AB5-4F34-8DAC-9690B89EF97C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckCities", "Test\CheckCities\ConsoleApplication1\CheckCities.csproj", "{9EFEB7B7-4868-498C-9689-20CE841CE8A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckCities", "Test\CheckCities\CheckCities.csproj", "{3918BFBA-7370-4E28-819F-9BD8F7AB97BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +55,10 @@ Global
 		{303118C7-6AB5-4F34-8DAC-9690B89EF97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{303118C7-6AB5-4F34-8DAC-9690B89EF97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{303118C7-6AB5-4F34-8DAC-9690B89EF97C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9EFEB7B7-4868-498C-9689-20CE841CE8A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9EFEB7B7-4868-498C-9689-20CE841CE8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9EFEB7B7-4868-498C-9689-20CE841CE8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9EFEB7B7-4868-498C-9689-20CE841CE8A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +66,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 		{303118C7-6AB5-4F34-8DAC-9690B89EF97C} = {BD8A2866-059D-4673-8C31-491F42FB268B}
-		{9EFEB7B7-4868-498C-9689-20CE841CE8A4} = {BD8A2866-059D-4673-8C31-491F42FB268B}
+		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 	EndGlobalSection
 EndGlobal

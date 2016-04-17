@@ -44,6 +44,9 @@ namespace WeatherBot.TeleInteraction.ReqResp {
             }
         }
 
+        /// <summary>
+        /// new MessageResponse attach here
+        /// </summary>
         public MessageResponse Response {
             get {
                 return _response;
@@ -53,10 +56,13 @@ namespace WeatherBot.TeleInteraction.ReqResp {
             }
         }
 
+        /// <summary>
+        /// c-tor, Initializes an instance of Telegram.Bot.Types.Update
+        /// </summary>
+        /// <param name="update">Instance of Telegram.Bot.Types.Update</param>
         public Message(Telegram.Bot.Types.Update update) {
             _message = update.Message;
             Response = null;
         }
-
     }
 }
