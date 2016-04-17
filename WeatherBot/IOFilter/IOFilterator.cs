@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WeatherBot.TeleInteraction;
 using Weatherbot.WSLweather;
+using WeatherBot.TeleInteraction;
 using WeatherBot.TeleInteraction.TelegramAdapters;
 
 namespace WeatherBot.IOFilter
@@ -12,7 +13,7 @@ namespace WeatherBot.IOFilter
     ///
     public class IOFilterator
     {
-        ITeleInteractor test = new TeleInteractor();
+        ///ITeleInteractor test = new TeleInteractor();
 
         /*
        public async void GetMessages()
@@ -23,14 +24,19 @@ namespace WeatherBot.IOFilter
        }
         */
 
-        public  void GetMessages()
+        private Message MessageProcessing(Message message)
         {
-            Message m = test.GetNextMessage();
-            IncomeMessage(m.Text);
-            string txt = OutcomeMessage();
 
+            if (message != null)
+            {
+                IncomeMessage(message.Text);
+                message.Response = new MessageResponse();
+                message.Response.Text = OutcomeMessage();
+
+                return message;
+            }
+            return null;
         }
-
 
         private List<string> _Tokens = new List<string>();
         private List<string> _Cities = new List<string>();
@@ -38,6 +44,9 @@ namespace WeatherBot.IOFilter
 
         public IOFilterator()
         {
+            InteractionProcess.Instance.ProcessingEventHandlers += MessageProcessing;
+            InteractionProcess.Instance.State = InteractionProcessState.Launched;
+
             _Cities = new DBEmulator().GetCountries();
         }
 
