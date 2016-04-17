@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherBot.Database.Entities
 {
-    class Weather
+    public class Weather
     {
         public enum DayTimeType
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherBot.Database.Entities
 {
-    class Location
+    public class Location
     {
         public int Id { get; set; }
         public double Latitude { get; set; }

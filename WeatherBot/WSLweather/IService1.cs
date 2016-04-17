@@ -10,44 +10,38 @@ namespace Weatherbot.WSLweather
     [DataContract]
     public class QData
     {
-        [DataMember]
-        string City;
-
-        [DataMember]
-        Dictionary<DateTime, QDataWeatherDay> itemsDays;
+        [DataMember] public string City;
+        [DataMember] public Dictionary<DateTime, QDataWeatherDay> ItemsDays;
     }
 
     [DataContract]
     public class QDataWeatherDay
     {
-        [DataMember]
-        List<QDataWeatherDayPart> itemsParts;
+        [DataMember] public List<QDataWeatherDayPart> ItemsParts;
     }
 
     [DataContract]
     public class QDataWeatherDayPart
     {
-        [DataMember]
-        double temp;
-        [DataMember]
-        string dayPart;
-        [DataMember]
-        string state;
+        [DataMember] public double Temp;
+        [DataMember] public string DayPart;
+        [DataMember] public string State;
     }
 
-    public interface IModuleIO
+    [ServiceContract]
+    public interface IWeather
     {
-
+        [OperationContract]
+        QDataWeatherDay GetDataWeatherDay(DateTime dataTime);
+        [OperationContract]
+        QDataWeatherDay GetWeatherDay(string city);
     }
 
 
     [ServiceContract]
     public interface IWeatherDbQuery
     {
-        [OperationContract]
-        QDataWeatherDay GetWeatherDay(DateTime dataTime);
-        [OperationContract]
-        QDataWeatherDay GetWeatherCityDataWeatherDay(string city);
+       
 
 
     }

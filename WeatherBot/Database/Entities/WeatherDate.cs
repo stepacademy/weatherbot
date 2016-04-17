@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherBot.Database.Entities
 {
-    class WeatherDate
+    public class WeatherDate
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }

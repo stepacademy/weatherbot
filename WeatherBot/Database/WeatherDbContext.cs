@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using WeatherBot.Database.Entities;
 
-namespace WeatherBot.Database.Entities
+namespace WeatherBot.Database
 {
-    class WeatherDbContext : DbContext
+    public class WeatherDbContext : DbContext
     {
         public WeatherDbContext() : base("ConnectionString")
         {
