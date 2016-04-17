@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WeatherBot.TeleInteraction;
 using Weatherbot.WSLweather;
-using WeatherBot.TeleInteraction;
+//using WeatherBot.TeleInteraction;
 using WeatherBot.TeleInteraction.TelegramAdapters;
 
 namespace WeatherBot.IOFilter
@@ -13,16 +13,10 @@ namespace WeatherBot.IOFilter
     ///
     public class IOFilterator
     {
-        ///ITeleInteractor test = new TeleInteractor();
-
-        /*
-       public async void GetMessages()
-       {
-          Message  m   =  await test.GetNextMessageAsync();
-          IncomeMessage(m.Text);
-          string txt = OutcomeMessage();
-       }
-        */
+        public delegate void MsgOut (string msgin, string msgout);
+        private List<string> _Tokens = new List<string>();
+        private List<string> _Cities = new List<string>();
+        public MsgOut MsgOutput;
 
         private Message MessageProcessing(Message message)
         {
@@ -31,16 +25,15 @@ namespace WeatherBot.IOFilter
             {
                 IncomeMessage(message.Text);
                 message.Response = new MessageResponse();
-                message.Response.Text = OutcomeMessage();
 
+                string msgout = OutcomeMessage();
+                MsgOutput(message.Text , msgout);
+                message.Response.Text = msgout;
+                
                 return message;
             }
             return null;
         }
-
-        private List<string> _Tokens = new List<string>();
-        private List<string> _Cities = new List<string>();
-
 
         public IOFilterator()
         {
@@ -157,7 +150,7 @@ namespace WeatherBot.IOFilter
             return false;
         }
 
-        public bool WordToDate(string word, ref DateTime dateret)
+        private bool WordToDate(string word, ref DateTime dateret)
         {
             Dictionary<string, int> words = new Dictionary<string, int>(); //из базы или файла
             words.Add("сегодня", 0);
