@@ -9,7 +9,7 @@ namespace Test.TeleInteractionTest {
 
             if (message != null) {
                 message.Response = new MessageResponse();
-                message.Response.Text = "Using ReqResp Processor Example, Weather Bot Result from fake DB";
+                message.Response.Text = "repeater: " + message.Text;
 
                 return message;
             }
