@@ -5,7 +5,7 @@ using System.Text;
 namespace WeatherBot.IOFilter
 {
     /// <summary>
-    ///  Эмуляция запросов к базе  "..\\..\\Resources\\Cities.txt"
+    ///  Эмуляция запросов к базе  "Cities.txt"
     /// </summary>
     public class DBEmulator
     {

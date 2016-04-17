@@ -1,5 +1,4 @@
-﻿namespace IOFilerTest
-{
+﻿namespace Test.IOFilerTest {
     partial class FormTestIOFilter
     {
         /// <summary>
