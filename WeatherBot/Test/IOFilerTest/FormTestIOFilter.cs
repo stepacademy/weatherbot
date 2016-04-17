@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeatherBot.IOFilter;
 
-namespace IOFilerTest
+namespace Test.IOFilerTest
 {
     public partial class FormTestIOFilter : Form
     {

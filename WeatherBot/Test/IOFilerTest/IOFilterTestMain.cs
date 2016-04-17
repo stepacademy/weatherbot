@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace IOFilerTest
+namespace Test.IOFilerTest
 {
     static class IOFilterTestMain
     {
