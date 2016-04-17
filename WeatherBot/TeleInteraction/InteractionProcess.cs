@@ -20,7 +20,7 @@ namespace WeatherBot.TeleInteraction {
                 if (_state == InteractionProcessState.Stopped) {
                     if (value == InteractionProcessState.Launched) {
                         _state = value;
-                        Instance.Start();
+                        Instance.Process();
                     }                    
                 }
                 else {
@@ -30,8 +30,8 @@ namespace WeatherBot.TeleInteraction {
                 }
             }
         }
-        public event NextQueryProcessingEvent ProcessingEventHandlers;
 
+        public event NextQueryProcessingEvent ProcessingEventHandlers;
         private static InteractionProcess _instance;
 
         public static InteractionProcess Instance {
@@ -42,23 +42,17 @@ namespace WeatherBot.TeleInteraction {
             }
         }
 
-        private Task Process() {
+        private void Process() {
 
             while (_state == InteractionProcessState.Launched) {
                 _teleInteractor.SendResponse(ProcessingEventHandlers.Invoke(_teleInteractor.GetNextMessage()));
                 Thread.Sleep(10);
             }
-            return new Task(null);
-        }
-
-        private async void Start() {
-            await Process();
         }
 
         private InteractionProcess() {
             _teleInteractor = new TeleInteractor();
             _state = InteractionProcessState.Stopped;
         }
-
     }
 }
