@@ -59,10 +59,10 @@ namespace WeatherBot.IOFilter
             {
                 sb.AppendLine(dci.ToString());
                 /// нужно перенести в другое место (только для демонстрации)
-                if ((subsrib & (int)SUBSCRIPT.MORNING) == (int)SUBSCRIPT.MORNING) sb.AppendLine("\t    утром:" + 5);
-                if ((subsrib & (int)SUBSCRIPT.DAY) == (int)SUBSCRIPT.DAY) sb.AppendLine("\t     днем:" + 6);
-                if ((subsrib & (int)SUBSCRIPT.EVENING) == (int)SUBSCRIPT.EVENING) sb.AppendLine("\tвечером:" + 7);
-                if ((subsrib & (int)SUBSCRIPT.NIGHT) == (int)SUBSCRIPT.NIGHT) sb.AppendLine("\t    ночью:" + 8);
+                if ((subsrib & (int)SUBSCRIPT.MORNING) == (int)SUBSCRIPT.MORNING) sb.AppendLine("\t    утром: олвоала");
+                if ((subsrib & (int)SUBSCRIPT.DAY) == (int)SUBSCRIPT.DAY) sb.AppendLine("\t     днем: выраарл");
+                if ((subsrib & (int)SUBSCRIPT.EVENING) == (int)SUBSCRIPT.EVENING) sb.AppendLine("\tвечером: влавлоа" + 7);
+                if ((subsrib & (int)SUBSCRIPT.NIGHT) == (int)SUBSCRIPT.NIGHT) sb.AppendLine("\t    ночью: волаов" + 8);
             }
             return sb.ToString();
         }

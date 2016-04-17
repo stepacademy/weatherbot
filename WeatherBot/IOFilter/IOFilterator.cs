@@ -40,10 +40,11 @@ namespace WeatherBot.IOFilter
 
         public IOFilterator()
         {
+            _Cities = new DBEmulator().GetCountries();
             InteractionProcess.Instance.ProcessingEventHandlers += MessageProcessing;
             InteractionProcess.Instance.State = InteractionProcessState.Launched;
 
-            _Cities = new DBEmulator().GetCountries();
+           
         }
 
         public void IncomeMessage(string message)
@@ -251,9 +252,10 @@ namespace WeatherBot.IOFilter
 
         private bool NotCorrectMessageAnswer(ClimatInfo cli, ref string answer)
         {
-            if (cli.city == null) answer = "Вы не указали свой город";   // запросы к базе
+            answer = "Вы";
+            if (cli.city == null) answer = ", не указали свой город";   // запросы к базе
             if (cli.Count == 0) answer += ", не выбрали дни";
-            return answer != "";
+            return  answer != "Вы";
         }
     }
 
