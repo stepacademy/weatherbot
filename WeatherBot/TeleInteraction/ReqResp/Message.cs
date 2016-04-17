@@ -18,6 +18,15 @@ namespace WeatherBot.TeleInteraction.ReqResp {
         }
 
         /// <summary>
+        /// Unique chat-user identifier
+        /// </summary>
+        public long ChatUserId {
+            get {
+                return _message.Chat.Id;
+            }
+        }
+
+        /// <summary>
         /// Date the message was sent in Unix time
         /// </summary>
         public DateTime DTime {
@@ -44,8 +53,9 @@ namespace WeatherBot.TeleInteraction.ReqResp {
             }
         }
 
-        public Message(Telegram.Bot.Types.Update update, MessageResponse response = null) {
+        public Message(Telegram.Bot.Types.Update update) {
             _message = update.Message;
+            Response = null;
         }
 
     }

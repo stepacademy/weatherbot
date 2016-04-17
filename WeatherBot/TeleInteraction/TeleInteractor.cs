@@ -66,8 +66,14 @@ namespace WeatherBot.TeleInteraction {
             return null;
         }
 
-        public void SendResponse(Message response) {
-            throw new NotImplementedException();
+        public async void SendResponse(Message message) {                                // quick issue impl. need test
+
+            if (message != null && message.Response != null) {
+
+                if (message.Response.Text != null) {
+                    await _bot.SendTextMessage(message.ChatUserId, message.Response.Text);
+                }
+            }
         }
 
         private void Initialize(string tokenPath = "botToken.txt") {
@@ -84,7 +90,7 @@ namespace WeatherBot.TeleInteraction {
 
         public TeleInteractor(double updateIntervalMs = 1000) {
             Initialize();
-            _updateIntervalMs = updateIntervalMs; // will be dynamic recalculate
+            _updateIntervalMs = updateIntervalMs;                                        // will be dynamic recalculate
         }
     }
 }
