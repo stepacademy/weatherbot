@@ -28,9 +28,9 @@ namespace WeatherBot.IOFilter
                 message.Response = new MessageResponse();
 
                 string msgout = OutcomeMessage();
-                MsgOutput(message.Text , msgout);
+                MsgOutput(message.Text, msgout);
                 message.Response.Text = msgout;
-                
+
                 return message;
             }
             return null;

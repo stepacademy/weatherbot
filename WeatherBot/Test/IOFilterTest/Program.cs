@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WeatherBot.IOFilter;
 
-namespace IOFilterTest
+namespace Test.IOFilterTest
 {
     class Program
     {
