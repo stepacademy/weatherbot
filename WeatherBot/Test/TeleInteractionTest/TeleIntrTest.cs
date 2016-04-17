@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using WeatherBot.TeleInteraction;
+using WeatherBot.TeleInteraction.ReqResp;
 
 namespace Test.TeleInteractionTest {
 
@@ -20,9 +21,8 @@ namespace Test.TeleInteractionTest {
 
             while (true) {
                 TestProcess(test);
-                Thread.Sleep(1000);
+                Thread.Sleep(1);
             }
         }
-
     }
 }

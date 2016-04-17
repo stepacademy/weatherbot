@@ -1,18 +1,23 @@
 ﻿using System.IO;
-using System.Threading.Tasks;
 using System.Linq;
 using System.Collections.Generic;
+using System;
+using WeatherBot.TeleInteraction.ReqResp;
+
 
 namespace WeatherBot.TeleInteraction {
 
     public class TeleInteractor : ITeleInteractor {
 
         private string _botToken;
-        private int _lastUdateId;
 
-        private Telegram.Bot.Api _bot;
-        private Telegram.Bot.Types.User _me;
+        private Telegram.Bot.Api            _bot;
+        private Telegram.Bot.Types.User     _me;
         private Telegram.Bot.Types.Update[] _updates;
+
+        private int      _lastUdateId;
+        private DateTime _lastRequestTime;
+        private double   _updateIntervalMs;
 
         private Queue<Telegram.Bot.Types.Update> _updatesQueue;
 
@@ -37,24 +42,32 @@ namespace WeatherBot.TeleInteraction {
                     continue;
                 }
                 else {
-                    while (_updatesQueue.Count > 100) {
+                    while (_updatesQueue.Count > 100)
                         _updatesQueue.Dequeue();
-                    }
+
                     _updatesQueue.Enqueue(update);
                     _lastUdateId = update.Id;
                 }
-            }
+            }            
         }
 
         public Message GetNextMessage() {
 
-            RequestAsync();
-
-            if (_updatesQueue != null && _updatesQueue.Count > 0) {
+            if (_updatesQueue == null || _updatesQueue.Count == 0) {
+                if ((DateTime.Now - _lastRequestTime).TotalMilliseconds > _updateIntervalMs) {
+                    RequestAsync();
+                    _lastRequestTime = DateTime.Now;
+                }
+            }
+            else {
                 return new Message(_updatesQueue.Dequeue());
             }
 
             return null;
+        }
+
+        public void SendResponse(Message response) {
+            throw new NotImplementedException();
         }
 
         private void Initialize(string tokenPath = "botToken.txt") {
@@ -65,12 +78,13 @@ namespace WeatherBot.TeleInteraction {
                     _bot = new Telegram.Bot.Api(_botToken);
                     _me = _bot.GetMe().Result;
                 }
-                // file.Close();
+                file.Close();
             }
         }
 
-        public TeleInteractor() {
+        public TeleInteractor(double updateIntervalMs = 1000) {
             Initialize();
+            _updateIntervalMs = updateIntervalMs; // will be dynamic recalculate
         }
     }
 }

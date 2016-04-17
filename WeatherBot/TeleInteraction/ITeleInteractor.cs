@@ -1,17 +1,20 @@
-﻿namespace WeatherBot.TeleInteraction {
+﻿using WeatherBot.TeleInteraction.ReqResp;
 
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+
+namespace WeatherBot.TeleInteraction {
 
     public interface ITeleInteractor {
 
         /// <summary>
-        /// GetNextMessageAsync();
+        /// returns the next message from the queue if present, otherwise - returns null
         /// </summary>
         Message GetNextMessage();
+
+        /// <summary>
+        /// receives an instance of the Message class field filled with Response
+        /// </summary>
+        /// <param name="response">instance of the Message class</param>
+        void SendResponse(Message response);
 
     }
 }

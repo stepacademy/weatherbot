@@ -1,14 +1,12 @@
-﻿namespace WeatherBot.TeleInteraction {
+﻿using System;
 
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+
+namespace WeatherBot.TeleInteraction.ReqResp {
 
     public class Message {
 
         private Telegram.Bot.Types.Message _message;
+        private MessageResponse _response;
 
         /// <summary>
         /// Unique message identifier
@@ -37,8 +35,18 @@
             }
         }
 
-        public Message(Telegram.Bot.Types.Update update) {
+        public MessageResponse Response {
+            get {
+                return _response;
+            }
+            set {
+                _response = value;
+            }
+        }
+
+        public Message(Telegram.Bot.Types.Update update, MessageResponse response = null) {
             _message = update.Message;
         }
+
     }
 }
