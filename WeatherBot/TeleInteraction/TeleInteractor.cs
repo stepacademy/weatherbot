@@ -29,7 +29,7 @@ namespace WeatherBot.TeleInteraction {
 
         private async void RequestAsync() {
 
-            _updates = await _bot.GetUpdates();
+            _updates = await _bot.GetUpdates(_lastUdateId);
 
             if (_updatesQueue == null) {
                 _updatesQueue = new Queue<Telegram.Bot.Types.Update>(_updates);
