@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using WeatherBot.TeleInteraction;
-using Weatherbot.WSLweather;
+//using Weatherbot.WSLweather;
 //using WeatherBot.TeleInteraction;
 using WeatherBot.TeleInteraction.TelegramAdapters;
 
@@ -244,9 +244,9 @@ namespace WeatherBot.IOFilter
             if (NotCorrectMessageAnswer(cli, ref check))
                 return check;
 
-            Weatherbot.WSLweather.QData qdata = new QData();
-            Weatherbot.WSLweather.QDataWeatherDay qdataweatherday = new QDataWeatherDay();
-            Weatherbot.WSLweather.QDataWeatherDayPart qdataweatherdaypart = new QDataWeatherDayPart();
+            //Weatherbot.WSLweather.QData qdata = new QData();
+            //Weatherbot.WSLweather.QDataWeatherDay qdataweatherday = new QDataWeatherDay();
+            //Weatherbot.WSLweather.QDataWeatherDayPart qdataweatherdaypart = new QDataWeatherDayPart();
             
 
             return cli.ToString();
