@@ -13,13 +13,11 @@ namespace WeatherBot.IOFilter
     ///
     public class IOFilterator
     {
-        public delegate void MsgOut(string msgin, string msgout);
+        public delegate void  DebugOut(string debug_text);
         private List<string> _Tokens = new List<string>();
         private List<string> _Cities = new List<string>();
-        public MsgOut MsgOutput;
-
-
-
+        public DebugOut DebugOutEvent;
+  
         private Message MessageProcessing(Message message)
         {
 
@@ -29,8 +27,8 @@ namespace WeatherBot.IOFilter
                 message.Response = new MessageResponse();
 
                 string msgout = OutcomeMessage();
-                if (MsgOutput != null)
-                    MsgOutput(message.Text, msgout);
+                if (DebugOutEvent != null)
+                    DebugOutEvent("[IN]:\n" + message.Text +"\n[OUT]:\n"+ msgout);
                 message.Response.Text = msgout;
 
                 return message;
@@ -51,6 +49,44 @@ namespace WeatherBot.IOFilter
         {
             _Tokens.Clear();
             _Tokens = BreakWords(message);
+        }
+
+        /// <summary>
+        ///    Тут происходит разбор
+        ///    нужно добавить обработку ключевых слов (неделя, и т.п.)
+        ///    Сделав разбор
+        ///    Отправит составленную структуру для заполнения данными
+        ///    После заполнения функция сформирует текст (картинку) для пользователя
+        ///    Естественно все будет разбиваться на классы и методы
+        /// </summary>
+        /// <returns></returns>
+        public string OutcomeMessage()
+        {
+            ClimatInfo cli = new ClimatInfo();
+            if (_Tokens.Count == 0) return "Введите что-нибудь...";  // запрос к базе
+            foreach (string str in _Tokens)
+            {
+                string token = new string(str.ToArray());
+
+                FindDateInWord(cli, str);
+
+                if (_Cities.Contains(str))
+                    cli.SetCity(str);
+
+                int subscr = cli.subsrib;
+                if (IsDayPart(str, ref subscr))
+                    cli.subsrib = subscr;
+
+            }
+            if (cli.subsrib == 0)
+                cli.subsrib = (int)ClimatInfo.SUBSCRIPT.MORNING + (int)ClimatInfo.SUBSCRIPT.DAY
+                            + (int)ClimatInfo.SUBSCRIPT.EVENING + (int)ClimatInfo.SUBSCRIPT.NIGHT;
+
+            string check = "";
+            if (NotCorrectMessageAnswer(cli, ref check))
+                return check;
+
+            return cli.ToString();
         }
 
         private string PrepareMessage(string message)
@@ -77,7 +113,7 @@ namespace WeatherBot.IOFilter
             return ret;
         }
 
-        public bool DayOfWeekToDate(string day, ref DateTime dateret)
+        private bool DayOfWeekToDate(string day, ref DateTime dateret)
         {
             Dictionary<string, DateTime> days = new Dictionary<string, DateTime>(); //брать из базы?
             DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
@@ -212,48 +248,11 @@ namespace WeatherBot.IOFilter
                 AddDateToClimatInfo(cli, dt);
             }
         }
-        /// <summary>
-        ///    Тут происходит разбор
-        ///    нужно добавить обработку ключевых слов (неделя, и т.п.)
-        ///    Сделав разбор
-        ///    Отправит составленную структуру для заполнения данными
-        ///    После заполнения функция сформирует текст (картинку) для пользователя
-        ///    Естественно все будет разбиваться на классы и методы
-        /// </summary>
-        /// <returns></returns>
-        public string OutcomeMessage()
-        {
-            ClimatInfo cli = new ClimatInfo();
-            if (_Tokens.Count == 0) return "Введите что-нибудь...";  // запрос к базе
-            foreach (string str in _Tokens)
-            {
-                string token = new string(str.ToArray());
-
-                FindDateInWord(cli, str);
-
-                if (_Cities.Contains(str))
-                    cli.SetCity(str);
-
-                int subscr = cli.subsrib;
-                if (IsDayPart(str, ref subscr))
-                    cli.subsrib = subscr;
-
-            }
-            if (cli.subsrib == 0)
-                cli.subsrib = (int)ClimatInfo.SUBSCRIPT.MORNING + (int)ClimatInfo.SUBSCRIPT.DAY
-                            + (int)ClimatInfo.SUBSCRIPT.EVENING + (int)ClimatInfo.SUBSCRIPT.NIGHT;
-
-            string check = "";
-            if (NotCorrectMessageAnswer(cli, ref check))
-                return check;
-
-           return cli.ToString();
-        }
 
         private bool NotCorrectMessageAnswer(ClimatInfo cli, ref string answer)
         {
             answer = "Вы";
-            if (cli.city == null) answer = ", не указали свой город";   // запросы к базе
+            if (cli.city == null) answer += ", не указали свой город";   // запросы к базе
             if (cli.Count == 0) answer += ", не выбрали дни";
             return  answer != "Вы";
         }
