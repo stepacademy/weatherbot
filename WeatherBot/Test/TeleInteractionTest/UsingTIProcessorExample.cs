@@ -21,7 +21,6 @@ namespace Test.TeleInteractionTest {
 
             InteractionProcess.Instance.ProcessingEventHandlers += MessageProcessing;
             InteractionProcess.Instance.State = InteractionProcessState.Launched;
-            InteractionProcess.Instance.Process();
         }
 
     }

@@ -23,7 +23,7 @@ namespace WeatherBot.TeleInteraction {
             }
         }
 
-        public void Process() {
+        private void Process() {
 
             while (State != InteractionProcessState.Stopped) {
                 if (State == InteractionProcessState.Launched) {
@@ -35,6 +35,7 @@ namespace WeatherBot.TeleInteraction {
 
         private InteractionProcess() {
             _teleInteractor = new TeleInteractor();
+            Process();
         }
     }
 }
