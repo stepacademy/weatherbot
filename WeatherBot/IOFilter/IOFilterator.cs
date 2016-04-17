@@ -13,10 +13,11 @@ namespace WeatherBot.IOFilter
     ///
     public class IOFilterator
     {
-        public delegate void MsgOut (string msgin, string msgout);
+        public delegate void MsgOut(string msgin, string msgout);
         private List<string> _Tokens = new List<string>();
         private List<string> _Cities = new List<string>();
         public MsgOut MsgOutput;
+
 
 
         private Message MessageProcessing(Message message)
@@ -28,7 +29,8 @@ namespace WeatherBot.IOFilter
                 message.Response = new MessageResponse();
 
                 string msgout = OutcomeMessage();
-                MsgOutput(message.Text, msgout);
+                if (MsgOutput != null)
+                    MsgOutput(message.Text, msgout);
                 message.Response.Text = msgout;
 
                 return message;
@@ -185,7 +187,7 @@ namespace WeatherBot.IOFilter
             cli.AddDateInfo(dcli);
         }
 
-        private void FindDateInWord(ClimatInfo cli, string  str)
+        private void FindDateInWord(ClimatInfo cli, string str)
         {
             DateTime dt = new DateTime();
             int day;
@@ -244,12 +246,7 @@ namespace WeatherBot.IOFilter
             if (NotCorrectMessageAnswer(cli, ref check))
                 return check;
 
-            //Weatherbot.WSLweather.QData qdata = new QData();
-            //Weatherbot.WSLweather.QDataWeatherDay qdataweatherday = new QDataWeatherDay();
-            //Weatherbot.WSLweather.QDataWeatherDayPart qdataweatherdaypart = new QDataWeatherDayPart();
-            
-
-            return cli.ToString();
+           return cli.ToString();
         }
 
         private bool NotCorrectMessageAnswer(ClimatInfo cli, ref string answer)
@@ -261,9 +258,5 @@ namespace WeatherBot.IOFilter
     }
 
 
-
-  
-
- 
 
 }
