@@ -24,7 +24,7 @@ Project structure example:
             ...json
             ...
             *ttoken.*
-        [Release]                           <-- commit ?
+        [Release]
             ...dll
             ...exe
             ...xml
