@@ -3,14 +3,24 @@ using WeatherBot.TeleInteraction.TelegramAdapters;
 
 namespace WeatherBot.TeleInteraction {
 
-    public enum InteractionProcessState { Launched, Suspended, Stopped }
+    public enum InteractionProcessState { Launched, Stopped }
     public delegate Message NextQueryProcessingEvent(Message message);
 
     public class InteractionProcess {
 
         private ITeleInteractor _teleInteractor;
+        private InteractionProcessState _state;
 
-        public InteractionProcessState State;
+        public InteractionProcessState State {
+            get {
+                return _state;
+            }
+            set {
+                _state = value;
+                if (_state == InteractionProcessState.Launched)
+                    Instance.Process();
+            }
+        }
         public event NextQueryProcessingEvent ProcessingEventHandlers;
 
         private static InteractionProcess _instance;
@@ -25,17 +35,14 @@ namespace WeatherBot.TeleInteraction {
 
         private void Process() {
 
-            while (State != InteractionProcessState.Stopped) {
-                if (State == InteractionProcessState.Launched) {
-                    _teleInteractor.SendResponse(ProcessingEventHandlers.Invoke(_teleInteractor.GetNextMessage()));
-                }
+            while (_state == InteractionProcessState.Launched) {
+                _teleInteractor.SendResponse(ProcessingEventHandlers.Invoke(_teleInteractor.GetNextMessage()));
                 Thread.Sleep(10);
             }
         }
 
         private InteractionProcess() {
             _teleInteractor = new TeleInteractor();
-            Process();
         }
     }
 }
