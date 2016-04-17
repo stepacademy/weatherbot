@@ -33,18 +33,11 @@ namespace WeatherBot.TeleInteraction {
 
             if (_updatesQueue == null) {
                 _updatesQueue = new Queue<Telegram.Bot.Types.Update>(_updates);
-                _lastUdateId = _updatesQueue.Count > 0 ? _updatesQueue.Last().Id : 0;
-                return;
+                _lastUdateId = _updates[_updates.Length - 1].Id;
             }
 
             foreach (var update in _updates) {
-                if (update.Id <= _lastUdateId) {
-                    continue;
-                }
-                else {
-                    while (_updatesQueue.Count > 100)
-                        _updatesQueue.Dequeue();
-
+                if (update.Id > _lastUdateId) {
                     _updatesQueue.Enqueue(update);
                     _lastUdateId = update.Id;
                 }
@@ -66,7 +59,7 @@ namespace WeatherBot.TeleInteraction {
             return null;
         }
 
-        public async void SendResponse(Message message) {                                // quick issue impl. need test
+        public async void SendResponse(Message message) {                                          // quick issue impl.
 
             if (message != null && message.Response != null) {
 
