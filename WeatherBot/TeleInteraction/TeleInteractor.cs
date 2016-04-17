@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System;
-using WeatherBot.TeleInteraction.ReqResp;
+using WeatherBot.TeleInteraction.TelegramAdapters;
 
 
 namespace WeatherBot.TeleInteraction {

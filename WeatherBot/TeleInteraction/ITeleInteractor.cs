@@ -1,4 +1,4 @@
-﻿using WeatherBot.TeleInteraction.ReqResp;
+﻿using WeatherBot.TeleInteraction.TelegramAdapters;
 
 
 namespace WeatherBot.TeleInteraction {

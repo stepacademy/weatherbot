@@ -54,10 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ITeleInteractor.cs" />
-    <Compile Include="ReqResp\Message.cs" />
+    <Compile Include="TelegramAdapters\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReqResp\MessageResponse.cs" />
+    <Compile Include="TelegramAdapters\MessageResponse.cs" />
     <Compile Include="TeleInteractor.cs" />
+    <Compile Include="TelegramAdapters\MessageLocation.cs" />
+    <Compile Include="TelegramAdapters\MessageUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

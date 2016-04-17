@@ -1,4 +1,4 @@
-﻿namespace WeatherBot.TeleInteraction.ReqResp {
+﻿namespace WeatherBot.TeleInteraction.TelegramAdapters {
 
 
     public class MessageResponse {

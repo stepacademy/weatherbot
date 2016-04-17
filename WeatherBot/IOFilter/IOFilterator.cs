@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WeatherBot.TeleInteraction;
 using Weatherbot.WSLweather;
-using WeatherBot.TeleInteraction.ReqResp;
+using WeatherBot.TeleInteraction.TelegramAdapters;
 
 namespace WeatherBot.IOFilter
 {

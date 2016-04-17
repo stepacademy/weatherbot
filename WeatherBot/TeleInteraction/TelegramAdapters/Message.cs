@@ -1,11 +1,14 @@
 ﻿using System;
 
 
-namespace WeatherBot.TeleInteraction.ReqResp {
+namespace WeatherBot.TeleInteraction.TelegramAdapters {
 
     public class Message {
 
         private Telegram.Bot.Types.Message _message;
+
+        private MessageUser _user;
+        private MessageLocation _location;        
         private MessageResponse _response;
 
         /// <summary>
@@ -43,7 +46,7 @@ namespace WeatherBot.TeleInteraction.ReqResp {
                 return _message.Text;
             }
         }
-
+        
         /// <summary>
         /// new MessageResponse attach here
         /// </summary>
@@ -56,10 +59,6 @@ namespace WeatherBot.TeleInteraction.ReqResp {
             }
         }
 
-        /// <summary>
-        /// c-tor, Initializes an instance of Telegram.Bot.Types.Update
-        /// </summary>
-        /// <param name="update">Instance of Telegram.Bot.Types.Update</param>
         public Message(Telegram.Bot.Types.Update update) {
             _message = update.Message;
             Response = null;

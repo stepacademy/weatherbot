@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using WeatherBot.TeleInteraction;
-using WeatherBot.TeleInteraction.ReqResp;
+using WeatherBot.TeleInteraction.TelegramAdapters;
 
 namespace Test.TeleInteractionTest {
 
