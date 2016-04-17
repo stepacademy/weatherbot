@@ -10,8 +10,17 @@ Application > Assembly name     = ProjectName<br>
 Application > Default namespace = WeatherBot.ProjectName<br>
 Application > Target Framework  = .NET Framework 4.5
 
-Build > Output path = ..\..\Build\Debug\   - for debug<br>
-Build > Output path = ..\..\Build\Release\ - for release<br>
+Build > Output path = ..\ ..\Build\Debug\   - for debug<br>
+Build > Output path = ..\ ..\Build\Release\ - for release<br>
+
+The settings of each individual TEST project:
+
+Application > Assembly name     = ProjectName<br>
+Application > Default namespace = Test.ProjectName<br>
+Application > Target Framework  = .NET Framework 4.5
+
+Build > Output path = ..\ ..\ ..\ Build\Debug\   - for debug<br>
+Build > Output path = ..\ ..\ ..\ Build\Release\ - for release<br>
 
 Project structure example:
 ```
