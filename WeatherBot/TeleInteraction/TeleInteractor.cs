@@ -71,7 +71,7 @@ namespace WeatherBot.TeleInteraction {
             if (message != null && message.Response != null) {
 
                 if (message.Response.Text != null) {
-                    await _bot.SendTextMessage(message.ChatUserId, message.Response.Text);
+                    await _bot.SendTextMessage(message.User.Id, message.Response.Text);
                 }
             }
         }

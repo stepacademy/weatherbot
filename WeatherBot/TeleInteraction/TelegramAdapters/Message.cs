@@ -21,15 +21,6 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
         }
 
         /// <summary>
-        /// Unique chat-user identifier
-        /// </summary>
-        public long ChatUserId {
-            get {
-                return _message.Chat.Id;
-            }
-        }
-
-        /// <summary>
         /// Date the message was sent in Unix time
         /// </summary>
         public DateTime DTime {
@@ -46,6 +37,24 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
                 return _message.Text;
             }
         }
+
+        /// <summary>
+        /// Message sender
+        /// </summary>
+        public MessageUser User {
+            get {
+                return _user;
+            }
+        }
+
+        /// <summary>
+        /// Location
+        /// </summary>
+        public MessageLocation Location {
+            get {
+                return _location;
+            }
+        }
         
         /// <summary>
         /// new MessageResponse attach here
@@ -60,8 +69,12 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
         }
 
         public Message(Telegram.Bot.Types.Update update) {
-            _message = update.Message;
-            Response = null;
+
+            _message  = update.Message;
+            _user     = new MessageUser(update.Message.From);
+            _location = new MessageLocation(update.Message.Location);
+            Response  = null;
         }
+
     }
 }
