@@ -23,7 +23,7 @@ namespace Test.CheckCities
         {
             var country = (XmlElement)countryElement;
 
-            Console.WriteLine("Поток {0} ждет", country.GetAttribute("name"));
+            Console.WriteLine("{0} ждет", country.GetAttribute("name"));
 
             _pool.WaitOne();
 
@@ -31,23 +31,20 @@ namespace Test.CheckCities
 
             foreach (XmlNode cityNode in country)
             {
-                if (cityNode.Attributes != null)
+                if (cityNode.Attributes == null) continue;
+
+                var weatherInfo = new XmlDocument();
+                try
                 {
-                    //Console.WriteLine("\t"+cityNode.Attributes.GetNamedItem("id").InnerText + " " + cityNode.InnerText);
-                    var weatherInfo = new XmlDocument();
-                    try
-                    {
-                        weatherInfo.Load(
-                            $@"http://export.yandex.ru/weather-ng/forecasts/{cityNode.Attributes.GetNamedItem("id")
-                                .InnerText}.xml");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("----no load city: {0}, country: {1}----", cityNode.InnerText, country.GetAttribute("name"));
-                        Console.WriteLine("\t{0}", ex.Message);
-                    }
+                    weatherInfo.Load(
+                        $@"http://export.yandex.ru/weather-ng/forecasts/{cityNode.Attributes.GetNamedItem("id")
+                            .InnerText}.xml");
                 }
-                
+                catch (Exception ex)
+                {
+                    Console.WriteLine("----no load city: {0}, country: {1}----", cityNode.InnerText, country.GetAttribute("name"));
+                    Console.WriteLine("\t{0}", ex.Message);
+                }
             }
 
             _pool.Release();
@@ -75,9 +72,7 @@ namespace Test.CheckCities
 
             foreach (XmlElement countryElement in doc.DocumentElement)
             {
-                //Console.WriteLine(countryElement.GetAttribute("name"));
-
-                var t = new Thread(new ParameterizedThreadStart(Worker));
+                var t = new Thread(Worker);
                 t.Start(countryElement);
                 
             }
