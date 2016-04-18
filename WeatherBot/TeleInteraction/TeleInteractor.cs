@@ -1,9 +1,7 @@
 ﻿using System.IO;
-using System.Linq;
 using System.Collections.Generic;
 using System;
 using WeatherBot.TeleInteraction.TelegramAdapters;
-
 
 namespace WeatherBot.TeleInteraction {
 
@@ -85,5 +83,6 @@ namespace WeatherBot.TeleInteraction {
             Initialize();
             _updateIntervalMs = updateIntervalMs;                                        // will be dynamic recalculate
         }
+
     }
 }
