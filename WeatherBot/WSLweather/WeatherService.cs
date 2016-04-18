@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Xml;
-using WeatherBot.Database;
 using WeatherBot.Database.Entities;
 
 namespace WeatherBot.WSLweather
@@ -22,7 +21,7 @@ namespace WeatherBot.WSLweather
 
         public void UpdateCities()
         {
-            using (var db = new WeatherDbContext())
+            using (var db = new Database.WeatherDbContext())
             {
                 var doc = new XmlDocument();
                 doc.Load(@"https://pogoda.yandex.ru/static/cities.xml");
@@ -71,7 +70,7 @@ namespace WeatherBot.WSLweather
 
         public void UpdateWeather()
         {
-            using (var db = new WeatherDbContext())
+            using (var db = new Database.WeatherDbContext())
             {
                 db.Cities.Load();
 
@@ -83,11 +82,23 @@ namespace WeatherBot.WSLweather
 
                 foreach (var city in lstCities)
                 {
-                    doc.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
-
+                    try
+                    {
+                        doc.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
+                    }
+                    catch (Exception ex)
+                    {
+                        db.UpdateErrors.Add(new UpdateError()
+                        {
+                            City = city,
+                            Exception = ex.Message,
+                            DateTime = DateTime.Now
+                        });
+                    }
 
                 }
 
+                db.SaveChanges();
             }
         }
     }

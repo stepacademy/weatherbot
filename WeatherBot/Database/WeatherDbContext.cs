@@ -8,7 +8,6 @@ namespace WeatherBot.Database
     {
         public WeatherDbContext() : base("ConnectionString")
         {
-            throw new NotImplementedException();
         }
 
         public DbSet<City> Cities { get; set; }
@@ -17,6 +16,6 @@ namespace WeatherBot.Database
         public DbSet<Weather> Weathers { get; set; }
         public DbSet<WeatherDate> WeatherDates { get; set; }
         public DbSet<WeatherState> WeatherStates { get; set; }
-
+        public DbSet<UpdateError> UpdateErrors { get; set; }
     }
 }
