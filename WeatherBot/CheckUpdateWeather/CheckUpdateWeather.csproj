@@ -7,7 +7,7 @@
     <ProjectGuid>{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WeatherBot.CheckUpdateWeather</RootNamespace>
+    <RootNamespace>Test.CheckUpdateWeather</RootNamespace>
     <AssemblyName>CheckUpdateWeather</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -62,7 +62,7 @@
     <None Include="Service References\WSLweatherReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\WSLweatherReference\WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay.datasource">
+    <None Include="Service References\WSLweatherReference\Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WSLweatherReference\WeatherBot.WSLweather.xsd">

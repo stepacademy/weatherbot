@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WeatherBot.CheckUpdateWeather.WSLweatherReference {
+namespace Test.CheckUpdateWeather.WSLweatherReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -23,7 +23,7 @@ namespace WeatherBot.CheckUpdateWeather.WSLweatherReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDayPart[] ItemsPartsField;
+        private Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDayPart[] ItemsPartsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -36,7 +36,7 @@ namespace WeatherBot.CheckUpdateWeather.WSLweatherReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDayPart[] ItemsParts {
+        public Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDayPart[] ItemsParts {
             get {
                 return this.ItemsPartsField;
             }
@@ -140,16 +140,16 @@ namespace WeatherBot.CheckUpdateWeather.WSLweatherReference {
     public interface IWeather {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWeather/GetDataWeatherDay", ReplyAction="http://tempuri.org/IWeather/GetDataWeatherDayResponse")]
-        WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetDataWeatherDay(System.DateTime dataTime);
+        Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetDataWeatherDay(System.DateTime dataTime);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWeather/GetDataWeatherDay", ReplyAction="http://tempuri.org/IWeather/GetDataWeatherDayResponse")]
-        System.Threading.Tasks.Task<WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetDataWeatherDayAsync(System.DateTime dataTime);
+        System.Threading.Tasks.Task<Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetDataWeatherDayAsync(System.DateTime dataTime);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWeather/GetWeatherDay", ReplyAction="http://tempuri.org/IWeather/GetWeatherDayResponse")]
-        WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetWeatherDay(string city);
+        Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetWeatherDay(string city);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWeather/GetWeatherDay", ReplyAction="http://tempuri.org/IWeather/GetWeatherDayResponse")]
-        System.Threading.Tasks.Task<WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetWeatherDayAsync(string city);
+        System.Threading.Tasks.Task<Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetWeatherDayAsync(string city);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IWeather/UpdateCities")]
         void UpdateCities();
@@ -165,12 +165,12 @@ namespace WeatherBot.CheckUpdateWeather.WSLweatherReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IWeatherChannel : WeatherBot.CheckUpdateWeather.WSLweatherReference.IWeather, System.ServiceModel.IClientChannel {
+    public interface IWeatherChannel : Test.CheckUpdateWeather.WSLweatherReference.IWeather, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WeatherClient : System.ServiceModel.ClientBase<WeatherBot.CheckUpdateWeather.WSLweatherReference.IWeather>, WeatherBot.CheckUpdateWeather.WSLweatherReference.IWeather {
+    public partial class WeatherClient : System.ServiceModel.ClientBase<Test.CheckUpdateWeather.WSLweatherReference.IWeather>, Test.CheckUpdateWeather.WSLweatherReference.IWeather {
         
         public WeatherClient() {
         }
@@ -191,19 +191,19 @@ namespace WeatherBot.CheckUpdateWeather.WSLweatherReference {
                 base(binding, remoteAddress) {
         }
         
-        public WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetDataWeatherDay(System.DateTime dataTime) {
+        public Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetDataWeatherDay(System.DateTime dataTime) {
             return base.Channel.GetDataWeatherDay(dataTime);
         }
         
-        public System.Threading.Tasks.Task<WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetDataWeatherDayAsync(System.DateTime dataTime) {
+        public System.Threading.Tasks.Task<Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetDataWeatherDayAsync(System.DateTime dataTime) {
             return base.Channel.GetDataWeatherDayAsync(dataTime);
         }
         
-        public WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetWeatherDay(string city) {
+        public Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetWeatherDay(string city) {
             return base.Channel.GetWeatherDay(city);
         }
         
-        public System.Threading.Tasks.Task<WeatherBot.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetWeatherDayAsync(string city) {
+        public System.Threading.Tasks.Task<Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetWeatherDayAsync(string city) {
             return base.Channel.GetWeatherDayAsync(city);
         }
         

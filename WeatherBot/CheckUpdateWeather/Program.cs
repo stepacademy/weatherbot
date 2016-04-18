@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml;
 
 
-namespace WeatherBot.CheckUpdateWeather
+namespace Test.CheckUpdateWeather
 {
     class Program
     {
