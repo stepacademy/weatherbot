@@ -21,6 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOFilterTest", "Test\IOFilt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSLweather", "WSLweather\WSLweather.csproj", "{1B683C31-0F5C-4A54-A385-0FAB26B463C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckUpdateWeather", "CheckUpdateWeather\CheckUpdateWeather.csproj", "{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1B683C31-0F5C-4A54-A385-0FAB26B463C8} = {1B683C31-0F5C-4A54-A385-0FAB26B463C8}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +64,10 @@ Global
 		{1B683C31-0F5C-4A54-A385-0FAB26B463C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B683C31-0F5C-4A54-A385-0FAB26B463C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B683C31-0F5C-4A54-A385-0FAB26B463C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,5 +77,6 @@ Global
 		{303118C7-6AB5-4F34-8DAC-9690B89EF97C} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 		{B72C19C3-BC36-4BBA-9677-DC743B2B3D3D} = {BD8A2866-059D-4673-8C31-491F42FB268B}
+		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 	EndGlobalSection
 EndGlobal
