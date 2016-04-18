@@ -27,10 +27,12 @@ namespace WeatherBot.IOTranslator
                 message.Response = new MessageResponse();
 
                 string msgout = OutcomeMessage();
+                int i = 0;
+                int.TryParse(message.Text[0].ToString(), out i);
                 if (DebugOutEvent != null)
-                    DebugOutEvent("\n[IN]:\n" + message.Text +"\n[OUT]:\n"+ msgout);
+                    DebugOutEvent("\n[IN]:\n" + message.Text + " [" + i + "]" + "\n[OUT]:\n"+ msgout);
                 message.Response.Text = msgout;
-
+                
                 return message;
             }
             return null;
@@ -72,12 +74,14 @@ namespace WeatherBot.IOTranslator
             if (_Tokens.Count == 0) return "Введите что-нибудь...";  // запрос к базе
             foreach (string str in _Tokens)
             {
+                
                 string token = new string(str.ToArray());
 
                 FindDateInWord(cli, str);
 
-                if (_Cities.Contains(str))
-                    cli.SetCity(str);
+                string city=str;
+                if (ContainsInLowerCase(_Cities, ref city))
+                    cli.SetCity(city);
 
                 int subscr = cli.subsrib;
                 if (IsDayPart(str, ref subscr))
@@ -88,11 +92,27 @@ namespace WeatherBot.IOTranslator
                 cli.subsrib = (int)ClimatInfo.SUBSCRIPT.MORNING + (int)ClimatInfo.SUBSCRIPT.DAY
                             + (int)ClimatInfo.SUBSCRIPT.EVENING + (int)ClimatInfo.SUBSCRIPT.NIGHT;
 
+            if (cli.Count==0)
+                AddDateToClimatInfo(cli, DateTime.Now);
+
             string check = "";
             if (NotCorrectMessageAnswer(cli, ref check))
                 return check;
 
             return cli.ToString();
+        }
+        private bool ContainsInLowerCase(List<string> words, ref string search)
+        {
+            foreach (string test in words)
+            {
+                if (search.ToLower() == test.ToLower())
+                {
+                    search = test;
+                    return true;
+                }
+                  
+            }
+            return false;
         }
 
         private string PrepareMessage(string message)
@@ -110,7 +130,7 @@ namespace WeatherBot.IOTranslator
 
         private List<string> BreakWords(string message)
         {
-            message = PrepareMessage(message);
+            message = (PrepareMessage(message)).ToLower();
             string[] words = message.Split(' ');
             List<string> ret = new List<string>();
 
