@@ -129,7 +129,7 @@ namespace Test.CheckCities
             //свободных 2
             _pool = new Semaphore(2, 10);
 
-            Progress.TotalProgress = doc.DocumentElement.ChildNodes.Count;
+            Progress.TotalProgress = doc.DocumentElement.ChildNodes.Count - 1;
 
             foreach (XmlElement countryElement in doc.DocumentElement)
             {

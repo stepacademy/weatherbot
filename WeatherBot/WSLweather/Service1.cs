@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using System.Xml;
+using WeatherBot.Database;
 using WeatherBot.Database.Entities;
 
-namespace Weatherbot.WSLweather
+namespace WeatherBot.WSLweather
 {
     public class Weather : IWeather
     {
@@ -17,14 +20,9 @@ namespace Weatherbot.WSLweather
             throw new NotImplementedException();
         }
 
-
-    }
-
-    public class DbQuery : IWeatherDbQuery
-    {
         public void UpdateCities()
         {
-            using (var db = new WeatherBot.Database.WeatherDbContext())
+            using (var db = new WeatherDbContext())
             {
                 var doc = new XmlDocument();
                 doc.Load(@"https://pogoda.yandex.ru/static/cities.xml");
@@ -58,7 +56,7 @@ namespace Weatherbot.WSLweather
                                 Name = cityNode.InnerText,
                                 XmlCode = cityNode.Attributes.GetNamedItem("id").InnerText
                             });
-                            
+
                     }
 
                     db.Countries.Add(country);
@@ -68,6 +66,29 @@ namespace Weatherbot.WSLweather
 
             }
 
+        }
+
+
+        public void UpdateWeather()
+        {
+            using (var db = new WeatherDbContext())
+            {
+                db.Cities.Load();
+
+                var lstCities = db.Cities.ToList();
+
+                if (lstCities.Count == 0) return;
+
+                var doc = new XmlDocument();
+
+                foreach (var city in lstCities)
+                {
+                    doc.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
+
+
+                }
+
+            }
         }
     }
 }
