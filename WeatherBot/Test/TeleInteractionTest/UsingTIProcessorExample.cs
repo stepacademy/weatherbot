@@ -19,7 +19,7 @@ namespace Test.TeleInteractionTest {
                 // --- message processing ---
 
                 message.Response = new MessageResponse();
-                message.Response.Text = "repeater: Cам " + message.Text + "! =)";
+                message.Response.Text = "Cам " + message.Text + ", " + message.User.FirstName + "! =)";
 
                 // --- message processing ---
 
@@ -38,6 +38,5 @@ namespace Test.TeleInteractionTest {
             InteractionProcess.Instance.State = InteractionProcessState.Launched;
         }
 
-        public UsingTIProcessorExample() { }
     }
 }
