@@ -48,7 +48,7 @@
     <Compile Include="DayClimatInfo.cs" />
     <Compile Include="DayPartClimatInfo.cs" />
     <Compile Include="DBEmulator.cs" />
-    <Compile Include="IOFilterator.cs" />
+    <Compile Include="IOTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

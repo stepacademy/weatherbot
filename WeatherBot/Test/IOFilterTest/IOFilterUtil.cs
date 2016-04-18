@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WeatherBot.IOFilter;
+using WeatherBot.IOTranslator;
 
 namespace Test.IOFilterTest
 {
     class Tester
     {
-        IOFilterator iof;
+        IOFilter iof;
         delegate void TestedMethod();
 
         public Tester()
@@ -17,18 +17,17 @@ namespace Test.IOFilterTest
             Console.WriteLine("CREATE TESTOR");
             testRUN(InitIOFilterator, "InitIOFilterator");
             DateTime dtstart = DateTime.Now;
-            TimeSpan ts = new TimeSpan(0, 0, 10);
+            TimeSpan ts = new TimeSpan(0, 0, 1);
             while (true)
             {
                 if (ts < DateTime.Now - dtstart)
                 {
                     dtstart = DateTime.Now;
-                    //Console.Clear();
+                  
                     Console.WriteLine(DateTime.Now + "waiting...");
                 }
             }
         }
-
         private void testRUN(TestedMethod method, string description)
         {
             Console.Write(description + "...");
@@ -46,11 +45,10 @@ namespace Test.IOFilterTest
 
         private void InitIOFilterator()
         {
-            iof = new IOFilterator();
-            iof.DebugOutEvent += Messaging;
+            iof = new IOFilter(DebugOut);
         }
 
-        private void Messaging(string debug_text)
+        private void DebugOut(string debug_text)
         {
             Console.WriteLine(debug_text);
         }

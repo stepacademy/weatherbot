@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleInteraction", "TeleInteraction\TeleInteraction.csproj", "{D812A40F-68C2-44C1-A91B-EE32E9DEE401}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOFilter", "IOFilter\IOFilter.csproj", "{AE515676-DF5B-4C0D-BA57-B86F5E854D22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOTranslator", "IOFilter\IOTranslator.csproj", "{AE515676-DF5B-4C0D-BA57-B86F5E854D22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{991327E4-08EC-47F2-8A50-99094AF77F93}"
 EndProject

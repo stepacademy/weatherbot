@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace WeatherBot.IOFilter
+namespace WeatherBot.IOTranslator
 {
     public class ClimatInfo : IEnumerable<DayClimatInfo>, IEnumerator<DayClimatInfo>
     {

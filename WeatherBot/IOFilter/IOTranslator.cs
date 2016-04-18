@@ -6,12 +6,12 @@ using WeatherBot.TeleInteraction;
 //using WeatherBot.TeleInteraction;
 using WeatherBot.TeleInteraction.TelegramAdapters;
 
-namespace WeatherBot.IOFilter
+namespace WeatherBot.IOTranslator
 {
     ///
-    ///  IOFilterator
+    ///  IOFilter
     ///
-    public class IOFilterator
+    public class IOFilter
     {
         public delegate void  DebugOut(string debug_text);
         private List<string> _Tokens = new List<string>();
@@ -28,7 +28,7 @@ namespace WeatherBot.IOFilter
 
                 string msgout = OutcomeMessage();
                 if (DebugOutEvent != null)
-                    DebugOutEvent("[IN]:\n" + message.Text +"\n[OUT]:\n"+ msgout);
+                    DebugOutEvent("\n[IN]:\n" + message.Text +"\n[OUT]:\n"+ msgout);
                 message.Response.Text = msgout;
 
                 return message;
@@ -36,13 +36,19 @@ namespace WeatherBot.IOFilter
             return null;
         }
 
-        public IOFilterator()
+        public IOFilter(DebugOut debugOutMethod)
+        {
+            DebugOutEvent += debugOutMethod;
+            _Cities = new DBEmulator().GetCountries();
+            InteractionProcess.Instance.ProcessingEventHandlers += MessageProcessing;
+            InteractionProcess.Instance.State = InteractionProcessState.Launched;
+        }
+
+        public IOFilter()
         {
             _Cities = new DBEmulator().GetCountries();
             InteractionProcess.Instance.ProcessingEventHandlers += MessageProcessing;
             InteractionProcess.Instance.State = InteractionProcessState.Launched;
-
-           
         }
 
         public void IncomeMessage(string message)
@@ -251,9 +257,9 @@ namespace WeatherBot.IOFilter
 
         private bool NotCorrectMessageAnswer(ClimatInfo cli, ref string answer)
         {
-            answer = "Вы";
-            if (cli.city == null) answer += ", не указали свой город";   // запросы к базе
-            if (cli.Count == 0) answer += ", не выбрали дни";
+            answer = "Вы";  // проработать грамматику ответа
+            if (cli.city == null) answer += " не указали свой город ";   // запросы к базе
+            if (cli.Count == 0) answer += " не выбрали дни ";
             return  answer != "Вы";
         }
     }
