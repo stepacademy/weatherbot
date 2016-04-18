@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOFilterTest", "Test\IOFilt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSLweather", "WSLweather\WSLweather.csproj", "{1B683C31-0F5C-4A54-A385-0FAB26B463C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckUpdateWeather", "CheckUpdateWeather\CheckUpdateWeather.csproj", "{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckUpdateWeather", "Test\CheckUpdateWeather\CheckUpdateWeather.csproj", "{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1B683C31-0F5C-4A54-A385-0FAB26B463C8} = {1B683C31-0F5C-4A54-A385-0FAB26B463C8}
 	EndProjectSection
