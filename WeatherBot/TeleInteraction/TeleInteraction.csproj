@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ITeleInteractor.cs" />
     <Compile Include="InteractionProcess.cs" />
     <Compile Include="TelegramAdapters\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

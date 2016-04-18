@@ -1,7 +1,9 @@
-﻿using System;
-
+﻿
+/// Message class / Stanislav Kuzmich / Art.Stea1th
 
 namespace WeatherBot.TeleInteraction.TelegramAdapters {
+
+    using System;
 
     public class Message {
 

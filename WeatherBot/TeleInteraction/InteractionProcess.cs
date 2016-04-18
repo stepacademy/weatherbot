@@ -1,15 +1,17 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using WeatherBot.TeleInteraction.TelegramAdapters;
+﻿
+/// InteractionProcess class / Stanislav Kuzmich / Art.Stea1th
 
 namespace WeatherBot.TeleInteraction {
+
+    using System.Threading;
+    using WeatherBot.TeleInteraction.TelegramAdapters;
 
     public enum InteractionProcessState { Stopped, Launched };
     public delegate Message NextQueryProcessingEvent(Message message);
 
     public class InteractionProcess {
 
-        private ITeleInteractor _teleInteractor;
+        private TeleInteractor _teleInteractor;
         private InteractionProcessState _state;
 
         public InteractionProcessState State {

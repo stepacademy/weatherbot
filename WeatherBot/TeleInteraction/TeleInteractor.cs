@@ -1,11 +1,14 @@
-﻿using System.IO;
-using System.Collections.Generic;
-using System;
-using WeatherBot.TeleInteraction.TelegramAdapters;
+﻿
+/// TeleInteractor class / Stanislav Kuzmich / Art.Stea1th
 
 namespace WeatherBot.TeleInteraction {
 
-    class TeleInteractor : ITeleInteractor {
+    using System;
+    using System.IO;
+    using System.Collections.Generic;    
+    using WeatherBot.TeleInteraction.TelegramAdapters;
+
+    class TeleInteractor {
 
         private string _botToken;
 
@@ -83,6 +86,5 @@ namespace WeatherBot.TeleInteraction {
             Initialize();
             _updateIntervalMs = updateIntervalMs;                                        // will be dynamic recalculate
         }
-
     }
 }
