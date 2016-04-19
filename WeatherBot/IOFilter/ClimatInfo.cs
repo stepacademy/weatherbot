@@ -58,15 +58,10 @@ namespace WeatherBot.IOTranslator
             foreach (DayClimatInfo dci in this)
             {
                 sb.AppendLine(dci.ToString());
-                /// нужно перенести в другое место (только для демонстрации)
-               
-                if ((subsrib & (int)SUBSCRIPT.MORNING) == (int)SUBSCRIPT.MORNING) sb.AppendLine("🌇(утро) 🌡+7t");
-                if ((subsrib & (int)SUBSCRIPT.DAY) == (int)SUBSCRIPT.DAY) sb.AppendLine("🏙(день) 🌡+12t ☀️");
-                if ((subsrib & (int)SUBSCRIPT.EVENING) == (int)SUBSCRIPT.EVENING) sb.AppendLine("🌆(веч. ) 🌡+4t ⛅️ " + 7);
-                if ((subsrib & (int)SUBSCRIPT.NIGHT) == (int)SUBSCRIPT.NIGHT) sb.AppendLine("🌃(ночь) 🌡+0t" + 8);
             }
             return sb.ToString();
         }
+
 
         public DayClimatInfo Current
         {
