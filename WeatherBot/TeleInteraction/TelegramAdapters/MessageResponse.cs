@@ -1,5 +1,7 @@
-﻿namespace WeatherBot.TeleInteraction.TelegramAdapters {
+﻿
+/// MessageResponse class / Stanislav Kuzmich / Art.Stea1th
 
+namespace WeatherBot.TeleInteraction.TelegramAdapters {
 
     public class MessageResponse {
 

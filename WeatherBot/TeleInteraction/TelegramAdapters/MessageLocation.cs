@@ -1,5 +1,7 @@
-﻿namespace WeatherBot.TeleInteraction.TelegramAdapters {
+﻿
+/// MessageLocation class / Stanislav Kuzmich / Art.Stea1th
 
+namespace WeatherBot.TeleInteraction.TelegramAdapters {
 
     public class MessageLocation {
 
