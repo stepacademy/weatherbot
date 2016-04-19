@@ -53,11 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InteractionProcess.cs" />
+    <Compile Include="TeleInteractor.cs" />
     <Compile Include="TelegramAdapters\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelegramAdapters\MResponse.cs" />
-    <Compile Include="TeleInteractor.cs" />
+    <Compile Include="ReceiveActionListener.cs" />
     <Compile Include="TelegramAdapters\MLocation.cs" />
     <Compile Include="TelegramAdapters\MUser.cs" />
   </ItemGroup>

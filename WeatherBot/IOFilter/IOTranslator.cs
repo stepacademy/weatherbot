@@ -32,8 +32,8 @@ namespace WeatherBot.IOTranslator
             DB.LoadCities(_Cities);
             DB.LoadDayPartsDictionary(day_parts);
             DB.LoadDateInWordDictionary(dateInWord);
-            InteractionProcess.Instance.ProcessingEventHandlers += MessageProcessing;
-            InteractionProcess.Instance.State = InteractionProcessState.Launched;
+            ReceiveActionListener.Instance.MessageProcessingEventHandlers += MessageProcessing;
+            ReceiveActionListener.Instance.Process();
         }
 
 

@@ -1,7 +1,7 @@
-﻿using System;
-using WeatherBot.TeleInteraction.TelegramAdapters;
+﻿namespace Test.TeleInteractionTest {
 
-namespace Test.TeleInteractionTest {
+    using System;
+    using WeatherBot.TeleInteraction.TelegramAdapters;
 
     class TIProcessorTest {
 

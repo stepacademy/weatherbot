@@ -1,7 +1,7 @@
-﻿using WeatherBot.TeleInteraction;
-using WeatherBot.TeleInteraction.TelegramAdapters;
+﻿namespace Test.TeleInteractionTest {
 
-namespace Test.TeleInteractionTest {
+    using WeatherBot.TeleInteraction;
+    using WeatherBot.TeleInteraction.TelegramAdapters;
 
     public delegate void OnChangeDelegate(Message message);
 
@@ -32,8 +32,8 @@ namespace Test.TeleInteractionTest {
         public void Start(OnChangeDelegate onChangeEvent) {
 
             OnChangeEvent += onChangeEvent;
-            InteractionProcess.Instance.ProcessingEventHandlers += MessageProcessing;
-            InteractionProcess.Instance.State = InteractionProcessState.Launched;
+            ReceiveActionListener.Instance.MessageProcessingEventHandlers += MessageProcessing;
+            ReceiveActionListener.Instance.Process();
         }
 
     }
