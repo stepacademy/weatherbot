@@ -33,7 +33,9 @@ namespace WeatherBot.TeleInteraction {
             }
         }
 
-        public event NextQueryProcessingEvent ProcessingEventHandlers;
+        public event NextQueryProcessingEvent ProcessingEventHandlers =
+            (Message message) => { return null; };                               // <- null-reference Invoke protection
+
         private static InteractionProcess _instance;
 
         public static InteractionProcess Instance {

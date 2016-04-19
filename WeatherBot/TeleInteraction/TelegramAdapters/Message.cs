@@ -9,9 +9,9 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
 
         private Telegram.Bot.Types.Message _message;
 
-        private MessageUser _user;
-        private MessageLocation _location;        
-        private MessageResponse _response;
+        private MUser _user;
+        private MLocation _location;        
+        private MResponse _response;
 
         /// <summary>
         /// Unique message identifier
@@ -43,7 +43,7 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
         /// <summary>
         /// Message sender
         /// </summary>
-        public MessageUser User {
+        public MUser User {
             get {
                 return _user;
             }
@@ -52,7 +52,7 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
         /// <summary>
         /// Location
         /// </summary>
-        public MessageLocation Location {
+        public MLocation Location {
             get {
                 return _location;
             }
@@ -61,7 +61,7 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
         /// <summary>
         /// new MessageResponse attach here
         /// </summary>
-        public MessageResponse Response {
+        public MResponse Response {
             get {
                 return _response;
             }
@@ -73,8 +73,8 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
         public Message(Telegram.Bot.Types.Update update) {
 
             _message  = update.Message;
-            _user     = new MessageUser(update.Message.From);
-            _location = new MessageLocation(update.Message.Location);
+            _user     = new MUser(update.Message.From);
+            _location = new MLocation(update.Message.Location);
             Response  = null;
         }
 

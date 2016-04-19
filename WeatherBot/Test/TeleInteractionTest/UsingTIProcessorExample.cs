@@ -7,24 +7,22 @@ namespace Test.TeleInteractionTest {
 
     class UsingTIProcessorExample {
 
-        private event OnChangeDelegate OnChangeEvent;
+        private event OnChangeDelegate OnChangeEvent = (Message message) => { }; // <- null-reference Invoke protection
 
         private Message MessageProcessing(Message message) {
 
             if (message != null) {
 
-                if (OnChangeEvent != null)
-                    OnChangeEvent.Invoke(message);
+                OnChangeEvent.Invoke(message);
 
                 // --- message processing ---
 
-                message.Response = new MessageResponse();
+                message.Response = new MResponse();
                 message.Response.Text = "Cам " + message.Text + ", " + message.User.FirstName + "! =)";
 
                 // --- message processing ---
 
-                if (OnChangeEvent != null)
-                    OnChangeEvent.Invoke(message);
+                OnChangeEvent.Invoke(message);
 
                 return message;
             }

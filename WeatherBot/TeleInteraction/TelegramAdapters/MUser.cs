@@ -3,7 +3,7 @@
 
 namespace WeatherBot.TeleInteraction.TelegramAdapters {
 
-    public class MessageUser {
+    public class MUser {
 
         Telegram.Bot.Types.User _user;
 
@@ -43,7 +43,7 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
             }
         }
 
-        public MessageUser(Telegram.Bot.Types.User user) {
+        public MUser(Telegram.Bot.Types.User user) {
             _user = user;
         }
     }

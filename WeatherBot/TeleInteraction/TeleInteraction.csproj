@@ -56,10 +56,10 @@
     <Compile Include="InteractionProcess.cs" />
     <Compile Include="TelegramAdapters\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelegramAdapters\MessageResponse.cs" />
+    <Compile Include="TelegramAdapters\MResponse.cs" />
     <Compile Include="TeleInteractor.cs" />
-    <Compile Include="TelegramAdapters\MessageLocation.cs" />
-    <Compile Include="TelegramAdapters\MessageUser.cs" />
+    <Compile Include="TelegramAdapters\MLocation.cs" />
+    <Compile Include="TelegramAdapters\MUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -3,7 +3,7 @@
 
 namespace WeatherBot.TeleInteraction.TelegramAdapters {
 
-    public class MessageResponse {
+    public class MResponse {
 
         /// <summary>
         /// response Message Text (Optional)

@@ -24,7 +24,7 @@ namespace WeatherBot.IOTranslator
             if (message != null)
             {
                 IncomeMessage(message.Text);
-                message.Response = new MessageResponse();
+                message.Response = new MResponse();
 
                 string msgout = OutcomeMessage();
                 int i = 0;

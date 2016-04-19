@@ -3,7 +3,7 @@
 
 namespace WeatherBot.TeleInteraction.TelegramAdapters {
 
-    public class MessageLocation {
+    public class MLocation {
 
         Telegram.Bot.Types.Location _location;
 
@@ -25,7 +25,7 @@ namespace WeatherBot.TeleInteraction.TelegramAdapters {
             }
         }
 
-        public MessageLocation(Telegram.Bot.Types.Location location) {
+        public MLocation(Telegram.Bot.Types.Location location) {
             _location = location;
         }
     }
