@@ -45,6 +45,7 @@ namespace WeatherBot.IOTranslator
         }
     }
 }
+
 /*
  Понедельник - Monday/Mon
  Вторник - Tuesday/Tue
