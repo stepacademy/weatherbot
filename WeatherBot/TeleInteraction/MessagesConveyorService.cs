@@ -6,7 +6,7 @@
     using TelegramAdapters;
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
-    public class ReceiveActionListenerService : IReceiveActionListenerService {        
+    public class MessagesConveyorService : IMessagesConveyorService {        
 
         private int _lastProcessingMessageId;
 
@@ -41,7 +41,7 @@
             TeleInteractor.Instance.Received -= UpdatesReceived;
         }
 
-        public ReceiveActionListenerService() {
+        public MessagesConveyorService() {
 
             TeleInteractor.Instance.Received += new ReceivedUpdatesEventHandler(UpdatesReceived);
         }

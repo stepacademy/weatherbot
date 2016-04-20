@@ -25,7 +25,7 @@
 
             UsingTIProcessorExample example = new UsingTIProcessorExample();
 
-            using (var host = new ServiceHost(typeof(ReceiveActionListenerService))) {
+            using (var host = new ServiceHost(typeof(MessagesConveyorService))) {
 
                 host.Open();
                 

@@ -34,7 +34,7 @@
             OnChangeEvent += onChangeEvent;
             //ReceiveActionListener.Instance.MessageProcessingEventHandlers += MessageProcessing;
             //ReceiveActionListener.Instance.Start();
-            ReceiveActionListenerService s = new ReceiveActionListenerService();
+            MessagesConveyorService s = new MessagesConveyorService();
             s.Start();
         }
 
