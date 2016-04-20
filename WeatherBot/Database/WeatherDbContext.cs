@@ -18,5 +18,9 @@ namespace WeatherBot.Database
         public DbSet<WeatherState> WeatherStates { get; set; }
         public DbSet<UpdateError> UpdateErrors { get; set; }
         public DbSet<StateCode> StateCodes { get; set; }
+        public DbSet<FactWeather> FactWeathers { get; set; }
+        public DbSet<ForecastWeather> ForecastWeathers { get; set; }
+        public DbSet<WeatherData> WeatherDatas { get; set; }
+        public DbSet<DayPart> DayParts { get; set; }
     }
 }
