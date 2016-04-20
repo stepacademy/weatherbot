@@ -91,7 +91,60 @@ namespace WeatherBot.WSLweather
                         {
                             UpdateLocations(city, root);
 
-                            //разбор погоды
+                            if(city.Weather == null)
+                                city.Weather = new Database.Entities.Weather() {City = city};
+
+                            if(city.Weather.Fact == null)
+                                city.Weather.Fact = new FactWeather() {Weather = city.Weather, WeatherData = new WeatherData() };
+
+                            
+                            foreach (XmlNode item in root.ChildNodes)
+                            {
+                                switch (item.Name)
+                                {
+                                    case "fact":
+                                        var fact = city.Weather.Fact;
+                                        fact.ObservationTime =
+                                            Convert.ToDateTime(
+                                                item.ChildNodes
+                                                    .Cast<XmlNode>()
+                                                    .First(p => p.Name == "observation_time")
+                                                    .InnerText);
+                                        fact.WeatherData.Temperature =
+                                            Convert.ToDouble(
+                                                item.ChildNodes.Cast<XmlNode>()
+                                                    .First(p => p.Name == "temperature")
+                                                    .InnerText);
+                                        fact.WeatherData.Humidity =
+                                            Convert.ToInt32(
+                                                item.ChildNodes.Cast<XmlNode>()
+                                                    .First(p => p.Name == "humidity")
+                                                    .InnerText);
+                                        fact.WeatherData.Pressure =
+                                            Convert.ToInt32(
+                                                item.ChildNodes.Cast<XmlNode>()
+                                                    .First(p => p.Name == "pressure")
+                                                    .InnerText);
+
+                                        //var wstCode = item.ChildNodes.Cast<XmlNode>()
+                                        //    .First(p => p.Name == "image-v3")
+                                        //    .InnerText;
+                                        //var wst = db.WeatherStates.ToList();
+                                        //if (!wst.Exists(p => p.Code == wstCode))
+                                        //{
+                                        //    WeatherState wstNew = new WeatherState() {};
+                                        //}
+                                        //    fact.WeatherData.WeatherState = db.WeatherStates.ToList().Where()
+
+                                        break;
+                                    case "day":
+                                        break;
+                                }
+                                if (item.Name == "fact")
+                                {
+                                    Console.WriteLine(item.InnerText);
+                                }
+                            }
                         }
                         else
                         {
