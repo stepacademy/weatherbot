@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OnChangeDelegate.cs" />
     <Compile Include="UsingTIProcessorExample.cs" />
     <Compile Include="TIProcessorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

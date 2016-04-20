@@ -54,6 +54,7 @@
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\Country.cs" />
     <Compile Include="Entities\DayPart.cs" />
+    <Compile Include="Entities\DayTimeType.cs" />
     <Compile Include="Entities\ForecastWeather.cs" />
     <Compile Include="Entities\UpdateError.cs" />
     <Compile Include="Entities\Weather.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Entities\CalendarDate.cs" />
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\FactWeather.cs" />
+    <Compile Include="Entities\WindDirectionType.cs" />
     <Compile Include="WeatherDbContext.cs" />
     <Compile Include="Entities\WeatherState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

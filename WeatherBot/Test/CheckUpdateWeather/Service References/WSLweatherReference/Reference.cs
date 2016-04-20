@@ -8,22 +8,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Test.CheckUpdateWeather.WSLweatherReference {
-    using System.Runtime.Serialization;
-    using System;
-    
-    
+using System;
+using System.Runtime.Serialization;
+
+namespace Test.CheckUpdateWeather.Service_References.WSLweatherReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QDataWeatherDay", Namespace="http://schemas.datacontract.org/2004/07/WeatherBot.WSLweather")]
-    [System.SerializableAttribute()]
+    [DataContract(Name="QDataWeatherDay", Namespace="http://schemas.datacontract.org/2004/07/WeatherBot.WSLweather")]
+    [Serializable()]
     public partial class QDataWeatherDay : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.NonSerializedAttribute()]
+        [NonSerialized()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDayPart[] ItemsPartsField;
+        [OptionalField()]
+        private QDataWeatherDayPart[] ItemsPartsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -35,8 +34,8 @@ namespace Test.CheckUpdateWeather.WSLweatherReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDayPart[] ItemsParts {
+        [DataMember()]
+        public QDataWeatherDayPart[] ItemsParts {
             get {
                 return this.ItemsPartsField;
             }
@@ -60,20 +59,20 @@ namespace Test.CheckUpdateWeather.WSLweatherReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QDataWeatherDayPart", Namespace="http://schemas.datacontract.org/2004/07/WeatherBot.WSLweather")]
-    [System.SerializableAttribute()]
+    [DataContract(Name="QDataWeatherDayPart", Namespace="http://schemas.datacontract.org/2004/07/WeatherBot.WSLweather")]
+    [Serializable()]
     public partial class QDataWeatherDayPart : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.NonSerializedAttribute()]
+        [NonSerialized()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        [OptionalField()]
         private string DayPartField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        [OptionalField()]
         private string StateField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        [OptionalField()]
         private double TempField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -86,7 +85,7 @@ namespace Test.CheckUpdateWeather.WSLweatherReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [DataMember()]
         public string DayPart {
             get {
                 return this.DayPartField;
@@ -99,7 +98,7 @@ namespace Test.CheckUpdateWeather.WSLweatherReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [DataMember()]
         public string State {
             get {
                 return this.StateField;
@@ -112,7 +111,7 @@ namespace Test.CheckUpdateWeather.WSLweatherReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [DataMember()]
         public double Temp {
             get {
                 return this.TempField;
@@ -140,16 +139,16 @@ namespace Test.CheckUpdateWeather.WSLweatherReference {
     public interface IWeather {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWeather/GetDataWeatherDay", ReplyAction="http://tempuri.org/IWeather/GetDataWeatherDayResponse")]
-        Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetDataWeatherDay(System.DateTime dataTime);
+        QDataWeatherDay GetDataWeatherDay(System.DateTime dataTime);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWeather/GetDataWeatherDay", ReplyAction="http://tempuri.org/IWeather/GetDataWeatherDayResponse")]
-        System.Threading.Tasks.Task<Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetDataWeatherDayAsync(System.DateTime dataTime);
+        System.Threading.Tasks.Task<QDataWeatherDay> GetDataWeatherDayAsync(System.DateTime dataTime);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWeather/GetWeatherDay", ReplyAction="http://tempuri.org/IWeather/GetWeatherDayResponse")]
-        Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetWeatherDay(string city);
+        QDataWeatherDay GetWeatherDay(string city);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWeather/GetWeatherDay", ReplyAction="http://tempuri.org/IWeather/GetWeatherDayResponse")]
-        System.Threading.Tasks.Task<Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetWeatherDayAsync(string city);
+        System.Threading.Tasks.Task<QDataWeatherDay> GetWeatherDayAsync(string city);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IWeather/UpdateCities")]
         void UpdateCities();
@@ -165,12 +164,12 @@ namespace Test.CheckUpdateWeather.WSLweatherReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IWeatherChannel : Test.CheckUpdateWeather.WSLweatherReference.IWeather, System.ServiceModel.IClientChannel {
+    public interface IWeatherChannel : IWeather, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WeatherClient : System.ServiceModel.ClientBase<Test.CheckUpdateWeather.WSLweatherReference.IWeather>, Test.CheckUpdateWeather.WSLweatherReference.IWeather {
+    public partial class WeatherClient : System.ServiceModel.ClientBase<IWeather>, IWeather {
         
         public WeatherClient() {
         }
@@ -191,19 +190,19 @@ namespace Test.CheckUpdateWeather.WSLweatherReference {
                 base(binding, remoteAddress) {
         }
         
-        public Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetDataWeatherDay(System.DateTime dataTime) {
+        public QDataWeatherDay GetDataWeatherDay(System.DateTime dataTime) {
             return base.Channel.GetDataWeatherDay(dataTime);
         }
         
-        public System.Threading.Tasks.Task<Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetDataWeatherDayAsync(System.DateTime dataTime) {
+        public System.Threading.Tasks.Task<QDataWeatherDay> GetDataWeatherDayAsync(System.DateTime dataTime) {
             return base.Channel.GetDataWeatherDayAsync(dataTime);
         }
         
-        public Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay GetWeatherDay(string city) {
+        public QDataWeatherDay GetWeatherDay(string city) {
             return base.Channel.GetWeatherDay(city);
         }
         
-        public System.Threading.Tasks.Task<Test.CheckUpdateWeather.WSLweatherReference.QDataWeatherDay> GetWeatherDayAsync(string city) {
+        public System.Threading.Tasks.Task<QDataWeatherDay> GetWeatherDayAsync(string city) {
             return base.Channel.GetWeatherDayAsync(city);
         }
         

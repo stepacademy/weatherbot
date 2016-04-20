@@ -4,7 +4,7 @@ using System.Linq;
 using WeatherBot.TeleInteraction;
 using WeatherBot.TeleInteraction.TelegramAdapters;
 
-namespace WeatherBot.IOTranslator
+namespace WeatherBot.IOFilter
 {
     public class IoFilter : IMessageProcessor
     {
