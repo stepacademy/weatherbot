@@ -8,8 +8,10 @@ namespace WeatherBot.Database.Entities
 {
     public class ForecastWeather
     {
-        public WeatherDate Date { get; set; }
+        public int Id { get; set; }
+        public Weather Weather { get; set; }
 
+        public CalendarDate Date { get; set; }
         public List<DayPart> DayParts { get; set; } 
     }
 }

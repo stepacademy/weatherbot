@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace WeatherBot.Database.Entities
 {
-    public class StateCode
+    public class CalendarDate
     {
         public int Id { get; set; }
-        public List<WeatherState> WeatherStates { get; set; }
-
-        //ovc, bkb_d ...
-        public string Code { get; set; } 
+        public List<ForecastWeather> ForecastWeathers { get; set; }
+        
+        public DateTime Date { get; set; }
     }
 }

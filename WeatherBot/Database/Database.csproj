@@ -55,11 +55,10 @@
     <Compile Include="Entities\Country.cs" />
     <Compile Include="Entities\DayPart.cs" />
     <Compile Include="Entities\ForecastWeather.cs" />
-    <Compile Include="Entities\StateCode.cs" />
     <Compile Include="Entities\UpdateError.cs" />
     <Compile Include="Entities\Weather.cs" />
     <Compile Include="Entities\WeatherData.cs" />
-    <Compile Include="Entities\WeatherDate.cs" />
+    <Compile Include="Entities\CalendarDate.cs" />
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\FactWeather.cs" />
     <Compile Include="WeatherDbContext.cs" />

@@ -20,9 +20,9 @@ namespace WeatherBot.Database.Entities
 
         public WeatherState WeatherState { get; set; }
         public WindDirectionType WindDirection { get; set; }
-        public string WindSpeed { get; set; }
-        public string Humidity { get; set; }
-        public string Pressure { get; set; }
+        public double WindSpeed { get; set; }
+        public int Humidity { get; set; }
+        public int Pressure { get; set; }
         public double Temperature { get; set; }
     }
 }
