@@ -46,16 +46,14 @@ namespace WeatherBot.WSLweather
                         Cities = new List<City>()
                     };
 
-                    foreach (XmlNode cityNode in countryElement)
+                    foreach (XmlNode cityNode in countryElement.Cast<XmlNode>().Where(cityNode => cityNode.Attributes != null))
                     {
-                        if (cityNode.Attributes != null)
-                            country.Cities.Add(new City()
-                            {
-                                Country = country,
-                                Name = cityNode.InnerText,
-                                XmlCode = cityNode.Attributes.GetNamedItem("id").InnerText
-                            });
-
+                        country.Cities.Add(new City()
+                        {
+                            Country = country,
+                            Name = cityNode.InnerText,
+                            XmlCode = cityNode.Attributes.GetNamedItem("id").InnerText
+                        });
                     }
 
                     db.Countries.Add(country);
@@ -85,6 +83,37 @@ namespace WeatherBot.WSLweather
                     try
                     {
                         doc.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
+
+                        var root = doc.DocumentElement;
+
+                        if (root != null)
+                        {
+                            if (city.Location == null)
+                            {
+                                city.Location = new Location()
+                                {
+                                    City = city,
+                                    Latitude =
+                                        Convert.ToDouble(root.Attributes.GetNamedItem("lat").InnerText.Replace('.', ',')),
+                                    Longitude =
+                                        Convert.ToDouble(root.Attributes.GetNamedItem("lon").InnerText.Replace('.', ','))
+                                };
+                            }
+
+                            
+                            foreach (XmlNode item in root.ChildNodes)
+                            {
+                                switch (item.Name)
+                                {
+                                    case "fact": break;
+                                        
+                                }
+                            }
+                        }
+                        else
+                        {
+                            throw new ArgumentNullException();
+                        }
                     }
                     catch (Exception ex)
                     {

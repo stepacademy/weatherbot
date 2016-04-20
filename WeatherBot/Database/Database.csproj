@@ -53,6 +53,7 @@
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\Country.cs" />
+    <Compile Include="Entities\StateCode.cs" />
     <Compile Include="Entities\UpdateError.cs" />
     <Compile Include="Entities\Weather.cs" />
     <Compile Include="Entities\WeatherDate.cs" />

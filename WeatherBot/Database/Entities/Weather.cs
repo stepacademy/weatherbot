@@ -16,12 +16,24 @@ namespace WeatherBot.Database.Entities
             Night
         }
 
+        public enum WindDirectionType
+        {
+            S, Se, Sw,
+            N, Nw, Ne,
+            W,
+            E
+        }
+
         public int Id { get; set; }
         public City City { get; set; }
         public WeatherDate Date { get; set; }
-        public int Temperature { get; set; }
+        public double Temperature { get; set; }
         public DayTimeType DayTime { get; set; }
         public WeatherState WeatherState { get; set; }
-
+        public WindDirectionType WindDirection { get; set; }
+        public string WindSpeed { get; set; }
+        public string Humidity { get; set; }
+        public string Pressure { get; set; }
+        public DateTime ObservationTime { get; set; }
     }
 }

@@ -17,5 +17,6 @@ namespace WeatherBot.Database
         public DbSet<WeatherDate> WeatherDates { get; set; }
         public DbSet<WeatherState> WeatherStates { get; set; }
         public DbSet<UpdateError> UpdateErrors { get; set; }
+        public DbSet<StateCode> StateCodes { get; set; }
     }
 }
