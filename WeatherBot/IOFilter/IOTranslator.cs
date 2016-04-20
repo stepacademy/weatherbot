@@ -6,7 +6,7 @@ using WeatherBot.TeleInteraction.TelegramAdapters;
 
 namespace WeatherBot.IOTranslator
 {
-    public class IOFilter
+    public class IOFilter : IMessageProcessor
     {
         public delegate void  DebugOut(string debug_text);
         private List<string> _Tokens = new List<string>();
@@ -32,13 +32,13 @@ namespace WeatherBot.IOTranslator
             DB.LoadCities(_Cities);
             DB.LoadDayPartsDictionary(day_parts);
             DB.LoadDateInWordDictionary(dateInWord);
-            ReceiveActionListener.Instance.MessageProcessingEventHandlers += MessageProcessing;
-            ReceiveActionListener.Instance.Process();
+            //ReceiveActionListener.Instance.MessageProcessingEventHandlers += MessageProcessing;
+            //ReceiveActionListener.Instance.Start();
         }
 
 
         #region resonse
-        private Message MessageProcessing(Message message)
+        public Message MessageProcessing(Message message)
         {
 
             if (message != null)

@@ -5,11 +5,11 @@
 
     public delegate void OnChangeDelegate(Message message);
 
-    class UsingTIProcessorExample {
+    class UsingTIProcessorExample : IMessageProcessor {
 
         private event OnChangeDelegate OnChangeEvent = (Message message) => { }; // <- null-reference Invoke protection
 
-        private Message MessageProcessing(Message message) {
+        public Message MessageProcessing(Message message) {
 
             if (message != null) {
 
@@ -32,8 +32,10 @@
         public void Start(OnChangeDelegate onChangeEvent) {
 
             OnChangeEvent += onChangeEvent;
-            ReceiveActionListener.Instance.MessageProcessingEventHandlers += MessageProcessing;
-            ReceiveActionListener.Instance.Process();
+            //ReceiveActionListener.Instance.MessageProcessingEventHandlers += MessageProcessing;
+            //ReceiveActionListener.Instance.Start();
+            ReceiveActionListenerService s = new ReceiveActionListenerService();
+            s.Start();
         }
 
     }

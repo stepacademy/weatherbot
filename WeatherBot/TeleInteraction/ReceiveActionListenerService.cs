@@ -1,40 +1,34 @@
 ﻿namespace WeatherBot.TeleInteraction {
 
-    using System.Collections.Generic;
     using System.Threading;
+    using System.ServiceModel;
+    using System.Collections.Generic;
     using TelegramAdapters;
 
-    public delegate Message MessageProcessingEvent(Message message);
-
-    public class ReceiveActionListener {
-
-        public event MessageProcessingEvent MessageProcessingEventHandlers = (Message message) => { return null; };
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
+    public class ReceiveActionListenerService : IReceiveActionListenerService {        
 
         private int _lastProcessingMessageId;
 
-        private static ReceiveActionListener _instance;
-
-        public static ReceiveActionListener Instance {
+        IMessageProcessor MessageProcessor {
             get {
-                if (_instance == null)
-                    _instance = new ReceiveActionListener();
-                return _instance;
+                return OperationContext.Current.GetCallbackChannel<IMessageProcessor>();
             }
         }
 
         private void UpdatesReceived(Queue<Telegram.Bot.Types.Update> updatesQueue) {
 
             while (updatesQueue.Count > 0) {
+
                 Message message = new Message(updatesQueue.Dequeue());
-                TeleInteractor.Instance.SendResponse(
-                    MessageProcessingEventHandlers(
-                        message.Id != _lastProcessingMessageId ? message : null
-                        ));
+
+                TeleInteractor.Instance.SendResponse(MessageProcessor.MessageProcessing(
+                        message.Id != _lastProcessingMessageId ? message : null));
                 _lastProcessingMessageId = message.Id;
             }
         }
 
-        public void Process() {
+        public void Start() {
 
             while (true) {
                 TeleInteractor.Instance.RequestAsync();
@@ -47,10 +41,9 @@
             TeleInteractor.Instance.Received -= UpdatesReceived;
         }
 
-        private ReceiveActionListener() {
+        public ReceiveActionListenerService() {
 
             TeleInteractor.Instance.Received += new ReceivedUpdatesEventHandler(UpdatesReceived);
         }
-
-    }
+    }    
 }

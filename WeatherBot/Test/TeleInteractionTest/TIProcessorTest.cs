@@ -1,6 +1,8 @@
 ﻿namespace Test.TeleInteractionTest {
 
     using System;
+    using System.ServiceModel;
+    using WeatherBot.TeleInteraction;
     using WeatherBot.TeleInteraction.TelegramAdapters;
 
     class TIProcessorTest {
@@ -17,8 +19,18 @@
 
         static void Main(string[] args) {
 
+            //WSDualHttpBinding binding = new WSDualHttpBinding();
+            //EndpointAddress endptadr = new EndpointAddress("http://localhost:12000/Duplex/Server");
+            //binding.ClientBaseAddress = new Uri("http://localhost:8000/Duplex/Client/");
+
             UsingTIProcessorExample example = new UsingTIProcessorExample();
-            example.Start(Display);
+
+            using (var host = new ServiceHost(typeof(ReceiveActionListenerService))) {
+
+                host.Open();
+                
+                example.Start(Display);
+            }
         }
     }
 }
