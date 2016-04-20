@@ -6,14 +6,6 @@ using System.Threading.Tasks;
 
 namespace WeatherBot.Database.Entities
 {
-    public enum DayTimeType
-    {
-        Morning,
-        Day,
-        Evening,
-        Night
-    }
-
     public class DayPart
     {
         public int Id { get; set; }

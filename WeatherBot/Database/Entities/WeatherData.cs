@@ -6,14 +6,6 @@ using System.Threading.Tasks;
 
 namespace WeatherBot.Database.Entities
 {
-    public enum WindDirectionType
-    {
-        S, Se, Sw,
-        N, Nw, Ne,
-        W,
-        E
-    }
-
     public class WeatherData
     {
         public int Id { get; set; }

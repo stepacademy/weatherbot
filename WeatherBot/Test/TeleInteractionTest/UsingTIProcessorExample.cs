@@ -3,8 +3,6 @@
     using WeatherBot.TeleInteraction;
     using WeatherBot.TeleInteraction.TelegramAdapters;
 
-    public delegate void OnChangeDelegate(Message message);
-
     class UsingTIProcessorExample : IMessageProcessor {
 
         private event OnChangeDelegate OnChangeEvent = (Message message) => { }; // <- null-reference Invoke protection

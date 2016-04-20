@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace WeatherBot.IOTranslator
+namespace WeatherBot.IOFilter
 {
     /// <summary>
     ///  Эмуляция запросов к базе  "Cities.txt"

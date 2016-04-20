@@ -59,6 +59,7 @@
     <Compile Include="IMessageProcessor.cs" />
     <Compile Include="IMessagesConveyorService.cs" />
     <Compile Include="MessagesConveyorService.cs" />
+    <Compile Include="ReceivedUpdatesEventHandler.cs" />
     <Compile Include="TeleInteractor.cs" />
     <Compile Include="TelegramAdapters\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

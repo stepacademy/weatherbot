@@ -5,8 +5,6 @@
     using System.Collections.Generic;
     using TelegramAdapters;
 
-    public delegate void ReceivedUpdatesEventHandler(Queue<Telegram.Bot.Types.Update> updatesQueue);
-
     public class TeleInteractor {
 
         public event ReceivedUpdatesEventHandler Received = (Queue<Telegram.Bot.Types.Update> uQ) => { };

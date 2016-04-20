@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace WeatherBot.IOTranslator
+namespace WeatherBot.IOFilter
 {
     public class DayClimatInfo
     {
