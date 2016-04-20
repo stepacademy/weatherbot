@@ -66,6 +66,7 @@ namespace WeatherBot.WSLweather
         }
 
 
+
         public void UpdateWeather()
         {
             using (var db = new Database.WeatherDbContext())
@@ -88,27 +89,9 @@ namespace WeatherBot.WSLweather
 
                         if (root != null)
                         {
-                            if (city.Location == null)
-                            {
-                                city.Location = new Location()
-                                {
-                                    City = city,
-                                    Latitude =
-                                        Convert.ToDouble(root.Attributes.GetNamedItem("lat").InnerText.Replace('.', ',')),
-                                    Longitude =
-                                        Convert.ToDouble(root.Attributes.GetNamedItem("lon").InnerText.Replace('.', ','))
-                                };
-                            }
+                            UpdateLocations(city, root);
 
-                            
-                            foreach (XmlNode item in root.ChildNodes)
-                            {
-                                switch (item.Name)
-                                {
-                                    case "fact": break;
-                                        
-                                }
-                            }
+                            //разбор погоды
                         }
                         else
                         {
@@ -129,6 +112,22 @@ namespace WeatherBot.WSLweather
 
                 db.SaveChanges();
             }
+        }
+
+        private static void UpdateLocations(City city, XmlElement root)
+        {
+            if (city.Location == null)
+            {
+                city.Location = new Location()
+                {
+                    City = city,
+                    Latitude =
+                        Convert.ToDouble(root.Attributes.GetNamedItem("lat").InnerText.Replace('.', ',')),
+                    Longitude =
+                        Convert.ToDouble(root.Attributes.GetNamedItem("lon").InnerText.Replace('.', ','))
+                };
+            }
+
         }
     }
 }

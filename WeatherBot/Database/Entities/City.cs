@@ -15,5 +15,7 @@ namespace WeatherBot.Database.Entities
         //28650, 27612 ...
         public string XmlCode { get; set; }
         public Location Location { get; set; }
+
+        public Weather Weather { get; set; }
     }
 }
