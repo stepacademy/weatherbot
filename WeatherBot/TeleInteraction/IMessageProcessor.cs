@@ -5,7 +5,7 @@
 
     public interface IMessageProcessor {
 
-        [OperationContract(IsOneWay = false)]
+        [OperationContract]
         Message MessageProcessing(Message message);
 
     }

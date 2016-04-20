@@ -9,7 +9,7 @@ namespace Test.IOFilterTest
 {
     class Tester
     {
-        IOFilter iof;
+        IoFilter iof;
         delegate void TestedMethod();
 
         public Tester()
@@ -45,7 +45,7 @@ namespace Test.IOFilterTest
 
         private void InitIOFilterator()
         {
-            iof = new IOFilter(DebugOut);
+            iof = new IoFilter(DebugOut);
         }
 
         private void DebugOut(string debug_text)

@@ -9,7 +9,7 @@ namespace WeatherBot.Database.Entities
     public class CalendarDate
     {
         public int Id { get; set; }
-        public List<ForecastWeather> ForecastWeathers { get; set; }
+        public virtual ICollection<ForecastWeather> ForecastWeathers { get; set; }
         
         public DateTime Date { get; set; }
     }

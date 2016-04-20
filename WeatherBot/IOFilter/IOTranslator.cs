@@ -6,7 +6,7 @@ using WeatherBot.TeleInteraction.TelegramAdapters;
 
 namespace WeatherBot.IOTranslator
 {
-    public class IOFilter : IMessageProcessor
+    public class IoFilter : IMessageProcessor
     {
         public delegate void  DebugOut(string debug_text);
         private List<string> _Tokens = new List<string>();
@@ -15,13 +15,13 @@ namespace WeatherBot.IOTranslator
         private Dictionary<string, int> dateInWord = new Dictionary<string, int>(); //из базы или файла
         public DebugOut DebugOutEvent;
         
-        public IOFilter(DebugOut debugOutMethod)
+        public IoFilter(DebugOut debugOutMethod)
         {
             DebugOutEvent += debugOutMethod;
             Initialize();
         }
 
-        public IOFilter()
+        public IoFilter()
         {
             Initialize();
         }
