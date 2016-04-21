@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Linq;
+using WeatherBot.Database;
 using WeatherBot.Database.Entities;
 
 namespace WeatherBot.WSLweather
@@ -65,107 +69,139 @@ namespace WeatherBot.WSLweather
 
         }
 
-
-
-        public void UpdateWeather()
+        public void UpdateCityWeather(IEnumerable<City> cities)
         {
-            using (var db = new Database.WeatherDbContext())
+            var stackCities = cities as Stack<City>;
+
+            var formatSepar = new NumberFormatInfo { NumberDecimalSeparator = "." };
+
+            while (stackCities != null && stackCities.Count > 0)
             {
-                db.Cities.Load();
+                var city = stackCities.Pop();
+                var doc = XDocument.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
 
-                var lstCities = db.Cities.ToList();
+                if (doc.Root == null) continue;
 
-                if (lstCities.Count == 0) return;
+                var ns = doc.Root.GetDefaultNamespace();
 
-                var doc = new XmlDocument();
+                var fact = doc.Root.Element(ns + "fact");
 
-                foreach (var city in lstCities)
-                {
-                    try
-                    {
-                        doc.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
+                var factWeather = city.Weather.Fact;
+                if (fact == null) continue;
 
-                        var root = doc.DocumentElement;
+                var observationTimeElement = fact.Element(ns + "observation_time");
+                if (observationTimeElement == null) continue;
 
-                        if (root != null)
-                        {
-                            UpdateLocations(city, root);
+                var obsDate = Convert.ToDateTime(observationTimeElement.Value);
+                if (factWeather.ObservationTime == obsDate) continue;
 
-                            if(city.Weather == null)
-                                city.Weather = new Database.Entities.Weather() {City = city};
+                factWeather.ObservationTime = obsDate;
 
-                            if(city.Weather.Fact == null)
-                                city.Weather.Fact = new FactWeather() {Weather = city.Weather, WeatherData = new WeatherData() };
-
-                            
-                            foreach (XmlNode item in root.ChildNodes)
-                            {
-                                switch (item.Name)
-                                {
-                                    case "fact":
-                                        var fact = city.Weather.Fact;
-                                        fact.ObservationTime =
-                                            Convert.ToDateTime(
-                                                item.ChildNodes
-                                                    .Cast<XmlNode>()
-                                                    .First(p => p.Name == "observation_time")
-                                                    .InnerText);
-                                        fact.WeatherData.Temperature =
-                                            Convert.ToDouble(
-                                                item.ChildNodes.Cast<XmlNode>()
-                                                    .First(p => p.Name == "temperature")
-                                                    .InnerText);
-                                        fact.WeatherData.Humidity =
-                                            Convert.ToInt32(
-                                                item.ChildNodes.Cast<XmlNode>()
-                                                    .First(p => p.Name == "humidity")
-                                                    .InnerText);
-                                        fact.WeatherData.Pressure =
-                                            Convert.ToInt32(
-                                                item.ChildNodes.Cast<XmlNode>()
-                                                    .First(p => p.Name == "pressure")
-                                                    .InnerText);
-
-                                        //var wstCode = item.ChildNodes.Cast<XmlNode>()
-                                        //    .First(p => p.Name == "image-v3")
-                                        //    .InnerText;
-                                        //var wst = db.WeatherStates.ToList();
-                                        //if (!wst.Exists(p => p.Code == wstCode))
-                                        //{
-                                        //    WeatherState wstNew = new WeatherState() {};
-                                        //}
-                                        //    fact.WeatherData.WeatherState = db.WeatherStates.ToList().Where()
-
-                                        break;
-                                    case "day":
-                                        break;
-                                }
-                                if (item.Name == "fact")
-                                {
-                                    Console.WriteLine(item.InnerText);
-                                }
-                            }
-                        }
-                        else
-                        {
-                            throw new ArgumentNullException();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        db.UpdateErrors.Add(new UpdateError()
-                        {
-                            City = city,
-                            Exception = ex.Message,
-                            DateTime = DateTime.Now
-                        });
-                    }
-
-                }
-
-                db.SaveChanges();
+                WeatherUpdate.WeatherDataProccessing(formatSepar, ns, fact, factWeather);
             }
         }
+
+#region get data from Db
+
+        public static WindDirectionType GetWindDirectionType(string windDirection)
+        {
+            WindDirectionType wd;
+            Enum.TryParse(windDirection, out wd);
+
+            return wd;
+        }
+
+        public static WeatherState GetWeatherState(string stateCode)
+        {
+            WeatherState result;
+            using (var db = new WeatherDbContext())
+            {
+                db.WeatherStates.Load();
+                var query = from wst in db.WeatherStates where wst.Code == stateCode select wst;
+
+                result = query.First();
+            }
+
+            return result;
+        }
+#endregion
+
+        private void ForecastUpdate(IEnumerable<City> cities)
+        {
+            var stackCities = cities as Stack<City>;
+
+            var formatSepar = new NumberFormatInfo { NumberDecimalSeparator = "." };
+
+            while (stackCities != null && stackCities.Count > 0)
+            {
+                var city = stackCities.Pop();
+
+
+            }
+        }
+
+
+        //public void UpdateWeather()
+        //{
+
+        //    using (var db = new Database.WeatherDbContext())
+        //    {
+        //        db.Cities.Load();
+
+        //        var lstCities = db.Cities.ToList();
+
+        //        if (lstCities.Count == 0) return;
+                
+
+        //        foreach (var city in lstCities)
+        //        {
+        //            try
+        //            {
+        //                UpdateLocations(city, root);
+
+        //                if (city.Weather == null)
+        //                    city.Weather = new Database.Entities.Weather();
+
+        //                if (city.Weather.Fact == null)
+        //                    city.Weather.Fact = new FactWeather() { WeatherData = new WeatherData() };
+
+
+        //                foreach (XmlNode item in root.ChildNodes)
+        //                {
+        //                    switch (item.Name)
+        //                    {
+        //                        case "fact":
+
+
+
+        //                            break;
+        //                        case "day":
+        //                            break;
+        //                    }
+        //                    if (item.Name == "fact")
+        //                    {
+        //                        Console.WriteLine(item.InnerText);
+        //                    }
+        //                    else
+        //                {
+        //                    throw new ArgumentNullException();
+        //                }
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                db.UpdateErrors.Add(new UpdateError()
+        //                {
+        //                    City = city,
+        //                    Exception = ex.Message,
+        //                    DateTime = DateTime.Now
+        //                });
+        //            }
+
+        //        }
+
+        //        db.SaveChanges();
+        //    }
+        //}
 
         private static void UpdateLocations(City city, XmlElement root)
         {
@@ -181,6 +217,11 @@ namespace WeatherBot.WSLweather
                 };
             }
 
+        }
+
+        public void UpdateWeather()
+        {
+            throw new NotImplementedException();
         }
     }
 }
