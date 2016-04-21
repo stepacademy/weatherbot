@@ -1,18 +1,24 @@
 using System;
 using System.ServiceModel;
+using System.Xml;
+using WeatherBot.Database.Entities;
 
 namespace WeatherBot.WSLweather
 {
     [ServiceContract]
-    interface IWeather
+    internal interface IWeather
     {
         [OperationContract]
         QDataWeatherDay GetDataWeatherDay(DateTime dataTime);
+
         [OperationContract]
         QDataWeatherDay GetWeatherDay(string city);
 
         [OperationContract(IsOneWay = true)]
-        void UpdateCities();
+        void CitiesInit();
+
+        [OperationContract(IsOneWay = true)]
+        void LocationsInit(City city, XmlElement root);
 
         [OperationContract(IsOneWay = true)]
         void UpdateWeather();

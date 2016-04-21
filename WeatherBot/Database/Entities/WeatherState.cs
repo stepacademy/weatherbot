@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WeatherBot.Database.Entities
 {
@@ -15,6 +11,5 @@ namespace WeatherBot.Database.Entities
         public string State { get; set; }
         //ovc, bkb_d ...
         public string Code { get; set; }
-
     }
 }

@@ -6,9 +6,46 @@ using WeatherBot.Database.Entities;
 
 namespace WeatherBot.WSLweather
 {
-    class WeatherUpdate : IWeatherUpdate
+    internal class WeatherUpdate : IWeatherUpdate
     {
-        public static void WeatherDataProccessing(NumberFormatInfo formatSepar, XNamespace ns, XElement itemXElement, FactWeather containerWeather)
+        public virtual void UpdateCity(IEnumerable<City> cities)
+        {
+        }
+
+        public void UpdateCityWeather(IEnumerable<City> cities)
+        {
+            var stackCities = cities as Stack<City>;
+
+            var formatSepar = new NumberFormatInfo {NumberDecimalSeparator = "."};
+
+            while (stackCities != null && stackCities.Count > 0)
+            {
+                var city = stackCities.Pop();
+                var doc = XDocument.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
+
+                if (doc.Root == null) continue;
+
+                var ns = doc.Root.GetDefaultNamespace();
+
+                var fact = doc.Root.Element(ns + "fact");
+
+                var factWeather = city.Weather.Fact;
+                if (fact == null) continue;
+
+                var observationTimeElement = fact.Element(ns + "observation_time");
+                if (observationTimeElement == null) continue;
+
+                var obsDate = Convert.ToDateTime(observationTimeElement.Value);
+                if (factWeather.ObservationTime == obsDate) continue;
+
+                factWeather.ObservationTime = obsDate;
+
+                // WeatherDataProccessing(formatSepar, ns, fact, factWeather);
+            }
+        }
+
+        public static void WeatherDataProccessing(NumberFormatInfo formatSepar, XNamespace ns, XElement itemXElement,
+            FactWeather containerWeather)
         {
             var factWeatherData = containerWeather.WeatherData;
 
@@ -35,10 +72,6 @@ namespace WeatherBot.WSLweather
             var windSpeedElement = itemXElement.Element(ns + "wind_speed");
             if (windSpeedElement != null)
                 factWeatherData.WindSpeed = Convert.ToDouble(windSpeedElement.Value, formatSepar);
-        }
-
-        public virtual void UpdateCity(IEnumerable<City> cities)
-        {
         }
     }
 }

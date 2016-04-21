@@ -1,49 +1,50 @@
-﻿namespace WeatherBot.TeleInteraction {
+﻿using System.Collections.Generic;
+using System.ServiceModel;
+using System.Threading;
+using Telegram.Bot.Types;
+using Message = WeatherBot.TeleInteraction.TelegramAdapters.Message;
 
-    using System.Threading;
-    using System.ServiceModel;
-    using System.Collections.Generic;
-    using TelegramAdapters;
-
+namespace WeatherBot.TeleInteraction
+{
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
-    public class MessagesConveyorService : IMessagesConveyorService {        
-
+    public class MessagesConveyorService : IMessagesConveyorService
+    {
         private int _lastProcessingMessageId;
 
-        IMessageProcessor MessageProcessor {
-            get {
-                return OperationContext.Current.GetCallbackChannel<IMessageProcessor>();
-            }
+        public MessagesConveyorService()
+        {
+            TeleInteractor.Instance.Received += UpdatesReceived;
         }
 
-        private void UpdatesReceived(Queue<Telegram.Bot.Types.Update> updatesQueue) {
-
-            while (updatesQueue.Count > 0) {
-
-                Message message = new Message(updatesQueue.Dequeue());
-
-                TeleInteractor.Instance.SendResponse(MessageProcessor.MessageProcessing(
-                        message.Id != _lastProcessingMessageId ? message : null));
-                _lastProcessingMessageId = message.Id;
-            }
+        private IMessageProcessor MessageProcessor
+        {
+            get { return OperationContext.Current.GetCallbackChannel<IMessageProcessor>(); }
         }
 
-        public void Start() {
-
-            while (true) {
+        public void Start()
+        {
+            while (true)
+            {
                 TeleInteractor.Instance.RequestAsync();
                 Thread.Sleep(10);
             }
         }
 
-        private void Detach() {
+        private void UpdatesReceived(Queue<Update> updatesQueue)
+        {
+            while (updatesQueue.Count > 0)
+            {
+                var message = new Message(updatesQueue.Dequeue());
 
+                TeleInteractor.Instance.SendResponse(MessageProcessor.MessageProcessing(
+                    message.Id != _lastProcessingMessageId ? message : null));
+                _lastProcessingMessageId = message.Id;
+            }
+        }
+
+        private void Detach()
+        {
             TeleInteractor.Instance.Received -= UpdatesReceived;
         }
-
-        public MessagesConveyorService() {
-
-            TeleInteractor.Instance.Received += new ReceivedUpdatesEventHandler(UpdatesReceived);
-        }
-    }    
+    }
 }

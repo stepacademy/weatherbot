@@ -4,8 +4,14 @@ namespace WeatherBot.IOFilter
 {
     public class DayPartClimatInfo
     {
-        public double temperature { get; private set; }
-        public int pressure { get; private set; }
+        public enum DAY_PART_TYPE
+        {
+            MORINING,
+            DAY,
+            EVENING,
+            NIGHT
+        }
+
         public enum WEATHER_EVENTS
         {
             ONLY_SUN = 1,
@@ -20,9 +26,9 @@ namespace WeatherBot.IOFilter
             FOG = 512,
             FIRE = 1024
         }
-        public int weather_events;
-        public enum DAY_PART_TYPE { MORINING, DAY, EVENING, NIGHT }
+
         public DAY_PART_TYPE day_part_type;
+        public int weather_events;
 
         public DayPartClimatInfo(DAY_PART_TYPE type, double t, int p, int events)
         {
@@ -31,6 +37,9 @@ namespace WeatherBot.IOFilter
             temperature = t;
             pressure = p;
         }
+
+        public double temperature { get; private set; }
+        public int pressure { get; private set; }
 
         public void SetTemperature(double t)
         {
@@ -45,22 +54,22 @@ namespace WeatherBot.IOFilter
         private string weather_events_string()
         {
             //"☀️🌤⛅️🌥🌦☁️🌧⛈🌩🌨🌪🌫🔥";
-            StringBuilder sb = new StringBuilder();
-            if ((weather_events & (int)WEATHER_EVENTS.ONLY_SUN) == (int)WEATHER_EVENTS.ONLY_SUN)
+            var sb = new StringBuilder();
+            if ((weather_events & (int) WEATHER_EVENTS.ONLY_SUN) == (int) WEATHER_EVENTS.ONLY_SUN)
                 sb.Append("☀️");
-            if ((weather_events & (int)WEATHER_EVENTS.CLOUD) == (int)WEATHER_EVENTS.CLOUD)
+            if ((weather_events & (int) WEATHER_EVENTS.CLOUD) == (int) WEATHER_EVENTS.CLOUD)
                 sb.Append("☁️");
-            if ((weather_events & (int)WEATHER_EVENTS.SUN_CLOUD) == (int)WEATHER_EVENTS.SUN_CLOUD)
+            if ((weather_events & (int) WEATHER_EVENTS.SUN_CLOUD) == (int) WEATHER_EVENTS.SUN_CLOUD)
                 sb.Append("🌤");
-            if ((weather_events & (int)WEATHER_EVENTS.RAIN) == (int)WEATHER_EVENTS.RAIN)
+            if ((weather_events & (int) WEATHER_EVENTS.RAIN) == (int) WEATHER_EVENTS.RAIN)
                 sb.Append("🌦");
-            if ((weather_events & (int)WEATHER_EVENTS.FOG) == (int)WEATHER_EVENTS.FOG)
+            if ((weather_events & (int) WEATHER_EVENTS.FOG) == (int) WEATHER_EVENTS.FOG)
                 sb.Append("🌫");
-            if ((weather_events & (int)WEATHER_EVENTS.FIRE) == (int)WEATHER_EVENTS.FIRE)
+            if ((weather_events & (int) WEATHER_EVENTS.FIRE) == (int) WEATHER_EVENTS.FIRE)
                 sb.Append("🔥");
-            if ((weather_events & (int)WEATHER_EVENTS.HURRICANE) == (int)WEATHER_EVENTS.HURRICANE)
+            if ((weather_events & (int) WEATHER_EVENTS.HURRICANE) == (int) WEATHER_EVENTS.HURRICANE)
                 sb.Append("🌪");
-            if ((weather_events & (int)WEATHER_EVENTS.SNOW) == (int)WEATHER_EVENTS.SNOW)
+            if ((weather_events & (int) WEATHER_EVENTS.SNOW) == (int) WEATHER_EVENTS.SNOW)
                 sb.Append("🌨");
             return sb.ToString();
         }
@@ -83,7 +92,7 @@ namespace WeatherBot.IOFilter
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append(string.Format("{0}🌡{1}{2}° {3}",
                 day_part_type_string(),
                 getsign(temperature), temperature,

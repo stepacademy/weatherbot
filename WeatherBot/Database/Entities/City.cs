@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeatherBot.Database.Entities
+﻿namespace WeatherBot.Database.Entities
 {
     public class City
     {
@@ -16,6 +10,5 @@ namespace WeatherBot.Database.Entities
         public string Name { get; set; }
         //28650, 27612 ...
         public string XmlCode { get; set; }
-        
     }
 }

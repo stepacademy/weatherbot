@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeatherBot.Database.Entities
+﻿namespace WeatherBot.Database.Entities
 {
     public class Location
     {
@@ -13,6 +7,5 @@ namespace WeatherBot.Database.Entities
 
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-
     }
 }

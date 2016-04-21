@@ -1,14 +1,21 @@
-using System;
 using System.Collections.Generic;
+using System.Globalization;
 using WeatherBot.Database.Entities;
 
 namespace WeatherBot.WSLweather
 {
-    class ForecastUpdate : WeatherUpdate
+    internal class ForecastUpdate : WeatherUpdate
     {
         public override void UpdateCity(IEnumerable<City> cities)
         {
-            throw new NotImplementedException();
+            var stackCities = cities as Stack<City>;
+
+            var formatSepar = new NumberFormatInfo {NumberDecimalSeparator = "."};
+
+            while (stackCities != null && stackCities.Count > 0)
+            {
+                var city = stackCities.Pop();
+            }
         }
     }
 }

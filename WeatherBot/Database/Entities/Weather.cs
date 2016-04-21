@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WeatherBot.Database.Entities
 {
-
     public class Weather
     {
         public int Id { get; set; }
@@ -15,5 +10,4 @@ namespace WeatherBot.Database.Entities
         public FactWeather Fact { get; set; }
         public ICollection<ForecastWeather> Forecast { get; set; }
     }
-
 }

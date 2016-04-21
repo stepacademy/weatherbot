@@ -5,11 +5,10 @@ namespace WeatherBot.WSLweather
     [DataContract]
     public class QDataWeatherDayPart
     {
-        [DataMember]
-        public double Temp;
-        [DataMember]
-        public string DayPart;
-        [DataMember]
-        public string State;
+        [DataMember] public string DayPart;
+
+        [DataMember] public string State;
+
+        [DataMember] public double Temp;
     }
 }

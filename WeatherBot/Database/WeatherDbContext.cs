@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using WeatherBot.Database.Entities;
 
 namespace WeatherBot.Database

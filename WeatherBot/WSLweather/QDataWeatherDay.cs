@@ -6,7 +6,6 @@ namespace WeatherBot.WSLweather
     [DataContract]
     public class QDataWeatherDay
     {
-        [DataMember]
-        public List<QDataWeatherDayPart> ItemsParts;
+        [DataMember] public List<QDataWeatherDayPart> ItemsParts;
     }
 }

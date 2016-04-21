@@ -1,32 +1,32 @@
-﻿
-/// MessageLocation class / Stanislav Kuzmich / Art.Stea1th
+﻿/// MessageLocation class / Stanislav Kuzmich / Art.Stea1th
 
-namespace WeatherBot.TeleInteraction.TelegramAdapters {
+using Telegram.Bot.Types;
 
-    public class MLocation {
+namespace WeatherBot.TeleInteraction.TelegramAdapters
+{
+    public class MLocation
+    {
+        private readonly Location _location;
 
-        Telegram.Bot.Types.Location _location;
-
-        /// <summary>
-        /// Latitude as defined by sender
-        /// </summary>
-        public float Latitude {
-            get {
-                return _location.Latitude;
-            }
-        }
-
-        /// <summary>
-        /// Longitude as defined by sender
-        /// </summary>
-        public float Longitude {
-            get {
-                return _location.Longitude;
-            }
-        }
-
-        public MLocation(Telegram.Bot.Types.Location location) {
+        public MLocation(Location location)
+        {
             _location = location;
+        }
+
+        /// <summary>
+        ///     Latitude as defined by sender
+        /// </summary>
+        public float Latitude
+        {
+            get { return _location.Latitude; }
+        }
+
+        /// <summary>
+        ///     Longitude as defined by sender
+        /// </summary>
+        public float Longitude
+        {
+            get { return _location.Longitude; }
         }
     }
 }

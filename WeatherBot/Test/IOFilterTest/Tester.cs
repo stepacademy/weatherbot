@@ -3,27 +3,27 @@ using WeatherBot.IOFilter;
 
 namespace Test.IOFilterTest
 {
-    class Tester
+    internal class Tester
     {
-        IoFilter iof;
-        delegate void TestedMethod();
+        private IoFilter iof;
 
         public Tester()
         {
             Console.WriteLine("CREATE TESTOR");
             testRUN(InitIOFilterator, "InitIOFilterator");
-            DateTime dtstart = DateTime.Now;
-            TimeSpan ts = new TimeSpan(0, 0, 1);
+            var dtstart = DateTime.Now;
+            var ts = new TimeSpan(0, 0, 1);
             while (true)
             {
                 if (ts < DateTime.Now - dtstart)
                 {
                     dtstart = DateTime.Now;
-                  
+
                     Console.WriteLine(DateTime.Now + "waiting...");
                 }
             }
         }
+
         private void testRUN(TestedMethod method, string description)
         {
             Console.Write(description + "...");
@@ -48,5 +48,7 @@ namespace Test.IOFilterTest
         {
             Console.WriteLine(debug_text);
         }
+
+        private delegate void TestedMethod();
     }
 }

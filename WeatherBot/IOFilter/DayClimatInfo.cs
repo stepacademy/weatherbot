@@ -17,15 +17,18 @@ namespace WeatherBot.IOFilter
         }
 
         public void SetInfo(DayPartClimatInfo m, DayPartClimatInfo d,
-                            DayPartClimatInfo e, DayPartClimatInfo n)
+            DayPartClimatInfo e, DayPartClimatInfo n)
         {
-            morning = m; day = d; evening = e; night = n;
+            morning = m;
+            day = d;
+            evening = e;
+            night = n;
         }
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine(String.Format("{0:ddd, d MMM yyyy}", date));
+            var sb = new StringBuilder();
+            sb.AppendLine(string.Format("{0:ddd, d MMM yyyy}", date));
             if (morning != null) sb.AppendLine(morning.ToString());
             if (day != null) sb.AppendLine(day.ToString());
             if (evening != null) sb.AppendLine(evening.ToString());
@@ -33,6 +36,5 @@ namespace WeatherBot.IOFilter
 
             return sb.ToString();
         }
-
     }
 }

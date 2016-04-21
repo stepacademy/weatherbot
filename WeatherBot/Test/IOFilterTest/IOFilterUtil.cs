@@ -1,16 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Test.IOFilterTest
+﻿namespace Test.IOFilterTest
 {
-    class IOFilterUtil
+    internal class IOFilterUtil
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Tester tester = new Tester();
+            var tester = new Tester();
         }
     }
 }
-

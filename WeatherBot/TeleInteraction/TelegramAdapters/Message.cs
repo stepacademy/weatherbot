@@ -1,82 +1,59 @@
-﻿
-/// Message class / Stanislav Kuzmich / Art.Stea1th
+﻿/// Message class / Stanislav Kuzmich / Art.Stea1th
 
-namespace WeatherBot.TeleInteraction.TelegramAdapters {
+using System;
+using Telegram.Bot.Types;
 
-    using System;
+namespace WeatherBot.TeleInteraction.TelegramAdapters
+{
+    public class Message
+    {
+        private readonly Telegram.Bot.Types.Message _message;
 
-    public class Message {
-
-        private Telegram.Bot.Types.Message _message;
-
-        private MUser _user;
-        private MLocation _location;        
-        private MResponse _response;
-
-        /// <summary>
-        /// Unique message identifier
-        /// </summary>
-        public int Id {
-            get {
-                return _message.MessageId;
-            }
+        public Message(Update update)
+        {
+            _message = update.Message;
+            User = new MUser(update.Message.From);
+            Location = new MLocation(update.Message.Location);
+            Response = null;
         }
 
         /// <summary>
-        /// Date the message was sent in Unix time
+        ///     Unique message identifier
         /// </summary>
-        public DateTime DTime {
-            get {
-                return _message.Date;
-            }
-        }
-
-        ///<summary>
-        /// The actual UTF-8 text of the message
-        /// </summary>
-        public string Text {
-            get {
-                return _message.Text;
-            }
+        public int Id
+        {
+            get { return _message.MessageId; }
         }
 
         /// <summary>
-        /// Message sender
+        ///     Date the message was sent in Unix time
         /// </summary>
-        public MUser User {
-            get {
-                return _user;
-            }
+        public DateTime DTime
+        {
+            get { return _message.Date; }
         }
 
         /// <summary>
-        /// Location
+        ///     The actual UTF-8 text of the message
         /// </summary>
-        public MLocation Location {
-            get {
-                return _location;
-            }
+        public string Text
+        {
+            get { return _message.Text; }
         }
-        
+
         /// <summary>
-        /// new MessageResponse attach here
+        ///     Message sender
         /// </summary>
-        public MResponse Response {
-            get {
-                return _response;
-            }
-            set {
-                _response = value;
-            }
-        }
+        public MUser User { get; }
 
-        public Message(Telegram.Bot.Types.Update update) {
+        /// <summary>
+        ///     Location
+        /// </summary>
+        public MLocation Location { get; }
 
-            _message  = update.Message;
-            _user     = new MUser(update.Message.From);
-            _location = new MLocation(update.Message.Location);
-            Response  = null;
-        }
-
+        /// <summary>
+        ///     new MessageResponse attach here
+        /// </summary>
+        public MResponse Response { get; set; }
     }
 }

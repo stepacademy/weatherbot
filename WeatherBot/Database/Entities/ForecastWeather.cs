@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WeatherBot.Database.Entities
 {
@@ -11,6 +7,6 @@ namespace WeatherBot.Database.Entities
         public int Id { get; set; }
         public Weather Weather { get; set; }
         public CalendarDate Date { get; set; }
-        public ICollection<DayPart> DayParts { get; set; } 
+        public ICollection<DayPart> DayParts { get; set; }
     }
 }

@@ -1,29 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace Test.CheckCities
 {
-    class Program
+    internal class Program
     {
         private static Semaphore _pool;
 
-        
-        private static StringBuilder _msg = new StringBuilder();
-        static void Main(string[] args)
+
+        private static readonly StringBuilder _msg = new StringBuilder();
+
+        private static void Main(string[] args)
         {
-
             UpdateCities();
-
         }
 
-        
 
-        static void Worker(object countryElement)
+        private static void Worker(object countryElement)
         {
             var country = (XmlElement) countryElement;
 
@@ -57,17 +52,15 @@ namespace Test.CheckCities
             Progress.Curr++;
             Progress.DrawTextProgressBar(_msg.ToString());
 
-            
-
 
             //Console.WriteLine("Готово {0}", country.GetAttribute("name"));
         }
 
-        static void UpdateCities()
+        private static void UpdateCities()
         {
             var doc = new XmlDocument();
             doc.Load(@"https://pogoda.yandex.ru/static/cities.xml");
-            
+
             //<cities>
             //    <country name="Абхазия">
             //        <city id="37188" region="27028" head="" type="3" country="Абхазия" part="" resort="" climate="">Новый Афон</city>
@@ -78,7 +71,7 @@ namespace Test.CheckCities
             //    </country>
 
             if (doc.DocumentElement == null) return;
-            
+
             //свободных 2
             _pool = new Semaphore(2, 10);
 
@@ -88,9 +81,7 @@ namespace Test.CheckCities
             {
                 var t = new Thread(Worker);
                 t.Start(countryElement);
-                
             }
-            
         }
     }
 }
