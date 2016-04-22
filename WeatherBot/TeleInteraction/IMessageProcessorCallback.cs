@@ -7,10 +7,10 @@ using WeatherBot.TeleInteraction.Adapters;
 
 namespace WeatherBot.TeleInteraction {
 
+    [ServiceContract]
     public interface IMessageProcessorCallback {
 
         [OperationContract(IsOneWay = true)]
-        void Process(Message message);
-
+        void CallbackInvoke(Message message);
     }
 }

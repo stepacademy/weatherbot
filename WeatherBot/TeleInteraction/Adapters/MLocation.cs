@@ -9,24 +9,14 @@ namespace WeatherBot.TeleInteraction.Adapters {
     [DataContract]
     public class MLocation {
 
-        Telegram.Bot.Types.Location _location;
-
-        [DataMember]
-        public float Latitude {
-            get {
-                return _location.Latitude;
-            }
-        }
-
-        [DataMember]
-        public float Longitude {
-            get {
-                return _location.Longitude;
-            }
-        }
+        [DataMember] public readonly float Latitude;
+        [DataMember] public readonly float Longitude;
 
         public MLocation(Telegram.Bot.Types.Location location) {
-            _location = location;
+
+            Latitude  = location != null ? location.Latitude  : 0;
+            Longitude = location != null ? location.Longitude : 0;
+
         }
     }
 }

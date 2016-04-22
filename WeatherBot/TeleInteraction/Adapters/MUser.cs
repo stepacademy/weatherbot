@@ -9,38 +9,18 @@ namespace WeatherBot.TeleInteraction.Adapters {
     [DataContract]
     public class MUser {
 
-        Telegram.Bot.Types.User _user;
-
-        [DataMember]
-        public int Id {
-            get {
-                return _user.Id;
-            }
-        }
-
-        [DataMember]
-        public string Username {
-            get {
-                return _user.Username;
-            }
-        }
-
-        [DataMember]
-        public string FirstName {
-            get {
-                return _user.FirstName;
-            }
-        }
-
-        [DataMember]
-        public string LastName {
-            get {
-                return _user.Username;
-            }
-        }
+        [DataMember] public readonly int    Id;
+        [DataMember] public readonly string Username;
+        [DataMember] public readonly string FirstName;
+        [DataMember] public readonly string LastName;
 
         public MUser(Telegram.Bot.Types.User user) {
-            _user = user;
+
+            Id        = user.Id;
+            Username  = user.Username;
+            FirstName = user.FirstName;
+            LastName  = user.LastName;
+
         }
     }
 }

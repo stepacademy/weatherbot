@@ -4,11 +4,9 @@
 
 namespace WeatherBot.TeleInteraction.InteractionStrategy {
 
-
     interface IInteractionStrategy {
 
         void Start();
         void Stop();
-
     }
 }

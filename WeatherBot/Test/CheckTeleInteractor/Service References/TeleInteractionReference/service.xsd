@@ -10,7 +10,9 @@
   </xs:element>
   <xs:element name="Start">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="botTokenPath" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Stop">
@@ -18,7 +20,7 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="Process">
+  <xs:element name="CallbackInvoke">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WeatherBot.TeleInteraction.Adapters" minOccurs="0" name="message" nillable="true" type="q2:Message" />

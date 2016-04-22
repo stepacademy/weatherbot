@@ -22,10 +22,10 @@ namespace Test.CheckTeleInteractor.TeleInteractionReference {
         System.Threading.Tasks.Task SendResponseAsync(WeatherBot.TeleInteraction.Adapters.Message message);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMessagesConveyorService/Start")]
-        void Start();
+        void Start(string botTokenPath);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMessagesConveyorService/Start")]
-        System.Threading.Tasks.Task StartAsync();
+        System.Threading.Tasks.Task StartAsync(string botTokenPath);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMessagesConveyorService/Stop")]
         void Stop();
@@ -37,8 +37,8 @@ namespace Test.CheckTeleInteractor.TeleInteractionReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IMessagesConveyorServiceCallback {
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMessagesConveyorService/Process")]
-        void Process(WeatherBot.TeleInteraction.Adapters.Message message);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMessagesConveyorService/CallbackInvoke")]
+        void CallbackInvoke(WeatherBot.TeleInteraction.Adapters.Message message);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -77,12 +77,12 @@ namespace Test.CheckTeleInteractor.TeleInteractionReference {
             return base.Channel.SendResponseAsync(message);
         }
         
-        public void Start() {
-            base.Channel.Start();
+        public void Start(string botTokenPath) {
+            base.Channel.Start(botTokenPath);
         }
         
-        public System.Threading.Tasks.Task StartAsync() {
-            return base.Channel.StartAsync();
+        public System.Threading.Tasks.Task StartAsync(string botTokenPath) {
+            return base.Channel.StartAsync(botTokenPath);
         }
         
         public void Stop() {

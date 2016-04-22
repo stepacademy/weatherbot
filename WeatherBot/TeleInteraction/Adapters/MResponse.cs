@@ -9,8 +9,8 @@ namespace WeatherBot.TeleInteraction.Adapters {
     [DataContract]
     public class MResponse {
 
-        [DataMember] public string Text     { get; set; }
-        [DataMember] public string Document { get; set; }
-        [DataMember] public string Sticker  { get; set; }
+        [DataMember] public string Text;
+        [DataMember] public string Document;
+        [DataMember] public string Sticker;
     }
 }

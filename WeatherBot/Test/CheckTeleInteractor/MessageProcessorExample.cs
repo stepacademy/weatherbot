@@ -3,36 +3,58 @@
 ///
 
 using System;
+using System.IO;
 using System.ServiceModel;
-using WeatherBot.TeleInteraction;
+using WeatherBot.TeleInteraction.Adapters;
 using Test.CheckTeleInteractor.TeleInteractionReference;
-using Message = WeatherBot.TeleInteraction.Adapters.Message;
 
 namespace Test.CheckTeleInteractor {
 
-    internal class MessageProcessorExample : IMessageProcessorCallback {
+    public class MessageProcessorExample : IMessagesConveyorServiceCallback {
 
-        public void Process(Message message) {
-            
+        MessagesConveyorServiceClient _proxy;
+
+        public async void CallbackInvoke(Message message) {
+
+            if (message != null) {
+
+                Console.WriteLine("User message: {0}", message.Text);
+
+                message.Response = new MResponse();
+                message.Response.Text = "Echo: " + message.Text;
+
+                Console.WriteLine("Bot response: {0}", message.Response.Text);
+
+                await _proxy.SendResponseAsync(message);
+            }
         }
 
         public void Initialize() {
 
-            var instanceContext = new InstanceContext(this);
-            var client = new MessagesConveyorServiceClient(instanceContext);
-            Console.WriteLine("Ready...");
+            InstanceContext instanceContext = new InstanceContext(this);
+            _proxy = new MessagesConveyorServiceClient(instanceContext);
+            _proxy.Open();
+
+            string botToken;
+
+            try {
+                using (StreamReader file = new StreamReader("botToken.txt")) {
+
+                    if ((botToken = file.ReadLine()) != null) {
+                        _proxy.Start(botToken);
+                        Console.WriteLine("Telegram API Interaction ready...\n");
+                    }
+                    file.Close();
+                }
+            }
+            catch (FileNotFoundException e) {
+                Console.WriteLine(e.Message);
+            }            
         }
 
         public MessageProcessorExample() {
             Initialize();
         }
 
-        static void Main(string[] args) {
-
-            MessageProcessorExample mpEx = new MessageProcessorExample();
-            mpEx.Process(null);
-
-            Console.ReadLine();
-        }            
     }
 }

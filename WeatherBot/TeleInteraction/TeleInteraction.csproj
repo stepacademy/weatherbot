@@ -69,7 +69,7 @@
     <Compile Include="InteractionStrategy\BasedGetUpdates.cs" />
     <Compile Include="InteractionStrategy\BasedWebHook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MessagesConveyor.cs" />
+    <Compile Include="MessagesConveyorService.cs" />
     <Compile Include="InteractionStrategy\ITeleInteractionStrategy.cs" />
   </ItemGroup>
   <ItemGroup>

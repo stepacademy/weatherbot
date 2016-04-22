@@ -14,7 +14,7 @@ namespace WeatherBot.TeleInteraction {
         void SendResponse(Message message);
 
         [OperationContract(IsOneWay = true)]
-        void Start();
+        void Start(string botTokenPath);
 
         [OperationContract(IsOneWay = true)]
         void Stop();

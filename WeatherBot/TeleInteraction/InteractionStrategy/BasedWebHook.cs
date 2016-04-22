@@ -3,6 +3,7 @@
 ///
 
 using System;
+using System.ServiceModel;
 
 namespace WeatherBot.TeleInteraction.InteractionStrategy {
 
@@ -15,6 +16,5 @@ namespace WeatherBot.TeleInteraction.InteractionStrategy {
         public void Stop() {
             throw new NotImplementedException();
         }
-
     }
 }
