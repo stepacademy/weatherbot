@@ -21,6 +21,7 @@ namespace Test.IOFilterTest
 
                     Console.WriteLine(DateTime.Now + "waiting...");
                 }
+                System.Threading.Thread.Sleep(50);
             }
         }
 

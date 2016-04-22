@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using WeatherBot.TeleInteraction;
-using WeatherBot.TeleInteraction.TelegramAdapters;
+using WeatherBot.TeleInteraction.Adapters;
 
 namespace WeatherBot.IOFilter
 {
-    public class IoFilter : IMessageProcessor
+    public class IoFilter// : IMessageProcessor
     {
         public delegate void DebugOut(string debug_text);
 

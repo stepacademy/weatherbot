@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeleInteraction\TeleInteraction.csproj">
-      <Project>{d812a40f-68c2-44c1-a91b-ee32e9dee401}</Project>
+      <Project>{0fbb8596-5334-46d7-b26c-c97539192d46}</Project>
       <Name>TeleInteraction</Name>
     </ProjectReference>
   </ItemGroup>
