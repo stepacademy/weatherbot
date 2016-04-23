@@ -1,11 +1,22 @@
-﻿using System.ServiceModel;
+﻿///
+/// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
+///
 
-namespace WeatherBot.TeleInteraction
-{
-    [ServiceContract(SessionMode = SessionMode.Required, CallbackContract = typeof (IMessageProcessor))]
-    public interface IMessagesConveyorService
-    {
+using System.ServiceModel;
+using WeatherBot.TeleInteraction.Adapters;
+
+namespace WeatherBot.TeleInteraction {
+
+    [ServiceContract(CallbackContract = typeof(IMessageProcessorCallback))]
+    public interface IMessagesConveyorService {
+
         [OperationContract(IsOneWay = true)]
-        void Start();
+        void SendResponse(Message message);
+
+        [OperationContract(IsOneWay = true)]
+        void Start(string botTokenPath);
+
+        [OperationContract(IsOneWay = true)]
+        void Stop();
     }
 }

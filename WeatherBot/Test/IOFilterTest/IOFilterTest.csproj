@@ -52,16 +52,14 @@
     <Compile Include="Tester.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\IOFilter\IOTranslator.csproj">
       <Project>{ae515676-df5b-4c0d-ba57-b86f5e854d22}</Project>
       <Name>IOTranslator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\TeleInteraction\TeleInteraction.csproj">
-      <Project>{d812a40f-68c2-44c1-a91b-ee32e9dee401}</Project>
-      <Name>TeleInteraction</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

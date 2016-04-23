@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using WeatherBot.TeleInteraction;
-using WeatherBot.TeleInteraction.TelegramAdapters;
+using WeatherBot.TeleInteraction.Adapters;
 
 namespace WeatherBot.IOFilter
 {
-    public class IoFilter : IMessageProcessor
+    public class IoFilter// : IMessageProcessor
     {
         public delegate void DebugOut(string debug_text);
 
@@ -66,10 +66,10 @@ namespace WeatherBot.IOFilter
 
         public string OutcomeMessage()
         {
-            ///    Тут происходит разбор
-            ///    нужно добавить обработку ключевых слов (неделя, и т.п.)
-            ///    Сделав разбор
-            ///    Отправит составленную структуру для заполнения данными
+            //    Тут происходит разбор
+            //    нужно добавить обработку ключевых слов (неделя, и т.п.)
+            //    Сделав разбор
+            //    Отправит составленную структуру для заполнения данными
             var cli = new ClimatInfo();
             if (_Tokens.Count == 0) return "Введите что-нибудь..."; // запрос к базе
             foreach (var str in _Tokens)

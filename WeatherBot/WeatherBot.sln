@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleInteraction", "TeleInteraction\TeleInteraction.csproj", "{D812A40F-68C2-44C1-A91B-EE32E9DEE401}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOTranslator", "IOFilter\IOTranslator.csproj", "{AE515676-DF5B-4C0D-BA57-B86F5E854D22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{991327E4-08EC-47F2-8A50-99094AF77F93}"
@@ -12,8 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{BD8A2866-059D-4673-8C31-491F42FB268B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserMessageParser", "Test\UserMessageParser\UserMessageParser.csproj", "{A5A2184D-1CDF-47D4-89EC-490ADC9475D0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleInteractionTest", "Test\TeleInteractionTest\TeleInteractionTest.csproj", "{303118C7-6AB5-4F34-8DAC-9690B89EF97C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckCities", "Test\CheckCities\CheckCities.csproj", "{3918BFBA-7370-4E28-819F-9BD8F7AB97BA}"
 EndProject
@@ -26,16 +22,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckUpdateWeather", "Test\
 		{1B683C31-0F5C-4A54-A385-0FAB26B463C8} = {1B683C31-0F5C-4A54-A385-0FAB26B463C8}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleInteraction", "TeleInteraction\TeleInteraction.csproj", "{0FBB8596-5334-46D7-B26C-C97539192D46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckTeleInteractor", "Test\CheckTeleInteractor\CheckTeleInteractor.csproj", "{27964726-4C17-4327-9C4E-1272EDEC21DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FBB8596-5334-46D7-B26C-C97539192D46} = {0FBB8596-5334-46D7-B26C-C97539192D46}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D812A40F-68C2-44C1-A91B-EE32E9DEE401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D812A40F-68C2-44C1-A91B-EE32E9DEE401}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D812A40F-68C2-44C1-A91B-EE32E9DEE401}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D812A40F-68C2-44C1-A91B-EE32E9DEE401}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE515676-DF5B-4C0D-BA57-B86F5E854D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE515676-DF5B-4C0D-BA57-B86F5E854D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE515676-DF5B-4C0D-BA57-B86F5E854D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,10 +47,6 @@ Global
 		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{303118C7-6AB5-4F34-8DAC-9690B89EF97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{303118C7-6AB5-4F34-8DAC-9690B89EF97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{303118C7-6AB5-4F34-8DAC-9690B89EF97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{303118C7-6AB5-4F34-8DAC-9690B89EF97C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -68,15 +63,23 @@ Global
 		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBB8596-5334-46D7-B26C-C97539192D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBB8596-5334-46D7-B26C-C97539192D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBB8596-5334-46D7-B26C-C97539192D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBB8596-5334-46D7-B26C-C97539192D46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27964726-4C17-4327-9C4E-1272EDEC21DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27964726-4C17-4327-9C4E-1272EDEC21DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27964726-4C17-4327-9C4E-1272EDEC21DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27964726-4C17-4327-9C4E-1272EDEC21DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A5A2184D-1CDF-47D4-89EC-490ADC9475D0} = {BD8A2866-059D-4673-8C31-491F42FB268B}
-		{303118C7-6AB5-4F34-8DAC-9690B89EF97C} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 		{B72C19C3-BC36-4BBA-9677-DC743B2B3D3D} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372} = {BD8A2866-059D-4673-8C31-491F42FB268B}
+		{27964726-4C17-4327-9C4E-1272EDEC21DB} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 	EndGlobalSection
 EndGlobal

@@ -1,50 +1,47 @@
-﻿using System.Collections.Generic;
+﻿///
+/// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
+///
+
 using System.ServiceModel;
-using System.Threading;
-using Telegram.Bot.Types;
-using Message = WeatherBot.TeleInteraction.TelegramAdapters.Message;
+using WeatherBot.TeleInteraction.Adapters;
+using WeatherBot.TeleInteraction.InteractionStrategy;
 
-namespace WeatherBot.TeleInteraction
-{
+namespace WeatherBot.TeleInteraction {
+
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
-    public class MessagesConveyorService : IMessagesConveyorService
-    {
-        private int _lastProcessingMessageId;
+    public class MessagesConveyorService : IMessagesConveyorService {
 
-        public MessagesConveyorService()
-        {
-            TeleInteractor.Instance.Received += UpdatesReceived;
-        }
+        private IInteractionStrategy _interaction;
+        public static string BotToken;
 
-        private IMessageProcessor MessageProcessor
-        {
-            get { return OperationContext.Current.GetCallbackChannel<IMessageProcessor>(); }
-        }
+        public async void SendResponse(Message message) {
 
-        public void Start()
-        {
-            while (true)
-            {
-                TeleInteractor.Instance.RequestAsync();
-                Thread.Sleep(10);
+            if (message != null && message.Response != null) {
+
+                if (message.Response.Text != null)
+                    await Bot.Api.SendTextMessage(message.User.Id, message.Response.Text);
             }
         }
 
-        private void UpdatesReceived(Queue<Update> updatesQueue)
-        {
-            while (updatesQueue.Count > 0)
-            {
-                var message = new Message(updatesQueue.Dequeue());
-
-                TeleInteractor.Instance.SendResponse(MessageProcessor.MessageProcessing(
-                    message.Id != _lastProcessingMessageId ? message : null));
-                _lastProcessingMessageId = message.Id;
-            }
+        public void Start(string botToken) {
+            BotToken = botToken;
+            _interaction.Start();
         }
 
-        private void Detach()
-        {
-            TeleInteractor.Instance.Received -= UpdatesReceived;
+        public void Stop() {
+            _interaction.Stop();
+        }
+
+        public MessagesConveyorService() {
+            _interaction = new BasedGetUpdates();
+        }
+
+        public MessagesConveyorService(InteractionMode iMode) {
+
+            if (iMode == InteractionMode.WebHookBased)
+                _interaction = new BasedWebHook();
+            else
+                _interaction = new BasedGetUpdates();
         }
     }
 }
