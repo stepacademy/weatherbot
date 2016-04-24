@@ -10,6 +10,7 @@ namespace WeatherBot.IOFilter
     {
         public string city { get; private set; }
         public int subscrib { get; set; }
+
         private int _index;
         private Dictionary<DateTime, DayClimatInfo> _dates;
         
