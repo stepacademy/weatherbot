@@ -8,8 +8,13 @@ namespace WeatherBot.IOFilter
 {
     public class ClimatInfo : IEnumerable<DayClimatInfo>, IEnumerator<DayClimatInfo>
     {
-        // для подписки на определенное время вероятно будет храниться в настройках пользователя
-        public enum SUBSCRIPT
+        public string city { get; private set; }
+        public int subscrib { get; set; }
+
+        private int _index;
+        private Dictionary<DateTime, DayClimatInfo> _dates;
+        
+        public enum SUBSCRIPT // для подписки на определенное время
         {
             MORNING = 1,
             DAY = 2,
@@ -17,26 +22,48 @@ namespace WeatherBot.IOFilter
             NIGHT = 8
         }
 
-        private int _index;
-
         public ClimatInfo()
         {
-            _index = -1;
-            dates = new Dictionary<DateTime, DayClimatInfo>();
+            _index = -1; //IEnumerable
+            _dates = new Dictionary<DateTime, DayClimatInfo>();
         }
 
-        public string city { get; private set; }
-        private Dictionary<DateTime, DayClimatInfo> dates { get; }
-        public int subsrib { get; set; }
+        public void SetCity(string cityname)
+        {
+            city = cityname;
+        }
+
+        public void AddDateInfo(DayClimatInfo ci)
+        {
+            _dates[ci.date] = ci;
+        }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("🏘" + city);
+            foreach (var dci in this)
+            {
+                sb.AppendLine(dci.ToString());
+            }
+            return sb.ToString();
+        }
+
+        #region  realisation of IEnumerable
 
         public int Count
         {
-            get { return dates.Count; }
+            get { return _dates.Count; }
+        }
+
+        public void Clear()
+        {
+            _dates.Clear();
         }
 
         public DayClimatInfo this[int index]
         {
-            get { return dates.ElementAt(index).Value; }
+            get { return _dates.ElementAt(index).Value; }
         }
 
         public IEnumerator<DayClimatInfo> GetEnumerator()
@@ -56,7 +83,7 @@ namespace WeatherBot.IOFilter
             {
                 try
                 {
-                    return dates.ElementAt(_index).Value;
+                    return _dates.ElementAt(_index).Value;
                 }
                 catch (IndexOutOfRangeException)
                 {
@@ -67,49 +94,24 @@ namespace WeatherBot.IOFilter
 
         object IEnumerator.Current
         {
-            get { return dates.ElementAt(_index).Value; }
+            get { return _dates.ElementAt(_index).Value; }
         }
 
         public void Dispose()
         {
-            dates.Clear();
+            _dates.Clear();
         }
 
         public bool MoveNext()
         {
             ++_index;
-            return _index < dates.Count;
+            return _index < _dates.Count;
         }
 
         public void Reset()
         {
             _index = -1;
         }
-
-        public void SetCity(string cityname)
-        {
-            city = cityname;
-        }
-
-        public void AddDateInfo(DayClimatInfo ci)
-        {
-            dates[ci.date] = ci;
-        }
-
-        public void Clear()
-        {
-            dates.Clear();
-        }
-
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.AppendLine("🏘" + city);
-            foreach (var dci in this)
-            {
-                sb.AppendLine(dci.ToString());
-            }
-            return sb.ToString();
-        }
+        #endregion
     }
 }

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using WeatherBot.TeleInteraction;
 using WeatherBot.TeleInteraction.Adapters;
-
 namespace WeatherBot.IOFilter
 {
     public class IoFilter// : IMessageProcessor
     {
         public delegate void DebugOut(string debug_text);
-
+        public DebugOut DebugOutEvent;
+        /// -----------------------------------------------
         private readonly List<string> _Cities = new List<string>();
         private List<string> _Tokens = new List<string>();
-        private readonly Dictionary<string, int> dateInWord = new Dictionary<string, int>(); //из базы или файла
-        private readonly Dictionary<string, int> day_parts = new Dictionary<string, int>(); //из базы или файла
-        public DebugOut DebugOutEvent;
+        private readonly Dictionary<string, int> _dateInWord = new Dictionary<string, int>(); //из базы или файла
+        private readonly Dictionary<string, string> _dayOfWeek = new Dictionary<string, string>(); //из базы или файла
+        private readonly Dictionary<string, int> _day_parts = new Dictionary<string, int>(); //из базы или файла
 
         public IoFilter(DebugOut debugOutMethod)
         {
@@ -31,14 +31,14 @@ namespace WeatherBot.IOFilter
         {
             var DB = new DBEmulator();
             DB.LoadCities(_Cities);
-            DB.LoadDayPartsDictionary(day_parts);
-            DB.LoadDateInWordDictionary(dateInWord);
+            DB.LoadDayPartsDictionary(_day_parts);
+            DB.LoadDateInWordDictionary(_dateInWord);
+            DB.LoadDayOfWeekDictionary(_dayOfWeek);   //!!! пока не работает
             //ReceiveActionListener.Instance.MessageProcessingEventHandlers += MessageProcessing;
             //ReceiveActionListener.Instance.Start();
         }
 
         #region response
-
         public Message MessageProcessing(Message message)
         {
             if (message != null)
@@ -82,13 +82,13 @@ namespace WeatherBot.IOFilter
                 if (ContainsInLowerCase(_Cities, ref city))
                     cli.SetCity(city);
 
-                var subscr = cli.subsrib;
+                var subscr = cli.subscrib;
                 if (IsDayPart(str, ref subscr))
-                    cli.subsrib = subscr;
+                    cli.subscrib = subscr;
             }
-            if (cli.subsrib == 0)
-                cli.subsrib = (int) ClimatInfo.SUBSCRIPT.MORNING + (int) ClimatInfo.SUBSCRIPT.DAY
-                              + (int) ClimatInfo.SUBSCRIPT.EVENING + (int) ClimatInfo.SUBSCRIPT.NIGHT;
+            if (cli.subscrib == 0)
+                cli.subscrib = (int)ClimatInfo.SUBSCRIPT.MORNING + (int)ClimatInfo.SUBSCRIPT.DAY
+                              + (int)ClimatInfo.SUBSCRIPT.EVENING + (int)ClimatInfo.SUBSCRIPT.NIGHT;
 
             if (cli.Count == 0)
                 AddDateToClimatInfo(cli, DateTime.Now);
@@ -96,18 +96,32 @@ namespace WeatherBot.IOFilter
             var check = "";
             if (NotCorrectMessageAnswer(cli, ref check))
                 return check;
+
             // Запрос к базе 
             for (var i = 0; i < cli.Count; ++i)
             {
-                cli[i].SetInfo(new DayPartClimatInfo(DayPartClimatInfo.DAY_PART_TYPE.MORINING, 5, 120,
-                    (int) DayPartClimatInfo.WEATHER_EVENTS.FOG),
-                    new DayPartClimatInfo(DayPartClimatInfo.DAY_PART_TYPE.DAY, 20, 120,
-                        (int) DayPartClimatInfo.WEATHER_EVENTS.ONLY_SUN),
-                    new DayPartClimatInfo(DayPartClimatInfo.DAY_PART_TYPE.EVENING, 14, 120,
-                        (int) DayPartClimatInfo.WEATHER_EVENTS.CLOUD),
-                    new DayPartClimatInfo(DayPartClimatInfo.DAY_PART_TYPE.NIGHT, 0, 120,
-                        (int) DayPartClimatInfo.WEATHER_EVENTS.CLOUD)
-                    );
+                DayPartClimatInfo m=null, d=null, e=null, n=null;
+                if ((cli.subscrib & (int)ClimatInfo.SUBSCRIPT.MORNING) == (int)ClimatInfo.SUBSCRIPT.MORNING)
+                {
+                    m = new DayPartClimatInfo(DayPartClimatInfo.DAY_PART_TYPE.MORINING, 5, 120,
+                        (int)DayPartClimatInfo.WEATHER_EVENTS.FOG);
+                }
+                if ((cli.subscrib & (int)ClimatInfo.SUBSCRIPT.DAY) == (int)ClimatInfo.SUBSCRIPT.DAY)
+                {
+                    d = new DayPartClimatInfo(DayPartClimatInfo.DAY_PART_TYPE.DAY, 14, 120,
+                        (int)DayPartClimatInfo.WEATHER_EVENTS.CLOUD);
+                }
+                if ((cli.subscrib & (int)ClimatInfo.SUBSCRIPT.EVENING) == (int)ClimatInfo.SUBSCRIPT.EVENING)
+                {
+                    e = new DayPartClimatInfo(DayPartClimatInfo.DAY_PART_TYPE.EVENING, 20, 120,
+                        (int)DayPartClimatInfo.WEATHER_EVENTS.ONLY_SUN);
+                }
+                if ((cli.subscrib & (int)ClimatInfo.SUBSCRIPT.NIGHT) == (int)ClimatInfo.SUBSCRIPT.NIGHT)
+                {
+                    n = new DayPartClimatInfo(DayPartClimatInfo.DAY_PART_TYPE.NIGHT, 7, 120,
+                        (int)DayPartClimatInfo.WEATHER_EVENTS.CLOUD);
+                }
+                cli[i].SetInfo(m, d, e, n);
             }
             return cli.ToString();
         }
@@ -120,12 +134,6 @@ namespace WeatherBot.IOFilter
             return answer != "Вы";
         }
 
-        private void AddDateToClimatInfo(ClimatInfo cli, DateTime dt)
-        {
-            var dcli = new DayClimatInfo();
-            dcli.SetDate(dt);
-            cli.AddDateInfo(dcli);
-        }
 
         private bool ContainsInLowerCase(List<string> words, ref string search)
         {
@@ -146,9 +154,9 @@ namespace WeatherBot.IOFilter
 
         private string PrepareMessage(string message)
         {
-            // предусмотреть пользовательские символы диапазона и т.п.
-            // тире может использоваться в городах!!!
-            // точки в датах!!! учитываем перевод строки
+            // тире может использоваться в городах и диапазонах!!!
+            // точки в датах!!! 
+            // проверить корректность перевода строки
             const string breaksymols = "!@#$%^&*()+=:,;_'?<>{}\n";
             var ret = new string(message.ToCharArray());
             foreach (var ch in breaksymols)
@@ -161,10 +169,7 @@ namespace WeatherBot.IOFilter
         {
             message = PrepareMessage(message).ToLower();
             var words = message.Split(' ');
-            var ret = new List<string>();
-
-            foreach (var word in words)
-                ret.Add(word);
+            var ret = words.ToList<string>();
             return ret;
         }
 
@@ -195,6 +200,13 @@ namespace WeatherBot.IOFilter
             {
                 AddDateToClimatInfo(cli, dt);
             }
+        }
+
+        private void AddDateToClimatInfo(ClimatInfo cli, DateTime dt)
+        {
+            var dcli = new DayClimatInfo();
+            dcli.SetDate(dt);
+            cli.AddDateInfo(dcli);
         }
 
         private bool DayOfWeekToDate(string day, ref DateTime dateret)
@@ -247,39 +259,38 @@ namespace WeatherBot.IOFilter
         private bool IsDayPart(string str, ref int subscr)
         {
             var test = new string(str.ToCharArray());
-            foreach (var day_part in day_parts.Keys)
+            foreach (var day_part in _day_parts.Keys)
             {
                 if (day_part == test)
                 {
                     int ret;
-                    day_parts.TryGetValue(day_part, out ret);
+                    _day_parts.TryGetValue(day_part, out ret);
                     subscr |= ret;
                     return true;
                 }
             }
             return false;
         }
-
+        // позавчера? вчера?
         private bool WordToDate(string word, ref DateTime dateret)
         {
-            // часы и минуты не учитываются
+            // добавить "сейчас", "после обеда", "через три часа" и т.д.
             var dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
             var test = word.ToLower();
-            foreach (var baseword in dateInWord.Keys)
+            foreach (var baseword in _dateInWord.Keys)
             {
                 if (test == baseword)
                 {
                     var span = 0;
-                    dateInWord.TryGetValue(baseword, out span);
-                    dt += new TimeSpan(24*span, 0, 0);
+                    _dateInWord.TryGetValue(baseword, out span);
+                    dt += new TimeSpan(24 * span, 0, 0);
                     dateret = dt;
                     return true;
                 }
             }
             return false;
         }
-
         #endregion
     }
 }

@@ -30,6 +30,13 @@ namespace WeatherBot.IOFilter
         public DAY_PART_TYPE day_part_type;
         public int weather_events;
 
+        public double temperature { get; private set; }
+        public double humidity { get; private set; }
+        public double pressure { get; private set; }
+        public int image_v3 { get; private set; }   //?
+        public int wind_direction { get; private set; }
+        public double wind_speed { get; private set; }
+
         public DayPartClimatInfo(DAY_PART_TYPE type, double t, int p, int events)
         {
             day_part_type = type;
@@ -38,8 +45,6 @@ namespace WeatherBot.IOFilter
             pressure = p;
         }
 
-        public double temperature { get; private set; }
-        public int pressure { get; private set; }
 
         public void SetTemperature(double t)
         {
