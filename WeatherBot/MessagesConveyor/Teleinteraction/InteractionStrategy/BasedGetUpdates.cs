@@ -4,9 +4,10 @@
 
 using System.ServiceModel;
 using System.Threading;
-using Message = WeatherBot.MessagesConveyor.TeleInteraction.Adapters.Message;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
+
+    using Message = Adapters.Message;
 
     internal class BasedGetUpdates : IInteractionStrategy {
 
@@ -39,6 +40,5 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
             if (_stateTimer != null)
                 _stateTimer.Dispose();
         }
-
     }
 }

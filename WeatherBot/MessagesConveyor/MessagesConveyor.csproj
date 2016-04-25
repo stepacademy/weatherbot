@@ -104,7 +104,7 @@
     <Compile Include="Teleinteraction\Bot.cs" />
     <Compile Include="IMessageProcessorCallback.cs" />
     <Compile Include="IMessagesConveyorService.cs" />
-    <Compile Include="InteractionMode.cs" />
+    <Compile Include="Teleinteraction\InteractionStrategy\InteractionMode.cs" />
     <Compile Include="Teleinteraction\InteractionStrategy\BasedGetUpdates.cs" />
     <Compile Include="Teleinteraction\InteractionStrategy\BasedWebHook.cs" />
     <Compile Include="Teleinteraction\InteractionStrategy\ITeleInteractionStrategy.cs" />

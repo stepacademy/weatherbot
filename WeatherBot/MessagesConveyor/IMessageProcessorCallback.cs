@@ -3,14 +3,16 @@
 ///
 
 using System.ServiceModel;
-using WeatherBot.MessagesConveyor.TeleInteraction.Adapters;
 
 namespace WeatherBot.MessagesConveyor {
+
+    using TeleInteraction.Adapters;
 
     [ServiceContract]
     public interface IMessageProcessorCallback {
 
         [OperationContract(IsOneWay = true)]
         void CallbackInvoke(Message message);
+
     }
 }

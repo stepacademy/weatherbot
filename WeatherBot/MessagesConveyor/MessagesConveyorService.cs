@@ -3,11 +3,12 @@
 ///
 
 using System.ServiceModel;
-using WeatherBot.MessagesConveyor.TeleInteraction;
-using WeatherBot.MessagesConveyor.TeleInteraction.Adapters;
-using WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy;
 
 namespace WeatherBot.MessagesConveyor {
+
+    using TeleInteraction;
+    using TeleInteraction.Adapters;
+    using TeleInteraction.InteractionStrategy;
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
     public class MessagesConveyorService : IMessagesConveyorService {
@@ -44,5 +45,6 @@ namespace WeatherBot.MessagesConveyor {
             else
                 _interaction = new BasedGetUpdates();
         }
+
     }
 }
