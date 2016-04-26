@@ -97,6 +97,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOFilter\QueryPreprocessor.cs" />
+    <Compile Include="IOFilter\ResponsePostprocessor.cs" />
     <Compile Include="Teleinteraction\Adapters\Message.cs" />
     <Compile Include="Teleinteraction\Adapters\MLocation.cs" />
     <Compile Include="Teleinteraction\Adapters\MResponse.cs" />
