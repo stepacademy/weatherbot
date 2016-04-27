@@ -8,14 +8,7 @@ namespace WeatherBot.WSLweather
     {
         public override void UpdateCity(IEnumerable<City> cities)
         {
-            var stackCities = cities as Stack<City>;
-
-            var formatSepar = new NumberFormatInfo {NumberDecimalSeparator = "."};
-
-            while (stackCities != null && stackCities.Count > 0)
-            {
-                var city = stackCities.Pop();
-            }
+            UpdateCityWeather(cities);
         }
     }
 }

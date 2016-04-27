@@ -40,7 +40,7 @@ namespace WeatherBot.WSLweather
 
                 factWeather.ObservationTime = obsDate;
 
-                // WeatherDataProccessing(formatSepar, ns, fact, factWeather);
+                WeatherDataProccessing(formatSepar, ns, fact, factWeather);
             }
         }
 
@@ -52,6 +52,14 @@ namespace WeatherBot.WSLweather
             var temperatureElement = itemXElement.Element(ns + "temperature");
             if (temperatureElement != null)
                 factWeatherData.Temperature = Convert.ToDouble(temperatureElement.Value, formatSepar);
+            else
+            {
+                var temperatureFromElement = itemXElement.Element(ns + "temperature_from");
+                var temperatureToElement = itemXElement.Element(ns + "temperature_to");
+                if (temperatureFromElement != null && temperatureToElement != null)
+                    factWeatherData.Temperature = Convert.ToDouble(temperatureFromElement.Value, formatSepar) +
+                                                  Convert.ToDouble(temperatureToElement.Value, formatSepar)/2;
+            }
 
             var humidityElement = itemXElement.Element(ns + "humidity");
             if (humidityElement != null)

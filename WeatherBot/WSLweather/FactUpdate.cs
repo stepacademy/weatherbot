@@ -8,7 +8,7 @@ namespace WeatherBot.WSLweather
     {
         public override void UpdateCity(IEnumerable<City> cities)
         {
-            throw new NotImplementedException();
+            UpdateCityWeather(cities);
         }
     }
 }
