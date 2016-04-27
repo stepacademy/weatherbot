@@ -118,6 +118,16 @@ namespace WeatherBot.WSLweather
             return result;
         }
 
+        public static DayTimeType GetDayTimeType(string dayTime)
+        {
+            DayTimeType result;
+            Enum.TryParse(dayTime, out result);
+
+            return result;
+        }
+
+
+
         #endregion
 
         //    {

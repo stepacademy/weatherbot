@@ -8,7 +8,7 @@ namespace WeatherBot.WSLweather
     {
         public override void UpdateCity(IEnumerable<City> cities)
         {
-            UpdateCityWeather(cities);
+            if (cities != null) UpdateCityFactWeather(cities);
         }
     }
 }
