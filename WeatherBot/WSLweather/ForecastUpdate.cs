@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Globalization;
-using WeatherBot.Database.Entities;
+using WeatherBot.DatabaseWorker.Database.Entities;
 
 namespace WeatherBot.WSLweather
 {

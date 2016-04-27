@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Xml;
-using WeatherBot.Database;
-using WeatherBot.Database.Entities;
+using WeatherBot.DatabaseWorker.Database;
+using WeatherBot.DatabaseWorker.Database.Entities;
 
 namespace WeatherBot.WSLweather
 {

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using WeatherBot.Database.Entities;
+using WeatherBot.DatabaseWorker.Database.Entities;
 
 namespace WeatherBot.WSLweather
 {
