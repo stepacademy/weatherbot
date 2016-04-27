@@ -7,7 +7,7 @@ namespace WeatherBot.MessagesConveyor.IOFilter {
 
     class QueryPreprocessor {
 
-        // TeleInteractor вызовет этот метод при поступлении нового сообщения от пользователя, передав Message        
+        // TeleInteractor вызовет этот метод при поступлении нового сообщения от пользователя, передав Message
 
         void MessageProcessing(Message message) { 
 

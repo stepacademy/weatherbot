@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1B683C31-0F5C-4A54-A385-0FAB26B463C8}</ProjectGuid>
+    <ProjectGuid>{3639B5A3-9918-4141-B19E-78E83E502B82}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WeatherBot.WSLweather</RootNamespace>
-    <AssemblyName>WSLweather</AssemblyName>
+    <RootNamespace>WeatherBot.DatabaseWorker</RootNamespace>
+    <AssemblyName>DatabaseWorker</AssemblyName>
     <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -54,26 +54,34 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FactUpdate.cs" />
-    <Compile Include="ForecastUpdate.cs" />
-    <Compile Include="IWeather.cs" />
-    <Compile Include="IWeatherUpdate.cs" />
-    <Compile Include="QData.cs" />
+    <Compile Include="Database\Entities\CalendarDate.cs" />
+    <Compile Include="Database\Entities\City.cs" />
+    <Compile Include="Database\Entities\Country.cs" />
+    <Compile Include="Database\Entities\DayPart.cs" />
+    <Compile Include="Database\Entities\DayTimeType.cs" />
+    <Compile Include="Database\Entities\FactWeather.cs" />
+    <Compile Include="Database\Entities\ForecastWeather.cs" />
+    <Compile Include="Database\Entities\Location.cs" />
+    <Compile Include="Database\Entities\UpdateError.cs" />
+    <Compile Include="Database\Entities\Weather.cs" />
+    <Compile Include="Database\Entities\WeatherData.cs" />
+    <Compile Include="Database\Entities\WeatherState.cs" />
+    <Compile Include="Database\Entities\WindDirectionType.cs" />
+    <Compile Include="Database\WeatherDbContext.cs" />
+    <Compile Include="QueryHandler.cs" />
+    <Compile Include="IManagementContract.cs" />
+    <Compile Include="IQueryHandlerContract.cs" />
+    <Compile Include="ICallbackResponseContract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QDataWeatherDay.cs" />
-    <Compile Include="QDataWeatherDayPart.cs" />
-    <Compile Include="Weather.cs" />
-    <Compile Include="WeatherUpdate.cs" />
+    <Compile Include="Management.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\DatabaseWorker\DatabaseWorker.csproj">
-      <Project>{3639b5a3-9918-4141-b19e-78e83e502b82}</Project>
-      <Name>DatabaseWorker</Name>
-    </ProjectReference>
+    <Content Include="WeatherUpdate\WSLweather_ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

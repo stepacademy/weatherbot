@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Xml.Linq;
-using WeatherBot.Database.Entities;
+using WeatherBot.DatabaseWorker.Database.Entities;
 
 namespace WeatherBot.WSLweather
 {
