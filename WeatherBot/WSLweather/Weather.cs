@@ -98,8 +98,27 @@ namespace WeatherBot.WSLweather
 
         public static WindDirectionType GetWindDirectionType(string windDirection)
         {
-            WindDirectionType wd;
-            Enum.TryParse(windDirection, out wd);
+            WindDirectionType wd = WindDirectionType.East; //not null
+
+            switch (windDirection)
+            {
+                case "s": wd = WindDirectionType.South;
+                    break;
+                case "w": wd = WindDirectionType.West;
+                    break;
+                case "e": wd = WindDirectionType.East;
+                    break;
+                case "n": wd = WindDirectionType.North;
+                    break;
+                case "se": wd = WindDirectionType.SouthEast;
+                    break;
+                case "sw": wd = WindDirectionType.SouthWest;
+                    break;
+                case "ne": wd = WindDirectionType.NorthEast;
+                    break;
+                case "nw": wd = WindDirectionType.NorthWest;
+                    break;
+            }
 
             return wd;
         }
