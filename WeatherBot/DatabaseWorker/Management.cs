@@ -14,10 +14,5 @@ namespace WeatherBot.DatabaseWorker {
         public void Stop() {
             throw new NotImplementedException();
         }
-
-        // Save MessageConveyor InstanceContext for callback response
-        public void SubscribeClient(InstanceContext callbackContext) {
-            throw new NotImplementedException();
-        }
     }
 }

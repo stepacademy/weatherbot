@@ -68,6 +68,8 @@
     <Compile Include="Database\Entities\WeatherState.cs" />
     <Compile Include="Database\Entities\WindDirectionType.cs" />
     <Compile Include="Database\WeatherDbContext.cs" />
+    <Compile Include="QueryComponents\QueryData.cs" />
+    <Compile Include="QueryComponents\WeatherEntities.cs" />
     <Compile Include="QueryHandler.cs" />
     <Compile Include="IManagementContract.cs" />
     <Compile Include="IQueryHandlerContract.cs" />
@@ -79,9 +81,8 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="WeatherUpdate\WSLweather_ReadMe.txt" />
+    <Folder Include="WeatherUpdate\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

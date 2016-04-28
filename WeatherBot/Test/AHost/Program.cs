@@ -1,7 +1,7 @@
 ﻿
 // local WeatherBot host
 
-namespace WeatherBot.AHost {
+namespace Test.AHost {
 
     class Program {
 

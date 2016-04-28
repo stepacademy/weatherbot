@@ -1,4 +1,4 @@
-namespace WeatherBot.DatabaseWorker.Database.Entities {
+namespace WeatherBot.Database.Entities {
 
     // clockwise arranged
     public enum WindDirectionType {

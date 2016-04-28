@@ -20,13 +20,5 @@ namespace WeatherBot.DatabaseWorker {
         /// </summary>
         [OperationContract]
         void Stop();
-
-        /// <summary>
-        /// Save InstanceContext for callback response
-        /// </summary>
-        /// <param name="callbackContext">InstanceContext for callback response</param>
-        [OperationContract]
-        void SubscribeClient(InstanceContext callbackContext);
-
     }
 }

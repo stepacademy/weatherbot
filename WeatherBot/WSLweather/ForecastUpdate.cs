@@ -4,8 +4,8 @@ using System.Data.Entity;
 using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
-using WeatherBot.DatabaseWorker.Database;
-using WeatherBot.DatabaseWorker.Database.Entities;
+using WeatherBot.Database;
+using WeatherBot.Database.Entities;
 
 namespace WeatherBot.WSLweather
 {
