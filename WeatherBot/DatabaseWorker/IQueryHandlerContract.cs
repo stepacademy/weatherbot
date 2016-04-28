@@ -1,5 +1,5 @@
 ﻿using System.ServiceModel;
-using QueryData = System.IntPtr; // <-- is a dummy, because QueryData not implemented
+using WeatherBot.DatabaseWorker.QueryComponents;
 
 namespace WeatherBot.DatabaseWorker {    
 

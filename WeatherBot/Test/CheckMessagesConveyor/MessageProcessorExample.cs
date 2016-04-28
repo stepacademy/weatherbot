@@ -30,6 +30,7 @@ namespace Test.CheckMessagesConveyor {
 
         public void Initialize() {
 
+
             InstanceContext instanceContext = new InstanceContext(this);
             _proxy = new MessagesConveyorServiceClient(instanceContext);
             _proxy.Open();

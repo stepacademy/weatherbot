@@ -11,7 +11,7 @@ namespace WeatherBot.MessagesConveyor.IOFilter {
 
         void QueryDataProcessing(/*QueryData query*/) {
 
-
+                
             // после преобразования QueryData в Message.Response.Text отправляем его обратно TeleInteractor-у
             // пока не реализовано, раскомментится, как будет готово
 

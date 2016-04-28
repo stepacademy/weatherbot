@@ -1,7 +1,7 @@
 using System;
 using System.ServiceModel;
 using System.Xml;
-using WeatherBot.DatabaseWorker.Database.Entities;
+using WeatherBot.Database.Entities;
 
 namespace WeatherBot.WSLweather
 {

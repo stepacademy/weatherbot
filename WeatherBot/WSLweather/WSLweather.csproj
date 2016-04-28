@@ -70,9 +70,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DatabaseWorker\DatabaseWorker.csproj">
-      <Project>{3639b5a3-9918-4141-b19e-78e83e502b82}</Project>
-      <Name>DatabaseWorker</Name>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{3bbd5f5d-0d72-4680-b6d1-ca969c6c4e5f}</Project>
+      <Name>Database</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
