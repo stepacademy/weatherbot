@@ -1,11 +1,12 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Data.Entity;
-using WeatherBot.DatabaseWorker.Database;
-using WeatherBot.DatabaseWorker.Database.Entities;
-using WeatherBot.DatabaseWorker.QueryComponents;
 using System.ServiceModel;
 using System.Collections.Generic;
-using System;
+
+using WeatherBot.Database;
+using WeatherBot.Database.Entities;
+using WeatherBot.DatabaseWorker.QueryComponents;
 
 namespace WeatherBot.DatabaseWorker {
 

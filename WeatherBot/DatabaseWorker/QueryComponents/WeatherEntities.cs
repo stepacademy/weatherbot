@@ -1,5 +1,5 @@
 ﻿using System.Runtime.Serialization;
-using WeatherBot.DatabaseWorker.Database.Entities;
+using WeatherBot.Database.Entities;
 
 namespace WeatherBot.DatabaseWorker.QueryComponents {
 
