@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Data.Entity;
 using System.ServiceModel;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 
 using WeatherBot.Database;
@@ -15,46 +16,47 @@ namespace WeatherBot.DatabaseWorker {
         private ICallbackResponseContract _currentOperationContext;
         private WeatherDbContext          _currentWeatherDbContext;
 
-        public void Query(QueryData query) {
+        public async void QueryAsync(QueryData query) {
 
             _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();
-            _currentOperationContext.Response(GetResponse(query));
+            _currentOperationContext.Response(await GetResponse(query));
         }
 
-
-        // Filling QueryData
-        private QueryData GetResponse(QueryData query) {
+        private async Task<QueryData> GetResponse(QueryData query) {
 
             List<DateTime> queryDateTimes = new List<DateTime>(query.weatherAtTimes.Keys);
 
             for (int i = 0; i < queryDateTimes.Count; ++i) {
 
-                query.weatherAtTimes[queryDateTimes[i]].Temperature   = 123; // get..
-                query.weatherAtTimes[queryDateTimes[i]].Humidity      = 123;
-                query.weatherAtTimes[queryDateTimes[i]].Pressure      = 123;
-                query.weatherAtTimes[queryDateTimes[i]].WindDirection = WindDirectionType.South;
-                query.weatherAtTimes[queryDateTimes[i]].WindSpeed     = 123;
+                WeatherData wData = await GetWeatherAtCityTime(query.City, queryDateTimes[i]); 
 
-                //KeyValuePair a = new KeyValuePair<int, int>
+                query.weatherAtTimes[queryDateTimes[i]].State         = wData.WeatherState.State;
+                query.weatherAtTimes[queryDateTimes[i]].Temperature   = wData.Temperature;
+                query.weatherAtTimes[queryDateTimes[i]].Humidity      = wData.Humidity;
+                query.weatherAtTimes[queryDateTimes[i]].Pressure      = wData.Pressure;
+                query.weatherAtTimes[queryDateTimes[i]].WindDirection = wData.WindDirection;
+                query.weatherAtTimes[queryDateTimes[i]].WindSpeed     = wData.WindSpeed;
+
             }
 
             return query;
         }
 
+        private Task<WeatherData> GetWeatherAtCityTime(string city, DateTime dateTime) {
 
+            int id = 0; // <-- ?????????
 
+            using (_currentWeatherDbContext = new WeatherDbContext()) {
 
-        private WeatherState GetWeatherState(string stateCode) {
+                _currentWeatherDbContext.WeatherDatas.Load();
 
-            WeatherState result;
-            using (var db = new WeatherDbContext()) {
-                db.WeatherStates.Load();
-                var query = from wst in db.WeatherStates where wst.Code == stateCode select wst;
+                IQueryable<WeatherData> wData =
+                    from weatherData in _currentWeatherDbContext.WeatherDatas
+                    where weatherData.Id == id
+                    select weatherData;
 
-                result = query.First();
+                return wData.FirstAsync();
             }
-
-            return result;
         }
     }
 }

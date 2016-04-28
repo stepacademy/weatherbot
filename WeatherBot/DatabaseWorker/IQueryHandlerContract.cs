@@ -7,6 +7,6 @@ namespace WeatherBot.DatabaseWorker {
     public interface IQueryHandlerContract {
 
         [OperationContract(IsOneWay = true)]
-        void Query(QueryData query);
+        void QueryAsync(QueryData query);
     }
 }
