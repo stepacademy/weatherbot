@@ -54,20 +54,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\Entities\CalendarDate.cs" />
-    <Compile Include="Database\Entities\City.cs" />
-    <Compile Include="Database\Entities\Country.cs" />
-    <Compile Include="Database\Entities\DayPart.cs" />
-    <Compile Include="Database\Entities\DayTimeType.cs" />
-    <Compile Include="Database\Entities\FactWeather.cs" />
-    <Compile Include="Database\Entities\ForecastWeather.cs" />
-    <Compile Include="Database\Entities\Location.cs" />
-    <Compile Include="Database\Entities\UpdateError.cs" />
-    <Compile Include="Database\Entities\Weather.cs" />
-    <Compile Include="Database\Entities\WeatherData.cs" />
-    <Compile Include="Database\Entities\WeatherState.cs" />
-    <Compile Include="Database\Entities\WindDirectionType.cs" />
-    <Compile Include="Database\WeatherDbContext.cs" />
     <Compile Include="QueryComponents\QueryData.cs" />
     <Compile Include="QueryComponents\WeatherEntities.cs" />
     <Compile Include="QueryHandler.cs" />
@@ -83,6 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="WeatherUpdate\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{3bbd5f5d-0d72-4680-b6d1-ca969c6c4e5f}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
