@@ -19,7 +19,7 @@ namespace WeatherBot.WSLweather
             DayProcessing(cities);
         }
 
-        public void DayProcessing(IEnumerable<City> cities)
+        private void DayProcessing(IEnumerable<City> cities)
         {
             var stackCities = cities as Stack<City>;
 
