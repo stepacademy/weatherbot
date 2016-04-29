@@ -8,7 +8,7 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
     using Message = Adapters.Message;
 
-    internal class BasedGetUpdates : IInteractionStrategy {
+    internal sealed class BasedGetUpdates : IInteractionStrategy {
 
         private int            _offset;
         private Timer          _stateTimer;

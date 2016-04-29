@@ -5,7 +5,7 @@
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.Adapters {
 
-    internal class MResponse {
+    internal sealed class MResponse {
 
         public string Text;
         public string Document;

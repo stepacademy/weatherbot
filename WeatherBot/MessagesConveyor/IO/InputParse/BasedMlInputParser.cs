@@ -9,7 +9,7 @@ namespace WeatherBot.MessagesConveyor.IO.InputParse {
     using TeleInteraction.Adapters;
     using TeleInteraction.InteractionStrategy;
 
-    internal class BasedMlInputParser : IInputParser {
+    internal sealed class BasedMlInputParser : IInputParser {
 
         public void FormQuery(Message message) {
             return;

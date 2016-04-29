@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WeatherBot.Database.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WeatherBot.Database.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="WindDirectionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="South" />
+      <xs:enumeration value="SouthEast" />
+      <xs:enumeration value="East" />
+      <xs:enumeration value="NorthEast" />
+      <xs:enumeration value="North" />
+      <xs:enumeration value="NorthWest" />
+      <xs:enumeration value="West" />
+      <xs:enumeration value="SouthWest" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WindDirectionType" nillable="true" type="tns:WindDirectionType" />
+</xs:schema>

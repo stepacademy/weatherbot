@@ -29,7 +29,9 @@ namespace WeatherBot.DatabaseWorker {
             _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();
 
             // возвращаем результат, предварительно заполнив в SetResponse ответами наш запрос
-            _currentOperationContext.Response(await SetResponse(query));
+            //_currentOperationContext.Response(await SetResponse(query));       // <-- This line will be uncomment
+
+            _currentOperationContext.Response(query);                            // <-- This line will be removed, DUMMY
 
         }
 
@@ -53,9 +55,9 @@ namespace WeatherBot.DatabaseWorker {
             return query;
         }
 
-        private Task<WeatherData> GetWeatherAtCityTime(string city, DateTime dateTime) {
+        private async Task<WeatherData> GetWeatherAtCityTime(string city, DateTime dateTime) {
 
-            int id = 0; // <-- ?????????
+            int id = 0; // <-- ?
 
             using (_currentWeatherDbContext = new WeatherDbContext()) {
 
@@ -63,10 +65,10 @@ namespace WeatherBot.DatabaseWorker {
 
                 IQueryable<WeatherData> wData =
                     from weatherData in _currentWeatherDbContext.WeatherDatas
-                    where weatherData.Id == id // <-- ?????????
+                    where weatherData.Id == id // <-- ?
                     select weatherData;
 
-                return wData.FirstAsync();
+                return await wData.FirstAsync();
             }
         }
 

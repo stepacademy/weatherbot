@@ -11,7 +11,7 @@ namespace WeatherBot.MessagesConveyor {
     using TeleInteraction.InteractionStrategy;
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
-    internal class Management : IManagementContract {
+    internal sealed class Management : IManagementContract {
 
         private IInteractionStrategy _interaction;
         private List<IInputParser>   _inputParsers;
@@ -34,8 +34,10 @@ namespace WeatherBot.MessagesConveyor {
         }
 
         public void Start(string botToken, InteractionMode iMode = InteractionMode.GetUpdatesBased) {
+
             BotToken = botToken;
             ParsersInitialize(_interaction = TeleInteraction(iMode));
+            DatabaseWorkerInstance.Proxy.Open();
             _interaction.Start();
         }
 

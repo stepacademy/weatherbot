@@ -9,9 +9,9 @@ namespace WeatherBot.MessagesConveyor.IO.ReplyProcessing {
     using TeleInteraction.Adapters;
     using DatabaseWorker.QueryComponents;
 
-    internal class SpeakerFree : IReplyProcessor {
+    internal sealed class SpeakerFree : IReplyProcessor {
 
-        public Message FormReply(QueryData response) {
+        public void Response(QueryData response) {
             throw new NotImplementedException();
         }
     }

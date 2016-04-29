@@ -6,7 +6,7 @@ using System;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.Adapters {
     
-    internal class Message {
+    internal sealed class Message {
 
         public readonly int       Id;
         public readonly DateTime  DTime;

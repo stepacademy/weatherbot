@@ -10,7 +10,7 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
     using Message = Adapters.Message;
 
-    internal class BasedWebHook : IInteractionStrategy {                   // WebHook-based interaction mode, NEED TESTS
+    internal sealed class BasedWebHook : IInteractionStrategy {            // WebHook-based interaction mode, NEED TESTS
 
         public event MessageIncomingEvent Incoming;
 

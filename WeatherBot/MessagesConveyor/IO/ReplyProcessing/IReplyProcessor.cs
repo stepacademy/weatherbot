@@ -8,10 +8,10 @@ namespace WeatherBot.MessagesConveyor.IO.ReplyProcessing {
 
     using TeleInteraction.Adapters;
     using DatabaseWorker.QueryComponents;
-
+    using DatabaseQueryHandler;
     internal interface IReplyProcessor {
 
-        Message FormReply(QueryData response);
+        void Response(QueryData response);
 
 
     }

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WeatherBot.DatabaseWorker.QueryComponents" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WeatherBot.DatabaseWorker.QueryComponents" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/WeatherBot.Database.Entities" />
+  <xs:complexType name="QueryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InitiatorId" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="weatherAtTimes" nillable="true" type="q1:ArrayOfKeyValueOfdateTimeWeatherEntitiesWkpWoWGi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryData" nillable="true" type="tns:QueryData" />
+  <xs:complexType name="WeatherEntities">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Humidity" type="xs:double" />
+      <xs:element minOccurs="0" name="Pressure" type="xs:double" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Temperature" type="xs:double" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WeatherBot.Database.Entities" minOccurs="0" name="WindDirection" type="q2:WindDirectionType" />
+      <xs:element minOccurs="0" name="WindSpeed" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WeatherEntities" nillable="true" type="tns:WeatherEntities" />
+</xs:schema>

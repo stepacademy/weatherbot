@@ -95,7 +95,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseWorkerInstance.cs" />
     <Compile Include="IManagementContract.cs" />
+    <Compile Include="IO\_OldCode_IoFilter\ClimatInfo.cs" />
+    <Compile Include="IO\_OldCode_IoFilter\DayClimatInfo.cs" />
+    <Compile Include="IO\_OldCode_IoFilter\DayPartClimatInfo.cs" />
+    <Compile Include="IO\_OldCode_IoFilter\DBEmulator.cs" />
+    <Compile Include="IO\_OldCode_IoFilter\IoFilter.cs" />
+    <Compile Include="IO\_OldCode_IoFilter\QueryPreprocessor.cs" />
+    <Compile Include="IO\_OldCode_IoFilter\ResponsePostprocessor.cs" />
     <Compile Include="MessageIncomingEvent.cs" />
     <Compile Include="MessageOutcomingEvent.cs" />
     <Compile Include="IO\InputParse\BasedLogicInputParser.cs" />
@@ -106,6 +114,11 @@
     <Compile Include="IO\ReplyProcessing\SpeakerWeatherSpecified.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Management.cs" />
+    <Compile Include="Service References\DatabaseQueryHandler\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="TeleInteraction\Adapters\Message.cs" />
     <Compile Include="TeleInteraction\Adapters\MLocation.cs" />
     <Compile Include="TeleInteraction\Adapters\MResponse.cs" />
@@ -121,6 +134,22 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Service References\DatabaseQueryHandler\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DatabaseQueryHandler\service.wsdl" />
+    <None Include="Service References\DatabaseQueryHandler\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DatabaseQueryHandler\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DatabaseQueryHandler\WeatherBot.Database.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DatabaseQueryHandler\WeatherBot.DatabaseWorker.QueryComponents.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DatabaseWorker\DatabaseWorker.csproj">
@@ -128,6 +157,25 @@
       <Name>DatabaseWorker</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DatabaseQueryHandler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DatabaseQueryHandler\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DatabaseQueryHandler\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DatabaseQueryHandler\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VSToolsPath Condition="'$(VSToolsPath)' == '' and '$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' != '11.0'">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

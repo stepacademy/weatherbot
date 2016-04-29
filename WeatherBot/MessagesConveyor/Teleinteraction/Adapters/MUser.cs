@@ -5,7 +5,7 @@
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.Adapters {
 
-    internal class MUser {
+    internal sealed class MUser {
 
         public readonly int    Id;
         public readonly string Username;

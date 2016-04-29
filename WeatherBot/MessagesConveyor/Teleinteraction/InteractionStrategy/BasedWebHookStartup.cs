@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
-    internal class BasedWebHookStartup {
+    internal sealed class BasedWebHookStartup {
 
         public void Configuration(IAppBuilder app) {
 

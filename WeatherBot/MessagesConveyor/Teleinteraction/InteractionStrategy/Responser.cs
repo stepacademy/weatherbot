@@ -7,7 +7,7 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
     using Adapters;
 
-    internal class Responser {
+    internal sealed class Responser {
 
         public async void SendResponse(Message message) {
 

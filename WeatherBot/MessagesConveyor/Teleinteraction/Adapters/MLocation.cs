@@ -5,7 +5,7 @@
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.Adapters {
 
-    internal class MLocation {
+    internal sealed class MLocation {
 
         public readonly float Latitude;
         public readonly float Longitude;

@@ -6,7 +6,7 @@ using System;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction {
 
-    internal class Bot {
+    internal sealed class Bot {
 
         private static readonly Lazy<Telegram.Bot.Api> _api =
             new Lazy<Telegram.Bot.Api>(() => new Telegram.Bot.Api(Management.BotToken));
