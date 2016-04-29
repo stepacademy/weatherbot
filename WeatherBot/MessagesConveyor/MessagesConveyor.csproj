@@ -97,13 +97,6 @@
   <ItemGroup>
     <Compile Include="DatabaseWorkerInstance.cs" />
     <Compile Include="IManagementContract.cs" />
-    <Compile Include="IO\_OldCode_IoFilter\ClimatInfo.cs" />
-    <Compile Include="IO\_OldCode_IoFilter\DayClimatInfo.cs" />
-    <Compile Include="IO\_OldCode_IoFilter\DayPartClimatInfo.cs" />
-    <Compile Include="IO\_OldCode_IoFilter\DBEmulator.cs" />
-    <Compile Include="IO\_OldCode_IoFilter\IoFilter.cs" />
-    <Compile Include="IO\_OldCode_IoFilter\QueryPreprocessor.cs" />
-    <Compile Include="IO\_OldCode_IoFilter\ResponsePostprocessor.cs" />
     <Compile Include="MessageIncomingEvent.cs" />
     <Compile Include="MessageOutcomingEvent.cs" />
     <Compile Include="IO\InputParse\BasedLogicInputParser.cs" />

@@ -1,26 +1,40 @@
 ﻿
 // local WeatherBot host
 
+using System;
+using System.IO;
+using System.ServiceModel;
+using Test.AHost.MessageConveyorServiceReference;
+
 namespace Test.AHost {
 
-    class Program {
+    public class Program {
 
         static void Main(string[] args) {
 
-            /// start service: 1
+            Program test = new Program();
 
-            // - DatabaseWorker (ex WSLweather)
-            ///  include: update weather, request-response logic
+            InstanceContext instanceContext = new InstanceContext(test);
+            ManagementContractClient proxy = new ManagementContractClient(instanceContext);
+            proxy.Open();
 
-            /// ---
+            string botToken;
 
+            try {
+                using (StreamReader file = new StreamReader("botToken.txt")) {
 
-            /// start service: 2
+                    if ((botToken = file.ReadLine()) != null) {
+                        proxy.Start(botToken, InteractionMode.GetUpdatesBased);
+                        Console.WriteLine("Telegram API Interaction ready...\n");
+                    }
+                    file.Close();
+                }
+            }
+            catch (FileNotFoundException e) {
+                Console.WriteLine(e.Message);
+            }
 
-            // - MessageConveyor (ex TeleInteractor)
-            ///  include: telegram api interaction, query preprocessor, response postprocessor
-
-            /// ---
+            Console.ReadLine();            
         }
     }
 }
