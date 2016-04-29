@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0FBB8596-5334-46D7-B26C-C97539192D46}</ProjectGuid>
+    <ProjectGuid>{5662EB76-33FE-4090-9370-30F3FC5B2BF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WeatherBot.MessagesConveyor</RootNamespace>
@@ -16,8 +16,6 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
     <XsdCodeGenEnabled>True</XsdCodeGenEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -97,39 +95,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMessagesConveyorController.cs" />
-    <Compile Include="IOFilter\QueryPreprocessor.cs" />
-    <Compile Include="IOFilter\ResponsePostprocessor.cs" />
+    <Compile Include="IManagementContract.cs" />
+    <Compile Include="InputParse\BasedLogicInputParser.cs" />
+    <Compile Include="InputParse\BasedMlInputParser.cs" />
+    <Compile Include="InputParse\IInputParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Management.cs" />
+    <Compile Include="ReplyProcessing\IReplyProcessor.cs" />
+    <Compile Include="ReplyProcessing\SpeakerFree.cs" />
+    <Compile Include="ReplyProcessing\SpeakerWeatherSpecified.cs" />
     <Compile Include="Teleinteraction\Adapters\Message.cs" />
     <Compile Include="Teleinteraction\Adapters\MLocation.cs" />
     <Compile Include="Teleinteraction\Adapters\MResponse.cs" />
     <Compile Include="Teleinteraction\Adapters\MUser.cs" />
     <Compile Include="Teleinteraction\Bot.cs" />
-    <Compile Include="IMessageProcessorCallback.cs" />
-    <Compile Include="IMessagesConveyorService.cs" />
-    <Compile Include="Teleinteraction\InteractionStrategy\InteractionMode.cs" />
     <Compile Include="Teleinteraction\InteractionStrategy\BasedGetUpdates.cs" />
     <Compile Include="Teleinteraction\InteractionStrategy\BasedWebHook.cs" />
+    <Compile Include="Teleinteraction\InteractionStrategy\InteractionMode.cs" />
     <Compile Include="Teleinteraction\InteractionStrategy\ITeleInteractionStrategy.cs" />
-    <Compile Include="IOFilter\ClimatInfo.cs" />
-    <Compile Include="IOFilter\DayClimatInfo.cs" />
-    <Compile Include="IOFilter\DayPartClimatInfo.cs" />
-    <Compile Include="IOFilter\DBEmulator.cs" />
-    <Compile Include="IOFilter\IoFilter.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MessagesConveyorService.cs" />
+    <Compile Include="Teleinteraction\InteractionStrategy\Responder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.Common.dll" />
-    <Analyzer Include="..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.CSharp.dll" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VSToolsPath Condition="'$(VSToolsPath)' == '' and '$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' != '11.0'">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -146,13 +135,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

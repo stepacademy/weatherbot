@@ -15,8 +15,6 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
     internal class BasedWebHook : IInteractionStrategy {                   // WebHook-based interaction mode, NEED TESTS
 
-        private IMessageProcessorCallback _currentOperationContext;
-
         private Task Process() {
 
             using (WebApp.Start<WebHookStartup>("https://+:8443")) {
@@ -33,7 +31,6 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
         }
 
         public async void Start() {
-            _currentOperationContext = OperationContext.Current.GetCallbackChannel<IMessageProcessorCallback>();
 
             if (Thread.CurrentThread.ThreadState != ThreadState.WaitSleepJoin)
                 await Process();
@@ -45,7 +42,7 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
         }
 
         public void Receive(Telegram.Bot.Types.Update update) {
-            _currentOperationContext.CallbackInvoke(new Message(update));
+            //_currentOperationContext.CallbackInvoke(new Message(update));   // !! To parser
         }
     }
 

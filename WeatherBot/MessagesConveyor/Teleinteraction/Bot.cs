@@ -18,7 +18,7 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction {
         }
 
         private Bot() {
-            _api = new Telegram.Bot.Api(MessagesConveyorService.BotToken);
+            _api = new Telegram.Bot.Api(Management.BotToken);
         }
     }
 }
