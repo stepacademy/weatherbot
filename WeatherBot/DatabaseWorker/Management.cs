@@ -3,6 +3,7 @@ using System.ServiceModel;
 
 namespace WeatherBot.DatabaseWorker {
 
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
     internal class Management : IManagementContract {
 
         // Start weather update timer and weather update
