@@ -10,13 +10,14 @@ using WeatherBot.Database.Entities;
 using WeatherBot.DatabaseWorker.QueryComponents;
 
 // Женя, тут необходимо заполнить QueryData погодой одного конкретного City для каждого из WeatherEntities напротив каждого DateTime
-// это метод GetWeatherAtCityTime(string city, DateTime dateTime) который по примеру возвращаетв какое-то конкретное время, или время суток или день и т.п.
+// это метод GetWeatherAtCityTime(string city, DateTime dateTime) который по примеру возвращает погоду в какое-то конкретное время, или время суток или день и т.п.
 // этим в свою очередь заполняется в цикле в SetResponse(QueryData query) ответ
 
 // p.s. в GetWeatherAtCityTime(string city, DateTime dateTime) знаю, что неправильнно запрашиваю, т.к. не то )
 
 namespace WeatherBot.DatabaseWorker {
 
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
     internal class QueryHandler : IQueryHandlerContract {
 
         private ICallbackResponseContract _currentOperationContext;
@@ -68,5 +69,6 @@ namespace WeatherBot.DatabaseWorker {
                 return wData.FirstAsync();
             }
         }
+
     }
 }
