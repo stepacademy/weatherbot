@@ -3,19 +3,17 @@
 ///
 
 using System;
-using System.Runtime.Serialization;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.Adapters {
     
-    [DataContract]
-    public class Message {
+    internal class Message {
 
-        [DataMember] public readonly int       Id;
-        [DataMember] public readonly DateTime  DTime;
-        [DataMember] public readonly string    Text;
-        [DataMember] public readonly MUser     User;
-        [DataMember] public readonly MLocation Location;
-        [DataMember] public MResponse          Response;
+        public readonly int       Id;
+        public readonly DateTime  DTime;
+        public readonly string    Text;
+        public readonly MUser     User;
+        public readonly MLocation Location;
+        public MResponse          Response;
 
         public Message(Telegram.Bot.Types.Update update) {
 

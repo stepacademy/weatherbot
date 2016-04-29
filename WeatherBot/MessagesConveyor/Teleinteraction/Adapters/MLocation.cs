@@ -2,15 +2,13 @@
 /// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
 ///
 
-using System.Runtime.Serialization;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.Adapters {
 
-    [DataContract]
-    public class MLocation {
+    internal class MLocation {
 
-        [DataMember] public readonly float Latitude;
-        [DataMember] public readonly float Longitude;
+        public readonly float Latitude;
+        public readonly float Longitude;
 
         public MLocation(Telegram.Bot.Types.Location location) {
 

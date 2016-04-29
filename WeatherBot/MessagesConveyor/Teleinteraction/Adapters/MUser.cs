@@ -2,17 +2,15 @@
 /// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
 ///
 
-using System.Runtime.Serialization;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.Adapters {
 
-    [DataContract]
-    public class MUser {
+    internal class MUser {
 
-        [DataMember] public readonly int    Id;
-        [DataMember] public readonly string Username;
-        [DataMember] public readonly string FirstName;
-        [DataMember] public readonly string LastName;
+        public readonly int    Id;
+        public readonly string Username;
+        public readonly string FirstName;
+        public readonly string LastName;
 
         public MUser(Telegram.Bot.Types.User user) {
 

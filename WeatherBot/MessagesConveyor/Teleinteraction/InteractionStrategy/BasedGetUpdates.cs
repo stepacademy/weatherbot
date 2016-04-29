@@ -2,7 +2,6 @@
 /// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
 ///
 
-using System.ServiceModel;
 using System.Threading;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
@@ -15,7 +14,9 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
         private Timer          _stateTimer;
         private AutoResetEvent _autoEvent;
 
-        public async void PerformStep(object stateInfo) {
+        public event MessageIncomingEvent Incoming;
+
+        private async void PerformStep(object stateInfo) {
 
             AutoResetEvent autoEvent = (AutoResetEvent)stateInfo;
             autoEvent.Set();
@@ -23,7 +24,7 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
             var updates = await Bot.Api.GetUpdates(_offset);
 
             foreach (var update in updates) {
-                //_currentOperationContext.CallbackInvoke(new Message(update)); // !! To parser
+                Incoming.Invoke(new Message(update));
                 _offset = update.Id + 1;
             }
         }

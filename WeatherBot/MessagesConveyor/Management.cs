@@ -1,40 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿///
+/// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
+///
+
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
-using WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy;
+using System.Collections.Generic;
 
 namespace WeatherBot.MessagesConveyor {
 
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
-    public class Management : IManagementContract {
+    using IO.InputParse;
+    using TeleInteraction.InteractionStrategy;
+
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
+    internal class Management : IManagementContract {
 
         private IInteractionStrategy _interaction;
+        private List<IInputParser>   _inputParsers;
+
         public static string BotToken;
 
-        private void SetTelegramInteractionMode(InteractionMode iMode) {
+        private IInteractionStrategy TeleInteraction(InteractionMode iMode) {
 
             if (iMode == InteractionMode.WebHookBased)
-                _interaction = new BasedWebHook();
+                return new BasedWebHook();
             else
-                _interaction = new BasedGetUpdates();
+                return new BasedGetUpdates();
+        }
+
+        private void ParsersInitialize(IInteractionStrategy incomingInitiator) {
+
+            _inputParsers = new List<IInputParser>(2);
+            _inputParsers.Add(new BasedLogicInputParser(incomingInitiator));
+            _inputParsers.Add(new BasedMlInputParser   (incomingInitiator));
         }
 
         public void Start(string botToken, InteractionMode iMode = InteractionMode.GetUpdatesBased) {
             BotToken = botToken;
-            SetTelegramInteractionMode(iMode);
+            ParsersInitialize(_interaction = TeleInteraction(iMode));
             _interaction.Start();
         }
 
         public void Stop() {
             _interaction.Stop();
         }
-
-
-        public Management() {
-            _interaction = new BasedGetUpdates();
-        }        
     }
 }

@@ -4,7 +4,9 @@
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
-    interface IInteractionStrategy {
+    internal interface IInteractionStrategy {
+
+        event MessageIncomingEvent Incoming;
 
         void Start();
         void Stop();
