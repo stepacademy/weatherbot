@@ -11,18 +11,16 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.Adapters {
         public readonly int       Id;
         public readonly DateTime  DTime;
         public readonly string    Text;
-        public readonly MUser     User;
-        public readonly MLocation Location;
-        public MResponse          Response;
+        public readonly User      User;
+        public readonly Location  Location;
 
         public Message(Telegram.Bot.Types.Update update) {
 
             Id       = update.Message.MessageId;
             DTime    = update.Message.Date;
             Text     = update.Message.Text;
-            User     = new MUser(update.Message.From);
-            Location = new MLocation(update.Message.Location);
-            Response = null;
+            User     = new User(update.Message.From);
+            Location = new Location(update.Message.Location);
         }
     }
 }

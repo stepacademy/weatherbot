@@ -3,15 +3,15 @@
 ///
 
 using System;
+using Telegram.Bot;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction {
 
     internal sealed class Bot {
 
-        private static readonly Lazy<Telegram.Bot.Api> _api =
-            new Lazy<Telegram.Bot.Api>(() => new Telegram.Bot.Api(Management.BotToken));
+        private static readonly Lazy<Api> _api = new Lazy<Api>(() => new Api(Management.BotToken));
 
-        public static Telegram.Bot.Api Api { get { return _api.Value; } }
+        public static Api Api { get { return _api.Value; } }
 
         private Bot() { }
     }

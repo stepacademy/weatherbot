@@ -8,11 +8,11 @@ using Test.AHost.MessageConveyorServiceReference;
 
 namespace Test.AHost {
 
-    public class Program {
+    public class LocalhostWeatherBot {
 
         static void Main(string[] args) {
 
-            Program test = new Program();
+            LocalhostWeatherBot test = new LocalhostWeatherBot();
 
             InstanceContext instanceContext = new InstanceContext(test);
             ManagementContractClient proxy = new ManagementContractClient(instanceContext);

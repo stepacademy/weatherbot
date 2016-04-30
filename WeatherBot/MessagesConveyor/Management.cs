@@ -3,18 +3,23 @@
 ///
 
 using System.ServiceModel;
-using System.Collections.Generic;
 
 namespace WeatherBot.MessagesConveyor {
 
-    using IO.InputParse;
+    using IO;
+    using DataInteraction;
+    using DatabaseQueryHandler;
     using TeleInteraction.InteractionStrategy;
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     internal sealed class Management : IManagementContract {
 
-        private IInteractionStrategy _interaction;
-        private List<IInputParser>   _inputParsers;
+        private IInteractionStrategy          _interaction;
+        private LogicalInputParser            _parser;
+        private NeuralNetworkEntryPoint       _neuralNetworkEntryPoint;
+
+        private IQueryHandlerContractCallback _callbackProxy;
+        private DatabaseWorkerProxy           _proxy;        
 
         public static string BotToken;
 
@@ -26,18 +31,19 @@ namespace WeatherBot.MessagesConveyor {
                 return new BasedGetUpdates();
         }
 
-        private void ParsersInitialize(IInteractionStrategy incomingInitiator) {
+        private void InteractionInitialize(InteractionMode iMode) {
 
-            _inputParsers = new List<IInputParser>(2);
-            _inputParsers.Add(new BasedLogicInputParser(incomingInitiator));
-            _inputParsers.Add(new BasedMlInputParser   (incomingInitiator));
+            _interaction             = TeleInteraction(iMode);
+            _callbackProxy           = new DatabaseWorkerCallback();
+            _proxy                   = new DatabaseWorkerProxy(_callbackProxy);
+            _parser                  = new LogicalInputParser(_interaction, _proxy);
+            _neuralNetworkEntryPoint = new NeuralNetworkEntryPoint(_interaction);
         }
 
-        public void Start(string botToken, InteractionMode iMode = InteractionMode.GetUpdatesBased) {
+        public void Start(string botToken, InteractionMode iMode) {
 
             BotToken = botToken;
-            ParsersInitialize(_interaction = TeleInteraction(iMode));
-            DatabaseWorkerInstance.Proxy.Open();
+            InteractionInitialize(iMode);
             _interaction.Start();
         }
 
