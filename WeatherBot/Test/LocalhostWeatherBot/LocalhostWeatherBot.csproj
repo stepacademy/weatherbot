@@ -112,9 +112,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logger\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\DatabaseWorker\DatabaseWorker.csproj">
       <Project>{3639b5a3-9918-4141-b19e-78e83e502b82}</Project>

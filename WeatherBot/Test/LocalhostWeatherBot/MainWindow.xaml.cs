@@ -35,14 +35,16 @@ namespace LocalhostWeatherBot {
 
                     if ((botToken = file.ReadLine()) != null) {
                         proxy.Start(botToken, InteractionMode.GetUpdatesBased);
-                        MessagesConveyorTextBox.Clear();
-                        MessagesConveyorTextBox.Text = "Telegram API Interaction ready...\n";
+                        serviceStatus.Content = "Ready...";
                     }
                     file.Close();
                 }
             }
             catch (FileNotFoundException e) {
-                MessagesConveyorTextBox.Text = e.Message;
+                serviceStatus.Content = e.Message;
+            }
+            catch (Exception e) {
+                serviceStatus.Content = e.Message;
             }
         }
 
