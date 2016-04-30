@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Test.AHost.MessageConveyorServiceReference {
+namespace Test.MessageConveyorServiceReference {
     using System.Runtime.Serialization;
     using System.ServiceModel;
 
@@ -29,10 +29,10 @@ namespace Test.AHost.MessageConveyorServiceReference {
     public interface IManagementContract {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManagementContract/Start", ReplyAction="http://tempuri.org/IManagementContract/StartResponse")]
-        void Start(string botTokenPath, Test.AHost.MessageConveyorServiceReference.InteractionMode iMode);
+        void Start(string botTokenPath, Test.MessageConveyorServiceReference.InteractionMode iMode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManagementContract/Start", ReplyAction="http://tempuri.org/IManagementContract/StartResponse")]
-        System.Threading.Tasks.Task StartAsync(string botTokenPath, Test.AHost.MessageConveyorServiceReference.InteractionMode iMode);
+        System.Threading.Tasks.Task StartAsync(string botTokenPath, Test.MessageConveyorServiceReference.InteractionMode iMode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManagementContract/Stop", ReplyAction="http://tempuri.org/IManagementContract/StopResponse")]
         void Stop();
@@ -42,12 +42,12 @@ namespace Test.AHost.MessageConveyorServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IManagementContractChannel : Test.AHost.MessageConveyorServiceReference.IManagementContract, System.ServiceModel.IClientChannel {
+    public interface IManagementContractChannel : Test.MessageConveyorServiceReference.IManagementContract, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ManagementContractClient : System.ServiceModel.ClientBase<Test.AHost.MessageConveyorServiceReference.IManagementContract>, Test.AHost.MessageConveyorServiceReference.IManagementContract {
+    public partial class ManagementContractClient : System.ServiceModel.ClientBase<Test.MessageConveyorServiceReference.IManagementContract>, Test.MessageConveyorServiceReference.IManagementContract {
         private InstanceContext instanceContext;
 
         public ManagementContractClient() {
@@ -73,11 +73,11 @@ namespace Test.AHost.MessageConveyorServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void Start(string botTokenPath, Test.AHost.MessageConveyorServiceReference.InteractionMode iMode) {
+        public void Start(string botTokenPath, Test.MessageConveyorServiceReference.InteractionMode iMode) {
             base.Channel.Start(botTokenPath, iMode);
         }
         
-        public System.Threading.Tasks.Task StartAsync(string botTokenPath, Test.AHost.MessageConveyorServiceReference.InteractionMode iMode) {
+        public System.Threading.Tasks.Task StartAsync(string botTokenPath, Test.MessageConveyorServiceReference.InteractionMode iMode) {
             return base.Channel.StartAsync(botTokenPath, iMode);
         }
         

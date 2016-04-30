@@ -15,7 +15,7 @@ namespace WeatherBot.MessagesConveyor {
     internal sealed class Management : IManagementContract {
 
         private IInteractionStrategy          _interaction;
-        private LogicalInputParser            _parser;
+        private InputParserEntryPoint            _parser;
         private NeuralNetworkEntryPoint       _neuralNetworkEntryPoint;
 
         private IQueryHandlerContractCallback _callbackProxy;
@@ -36,7 +36,7 @@ namespace WeatherBot.MessagesConveyor {
             _interaction             = TeleInteraction(iMode);
             _callbackProxy           = new DatabaseWorkerCallback();
             _proxy                   = new DatabaseWorkerProxy(_callbackProxy);
-            _parser                  = new LogicalInputParser(_interaction, _proxy);
+            _parser                  = new InputParserEntryPoint(_interaction, _proxy);
             _neuralNetworkEntryPoint = new NeuralNetworkEntryPoint(_interaction);
         }
 
