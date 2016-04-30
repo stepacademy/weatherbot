@@ -10,14 +10,14 @@ namespace WeatherBot.MessagesConveyor.DataInteraction {
 
     internal class DatabaseWorkerCallback : IQueryHandlerContractCallback {
 
-        private SpeakerWeather  _speaker;
+        private WeatherSpeaker  _speaker;
 
         public void Response(QueryData response) {
             _speaker.Response(response);
         }
 
         public DatabaseWorkerCallback() {
-            _speaker = new SpeakerWeather();
+            _speaker = new WeatherSpeaker();
         }
     }
 }

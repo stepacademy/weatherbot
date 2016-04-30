@@ -16,14 +16,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckUpdateWeather", "Test\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseWorker", "DatabaseWorker\DatabaseWorker.csproj", "{3639B5A3-9918-4141-B19E-78E83E502B82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AHost", "Test\AHost\AHost.csproj", "{0F0FE489-C861-4898-BADD-143384871DCB}"
-	ProjectSection(ProjectDependencies) = postProject
-		{5662EB76-33FE-4090-9370-30F3FC5B2BF2} = {5662EB76-33FE-4090-9370-30F3FC5B2BF2}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{3BBD5F5D-0D72-4680-B6D1-CA969C6C4E5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagesConveyor", "MessagesConveyor\MessagesConveyor.csproj", "{5662EB76-33FE-4090-9370-30F3FC5B2BF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalhostWeatherBot", "Test\LocalhostWeatherBot\LocalhostWeatherBot.csproj", "{843A57B2-C1BD-4120-8DA0-156859AF925B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5662EB76-33FE-4090-9370-30F3FC5B2BF2} = {5662EB76-33FE-4090-9370-30F3FC5B2BF2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,6 @@ Global
 		{3639B5A3-9918-4141-B19E-78E83E502B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3639B5A3-9918-4141-B19E-78E83E502B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3639B5A3-9918-4141-B19E-78E83E502B82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F0FE489-C861-4898-BADD-143384871DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F0FE489-C861-4898-BADD-143384871DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F0FE489-C861-4898-BADD-143384871DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F0FE489-C861-4898-BADD-143384871DCB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3BBD5F5D-0D72-4680-B6D1-CA969C6C4E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3BBD5F5D-0D72-4680-B6D1-CA969C6C4E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BBD5F5D-0D72-4680-B6D1-CA969C6C4E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,6 +55,10 @@ Global
 		{5662EB76-33FE-4090-9370-30F3FC5B2BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5662EB76-33FE-4090-9370-30F3FC5B2BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5662EB76-33FE-4090-9370-30F3FC5B2BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{843A57B2-C1BD-4120-8DA0-156859AF925B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{843A57B2-C1BD-4120-8DA0-156859AF925B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{843A57B2-C1BD-4120-8DA0-156859AF925B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{843A57B2-C1BD-4120-8DA0-156859AF925B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +66,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3918BFBA-7370-4E28-819F-9BD8F7AB97BA} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 		{9C9CDAC3-D2B3-40B9-8E13-FC37EDD75372} = {BD8A2866-059D-4673-8C31-491F42FB268B}
-		{0F0FE489-C861-4898-BADD-143384871DCB} = {BD8A2866-059D-4673-8C31-491F42FB268B}
+		{843A57B2-C1BD-4120-8DA0-156859AF925B} = {BD8A2866-059D-4673-8C31-491F42FB268B}
 	EndGlobalSection
 EndGlobal

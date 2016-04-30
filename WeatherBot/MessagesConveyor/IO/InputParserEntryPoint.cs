@@ -12,7 +12,7 @@ namespace WeatherBot.MessagesConveyor.IO {
     using TeleInteraction.InteractionStrategy;
     using DatabaseWorker.QueryComponents;
 
-    internal sealed class LogicalInputParser {
+    internal sealed class InputParserEntryPoint {
 
         private DatabaseWorkerProxy _database;
 
@@ -27,7 +27,7 @@ namespace WeatherBot.MessagesConveyor.IO {
             _database.Query(query);
         }
 
-        public LogicalInputParser(IInteractionStrategy sender, DatabaseWorkerProxy proxy) {
+        public InputParserEntryPoint(IInteractionStrategy sender, DatabaseWorkerProxy proxy) {
             sender.Incoming += Incoming;
             _database = proxy;
         }

@@ -99,9 +99,9 @@
     <Compile Include="DataInteraction\DatabaseWorkerProxy.cs" />
     <Compile Include="IManagementContract.cs" />
     <Compile Include="IO\MessageIncomingEvent.cs" />
-    <Compile Include="IO\LogicalInputParser.cs" />
+    <Compile Include="IO\InputParserEntryPoint.cs" />
     <Compile Include="IO\NeuralNetworkEntryPoint.cs" />
-    <Compile Include="IO\SpeakerWeather.cs" />
+    <Compile Include="IO\WeatherSpeaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Management.cs" />
     <Compile Include="Service References\DatabaseQueryHandler\Reference.cs">

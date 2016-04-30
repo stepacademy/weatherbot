@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1a615114-2115-4e3d-9af8-87f5f2cc6f66" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="52039a7f-6d0f-4ad1-b548-430e9a6da5ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/MessagesConveyor/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="89a37673-530c-4894-87e8-ab752a7936c2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MessagesConveyor/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="344ca4f3-45fa-4ade-9c67-0eb8f08fc3d6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MessagesConveyor/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="51af1e06-706e-42b4-80f8-c16db2a4734f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MessagesConveyor/mex" />
-    <MetadataFile FileName="WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy.xsd" MetadataType="Schema" ID="370e8a18-cee1-42c2-83dc-1ded8601a75b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MessagesConveyor/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f24a0d09-c96b-4278-8447-825bf5c57e31" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MessagesConveyor/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3da2a3d2-cf1b-4d5a-bb39-580df05d7f88" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MessagesConveyor/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6748a367-1f80-4929-9a32-b03ed440fdeb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MessagesConveyor/mex" />
+    <MetadataFile FileName="WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy.xsd" MetadataType="Schema" ID="91e47744-56b8-428c-a1bc-798b17c78be3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MessagesConveyor/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

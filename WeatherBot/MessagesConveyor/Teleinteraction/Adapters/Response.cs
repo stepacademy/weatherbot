@@ -9,7 +9,7 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.Adapters {
 
         public int    InitiatorId;
         public string Text;
-        public string Document;
-        public string Sticker;
+        //public string Document;
+        //public string Sticker;
     }
 }

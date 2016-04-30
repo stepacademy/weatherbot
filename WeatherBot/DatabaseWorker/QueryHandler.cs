@@ -23,7 +23,7 @@ namespace WeatherBot.DatabaseWorker {
         private ICallbackResponseContract _currentOperationContext;
         private WeatherDbContext          _currentWeatherDbContext;
 
-        public async void QueryAsync(QueryData query) {
+        public /*async*/ void QueryAsync(QueryData query) {                      // <-- Async line will be uncomment
 
             // берём контекст текущей операции
             _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();

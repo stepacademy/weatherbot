@@ -9,7 +9,7 @@ namespace WeatherBot.MessagesConveyor.IO {
     using TeleInteraction.InteractionStrategy;
     using DatabaseWorker.QueryComponents;
 
-    internal sealed class SpeakerWeather {
+    internal sealed class WeatherSpeaker {
 
         private OutcomingSender _sender;
 
@@ -21,7 +21,7 @@ namespace WeatherBot.MessagesConveyor.IO {
 
         }
 
-        public SpeakerWeather() {
+        public WeatherSpeaker() {
             _sender = new OutcomingSender();
         }
     }
