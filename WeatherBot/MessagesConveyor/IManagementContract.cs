@@ -7,11 +7,13 @@ using System.ServiceModel;
 
 namespace WeatherBot.MessagesConveyor {
 
+    using TeleInteraction.InteractionStrategy;
+
     [ServiceContract]
-    interface IMessagesConveyorController {
+    public interface IManagementContract {
 
         [OperationContract]
-        void Start(string botTokenPath);
+        void Start(string botTokenPath, InteractionMode iMode);
 
         [OperationContract]
         void Stop();

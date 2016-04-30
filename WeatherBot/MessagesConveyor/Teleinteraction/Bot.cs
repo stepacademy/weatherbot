@@ -2,23 +2,17 @@
 /// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
 ///
 
+using System;
+using Telegram.Bot;
+
 namespace WeatherBot.MessagesConveyor.TeleInteraction {
 
-    internal class Bot {
+    internal sealed class Bot {
 
-        private static Bot  _instance;
-        private Telegram.Bot.Api _api;
+        private static readonly Lazy<Api> _api = new Lazy<Api>(() => new Api(Management.BotToken));
 
-        public static Telegram.Bot.Api Api {
-            get {
-                if (_instance == null)
-                    _instance = new Bot();
-                return _instance._api;
-            }
-        }
+        public static Api Api { get { return _api.Value; } }
 
-        private Bot() {
-            _api = new Telegram.Bot.Api(MessagesConveyorService.BotToken);
-        }
+        private Bot() { }
     }
 }

@@ -3,8 +3,12 @@
 ///
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
+    
+    using IO;
 
-    interface IInteractionStrategy {
+    internal interface IInteractionStrategy {
+
+        event MessageIncomingEvent Incoming;
 
         void Start();
         void Stop();

@@ -2,24 +2,22 @@
 /// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
 ///
 
-using Owin;
-using System.Web.Http;
 using System.Threading;
-using System.ServiceModel;
 using System.Threading.Tasks;
 using Microsoft.Owin.Hosting;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
+    using IO;
     using Message = Adapters.Message;
 
-    internal class BasedWebHook : IInteractionStrategy {                   // WebHook-based interaction mode, NEED TESTS
+    internal sealed class BasedWebHook : IInteractionStrategy {            // WebHook-based interaction mode, NEED TESTS
 
-        private IMessageProcessorCallback _currentOperationContext;
+        public event MessageIncomingEvent Incoming;
 
         private Task Process() {
 
-            using (WebApp.Start<WebHookStartup>("https://+:8443")) {
+            using (WebApp.Start<BasedWebHookStartup>("https://+:8443")) {
 
                 try {                                                                                // Register WebHook
                     Bot.Api.SetWebhook("https://azure.stepacademy.weatherbot:8443/WeatherBotWebHook").Wait();
@@ -33,8 +31,6 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
         }
 
         public async void Start() {
-            _currentOperationContext = OperationContext.Current.GetCallbackChannel<IMessageProcessorCallback>();
-
             if (Thread.CurrentThread.ThreadState != ThreadState.WaitSleepJoin)
                 await Process();
         }
@@ -45,17 +41,7 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
         }
 
         public void Receive(Telegram.Bot.Types.Update update) {
-            _currentOperationContext.CallbackInvoke(new Message(update));
+            Incoming.Invoke(new Message(update));
         }
-    }
-
-    internal class WebHookStartup {
-
-        public void Configuration(IAppBuilder app) {
-
-            var configuration = new HttpConfiguration();
-            configuration.Routes.MapHttpRoute("WebHook", "{controller}");
-            app.UseWebApi(configuration);
-        }
-    }
+    }    
 }
