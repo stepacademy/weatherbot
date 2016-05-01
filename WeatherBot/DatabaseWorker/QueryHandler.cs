@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections;
 using System.Linq;
 using System.Data.Entity;
 using System.ServiceModel;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Xml.Linq;
-using WeatherBot.Database;
-using WeatherBot.Database.Entities;
-using WeatherBot.DatabaseWorker.QueryComponents;
-using WeatherBot.DatabaseWorker;
-using WeatherBot.DatabaseWorker.WeatherUpdate;
 
 namespace WeatherBot.DatabaseWorker {
+
+    using Database;
+    using Database.Entities;
+    using QueryComponents;
+    using WeatherUpdate;
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
     internal class QueryHandler : IQueryHandlerContract {
@@ -21,15 +18,10 @@ namespace WeatherBot.DatabaseWorker {
         private ICallbackResponseContract _currentOperationContext;
         private WeatherDbContext          _currentWeatherDbContext;
 
-        public async void QueryAsync(QueryData query) {                      // <-- Async line will be uncomment
+        public async void QueryAsync(QueryData query) {
 
-            // берём контекст текущей операции
             _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();
-
-            // возвращаем результат, предварительно заполнив в SetResponse ответами наш запрос
-            _currentOperationContext.Response(await SetResponse(query));       // <-- This line will be uncomment
-
-            //_currentOperationContext.Response(query);                            // <-- This line will be removed, DUMMY
+            _currentOperationContext.Response(await SetResponse(query));
 
         }
 
@@ -39,7 +31,8 @@ namespace WeatherBot.DatabaseWorker {
 
             foreach (DateTime dateTime in queryDateTimes)
             {
-                WeatherData wData = await GetWeatherAtCityTime(query.City, dateTime); 
+                // WeatherData wData = await GetWeatherAtCityTime(query.City, dateTime);    // <- will be uncomment
+                WeatherData wData = await GetDirectWeatherAtCityTime(query.City, dateTime); // <- dummy, will be removed
 
                 query.weatherAtTimes[dateTime].State         = wData.WeatherState.State;
                 query.weatherAtTimes[dateTime].Temperature   = wData.Temperature;
@@ -73,7 +66,7 @@ namespace WeatherBot.DatabaseWorker {
             }
         }
 
-        private async Task<WeatherData> SetResponseDirectDummy(string fCity, DateTime dateTime)
+        private async Task<WeatherData> GetDirectWeatherAtCityTime(string fCity, DateTime dateTime)
         {
             var countries = await WeatherUpdate.Weather.DownloadCities();
 
@@ -107,8 +100,5 @@ namespace WeatherBot.DatabaseWorker {
 
             return wData;
         }
-
-        
-
     }
 }
