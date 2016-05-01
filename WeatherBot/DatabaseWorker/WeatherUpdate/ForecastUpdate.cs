@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Globalization;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Xml.Linq;
 using WeatherBot.Database;
 using WeatherBot.Database.Entities;
@@ -72,7 +73,7 @@ namespace WeatherBot.DatabaseWorker.WeatherUpdate
             }
         }
 
-        private static List<DayPart> DayPartsProcessing(NumberFormatInfo formatSepar, XNamespace ns,
+        public static List<DayPart> DayPartsProcessing(NumberFormatInfo formatSepar, XNamespace ns,
             IEnumerable<XElement> dayPartsNodes)
         {
             var dayParts = new List<DayPart>();
@@ -92,6 +93,35 @@ namespace WeatherBot.DatabaseWorker.WeatherUpdate
             }
 
             return dayParts;
+        }
+
+        public static async Task<City> OneCityDayProcessing(City city)
+        {
+            var formatSepar = new NumberFormatInfo { NumberDecimalSeparator = "." };
+
+            var doc = XDocument.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
+
+            if (doc.Root == null) return city;
+
+            var ns = doc.Root.GetDefaultNamespace();
+
+            var daysNodes = doc.Root.Elements(ns + "day");
+
+            foreach (var day in daysNodes)
+            {
+                var calendarDate = new CalendarDate { Date = Convert.ToDateTime(day.Attribute("date").Value) };
+
+                var dayPartsNodes = day.Elements(ns + "day_part");
+                var dayParts = DayPartsProcessing(formatSepar, ns, dayPartsNodes);
+
+                city.Weather.Forecast.Add(new ForecastWeather
+                {
+                    CalendarDate = calendarDate,
+                    DayParts = dayParts
+                });
+            }
+
+            return city;
         }
     }
 }

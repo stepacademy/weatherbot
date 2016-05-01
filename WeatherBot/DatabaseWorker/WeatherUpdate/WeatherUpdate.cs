@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Threading.Tasks;
 using System.Xml.Linq;
 using WeatherBot.Database;
 using WeatherBot.Database.Entities;
@@ -82,5 +83,7 @@ namespace WeatherBot.DatabaseWorker.WeatherUpdate
             if (windSpeedElement != null)
                 itemWeatherData.WindSpeed = Convert.ToDouble(windSpeedElement.Value, formatSepar);
         }
+
+       
     }
 }

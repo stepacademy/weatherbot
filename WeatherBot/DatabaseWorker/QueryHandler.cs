@@ -5,10 +5,13 @@ using System.Data.Entity;
 using System.ServiceModel;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-
+using System.Globalization;
+using System.Xml.Linq;
 using WeatherBot.Database;
 using WeatherBot.Database.Entities;
 using WeatherBot.DatabaseWorker.QueryComponents;
+using WeatherBot.DatabaseWorker;
+using WeatherBot.DatabaseWorker.WeatherUpdate;
 
 namespace WeatherBot.DatabaseWorker {
 
@@ -69,6 +72,43 @@ namespace WeatherBot.DatabaseWorker {
                 return wData;
             }
         }
+
+        private async Task<WeatherData> SetResponseDirectDummy(string fCity, DateTime dateTime)
+        {
+            var countries = await WeatherUpdate.Weather.DownloadCities();
+
+            City qCity = null;
+
+            foreach (var country in countries)
+            {
+                foreach (var city in country.Cities)
+                {
+                    if (city.Name != fCity) continue;
+                    qCity = city;
+                    break;
+                }
+            }
+
+            var resCity = await ForecastUpdate.OneCityDayProcessing(qCity);
+
+            WeatherData wData = null;
+            
+            if (resCity != null)
+            {
+                DayTimeType dt = DbAction.GetDayTimeType(dateTime.Hour);
+
+                foreach (var forecastWeather in resCity.Weather.Forecast)
+                {
+                    if (forecastWeather.CalendarDate.Date != dateTime.Date) continue;
+
+                    wData = forecastWeather.DayParts.First(dayPart => dayPart.DayTime == dt).WeatherData;
+                }
+            }
+
+            return wData;
+        }
+
+        
 
     }
 }
