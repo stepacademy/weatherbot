@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbAction.cs" />
     <Compile Include="Entities\CalendarDate.cs" />
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\Country.cs" />

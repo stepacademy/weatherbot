@@ -1,14 +1,12 @@
-using System;
 using System.ServiceModel;
 using System.Xml;
 using WeatherBot.Database.Entities;
 
-namespace WeatherBot.WSLweather
+namespace WeatherBot.DatabaseWorker.WeatherUpdate
 {
     [ServiceContract]
     internal interface IWeather
     {
-
         [OperationContract(IsOneWay = true)]
         void CitiesInit();
 

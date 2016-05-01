@@ -58,10 +58,7 @@
     <Compile Include="ForecastUpdate.cs" />
     <Compile Include="IWeather.cs" />
     <Compile Include="IWeatherUpdate.cs" />
-    <Compile Include="QData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QDataWeatherDay.cs" />
-    <Compile Include="QDataWeatherDayPart.cs" />
     <Compile Include="Weather.cs" />
     <Compile Include="WeatherUpdate.cs" />
   </ItemGroup>

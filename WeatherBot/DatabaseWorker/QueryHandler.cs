@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using System.Data.Entity;
 using System.ServiceModel;
@@ -9,12 +10,6 @@ using WeatherBot.Database;
 using WeatherBot.Database.Entities;
 using WeatherBot.DatabaseWorker.QueryComponents;
 
-// Женя, тут необходимо заполнить QueryData погодой одного конкретного City для каждого из WeatherEntities напротив каждого DateTime
-// это метод GetWeatherAtCityTime(string city, DateTime dateTime) который по примеру возвращает погоду в какое-то конкретное время, или время суток или день и т.п.
-// этим в свою очередь заполняется в цикле в SetResponse(QueryData query) ответ
-
-// p.s. в GetWeatherAtCityTime(string city, DateTime dateTime) знаю, что неправильнно запрашиваю, т.к. не то )
-
 namespace WeatherBot.DatabaseWorker {
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
@@ -23,7 +18,7 @@ namespace WeatherBot.DatabaseWorker {
         private ICallbackResponseContract _currentOperationContext;
         private WeatherDbContext          _currentWeatherDbContext;
 
-        public /*async*/ void QueryAsync(QueryData query) {                      // <-- Async line will be uncomment
+        public async void QueryAsync(QueryData query) {                      // <-- Async line will be uncomment
 
             // берём контекст текущей операции
             _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();
@@ -39,36 +34,39 @@ namespace WeatherBot.DatabaseWorker {
 
             List<DateTime> queryDateTimes = new List<DateTime>(query.weatherAtTimes.Keys);
 
-            for (int i = 0; i < queryDateTimes.Count; ++i) {
+            foreach (DateTime dateTime in queryDateTimes)
+            {
+                WeatherData wData = await GetWeatherAtCityTime(query.City, dateTime); 
 
-                WeatherData wData = await GetWeatherAtCityTime(query.City, queryDateTimes[i]); 
-
-                query.weatherAtTimes[queryDateTimes[i]].State         = wData.WeatherState.State;
-                query.weatherAtTimes[queryDateTimes[i]].Temperature   = wData.Temperature;
-                query.weatherAtTimes[queryDateTimes[i]].Humidity      = wData.Humidity;
-                query.weatherAtTimes[queryDateTimes[i]].Pressure      = wData.Pressure;
-                query.weatherAtTimes[queryDateTimes[i]].WindDirection = wData.WindDirection;
-                query.weatherAtTimes[queryDateTimes[i]].WindSpeed     = wData.WindSpeed;
-
+                query.weatherAtTimes[dateTime].State         = wData.WeatherState.State;
+                query.weatherAtTimes[dateTime].Temperature   = wData.Temperature;
+                query.weatherAtTimes[dateTime].Humidity      = wData.Humidity;
+                query.weatherAtTimes[dateTime].Pressure      = wData.Pressure;
+                query.weatherAtTimes[dateTime].WindDirection = wData.WindDirection;
+                query.weatherAtTimes[dateTime].WindSpeed     = wData.WindSpeed;
             }
 
             return query;
         }
+        
+        private async Task<WeatherData> GetWeatherAtCityTime(string fCity, DateTime dateTime) {
+            
+            var queryCity = from city in _currentWeatherDbContext.Cities where city.Name == fCity select city;
 
-        private async Task<WeatherData> GetWeatherAtCityTime(string city, DateTime dateTime) {
-
-            int id = 0; // <-- ?
+            DayTimeType dt = DbAction.GetDayTimeType(dateTime.Hour);
 
             using (_currentWeatherDbContext = new WeatherDbContext()) {
 
-                _currentWeatherDbContext.WeatherDatas.Load();
+                _currentWeatherDbContext.Weathers.Load();
+                
+                var fWeather =
+                    queryCity.First()
+                        .Weather.Forecast.First(forecastWeather => forecastWeather.CalendarDate.Date == dateTime.Date);
+                
+                var wData = fWeather.DayParts.Where(dayPart => dayPart.DayTime == dt)
+                                .Select(dayPart => dayPart.WeatherData).First();
 
-                IQueryable<WeatherData> wData =
-                    from weatherData in _currentWeatherDbContext.WeatherDatas
-                    where weatherData.Id == id // <-- ?
-                    select weatherData;
-
-                return await wData.FirstAsync();
+                return wData;
             }
         }
 

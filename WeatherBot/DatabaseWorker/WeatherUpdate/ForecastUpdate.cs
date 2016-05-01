@@ -7,7 +7,7 @@ using System.Xml.Linq;
 using WeatherBot.Database;
 using WeatherBot.Database.Entities;
 
-namespace WeatherBot.WSLweather
+namespace WeatherBot.DatabaseWorker.WeatherUpdate
 {
     internal class ForecastUpdate : WeatherUpdate
     {
@@ -72,7 +72,8 @@ namespace WeatherBot.WSLweather
             }
         }
 
-        private static List<DayPart> DayPartsProcessing(NumberFormatInfo formatSepar, XNamespace ns, IEnumerable<XElement> dayPartsNodes)
+        private static List<DayPart> DayPartsProcessing(NumberFormatInfo formatSepar, XNamespace ns,
+            IEnumerable<XElement> dayPartsNodes)
         {
             var dayParts = new List<DayPart>();
 
@@ -81,7 +82,7 @@ namespace WeatherBot.WSLweather
                 var dp = new DayPart {WeatherData = new WeatherData()};
 
                 if (Convert.ToInt32(dayPartNode.Attribute("typeid").Value) < 5)
-                    dp.DayTime = Weather.GetDayTimeType(dayPartNode.Attribute("type").Value);
+                    dp.DayTime = DbAction.GetDayTimeType(dayPartNode.Attribute("type").Value);
                 else continue;
 
 

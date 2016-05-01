@@ -10,15 +10,6 @@ namespace WeatherBot.WSLweather
 {
     public class Weather : IWeather
     {
-        public QDataWeatherDay GetDataWeatherDay(DateTime dataTime)
-        {
-            throw new NotImplementedException();
-        }
-
-        public QDataWeatherDay GetWeatherDay(string city)
-        {
-            throw new NotImplementedException();
-        }
 
         public void UpdateWeather()
         {
@@ -141,6 +132,31 @@ namespace WeatherBot.WSLweather
         {
             DayTimeType result;
             Enum.TryParse(dayTime, out result);
+
+            return result;
+        }
+
+        public static DayTimeType GetDayTimeType(int hour)
+        {
+            DayTimeType result;
+
+            switch (hour)
+            {
+                case 6: result = DayTimeType.morning;
+                    break;
+                case 12:
+                    result = DayTimeType.day;
+                    break;
+                case 18:
+                    result = DayTimeType.evening;
+                    break;
+                case 0:
+                    result = DayTimeType.night;
+                    break;
+
+                default: result = DayTimeType.morning;
+                    break;
+            }
 
             return result;
         }
