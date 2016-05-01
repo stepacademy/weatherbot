@@ -24,9 +24,9 @@ namespace WeatherBot.DatabaseWorker {
             _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();
 
             // возвращаем результат, предварительно заполнив в SetResponse ответами наш запрос
-            //_currentOperationContext.Response(await SetResponse(query));       // <-- This line will be uncomment
+            _currentOperationContext.Response(await SetResponse(query));       // <-- This line will be uncomment
 
-            _currentOperationContext.Response(query);                            // <-- This line will be removed, DUMMY
+            //_currentOperationContext.Response(query);                            // <-- This line will be removed, DUMMY
 
         }
 
