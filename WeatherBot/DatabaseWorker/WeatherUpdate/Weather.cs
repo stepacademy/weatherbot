@@ -7,13 +7,11 @@ using WeatherBot.Database.Entities;
 
 namespace WeatherBot.DatabaseWorker.WeatherUpdate
 {
-    public class Weather : IWeather
+    public class Weather
     {
-        public void UpdateWeather()
-        {
-            throw new NotImplementedException();
-        }
-        
+
+        //implement db seed
+
         #region first DB init
 
         public void CitiesInit()

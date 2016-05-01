@@ -64,7 +64,6 @@
     <Compile Include="Management.cs" />
     <Compile Include="WeatherUpdate\FactUpdate.cs" />
     <Compile Include="WeatherUpdate\ForecastUpdate.cs" />
-    <Compile Include="WeatherUpdate\IWeather.cs" />
     <Compile Include="WeatherUpdate\IWeatherUpdate.cs" />
     <Compile Include="WeatherUpdate\Weather.cs" />
     <Compile Include="WeatherUpdate\WeatherUpdate.cs" />
