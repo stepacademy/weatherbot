@@ -35,9 +35,27 @@ namespace Test.CheckCities
                 var weatherInfo = new XmlDocument();
                 try
                 {
-                    weatherInfo.Load(
-                        $@"http://export.yandex.ru/weather-ng/forecasts/{cityNode.Attributes.GetNamedItem("id")
-                            .InnerText}.xml");
+                    const int numberOfAttempts = 5;
+                    bool sucsessAttempts = false;
+                    Exception exception = null;
+                    for (int i = 0; i < numberOfAttempts && !sucsessAttempts; i++)
+                    {
+                        try
+                        {
+                            weatherInfo.Load(
+                                $@"http://export.yandex.ru/weather-ng/forecasts/{cityNode.Attributes.GetNamedItem("id")
+                                    .InnerText}.xml");
+                        }
+                        catch (Exception ex)
+                        {
+                            exception = ex;
+                            continue;
+                        }
+                        sucsessAttempts = true;
+                    }
+
+                    if (!sucsessAttempts)
+                        throw new Exception(exception.Message);
                 }
                 catch (Exception ex)
                 {
