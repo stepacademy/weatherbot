@@ -20,9 +20,9 @@ namespace WeatherBot.MessagesConveyor.IO {
 
             QueryData query = new QueryData();                           // <-- This code will be replaced to real parse
             query.InitiatorId = message.User.Id;
-            query.City = "Минск";
+            query.City = "Брест";
             query.WeatherAtTimes = new Dictionary<DateTime, WeatherEntities>();
-            query.WeatherAtTimes.Add(new DateTime(2016, 5, 3, 0, 0, 0), null);                // <-- This code will be replaced to real parse
+            query.WeatherAtTimes.Add(new DateTime(2016, 5, 3, 0, 0, 0), new WeatherEntities());                // <-- This code will be replaced to real parse
 
             _database.Query(query);
         }

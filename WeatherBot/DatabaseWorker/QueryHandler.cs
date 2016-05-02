@@ -30,17 +30,20 @@ namespace WeatherBot.DatabaseWorker {
 
             List<DateTime> queryDateTimes = new List<DateTime>(query.WeatherAtTimes.Keys);
 
-            foreach (DateTime dateTime in queryDateTimes)
+            foreach (var dateTime in queryDateTimes)
             {
                 // WeatherData wData = await GetWeatherAtCityTime(query.City, dateTime);    // <- will be uncomment
                 WeatherData wData = await GetDirectWeatherAtCityTime(query.City, dateTime); // <- dummy, will be removed
 
-                query.WeatherAtTimes[dateTime].State         = wData.WeatherState.State;
+                //query.WeatherAtTimes[dateTime].State         = wData.WeatherState.State; // <- не содержит пока никаких данных.
+                
                 query.WeatherAtTimes[dateTime].Temperature   = wData.Temperature;
                 query.WeatherAtTimes[dateTime].Humidity      = wData.Humidity;
                 query.WeatherAtTimes[dateTime].Pressure      = wData.Pressure;
                 query.WeatherAtTimes[dateTime].WindDirection = wData.WindDirection;
-                query.WeatherAtTimes[dateTime].WindSpeed     = wData.WindSpeed;
+                query.WeatherAtTimes[dateTime].WindSpeed =  wData.WindSpeed;
+
+
             }
 
             return query;
@@ -100,6 +103,8 @@ namespace WeatherBot.DatabaseWorker {
                     if (forecastWeather.CalendarDate.Date != dateTime.Date) continue;
 
                     wData = forecastWeather.DayParts.First(dayPart => dayPart.DayTime == dt).WeatherData;
+
+                    break;
                 }
             }
 

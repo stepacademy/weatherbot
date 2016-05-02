@@ -122,12 +122,16 @@ namespace WeatherBot.DatabaseWorker.WeatherUpdate
 
             var daysNodes = doc.Root.Elements(ns + "day");
 
+            city.Weather = new Database.Entities.Weather();
+            city.Weather.Forecast = new List<ForecastWeather>();
+
             foreach (var day in daysNodes)
             {
                 var calendarDate = new CalendarDate { Date = Convert.ToDateTime(day.Attribute("date").Value) };
 
                 var dayPartsNodes = day.Elements(ns + "day_part");
                 var dayParts = DayPartsProcessing(formatSepar, ns, dayPartsNodes);
+
 
                 city.Weather.Forecast.Add(new ForecastWeather
                 {
