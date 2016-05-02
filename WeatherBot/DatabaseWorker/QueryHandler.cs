@@ -21,14 +21,9 @@ namespace WeatherBot.DatabaseWorker {
         public async void QueryAsync(QueryData query) {
 
             _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();
-            try {
-                _currentOperationContext.Response(await SetResponse(query));
-            }
-            catch (Exception ex) {
-                query.Error = ex.Message;
-                _currentOperationContext.Response(query);
-                //throw;
-            }
+
+            try { _currentOperationContext.Response(await SetResponse(query)); }
+            catch (Exception ex) { query.Error = ex.Message; _currentOperationContext.Response(query); }
         }
 
         private async Task<QueryData> SetResponse(QueryData query) {
@@ -109,6 +104,7 @@ namespace WeatherBot.DatabaseWorker {
             }
 
             return wData;
+
         }
     }
 }
