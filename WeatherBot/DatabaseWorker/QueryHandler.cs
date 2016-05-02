@@ -71,18 +71,22 @@ namespace WeatherBot.DatabaseWorker {
             var countries = await WeatherUpdate.Weather.DownloadCities();
 
             City qCity = null;
-
+            bool flag = false;
             foreach (var country in countries)
             {
                 foreach (var city in country.Cities)
                 {
                     if (city.Name != fCity) continue;
                     qCity = city;
+                    flag = true;
                     break;
                 }
+                if(flag)
+                    break;
+                
             }
 
-            var resCity = await ForecastUpdate.OneCityDayProcessing(qCity);
+            City resCity = ForecastUpdate.OneCityDayProcessing(qCity);
 
             WeatherData wData = null;
             
