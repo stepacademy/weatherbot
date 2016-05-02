@@ -19,7 +19,8 @@ namespace WeatherBot.DatabaseWorker {
         private ICallbackResponseContract _currentOperationContext;
         private WeatherDbContext          _currentWeatherDbContext;
 
-        public async void QueryAsync(QueryData query) {
+        public async void QueryAsync(QueryData query)
+        {
 
             if (_currentOperationContext == null)
                 _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();
@@ -32,18 +33,19 @@ namespace WeatherBot.DatabaseWorker {
 
             List<DateTime> queryDateTimes = new List<DateTime>(query.WeatherAtTimes.Keys);
 
-            foreach (DateTime dateTime in queryDateTimes)
+            foreach (var dateTime in queryDateTimes)
             {
                 // WeatherData wData = await GetWeatherAtCityTime(query.City, dateTime);       // <- will be uncomment
-                // WeatherData wData = await GetDirectWeatherAtCityTime(query.City, dateTime); // <- for debug, will be removed
-                WeatherData wData = await GetDummyWeatherAtCityTime(query.City, dateTime);     // <- for debug, will be removed
-
-                query.WeatherAtTimes[dateTime].State         = wData.WeatherState.State;
+                WeatherData wData = await GetDirectWeatherAtCityTime(query.City, dateTime);    // <- for debug, will be removed
+                // WeatherData wData = await GetDummyWeatherAtCityTime(query.City, dateTime);  // <- for debug, will be removed
+                
                 query.WeatherAtTimes[dateTime].Temperature   = wData.Temperature;
                 query.WeatherAtTimes[dateTime].Humidity      = wData.Humidity;
                 query.WeatherAtTimes[dateTime].Pressure      = wData.Pressure;
                 query.WeatherAtTimes[dateTime].WindDirection = wData.WindDirection;
                 query.WeatherAtTimes[dateTime].WindSpeed     = wData.WindSpeed;
+
+
             }
 
             return query;
@@ -56,8 +58,8 @@ namespace WeatherBot.DatabaseWorker {
 
             DayTimeType dt = DbAction.GetDayTimeType(dateTime.Hour);
 
-            using (_currentWeatherDbContext = new WeatherDbContext()) {
-
+            using (_currentWeatherDbContext = new WeatherDbContext())
+            {
                 _currentWeatherDbContext.Weathers.Load();
                 
                 var fWeather =
@@ -104,12 +106,12 @@ namespace WeatherBot.DatabaseWorker {
                     if (forecastWeather.CalendarDate.Date != dateTime.Date) continue;
 
                     wData = forecastWeather.DayParts.First(dayPart => dayPart.DayTime == dt).WeatherData;
-                }
 
+                    break;
+                }
             }
 
             return wData;
-
         }
 
         private async Task<WeatherData> GetDummyWeatherAtCityTime(string fCity, DateTime dateTime) {
