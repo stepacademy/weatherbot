@@ -150,6 +150,10 @@
       <Project>{3639b5a3-9918-4141-b19e-78e83e502b82}</Project>
       <Name>DatabaseWorker</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{3BBD5F5D-0D72-4680-B6D1-CA969C6C4E5F}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

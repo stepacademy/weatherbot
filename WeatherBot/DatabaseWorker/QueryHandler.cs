@@ -13,27 +13,30 @@ namespace WeatherBot.DatabaseWorker {
     using WeatherUpdate;
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
-    internal class QueryHandler : IQueryHandlerContract {
+    internal class QueryHandler : IQueryHandlerContract
+    {
 
         private ICallbackResponseContract _currentOperationContext;
         private WeatherDbContext          _currentWeatherDbContext;
 
         public async void QueryAsync(QueryData query) {
 
-            _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();
+            if (_currentOperationContext == null)
+                _currentOperationContext = OperationContext.Current.GetCallbackChannel<ICallbackResponseContract>();
 
-            try { _currentOperationContext.Response(await SetResponse(query)); }
-            catch (Exception ex) { query.Error = ex.Message; _currentOperationContext.Response(query); }
+            _currentOperationContext.Response(await Response(query));
         }
 
-        private async Task<QueryData> SetResponse(QueryData query) {
+        private async Task<QueryData> Response(QueryData query)
+        {
 
             List<DateTime> queryDateTimes = new List<DateTime>(query.WeatherAtTimes.Keys);
 
             foreach (DateTime dateTime in queryDateTimes)
             {
-                // WeatherData wData = await GetWeatherAtCityTime(query.City, dateTime);    // <- will be uncomment
-                WeatherData wData = await GetDirectWeatherAtCityTime(query.City, dateTime); // <- dummy, will be removed
+                // WeatherData wData = await GetWeatherAtCityTime(query.City, dateTime);       // <- will be uncomment
+                // WeatherData wData = await GetDirectWeatherAtCityTime(query.City, dateTime); // <- for debug, will be removed
+                WeatherData wData = await GetDummyWeatherAtCityTime(query.City, dateTime);     // <- for debug, will be removed
 
                 query.WeatherAtTimes[dateTime].State         = wData.WeatherState.State;
                 query.WeatherAtTimes[dateTime].Temperature   = wData.Temperature;
@@ -46,7 +49,8 @@ namespace WeatherBot.DatabaseWorker {
             return query;
         }
         
-        private async Task<WeatherData> GetWeatherAtCityTime(string fCity, DateTime dateTime) {
+        private async Task<WeatherData> GetWeatherAtCityTime(string fCity, DateTime dateTime)
+        {
             
             var queryCity = from city in _currentWeatherDbContext.Cities where city.Name == fCity select city;
 
@@ -71,7 +75,7 @@ namespace WeatherBot.DatabaseWorker {
         {
             var countries = await WeatherUpdate.Weather.DownloadCities();
 
-            City qCity = null;
+            City qCity = new City(); // <-- null ref hotfix
             bool flag = false;
             foreach (var country in countries)
             {
@@ -101,10 +105,32 @@ namespace WeatherBot.DatabaseWorker {
 
                     wData = forecastWeather.DayParts.First(dayPart => dayPart.DayTime == dt).WeatherData;
                 }
+
             }
 
             return wData;
 
+        }
+
+        private async Task<WeatherData> GetDummyWeatherAtCityTime(string fCity, DateTime dateTime) {
+
+            Task<WeatherData> taskWData = new Task<WeatherData>(delegate () {
+
+                WeatherData wData = new WeatherData();
+                wData.WeatherState = new WeatherState();
+
+                wData.WeatherState.State = "солнечно";
+                wData.Temperature        = 16.1;
+                wData.Humidity           = 97;
+                wData.Pressure           = 768;
+                wData.WindDirection      = WindDirectionType.NorthWest;
+                wData.WindSpeed          = 2.9;
+
+                return wData;
+            });
+
+            taskWData.Start();
+            return await taskWData;
         }
     }
 }

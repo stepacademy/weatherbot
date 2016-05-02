@@ -32,7 +32,7 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
         public void Start() {
             _autoEvent = new AutoResetEvent(false);
-            _stateTimer = new Timer(PerformStep, _autoEvent, 0, 1000);
+            _stateTimer = new Timer(PerformStep, _autoEvent, 0, 500);
         }
 
         public void Stop() {

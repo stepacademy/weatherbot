@@ -129,7 +129,7 @@ namespace WeatherBot.DatabaseWorker.WeatherUpdate
                 var dayPartsNodes = day.Elements(ns + "day_part");
                 var dayParts = DayPartsProcessing(formatSepar, ns, dayPartsNodes);
 
-                city.Weather.Forecast.Add(new ForecastWeather
+                city.Weather.Forecast.Add(new ForecastWeather            // <-- null reference
                 {
                     CalendarDate = calendarDate,
                     DayParts = dayParts
