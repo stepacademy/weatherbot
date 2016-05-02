@@ -14,7 +14,9 @@ namespace WeatherBot.DatabaseWorker.QueryComponents {
         public string City;
 
         [DataMember]
-        public Dictionary<DateTime, WeatherEntities> weatherAtTimes;
+        public Dictionary<DateTime, WeatherEntities> WeatherAtTimes;
 
+        [DataMember]
+        public string Error;
     }
 }

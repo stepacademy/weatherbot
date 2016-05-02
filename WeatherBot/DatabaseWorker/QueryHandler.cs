@@ -27,19 +27,19 @@ namespace WeatherBot.DatabaseWorker {
 
         private async Task<QueryData> SetResponse(QueryData query) {
 
-            List<DateTime> queryDateTimes = new List<DateTime>(query.weatherAtTimes.Keys);
+            List<DateTime> queryDateTimes = new List<DateTime>(query.WeatherAtTimes.Keys);
 
             foreach (DateTime dateTime in queryDateTimes)
             {
                 // WeatherData wData = await GetWeatherAtCityTime(query.City, dateTime);    // <- will be uncomment
                 WeatherData wData = await GetDirectWeatherAtCityTime(query.City, dateTime); // <- dummy, will be removed
 
-                query.weatherAtTimes[dateTime].State         = wData.WeatherState.State;
-                query.weatherAtTimes[dateTime].Temperature   = wData.Temperature;
-                query.weatherAtTimes[dateTime].Humidity      = wData.Humidity;
-                query.weatherAtTimes[dateTime].Pressure      = wData.Pressure;
-                query.weatherAtTimes[dateTime].WindDirection = wData.WindDirection;
-                query.weatherAtTimes[dateTime].WindSpeed     = wData.WindSpeed;
+                query.WeatherAtTimes[dateTime].State         = wData.WeatherState.State;
+                query.WeatherAtTimes[dateTime].Temperature   = wData.Temperature;
+                query.WeatherAtTimes[dateTime].Humidity      = wData.Humidity;
+                query.WeatherAtTimes[dateTime].Pressure      = wData.Pressure;
+                query.WeatherAtTimes[dateTime].WindDirection = wData.WindDirection;
+                query.WeatherAtTimes[dateTime].WindSpeed     = wData.WindSpeed;
             }
 
             return query;

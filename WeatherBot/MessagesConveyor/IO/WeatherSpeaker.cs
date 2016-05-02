@@ -17,7 +17,15 @@ namespace WeatherBot.MessagesConveyor.IO {
 
             // ... form reply
 
-            _sender.Response(new Response() { InitiatorId = response.InitiatorId, Text = "response: duplex work" });
+            Response resp = new Response();
+            resp.InitiatorId = response.InitiatorId;
+
+            if (response.Error != null)
+                resp.Text = response.Error;
+            else
+                resp.Text = "request: success";
+
+            _sender.Response(resp);
 
         }
 

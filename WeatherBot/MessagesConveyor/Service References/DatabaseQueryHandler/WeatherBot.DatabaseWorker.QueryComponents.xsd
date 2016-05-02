@@ -5,8 +5,9 @@
   <xs:complexType name="QueryData">
     <xs:sequence>
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="InitiatorId" type="xs:int" />
-      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="weatherAtTimes" nillable="true" type="q1:ArrayOfKeyValueOfdateTimeWeatherEntitiesWkpWoWGi" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WeatherAtTimes" nillable="true" type="q1:ArrayOfKeyValueOfdateTimeWeatherEntitiesWkpWoWGi" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="QueryData" nillable="true" type="tns:QueryData" />
