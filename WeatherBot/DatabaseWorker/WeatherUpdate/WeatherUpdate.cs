@@ -59,8 +59,8 @@ namespace WeatherBot.DatabaseWorker.WeatherUpdate
                 var temperatureFromElement = itemXElement.Element(ns + "temperature_from");
                 var temperatureToElement = itemXElement.Element(ns + "temperature_to");
                 if (temperatureFromElement != null && temperatureToElement != null)
-                    itemWeatherData.Temperature = Convert.ToDouble(temperatureFromElement.Value, formatSepar) +
-                                                  Convert.ToDouble(temperatureToElement.Value, formatSepar)/2;
+                    itemWeatherData.Temperature = (Convert.ToDouble(temperatureFromElement.Value, formatSepar) +
+                                                  Convert.ToDouble(temperatureToElement.Value, formatSepar))/2;
             }
 
             var humidityElement = itemXElement.Element(ns + "humidity");

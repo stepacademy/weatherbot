@@ -55,8 +55,15 @@ namespace WeatherBot.Database
             {
                 db.WeatherStates.Load();
                 var query = from wst in db.WeatherStates where wst.Code == stateCode select wst;
-
-                result = query.First();
+                try
+                {
+                    result = query.First();
+                }
+                catch (Exception)
+                {
+                    result = null;
+                }
+                
             }
 
             return result;

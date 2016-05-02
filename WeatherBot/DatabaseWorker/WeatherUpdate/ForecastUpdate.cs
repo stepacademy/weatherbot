@@ -95,13 +95,28 @@ namespace WeatherBot.DatabaseWorker.WeatherUpdate
             return dayParts;
         }
 
-        public static async Task<City> OneCityDayProcessing(City city)
+        public static City OneCityDayProcessing(City city)
         {
             var formatSepar = new NumberFormatInfo { NumberDecimalSeparator = "." };
 
-            var doc = XDocument.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
+            const int numberOfAttempts = 5;
+            bool flag = false;
+            XDocument doc = null;
+            for (int i = 0; i < numberOfAttempts && !flag; i++)
+            {
+                try
+                {
+                    doc = XDocument.Load($"http://export.yandex.ru/weather-ng/forecasts/{city.XmlCode}.xml");
+                    flag = true;
+                }
+                catch (Exception)
+                {
+                    continue;
+                }
+            }
+            
 
-            if (doc.Root == null) return city;
+            if (doc.Root == null) return null;
 
             var ns = doc.Root.GetDefaultNamespace();
 
