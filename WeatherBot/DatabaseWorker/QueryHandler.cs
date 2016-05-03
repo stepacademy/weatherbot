@@ -44,8 +44,6 @@ namespace WeatherBot.DatabaseWorker {
                 query.WeatherAtTimes[dateTime].Pressure      = wData.Pressure;
                 query.WeatherAtTimes[dateTime].WindDirection = wData.WindDirection;
                 query.WeatherAtTimes[dateTime].WindSpeed     = wData.WindSpeed;
-
-
             }
 
             return query;

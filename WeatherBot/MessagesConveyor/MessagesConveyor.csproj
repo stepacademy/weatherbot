@@ -98,11 +98,11 @@
     <Compile Include="DataInteraction\DatabaseWorkerCallback.cs" />
     <Compile Include="DataInteraction\DatabaseWorkerProxy.cs" />
     <Compile Include="IManagementContract.cs" />
-    <Compile Include="IO\Parsers\InputParser.cs" />
+    <Compile Include="IO\Parser\InputParser.cs" />
     <Compile Include="IO\MessageIncomingEvent.cs" />
     <Compile Include="IO\InputParserEntryPoint.cs" />
     <Compile Include="IO\NeuralNetworkEntryPoint.cs" />
-    <Compile Include="IO\Parsers\StringSimilarityMetric.cs" />
+    <Compile Include="IO\Parser\StringSimilarityMetric.cs" />
     <Compile Include="IO\WeatherSpeaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Management.cs" />
@@ -173,7 +173,9 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="IO\Parser\Data\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VSToolsPath Condition="'$(VSToolsPath)' == '' and '$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' != '11.0'">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
