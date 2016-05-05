@@ -73,7 +73,7 @@ namespace WeatherBot.DatabaseWorker {
 
         private async Task<WeatherData> GetDirectWeatherAtCityTime(string fCity, DateTime dateTime)
         {
-            var countries = await WeatherUpdate.Weather.DownloadCities();
+            var countries = await Database.DbAction.DownloadCities();
 
             City qCity = new City(); // <-- null ref hotfix
             bool flag = false;
