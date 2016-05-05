@@ -18,15 +18,17 @@ namespace WeatherBot.MessagesConveyor.IO {
 
         private void Incoming(Message message) {
 
-            // <-- This code will be replaced to real parse
+            // <-- This HARDCODE will be replaced to real parse
+
+
 
             QueryData query = new QueryData();
             query.InitiatorId = message.User.Id;
             query.City = message.Text;
             query.WeatherAtTimes = new Dictionary<DateTime, WeatherEntities>();
-            query.WeatherAtTimes.Add(new DateTime(2016, 5, 3, 0, 0, 0), new WeatherEntities());
-            
-            // <-- This code will be replaced to real parse
+            query.WeatherAtTimes.Add(new DateTime(2016, 5, 5, 0, 0, 0), new WeatherEntities());
+
+            // <-- This HARDCODE will be replaced to real parse
 
             _database.Query(query);
         }

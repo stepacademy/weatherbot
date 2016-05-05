@@ -14,7 +14,7 @@ namespace WeatherBot.MessagesConveyor.IO {
 
         private OutcomingSender _sender;
 
-        private string FormReply(QueryData response) {  // <-- hardcode method
+        private string FormReply(QueryData response) {  // <-- HARDCODE method
 
             StringBuilder result = new StringBuilder();
 
