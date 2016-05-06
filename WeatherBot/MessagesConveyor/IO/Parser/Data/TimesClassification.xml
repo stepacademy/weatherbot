@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-<TimeData Language="Russian">
+<TimesClassification Language="Russian">
 
     <Times Class="A">
         <Time Subcl="A">
@@ -195,4 +195,4 @@
         <Number Name="десять" Comp="true"  ElForm="-"        ElOf="0" TForm="сто"   TOf="6" HForm="тысяча" HOf="6"></Number>
     </Numbers>
     
-</TimeData>
+</TimesClassification>

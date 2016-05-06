@@ -176,7 +176,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="IO\Parser\Data\Times.xml" />
+    <EmbeddedResource Include="IO\Parser\Data\TimesClassification.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="IO\Parser\Data\Locations.xml" />
