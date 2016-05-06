@@ -1,5 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!--classification: in the process-->
-<times>
-  
+<times language="Russian">
+    <prefixes>
+        <prefix>поза</prefix>
+        <prefix>за</prefix>
+        <prefix>на</prefix>
+        <prefix>в</prefix>
+        <prefix>во</prefix>
+        <prefix>через</prefix>
+        <prefix>до</prefix>
+        <prefix>после</prefix>
+    </prefixes>
+    <directions>
+        <direction tag="Past">прошлый</direction>
+        <direction tag="Past">предыдущий</direction>
+        <direction tag="Present">текущий</direction>
+        <direction tag="Present">этот</direction>
+        <direction tag="Future">следующий</direction>
+    </directions>
+    <weekdays>
+        <weekday name="понедельник" value="1"/>
+        <weekday name="вторник" value="2"/>
+        <weekday name="среда" value="3"/>
+        <weekday name="четверг" value="4"/>
+        <weekday name="пятница" value="5"/>
+        <weekday name="суббота" value="6"/>
+        <weekday name="воскресенье" value="7"/>
+    </weekdays>
+    <months>
+        <month name="январь" value="1"/>
+        <month name="февраль" value="2"/>
+        <month name="март" value="3"/>
+        <month name="апрель" value="4"/>
+        <month name="май" value="5"/>
+        <month name="июнь" value="6"/>
+        <month name="июль" value="7"/>
+        <month name="август" value="8"/>
+        <month name="сентябрь" value="9"/>
+        <month name="октябрь" value="10"/>
+        <month name="ноябрь" value="11"/>
+        <month name="декабрь" value="12"/>
+    </months>
 </times>

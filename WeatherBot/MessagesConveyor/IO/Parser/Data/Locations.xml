@@ -5,3164 +5,3164 @@ until can be loaded the list of cities
 from real the Weather database.
 -->
 <locations>
-  <country name="Абхазия">
-    <city>Гагра</city>
-    <city>Гудаута</city>
-    <city>Новый Афон</city>
-    <city>Пицунда</city>
-    <city>Сухум</city>
-  </country>
-  <country name="Австралия">
-    <city>Аделаида</city>
-    <city>Алис-Спрингс</city>
-    <city>Брисбен</city>
-    <city>Дарвин</city>
-    <city>Канберра</city>
-    <city>Кэрнс</city>
-    <city>Мельбурн</city>
-    <city>Ньюкасл</city>
-    <city>Перт</city>
-    <city>Сидней</city>
-    <city>Таунсвилл</city>
-    <city>Хобарт</city>
-  </country>
-  <country name="Австрия">
-    <city>Айзенштадт</city>
-    <city>Баден</city>
-    <city>Вена</city>
-    <city>Зальцбург</city>
-    <city>Зельден</city>
-    <city>Инсбрук</city>
-    <city>Ишгль</city>
-    <city>Капрун</city>
-    <city>Лех</city>
-    <city>Линц</city>
-    <city>Сан-Антон</city>
-    <city>Цель-Ам-Зе</city>
-  </country>
-  <country name="Азербайджан">
-    <city>Баку</city>
-    <city>Гянджа</city>
-    <city>Ханкенди (Степанакерт)</city>
-  </country>
-  <country name="Азорские острова">
-    <city>Вила-ду-Порту</city>
-    <city>Орта</city>
-    <city>Понта-Делгада</city>
-    <city>Санта-Круш-даш-Флориш</city>
-  </country>
-  <country name="Албания">
-    <city>Тирана</city>
-  </country>
-  <country name="Алжир">
-    <city>Алжир</city>
-    <city>Оран</city>
-  </country>
-  <country name="Американские Виргинские острова">
-    <city>Шарлотта-Амалия</city>
-  </country>
-  <country name="Ангилья">
-    <city>Ангилья</city>
-  </country>
-  <country name="Ангола">
-    <city>Луанда</city>
-  </country>
-  <country name="Андорра">
-    <city>Андорра-ла-Велья</city>
-    <city>Аринсал</city>
-    <city>Аркалис</city>
-    <city>Ордино</city>
-    <city>Пал</city>
-    <city>Пас-де-ла-Каса</city>
-    <city>Сольдеу</city>
-    <city>Энкамп</city>
-    <city>Эскальдес</city>
-  </country>
-  <country name="Антарктика">
-    <city>Беллинсгаузен</city>
-  </country>
-  <country name="Антигуа и Барбуда">
-    <city>Антигуа</city>
-  </country>
-  <country name="Аргентина">
-    <city>Буэнос-Айрес</city>
-    <city>Калафате</city>
-    <city>Кордова</city>
-    <city>Мар-дель-Плата</city>
-    <city>Мирамар</city>
-    <city>Пуэрто-Игуасу</city>
-    <city>Сальта</city>
-    <city>Сан-Карлос-де-Барилоче</city>
-    <city>Ушуайя</city>
-  </country>
-  <country name="Армения">
-    <city>Гюмри</city>
-    <city>Ереван</city>
-    <city>Раздан</city>
-  </country>
-  <country name="Аруба">
-    <city>Ораньестад</city>
-  </country>
-  <country name="Афганистан">
-    <city>Кабул</city>
-  </country>
-  <country name="Багамские острова">
-    <city>Нассау</city>
-  </country>
-  <country name="Балеарские острова">
-    <city>Ибица</city>
-    <city>Майорка</city>
-    <city>Менорка</city>
-  </country>
-  <country name="Бангладеш">
-    <city>Барисал</city>
-    <city>Богра</city>
-    <city>Дакка</city>
-    <city>Джессор</city>
-    <city>Исхурди</city>
-    <city>Кокс-Базар</city>
-    <city>Рангпур</city>
-    <city>Силхет</city>
-    <city>Фени</city>
-    <city>Читтагонг</city>
-  </country>
-  <country name="Барбадос">
-    <city>Барбадос</city>
-    <city>Бриджтаун</city>
-  </country>
-  <country name="Бахрейн">
-    <city>Бахрейн</city>
-    <city>Манама</city>
-  </country>
-  <country name="Беларусь">
-    <city>Барановичи</city>
-    <city>Белыничи</city>
-    <city>Березино</city>
-    <city>Бобруйск</city>
-    <city>Борисов</city>
-    <city>Брагин</city>
-    <city>Браслав</city>
-    <city>Брест</city>
-    <city>Быхов</city>
-    <city>Василевичи</city>
-    <city>Верхнедвинск</city>
-    <city>Вилейка</city>
-    <city>Витебск</city>
-    <city>Волковыск</city>
-    <city>Воложин</city>
-    <city>Высокое</city>
-    <city>Ганцевичи</city>
-    <city>Глубокое</city>
-    <city>Гомель</city>
-    <city>Горки</city>
-    <city>Гродно</city>
-    <city>Дзержинск</city>
-    <city>Докшицы</city>
-    <city>Дрогичин</city>
-    <city>Дятлово</city>
-    <city>Езерище</city>
-    <city>Житковичи</city>
-    <city>Жлобин</city>
-    <city>Жодино</city>
-    <city>Заславль</city>
-    <city>Ивацевичи</city>
-    <city>Климовичи</city>
-    <city>Кличев</city>
-    <city>Кобрин</city>
-    <city>Костюковичи</city>
-    <city>Кричев</city>
-    <city>Крупки</city>
-    <city>Лельчицы</city>
-    <city>Лепель</city>
-    <city>Лида</city>
-    <city>Логойск</city>
-    <city>Любань</city>
-    <city>Марьина Горка</city>
-    <city>Минск</city>
-    <city>Миоры</city>
-    <city>Могилев</city>
-    <city>Мозырь</city>
-    <city>Молодечно</city>
-    <city>Мосты</city>
-    <city>Мстиславль</city>
-    <city>Мядель</city>
-    <city>Нарочь</city>
-    <city>Несвиж</city>
-    <city>Новогрудок</city>
-    <city>Новополоцк</city>
-    <city>Октябрь</city>
-    <city>Орша</city>
-    <city>Осиповичи</city>
-    <city>Ошмяны</city>
-    <city>Петриков</city>
-    <city>Пинск</city>
-    <city>Плещеницы</city>
-    <city>Полоцк</city>
-    <city>Поставы</city>
-    <city>Пружаны</city>
-    <city>Радошковичи</city>
-    <city>Речица</city>
-    <city>Рогачев</city>
-    <city>Светлогорск</city>
-    <city>Сенно</city>
-    <city>Славгород</city>
-    <city>Слоним</city>
-    <city>Слуцк</city>
-    <city>Сморгонь</city>
-    <city>Солигорск</city>
-    <city>Столбцы</city>
-    <city>Толочин</city>
-    <city>Туров</city>
-    <city>Ушачи</city>
-    <city>Хойники</city>
-    <city>Чечерск</city>
-    <city>Шарковщина</city>
-    <city>Шклов</city>
-    <city>Щучин</city>
-  </country>
-  <country name="Белиз">
-    <city>Белиз</city>
-    <city>Сан-Педро</city>
-  </country>
-  <country name="Бельгия">
-    <city>Антверпен</city>
-    <city>Бовшен</city>
-    <city>Брюгге</city>
-    <city>Брюссель</city>
-    <city>Ватерлоо</city>
-    <city>Гент</city>
-    <city>Льеж</city>
-    <city>Остенде</city>
-    <city>Хасселт</city>
-  </country>
-  <country name="Бенин">
-    <city>Котону</city>
-  </country>
-  <country name="Бермудские Острова">
-    <city>Сент-Джордж</city>
-  </country>
-  <country name="Болгария">
-    <city>Албена</city>
-    <city>Ахтополь</city>
-    <city>Банско</city>
-    <city>Бургас</city>
-    <city>Варна</city>
-    <city>Велико-Тырново</city>
-    <city>Видин</city>
-    <city>Враца</city>
-    <city>Габрово</city>
-    <city>Дрогоман</city>
-    <city>Золотые Пески</city>
-    <city>Ивайловград</city>
-    <city>Калиакра</city>
-    <city>Кырджали</city>
-    <city>Кюстендил</city>
-    <city>Ловеч</city>
-    <city>Лом</city>
-    <city>Монтана</city>
-    <city>Мургаш</city>
-    <city>Мусала</city>
-    <city>Новосело</city>
-    <city>Оряхово</city>
-    <city>Плевен</city>
-    <city>Пловдив</city>
-    <city>Приморско</city>
-    <city>Разград</city>
-    <city>Русе</city>
-    <city>Сандански</city>
-    <city>Свиленград</city>
-    <city>Свиштов</city>
-    <city>Силистра</city>
-    <city>Снежанка</city>
-    <city>Солнечный Берег</city>
-    <city>Сопот</city>
-    <city>София</city>
-    <city>Черни-Врых</city>
-    <city>Чирпан</city>
-    <city>Шабла</city>
-    <city>Элхово</city>
-  </country>
-  <country name="Боливия">
-    <city>Копакабана</city>
-    <city>Ла-Пас</city>
-    <city>Санта-Крус</city>
-    <city>Сукре</city>
-    <city>Тринидад</city>
-  </country>
-  <country name="Босния и Герцеговина">
-    <city>Ливно</city>
-    <city>Сараево</city>
-  </country>
-  <country name="Ботсвана">
-    <city>Габороне</city>
-  </country>
-  <country name="Бразилия">
-    <city>Бразилиа</city>
-    <city>Манаус</city>
-    <city>Рио-Де-Жанейро</city>
-    <city>Сальвадор</city>
-    <city>Сан-Паулу</city>
-    <city>Фос-ду-Игуасу</city>
-  </country>
-  <country name="Британские Виргинские острова">
-    <city>Роуд-Таун</city>
-  </country>
-  <country name="Бруней">
-    <city>Бандар-Сери-Бегаван</city>
-    <city>Куала-Белаит</city>
-  </country>
-  <country name="Буркина-Фасо">
-    <city>Уагадугу</city>
-  </country>
-  <country name="Бурунди">
-    <city>Бужумбура</city>
-  </country>
-  <country name="Бутан">
-    <city>Тхимпху</city>
-  </country>
-  <country name="Ватикан">
-    <city>Ватикан</city>
-  </country>
-  <country name="Великобритания">
-    <city>Абердин</city>
-    <city>Белфаст</city>
-    <city>Бирмингем</city>
-    <city>Бристоль</city>
-    <city>Глазго</city>
-    <city>Дерби</city>
-    <city>Дувр</city>
-    <city>Кембридж</city>
-    <city>Ливерпуль</city>
-    <city>Лондон</city>
-    <city>Манчестер</city>
-    <city>Оксфорд</city>
-    <city>Плимут</city>
-    <city>Скапа</city>
-    <city>Эдинбург</city>
-  </country>
-  <country name="Венгрия">
-    <city>Будапешт</city>
-    <city>Дебрецен</city>
-    <city>Кестхей</city>
-    <city>Папа</city>
-    <city>Сегед</city>
-    <city>Тата</city>
-    <city>Эгер</city>
-  </country>
-  <country name="Венесуэла">
-    <city>Каракас</city>
-    <city>Порламар (остров Маргарита)</city>
-  </country>
-  <country name="Восточное Самоа">
-    <city>Паго-Паго</city>
-  </country>
-  <country name="Восточный Тимор">
-    <city>Дили</city>
-  </country>
-  <country name="Вьетнам">
-    <city>Батьлонгви, о-в</city>
-    <city>Винь</city>
-    <city>Далат</city>
-    <city>Дананг</city>
-    <city>Донгхой</city>
-    <city>Камау</city>
-    <city>Каобанг</city>
-    <city>Кондао, о-в</city>
-    <city>Куиньон</city>
-    <city>Лангшон</city>
-    <city>Лаокай</city>
-    <city>Намдинь</city>
-    <city>Нячанг</city>
-    <city>Сапа (Шапа)</city>
-    <city>Тханьхоа</city>
-    <city>Тхотю, о-в</city>
-    <city>Фантхьет</city>
-    <city>Фукуок</city>
-    <city>Фульен</city>
-    <city>Хайфон</city>
-    <city>Ханой</city>
-    <city>Хойан</city>
-    <city>Хошимин</city>
-    <city>Хюэ</city>
-    <city>Шонла</city>
-  </country>
-  <country name="Габон">
-    <city>Либревиль</city>
-  </country>
-  <country name="Гаити">
-    <city>Порт-о-Пренс</city>
-  </country>
-  <country name="Гайана">
-    <city>Джорджтаун</city>
-  </country>
-  <country name="Гамбия">
-    <city>Банжул</city>
-  </country>
-  <country name="Гана">
-    <city>Аккра</city>
-  </country>
-  <country name="Гваделупа">
-    <city>Густавия</city>
-    <city>Пуэнт-а-Питр</city>
-  </country>
-  <country name="Гватемала">
-    <city>Гватемала Сити</city>
-    <city>Флорес</city>
-  </country>
-  <country name="Гвинея">
-    <city>Конакри</city>
-  </country>
-  <country name="Гвинея-Бисау">
-    <city>Бисау</city>
-  </country>
-  <country name="Германия">
-    <city>Баден-Баден</city>
-    <city>Берген</city>
-    <city>Берлин</city>
-    <city>Бонн</city>
-    <city>Бремен</city>
-    <city>Веймар</city>
-    <city>Гамбург</city>
-    <city>Ганновер</city>
-    <city>Гармиш-Партенкирхен</city>
-    <city>Дрезден</city>
-    <city>Дюссельдорф</city>
-    <city>Карлштадт</city>
-    <city>Кельн</city>
-    <city>Киль</city>
-    <city>Лейпциг</city>
-    <city>Мюнхен</city>
-    <city>Нюрнберг</city>
-    <city>Потсдам</city>
-    <city>Росток</city>
-    <city>Франкфурт-на-Майне</city>
-    <city>Хайдельберг</city>
-    <city>Эссен</city>
-  </country>
-  <country name="Гибралтар">
-    <city>Гибралтар</city>
-  </country>
-  <country name="Гондурас">
-    <city>Тегусигальпа</city>
-  </country>
-  <country name="Гренада">
-    <city>Гренада</city>
-  </country>
-  <country name="Гренландия">
-    <city>Нуук (Готхоб)</city>
-  </country>
-  <country name="Греция">
-    <city>Афины</city>
-    <city>Ираклион</city>
-    <city>Кастория</city>
-    <city>Керкира (Корфу)</city>
-    <city>Лимнос</city>
-    <city>Парос</city>
-    <city>Ретимно</city>
-    <city>Родос</city>
-    <city>Салоники</city>
-    <city>Халкидики</city>
-    <city>Херсонисос</city>
-  </country>
-  <country name="Грузия">
-    <city>Батуми</city>
-    <city>Кутаиси</city>
-    <city>Тбилиси</city>
-  </country>
-  <country name="Дания">
-    <city>Варде</city>
-    <city>Копенгаген</city>
-    <city>Оденсе</city>
-  </country>
-  <country name="Демократическая республика Конго">
-    <city>Киншаса</city>
-  </country>
-  <country name="Джибути">
-    <city>Джибути</city>
-  </country>
-  <country name="Доминика">
-    <city>Розо</city>
-  </country>
-  <country name="Доминиканская Республика">
-    <city>Санто-Доминго</city>
-  </country>
-  <country name="Египет">
-    <city>Абу-Симбел</city>
-    <city>Александрия</city>
-    <city>Асуан</city>
-    <city>Дахаб</city>
-    <city>Каир</city>
-    <city>Луксор</city>
-    <city>Макади-Бэй</city>
-    <city>Марса-Алам</city>
-    <city>Нувейба</city>
-    <city>Сафага</city>
-    <city>Таба</city>
-    <city>Хургада</city>
-    <city>Шарм-эль-Шейх</city>
-    <city>Эль-Гуна</city>
-  </country>
-  <country name="Замбия">
-    <city>Ливингстон</city>
-    <city>Лусака</city>
-  </country>
-  <country name="Западная Сахара">
-    <city>Эль-Аюн</city>
-  </country>
-  <country name="Зимбабве">
-    <city>Кариба</city>
-    <city>Хараре</city>
-  </country>
-  <country name="Израиль">
-    <city>Беэр-Шева</city>
-    <city>Иерусалим</city>
-    <city>Тверия</city>
-    <city>Тель-Авив</city>
-    <city>Хайфа</city>
-    <city>Цфат</city>
-    <city>Эйлат</city>
-    <city>Эйн-Бокек</city>
-  </country>
-  <country name="Индия">
-    <city>Агра</city>
-    <city>Аллахабад</city>
-    <city>Ахмадабад</city>
-    <city>Балешвар</city>
-    <city>Баллари</city>
-    <city>Бангалор</city>
-    <city>Барейли</city>
-    <city>Бармер</city>
-    <city>Биканер</city>
-    <city>Бхагалпур</city>
-    <city>Бхопал</city>
-    <city>Бхубанешвар</city>
-    <city>Бхудж</city>
-    <city>Варанаси</city>
-    <city>Веравал</city>
-    <city>Виджаявада</city>
-    <city>Ганганагар</city>
-    <city>Гая</city>
-    <city>Гвалияр</city>
-    <city>Гоа</city>
-    <city>Горанкпур</city>
-    <city>Гуна</city>
-    <city>Дели</city>
-    <city>Дехра-Дун</city>
-    <city>Джабалпур</city>
-    <city>Джайпур</city>
-    <city>Джайсалмер</city>
-    <city>Джамшедпур</city>
-    <city>Джхасугуда</city>
-    <city>Индаур</city>
-    <city>Калькутта</city>
-    <city>Канниякумари</city>
-    <city>Кота</city>
-    <city>Коямпуттур</city>
-    <city>Лакнау</city>
-    <city>Мадурай</city>
-    <city>Мумбай (Бомбей)</city>
-    <city>Нагпур</city>
-    <city>Патна</city>
-    <city>Пендра-Роуд</city>
-    <city>Порт Блэр</city>
-    <city>Раджкот</city>
-    <city>Райпур</city>
-    <city>Ранчи</city>
-    <city>Сатна</city>
-    <city>Сурат</city>
-    <city>Тривандрам</city>
-    <city>Тутикорин</city>
-    <city>Удайпур</city>
-    <city>Хайдарабад</city>
-    <city>Хисар</city>
-    <city>Ченнай (Мадрас)</city>
-  </country>
-  <country name="Индонезия">
-    <city>Амбон</city>
-    <city>Амед</city>
-    <city>Баликпапан</city>
-    <city>Банда-Ачех</city>
-    <city>Батам</city>
-    <city>Баубау</city>
-    <city>Бима</city>
-    <city>Битунг</city>
-    <city>Веда</city>
-    <city>Денпасар (Бали)</city>
-    <city>Джакарта</city>
-    <city>Джативанги</city>
-    <city>Катабару</city>
-    <city>Кетапанг</city>
-    <city>Китеко</city>
-    <city>Коконау</city>
-    <city>Кута</city>
-    <city>Лхоксемаве</city>
-    <city>Матарам</city>
-    <city>Медан</city>
-    <city>Мерауке</city>
-    <city>Набире</city>
-    <city>Намлеа</city>
-    <city>Нуса-Дуа</city>
-    <city>Паданг</city>
-    <city>Самаринда</city>
-    <city>Сангкапура</city>
-    <city>Санур</city>
-    <city>Семаранг</city>
-    <city>Серанг</city>
-    <city>Сиболга</city>
-    <city>Синтанг</city>
-    <city>Сурабая</city>
-    <city>Таракан</city>
-    <city>Толитоли</city>
-    <city>Убуд</city>
-    <city>Уджунгпанданг</city>
-    <city>Энде</city>
-  </country>
-  <country name="Иордания">
-    <city>Акаба</city>
-    <city>Амман</city>
-    <city>Петра</city>
-  </country>
-  <country name="Ирак">
-    <city>Багдад</city>
-    <city>Басра</city>
-  </country>
-  <country name="Иран">
-    <city>Керман</city>
-    <city>Семнан</city>
-    <city>Тегеран</city>
-    <city>Шираз</city>
-  </country>
-  <country name="Ирландия">
-    <city>Бирр</city>
-    <city>Дублин</city>
-    <city>Корк</city>
-    <city>Лимерик</city>
-  </country>
-  <country name="Исландия">
-    <city>Рейкьявик</city>
-  </country>
-  <country name="Испания">
-    <city>Аликанте</city>
-    <city>Барселона</city>
-    <city>Бенидорм</city>
-    <city>Валенсия</city>
-    <city>Гвадалахара</city>
-    <city>Картахена</city>
-    <city>Кордова</city>
-    <city>Коста-Брава</city>
-    <city>Коста-дель-Соль</city>
-    <city>Коста-Дорада</city>
-    <city>Ла-Корунья</city>
-    <city>Ла-Молина</city>
-    <city>Мадрид</city>
-    <city>Малага</city>
-    <city>Марбелья</city>
-    <city>Сарагоса</city>
-    <city>Севилья</city>
-    <city>Сьерра-Невада</city>
-    <city>Эстепона</city>
-  </country>
-  <country name="Италия">
-    <city>Аоста</city>
-    <city>Бари</city>
-    <city>Бергамо</city>
-    <city>Болонья</city>
-    <city>Бормио</city>
-    <city>Бриндизи</city>
-    <city>Венеция</city>
-    <city>Верона</city>
-    <city>Генуя</city>
-    <city>Кальяри</city>
-    <city>Капри</city>
-    <city>Катания</city>
-    <city>Кортина-д'Ампеццо</city>
-    <city>Курмайор</city>
-    <city>Ливиньо</city>
-    <city>Милан</city>
-    <city>Неаполь</city>
-    <city>Ольбия</city>
-    <city>Палермо</city>
-    <city>Пиза</city>
-    <city>Рим</city>
-    <city>Римини</city>
-    <city>Сан-Ремо</city>
-    <city>Сестриере</city>
-    <city>Сиена</city>
-    <city>Триест</city>
-    <city>Турин</city>
-    <city>Флоренция</city>
-    <city>Червиния</city>
-  </country>
-  <country name="Йемен">
-    <city>Аден</city>
-    <city>Сана</city>
-  </country>
-  <country name="Кабо-Верде">
-    <city>Прая</city>
-  </country>
-  <country name="Казахстан">
-    <city>Актау</city>
-    <city>Актобе</city>
-    <city>Алматы</city>
-    <city>Аральск</city>
-    <city>Аркалык</city>
-    <city>Астана</city>
-    <city>Атырау (Гурьев)</city>
-    <city>Балхаш</city>
-    <city>Большенарымское</city>
-    <city>Жезказган (Джезказган)</city>
-    <city>Казалинск</city>
-    <city>Караганда</city>
-    <city>Кокшетау</city>
-    <city>Костанай</city>
-    <city>Кызылорда</city>
-    <city>Павлодар</city>
-    <city>Петропавловск</city>
-    <city>Рузаевка</city>
-    <city>Семей</city>
-    <city>Талдыкорган</city>
-    <city>Тараз</city>
-    <city>Темир</city>
-    <city>Темиртау</city>
-    <city>Туркестан</city>
-    <city>Уральск</city>
-    <city>Усть-Каменогорск</city>
-    <city>Форт Шевченко</city>
-    <city>Шымкент</city>
-  </country>
-  <country name="Каймановы острова">
-    <city>Джорджтаун</city>
-  </country>
-  <country name="Камбоджа">
-    <city>Пномпень</city>
-    <city>Сиануквиль</city>
-    <city>Сием-Реап</city>
-  </country>
-  <country name="Камерун">
-    <city>Яунде</city>
-  </country>
-  <country name="Канада">
-    <city>Алерт</city>
-    <city>Бейкер-Лейк</city>
-    <city>Ванкувер</city>
-    <city>Виктория</city>
-    <city>Виннипег</city>
-    <city>Вистлер</city>
-    <city>Галифакс</city>
-    <city>Гиллам</city>
-    <city>Голден</city>
-    <city>Джаспер</city>
-    <city>Доусон</city>
-    <city>Икалуик</city>
-    <city>Инукджуак</city>
-    <city>Йеллоунайф</city>
-    <city>Калгари</city>
-    <city>Квебек</city>
-    <city>Кингстон</city>
-    <city>Кууджуак</city>
-    <city>Монреаль</city>
-    <city>Нейн</city>
-    <city>Оттава</city>
-    <city>Реджайна</city>
-    <city>Сакс-Харбор</city>
-    <city>Саскатун</city>
-    <city>Сент-Джонс</city>
-    <city>Тандер-Бей</city>
-    <city>Торонто</city>
-    <city>Уайтхорс</city>
-    <city>Форт-Нельсон</city>
-    <city>Фредериктон</city>
-    <city>Шарлоттаун</city>
-    <city>Эдмонтон</city>
-  </country>
-  <country name="Канарские острова">
-    <city>Санта-Крус</city>
-    <city>Тенерифе</city>
-  </country>
-  <country name="Катар">
-    <city>Доха</city>
-  </country>
-  <country name="Кения">
-    <city>Ламу</city>
-    <city>Момбаса</city>
-    <city>Найроби</city>
-    <city>Накуру</city>
-  </country>
-  <country name="Кипр">
-    <city>Айя-Напа</city>
-    <city>Ларнака</city>
-    <city>Лимасол</city>
-    <city>Никосия</city>
-    <city>Пафос</city>
-    <city>Протарас</city>
-  </country>
-  <country name="Киргизия">
-    <city>Балыкчи (Иссык-Куль)</city>
-    <city>Бишкек</city>
-    <city>Джалал-Абад</city>
-    <city>Каракол</city>
-    <city>Нарын</city>
-    <city>Ош</city>
-    <city>Талас</city>
-    <city>Тянь-Шань</city>
-    <city>Чолпон-Ата</city>
-  </country>
-  <country name="Кирибати">
-    <city>Байрики</city>
-  </country>
-  <country name="Китай">
-    <city>Байи, Тибет</city>
-    <city>Баодин, пров. Хэбэй</city>
-    <city>Бейхай, Гуанси-Чжуанский авт. р.</city>
-    <city>Голмуд, Тибет</city>
-    <city>Гонконг</city>
-    <city>Гуанчжоу, пров. Гуандун</city>
-    <city>Гуйлинь, Гуанси-Чжуанский авт. р.</city>
-    <city>Гуйян, пров. Гуйчжоу</city>
-    <city>Гянтзе, Тибет</city>
-    <city>Дадунхай</city>
-    <city>Далянь, пров. Ляонин</city>
-    <city>Даньдун, пров. Ляонин</city>
-    <city>Дуншэн, Вн. Монголия</city>
-    <city>Дуньхуан, пров. Ганьсу</city>
-    <city>Жабдун, Тибет</city>
-    <city>Инин, Синьцзян-Уйгурский авт. р.</city>
-    <city>Иньчуань, Нинся-Хуэйский авт. р.</city>
-    <city>Карамай, Синьцзян-Уйгурский авт. р.</city>
-    <city>Кашгар (Каши), Синьцзян-Уйгурский авт. р.</city>
-    <city>Куньмин, пров. Юньнань</city>
-    <city>Ланьчжоу, пров. Ганьсу</city>
-    <city>Лау-Фау-Шань (Люфушань), Гонконг</city>
-    <city>Лоян, пров. Хэнань</city>
-    <city>Лхаса, Тибет</city>
-    <city>Лючжоу, Гуанси-Чжуанский авт. р.</city>
-    <city>Макао</city>
-    <city>Мандал, Вн. Монголия</city>
-    <city>Нанкин, пров. Цзянсу</city>
-    <city>Наньнин, Гуанси-Чжуанский авт. р.</city>
-    <city>Наньчан, пров. Цзянси</city>
-    <city>Пекин</city>
-    <city>Санья, о-в Хайнань</city>
-    <city>Сиань, пров. Шаньси</city>
-    <city>Синань, пров. Гуандун</city>
-    <city>Синин, пров. Цинхай</city>
-    <city>Сифэнчжэнь, пров. Ганьсу</city>
-    <city>Сучжоу, пров. Цзянсу</city>
-    <city>Сямынь, пров. Фуцзянь</city>
-    <city>Тайпа (Данцзай-Дао), Макао</city>
-    <city>Тайюань, пров. Шэньси</city>
-    <city>Та-Ку-Лин (Дагулин), Гонконг</city>
-    <city>Тингри, Тибет</city>
-    <city>Тсетанг, Тибет</city>
-    <city>Турфан, Синьцзян-Уйгурский авт. р.</city>
-    <city>Тяньцзинь</city>
-    <city>Урумчи, Синьцзян-Уйгурский авт. р.</city>
-    <city>Уси, пров. Цзянсу</city>
-    <city>Ухань, пров. Хубэй</city>
-    <city>Фучжоу, пров. Фуцзянь</city>
-    <city>Фэннин, пров. Хэбэй</city>
-    <city>Хайкоу, о-в Хайнань</city>
-    <city>Хайлар, Вн. Монголия</city>
-    <city>Ханчжоу, пров. Чжэцзян</city>
-    <city>Ханьчжун, пров. Шаньси</city>
-    <city>Харбин, пров. Хэйлунцзян</city>
-    <city>Хотан, Синьцзян-Уйгурский авт. р.</city>
-    <city>Хух-Хото, Вн. Монголия</city>
-    <city>Хэфэй, пров. Аньхой</city>
-    <city>Цзинань, пров. Шаньдун</city>
-    <city>Циндао, пров. Шаньдун</city>
-    <city>Цицикар, пров. Хэйлунцзян</city>
-    <city>Чанхуань-Дао, Гонконг</city>
-    <city>Чанчжоу, пров. Цзянсу</city>
-    <city>Чанчунь, пров. Цзилинь</city>
-    <city>Чанша, пров. Хунань</city>
-    <city>Чжэнчжоу, пров. Хэнань</city>
-    <city>Чунцин, пров. Сычуань</city>
-    <city>Чэнду, пров. Сычуань</city>
-    <city>Чэндэ, пров. Хэбэй</city>
-    <city>Шанхай</city>
-    <city>Шигадзе, Тибет</city>
-    <city>Шицзячжуан, пров. Хэбэй</city>
-    <city>Шицюаньхэ, Тибет</city>
-    <city>Шэньян, пров. Ляонин</city>
-    <city>Эньши, пров. Хубэй</city>
-    <city>Эренхот, Вн. Монголия</city>
-    <city>Ялунвань</city>
-    <city>Яньчи, Нинся-Хуэйский авт. р.</city>
-  </country>
-  <country name="Кокосовые острова">
-    <city>Кокосовые острова (Килинг)</city>
-  </country>
-  <country name="Колумбия">
-    <city>Богота</city>
-  </country>
-  <country name="Коморские острова">
-    <city>Морони</city>
-  </country>
-  <country name="Коста-Рика">
-    <city>Либериа</city>
-    <city>Остров Кокос</city>
-    <city>Пунтаренас</city>
-    <city>Пуэрто-Лимон</city>
-    <city>Сан-Хосе</city>
-  </country>
-  <country name="Кот-д'Ивуар">
-    <city>Абиджан</city>
-  </country>
-  <country name="Куба">
-    <city>Варадеро</city>
-    <city>Гавана</city>
-    <city>Сантьяго-де-Куба</city>
-    <city>Тринидад</city>
-  </country>
-  <country name="Кувейт">
-    <city>Эль-Кувейт</city>
-  </country>
-  <country name="Лаос">
-    <city>Ванг-Виенг</city>
-    <city>Вьентьян</city>
-    <city>Луангпрабанг</city>
-    <city>Паксе (пров. Чампасак)</city>
-    <city>Пхонсаван</city>
-    <city>Сараван</city>
-    <city>Сиенкхуанг</city>
-  </country>
-  <country name="Латвия">
-    <city>Вентспилс</city>
-    <city>Даугавпилс</city>
-    <city>Краслава</city>
-    <city>Ливаны</city>
-    <city>Лиепая</city>
-    <city>Резекне</city>
-    <city>Рига</city>
-    <city>Цесис</city>
-    <city>Юрмала</city>
-  </country>
-  <country name="Лесото">
-    <city>Масеру</city>
-  </country>
-  <country name="Либерия">
-    <city>Монровия</city>
-  </country>
-  <country name="Ливан">
-    <city>Баальбек</city>
-    <city>Бейрут</city>
-    <city>Кедры</city>
-    <city>Триполи</city>
-  </country>
-  <country name="Ливия">
-    <city>Бенгази</city>
-    <city>Гадамес</city>
-    <city>Себха</city>
-    <city>Триполи</city>
-  </country>
-  <country name="Литва">
-    <city>Вильнюс</city>
-    <city>Друскининкай</city>
-    <city>Каунас</city>
-    <city>Клайпеда</city>
-    <city>Нида</city>
-    <city>Паланга</city>
-    <city>Тракай</city>
-    <city>Шяуляй</city>
-  </country>
-  <country name="Лихтенштейн">
-    <city>Вадуц</city>
-  </country>
-  <country name="Люксембург">
-    <city>Люксембург</city>
-    <city>Шенген</city>
-  </country>
-  <country name="Маврикий">
-    <city>Вакоас</city>
-  </country>
-  <country name="Мавритания">
-    <city>Нуакшот</city>
-  </country>
-  <country name="Мадагаскар">
-    <city>Антананариву</city>
-  </country>
-  <country name="Майотта">
-    <city>Дзаудзи</city>
-  </country>
-  <country name="Македония">
-    <city>Попова-Шапка</city>
-    <city>Скопье</city>
-  </country>
-  <country name="Малави">
-    <city>Лилонгве</city>
-  </country>
-  <country name="Малайзия">
-    <city>Куала-Лумпур</city>
-    <city>Куантан</city>
-    <city>Кудат</city>
-    <city>Кучинг</city>
-    <city>Лангкави</city>
-    <city>Малакка</city>
-    <city>Пенанг</city>
-    <city>Сибу</city>
-    <city>Субанг</city>
-  </country>
-  <country name="Мали">
-    <city>Бамако</city>
-  </country>
-  <country name="Мальдивские острова">
-    <city>Мале</city>
-  </country>
-  <country name="Мальта">
-    <city>Валлетта</city>
-  </country>
-  <country name="Марокко">
-    <city>Агадир</city>
-    <city>Касабланка</city>
-    <city>Марракеш</city>
-    <city>Рабат</city>
-    <city>Танжер</city>
-    <city>Фес</city>
-  </country>
-  <country name="Маршалловы Острова">
-    <city>Маджуро</city>
-  </country>
-  <country name="Мексика">
-    <city>Акапулько</city>
-    <city>Гвадалахара</city>
-    <city>Канкун</city>
-    <city>Мансанильо</city>
-    <city>Мехико</city>
-    <city>Монтеррей</city>
-    <city>Пуэрто-Вальярта</city>
-    <city>Сан-Лукас</city>
-    <city>Танголунда</city>
-    <city>Чиуауа</city>
-  </country>
-  <country name="Мелилья">
-    <city>Мелилья</city>
-  </country>
-  <country name="Микронезия">
-    <city>Паликир</city>
-  </country>
-  <country name="Мозамбик">
-    <city>Мапуту</city>
-  </country>
-  <country name="Молдова">
-    <city>Бельцы</city>
-    <city>Бендеры (Тигина)</city>
-    <city>Кишинев</city>
-    <city>Комрат</city>
-    <city>Сороки</city>
-    <city>Тирасполь</city>
-  </country>
-  <country name="Монако">
-    <city>Монако</city>
-    <city>Монте-Карло</city>
-  </country>
-  <country name="Монголия">
-    <city>Алтай</city>
-    <city>Баянхонгор</city>
-    <city>Даландзадгад</city>
-    <city>Мандалговь</city>
-    <city>Улаангом</city>
-    <city>Улан-Батор</city>
-    <city>Улгий</city>
-    <city>Ундерхаан</city>
-    <city>Ховд</city>
-    <city>Хутаг</city>
-    <city>Чойбалсан</city>
-  </country>
-  <country name="Монтсеррат">
-    <city>Плимут</city>
-  </country>
-  <country name="Мьянма">
-    <city>Баган</city>
-    <city>Кокосовые острова</city>
-    <city>Мандалай</city>
-    <city>Мейтхила</city>
-    <city>Мергуй</city>
-    <city>Мьичина</city>
-    <city>Патейн</city>
-    <city>Проме</city>
-    <city>Пьинмана</city>
-    <city>Сандовай</city>
-    <city>Ситуэ</city>
-    <city>Тауннгу</city>
-    <city>Янгон</city>
-  </country>
-  <country name="Намибия">
-    <city>Виндхук</city>
-  </country>
-  <country name="Науру">
-    <city>Айво (Янгор)</city>
-  </country>
-  <country name="Непал">
-    <city>Бхайрава</city>
-    <city>Дханкута</city>
-    <city>Катманду</city>
-    <city>Покхара</city>
-    <city>Сургхет</city>
-  </country>
-  <country name="Нигер">
-    <city>Ниамей</city>
-  </country>
-  <country name="Нигерия">
-    <city>Абуджа</city>
-    <city>Лагос</city>
-  </country>
-  <country name="Нидерландские Антильские острова">
-    <city>Виллемстад</city>
-    <city>Кралендейк</city>
-  </country>
-  <country name="Нидерланды">
-    <city>Амстердам</city>
-    <city>Берген-ан-Зее</city>
-    <city>Гаага</city>
-    <city>Де-Коог</city>
-    <city>Маастрихт</city>
-    <city>Роттердам</city>
-    <city>Эйндховен</city>
-  </country>
-  <country name="Никарагуа">
-    <city>Манагуа</city>
-  </country>
-  <country name="Новая Зеландия">
-    <city>Веллингтон</city>
-    <city>Крайстчерч</city>
-    <city>Окленд</city>
-  </country>
-  <country name="Новая Каледония">
-    <city>Нумеа</city>
-  </country>
-  <country name="Норвегия">
-    <city>Берген</city>
-    <city>Киркенес</city>
-    <city>Лиллехаммер</city>
-    <city>Ню-Олесунн</city>
-    <city>Осло</city>
-  </country>
-  <country name="Норфолк">
-    <city>Кингстон</city>
-  </country>
-  <country name="ОАЭ">
-    <city>Абу-Даби</city>
-    <city>Аджман</city>
-    <city>Дубай</city>
-    <city>Фуджейра</city>
-    <city>Шарджа</city>
-  </country>
-  <country name="Оман">
-    <city>Маскат</city>
-    <city>Салала</city>
-  </country>
-  <country name="Остров Гуам">
-    <city>Аганья</city>
-  </country>
-  <country name="Остров Рождества">
-    <city>Остров Рождества</city>
-  </country>
-  <country name="Остров Ян-Майен">
-    <city>Ян-Майен</city>
-  </country>
-  <country name="Острова Кука">
-    <city>Аваруа</city>
-  </country>
-  <country name="Острова Свальбард">
-    <city>Остров Надежды (Хупен)</city>
-    <city>Свальбард</city>
-    <city>Хорнсунн</city>
-  </country>
-  <country name="Пакистан">
-    <city>Исламабад</city>
-    <city>Карачи</city>
-    <city>Лахор</city>
-  </country>
-  <country name="Палау">
-    <city>Корор</city>
-  </country>
-  <country name="Палестинская автономия">
-    <city>Вифлеем</city>
-    <city>Газа</city>
-  </country>
-  <country name="Панама">
-    <city>Бокас-дель-Торо</city>
-    <city>Буке</city>
-    <city>Давид</city>
-    <city>Колон</city>
-    <city>Панама</city>
-  </country>
-  <country name="Папуа - Новая Гвинея">
-    <city>Ванимо</city>
-    <city>Вевак</city>
-    <city>Гурни</city>
-    <city>Дару</city>
-    <city>Киета</city>
-    <city>Киунга</city>
-    <city>Маданг</city>
-    <city>Маунт-Хаген</city>
-    <city>Наматанай</city>
-    <city>Порт-Морсби</city>
-    <city>Туфи</city>
-    <city>Хоскинс</city>
-  </country>
-  <country name="Парагвай">
-    <city>Асунсьон</city>
-  </country>
-  <country name="Перу">
-    <city>Куско</city>
-    <city>Лима</city>
-    <city>Наска</city>
-    <city>Трухильо</city>
-  </country>
-  <country name="Польша">
-    <city>Белосток</city>
-    <city>Варшава</city>
-    <city>Вроцлав</city>
-    <city>Гданьск</city>
-    <city>Закопане</city>
-    <city>Катовице</city>
-    <city>Краков</city>
-    <city>Крыница</city>
-    <city>Лодзь</city>
-    <city>Плоцк</city>
-    <city>Познань</city>
-    <city>Сопот</city>
-  </country>
-  <country name="Португалия">
-    <city>Алгарви</city>
-    <city>Брага</city>
-    <city>Браганса</city>
-    <city>Коимбра</city>
-    <city>Лиссабон</city>
-    <city>Порту</city>
-    <city>Синтра</city>
-    <city>Фару</city>
-    <city>Фуншал (Мадейра)</city>
-    <city>Эвора</city>
-  </country>
-  <country name="Республика Вануату">
-    <city>Порт-Вила</city>
-  </country>
-  <country name="Республика Конго">
-    <city>Браззавиль</city>
-  </country>
-  <country name="Реюньон">
-    <city>Сен-Дени</city>
-    <city>Сен-Пьер</city>
-  </country>
-  <country name="Россия">
-    <city>Абаза</city>
-    <city>Абакан</city>
-    <city>Абдулино</city>
-    <city>Абзаково</city>
-    <city>Абинск</city>
-    <city>Агата</city>
-    <city>Агидель</city>
-    <city>Агинское</city>
-    <city>Агрыз</city>
-    <city>Аджигардак</city>
-    <city>Адлер</city>
-    <city>Адыгейск</city>
-    <city>Азнакаево</city>
-    <city>Азов</city>
-    <city>Ак-Довурак</city>
-    <city>Аксай</city>
-    <city>Алагир</city>
-    <city>Алапаевск</city>
-    <city>Алатырь</city>
-    <city>Алдан</city>
-    <city>Алейск</city>
-    <city>Александров</city>
-    <city>Александров-Гай</city>
-    <city>Александров-Сахалинский</city>
-    <city>Александровск</city>
-    <city>Алексеевка</city>
-    <city>Алексин</city>
-    <city>Алзамай</city>
-    <city>Алушта</city>
-    <city>Альметьевск</city>
-    <city>Амдерма</city>
-    <city>Амурск</city>
-    <city>Анадырь</city>
-    <city>Анапа</city>
-    <city>Ангарск</city>
-    <city>Андреаполь</city>
-    <city>Анжеро-Судженск</city>
-    <city>Анива</city>
-    <city>Апатиты</city>
-    <city>Апрелевка</city>
-    <city>Апшеронск</city>
-    <city>Арамиль</city>
-    <city>Аргаяш</city>
-    <city>Аргун</city>
-    <city>Ардатов</city>
-    <city>Ардон</city>
-    <city>Арзамас</city>
-    <city>Аркадак</city>
-    <city>Армавир</city>
-    <city>Армянск</city>
-    <city>Арсеньев</city>
-    <city>Артем</city>
-    <city>Артемовск</city>
-    <city>Артемовский</city>
-    <city>Архангельск</city>
-    <city>Архыз</city>
-    <city>Аршан</city>
-    <city>Аршан</city>
-    <city>Асбест</city>
-    <city>Асино</city>
-    <city>Астрахань</city>
-    <city>Аткарск</city>
-    <city>Ахтубинск</city>
-    <city>Ачинск</city>
-    <city>Ачхой-Мартан</city>
-    <city>Аша</city>
-    <city>Ашатли</city>
-    <city>Бабаево</city>
-    <city>Бабушкин</city>
-    <city>Бавлы</city>
-    <city>Багратионовск</city>
-    <city>Байкальск</city>
-    <city>Баймак</city>
-    <city>Бакал</city>
-    <city>Баксан</city>
-    <city>Балабаново</city>
-    <city>Балаково</city>
-    <city>Балахна</city>
-    <city>Балашиха</city>
-    <city>Балашов</city>
-    <city>Балей</city>
-    <city>Балтийск</city>
-    <city>Банное</city>
-    <city>Барабинск</city>
-    <city>Баргузин</city>
-    <city>Барнаул</city>
-    <city>Барыш</city>
-    <city>Батайск</city>
-    <city>Бахчисарай</city>
-    <city>Бежецк</city>
-    <city>Белая Калитва</city>
-    <city>Белая Холуница</city>
-    <city>Белгород</city>
-    <city>Белебей</city>
-    <city>Белев</city>
-    <city>Белинский</city>
-    <city>Белово</city>
-    <city>Белогорка</city>
-    <city>Белогорск</city>
-    <city>Белогорск</city>
-    <city>Белозерск</city>
-    <city>Белокуриха</city>
-    <city>Беломорск</city>
-    <city>Белорецк</city>
-    <city>Белореченск</city>
-    <city>Белоусово</city>
-    <city>Белоярский</city>
-    <city>Белый</city>
-    <city>Белый Яр</city>
-    <city>Бердск</city>
-    <city>Березники</city>
-    <city>Березовский</city>
-    <city>Березовский</city>
-    <city>Беслан</city>
-    <city>Бийск</city>
-    <city>Бикин</city>
-    <city>Билибино</city>
-    <city>Биробиджан</city>
-    <city>Бирск</city>
-    <city>Бирюсинск</city>
-    <city>Бирюч</city>
-    <city>Благовещенск</city>
-    <city>Благовещенск</city>
-    <city>Благодарный</city>
-    <city>Бобров</city>
-    <city>Богданович</city>
-    <city>Богородицк</city>
-    <city>Богородск</city>
-    <city>Боготол</city>
-    <city>Богучар</city>
-    <city>Бодайбо</city>
-    <city>Бокситогорск</city>
-    <city>Болгар</city>
-    <city>Бологое</city>
-    <city>Болотное</city>
-    <city>Болохово</city>
-    <city>Болхов</city>
-    <city>Большой Камень</city>
-    <city>Бомнак</city>
-    <city>Бор</city>
-    <city>Борзя</city>
-    <city>Борисоглебск</city>
-    <city>Боровичи</city>
-    <city>Боровск</city>
-    <city>Бородино</city>
-    <city>Братск</city>
-    <city>Бреды</city>
-    <city>Бронницы</city>
-    <city>Брянск</city>
-    <city>Бугульма</city>
-    <city>Бугуруслан</city>
-    <city>Буденновск</city>
-    <city>Бузулук</city>
-    <city>Буинск</city>
-    <city>Буй</city>
-    <city>Буйнакск</city>
-    <city>Бутурлиновка</city>
-    <city>Быково</city>
-    <city>Быково</city>
-    <city>Валаам</city>
-    <city>Валдай</city>
-    <city>Валуйки</city>
-    <city>Ведено</city>
-    <city>Велиж</city>
-    <city>Великие Луки</city>
-    <city>Великий Новгород</city>
-    <city>Великий Устюг</city>
-    <city>Вельск</city>
-    <city>Вендинга</city>
-    <city>Венёв</city>
-    <city>Верещагино</city>
-    <city>Верея</city>
-    <city>Верхнее Пенжино</city>
-    <city>Верхнеуральск</city>
-    <city>Верхний Баскунчак</city>
-    <city>Верхний Тагил</city>
-    <city>Верхний Уфалей</city>
-    <city>Верхняя Пышма</city>
-    <city>Верхняя Салда</city>
-    <city>Верхняя Тура</city>
-    <city>Верхотурье</city>
-    <city>Верхоянск</city>
-    <city>Весьегонск</city>
-    <city>Ветлуга</city>
-    <city>Видное</city>
-    <city>Вилюйск</city>
-    <city>Вилючинск</city>
-    <city>Винницы</city>
-    <city>Витим</city>
-    <city>Вихоревка</city>
-    <city>Вичуга</city>
-    <city>Владивосток</city>
-    <city>Владикавказ</city>
-    <city>Владимир</city>
-    <city>Внуково</city>
-    <city>Вознесенье</city>
-    <city>Волгоград</city>
-    <city>Волгодонск</city>
-    <city>Волгореченск</city>
-    <city>Волжск</city>
-    <city>Волжский</city>
-    <city>Вологда</city>
-    <city>Володарск</city>
-    <city>Волоколамск</city>
-    <city>Волосово</city>
-    <city>Волхов</city>
-    <city>Волчанск</city>
-    <city>Вольск</city>
-    <city>Воркута</city>
-    <city>Воронеж</city>
-    <city>Ворсма</city>
-    <city>Воскресенск</city>
-    <city>Воткинск</city>
-    <city>Всеволожск</city>
-    <city>Вуктыл</city>
-    <city>Выборг</city>
-    <city>Выкса</city>
-    <city>Высоцк</city>
-    <city>Вытегра</city>
-    <city>Вышний Волочек</city>
-    <city>Вяземский</city>
-    <city>Вязники</city>
-    <city>Вязьма</city>
-    <city>Вятские Поляны</city>
-    <city>Гаврилов Посад</city>
-    <city>Гаврилов-Ям</city>
-    <city>Гагарин</city>
-    <city>Гаджиево</city>
-    <city>Гай</city>
-    <city>Галич</city>
-    <city>Гатчина</city>
-    <city>Гвардейск</city>
-    <city>Гдов</city>
-    <city>Геленджик</city>
-    <city>Георгиевск</city>
-    <city>Глазов</city>
-    <city>Голицыно</city>
-    <city>Горбатов</city>
-    <city>Горно-Алтайск</city>
-    <city>Горнозаводск</city>
-    <city>Горняк</city>
-    <city>Городец</city>
-    <city>Городище</city>
-    <city>Городовиковск</city>
-    <city>Гороховец</city>
-    <city>Горячий Ключ</city>
-    <city>Горячинск</city>
-    <city>Грайворон</city>
-    <city>Гремячинск</city>
-    <city>Гремячинск</city>
-    <city>Грозный</city>
-    <city>Грязи</city>
-    <city>Грязовец</city>
-    <city>Губаха</city>
-    <city>Губкин</city>
-    <city>Губкинский</city>
-    <city>Гудермес</city>
-    <city>Гуково</city>
-    <city>Гулькевичи</city>
-    <city>Гурзуф</city>
-    <city>Гурьевск</city>
-    <city>Гурьевск</city>
-    <city>Гусев</city>
-    <city>Гусиноозерск</city>
-    <city>Гусь-Хрустальный</city>
-    <city>Давлеканово</city>
-    <city>Дагестанские Огни</city>
-    <city>Дагомыс</city>
-    <city>Далматово</city>
-    <city>Дальнегорск</city>
-    <city>Дальнереченск</city>
-    <city>Данилов</city>
-    <city>Даниловка</city>
-    <city>Данков</city>
-    <city>Двинской Березник</city>
-    <city>Дегтярск</city>
-    <city>Дедовск</city>
-    <city>Демидов</city>
-    <city>Демянск</city>
-    <city>Дербент</city>
-    <city>Десногорск</city>
-    <city>Джанкой</city>
-    <city>Джейрах</city>
-    <city>Джубга</city>
-    <city>Дзержинск</city>
-    <city>Дивногорск</city>
-    <city>Дигора</city>
-    <city>Диксон</city>
-    <city>Димитровград</city>
-    <city>Дмитриев-Льговский</city>
-    <city>Дмитров</city>
-    <city>Дмитровск</city>
-    <city>Дно</city>
-    <city>Добрянка</city>
-    <city>Долинск</city>
-    <city>Домбай</city>
-    <city>Домодедово</city>
-    <city>Донецк</city>
-    <city>Донской</city>
-    <city>Дорогобуж</city>
-    <city>Дубна</city>
-    <city>Дубовка</city>
-    <city>Дудинка</city>
-    <city>Духовщина</city>
-    <city>Дюртюли</city>
-    <city>Дятьково</city>
-    <city>Евпатория</city>
-    <city>Егорьевск</city>
-    <city>Ейск</city>
-    <city>Екатеринбург</city>
-    <city>Елабуга</city>
-    <city>Елань</city>
-    <city>Елатьма</city>
-    <city>Елец</city>
-    <city>Елизово</city>
-    <city>Ельня</city>
-    <city>Еманжелинск</city>
-    <city>Емва</city>
-    <city>Енисейск</city>
-    <city>Ербогачен</city>
-    <city>Ермолино</city>
-    <city>Ершов</city>
-    <city>Ессентуки</city>
-    <city>Ефимовский</city>
-    <city>Ефремов</city>
-    <city>Железноводск</city>
-    <city>Железногорск</city>
-    <city>Железногорск</city>
-    <city>Железногорск-Илимский</city>
-    <city>Жердевка</city>
-    <city>Жиганск</city>
-    <city>Жигулевск</city>
-    <city>Жиздра</city>
-    <city>Жирновск</city>
-    <city>Жуков</city>
-    <city>Жуковка</city>
-    <city>Жуковский</city>
-    <city>Забайкальск</city>
-    <city>Завитинск</city>
-    <city>Заводоуковск</city>
-    <city>Заволжск</city>
-    <city>Заволжье</city>
-    <city>Завьялиха</city>
-    <city>Задонск</city>
-    <city>Заинск</city>
-    <city>Закаменск</city>
-    <city>Заозерный</city>
-    <city>Заозерск</city>
-    <city>Западная Двина</city>
-    <city>Заполярный</city>
-    <city>Зарайск</city>
-    <city>Заречный</city>
-    <city>Заречный</city>
-    <city>Заринск</city>
-    <city>Звенигово</city>
-    <city>Звенигород</city>
-    <city>Зверево</city>
-    <city>Зеленогорск</city>
-    <city>Зеленогорск</city>
-    <city>Зеленоград</city>
-    <city>Зеленоградск</city>
-    <city>Зеленодольск</city>
-    <city>Зеленокумск</city>
-    <city>Зерноград</city>
-    <city>Зея</city>
-    <city>Зима</city>
-    <city>Зирган</city>
-    <city>Златоуст</city>
-    <city>Злынка</city>
-    <city>Змеиногорск</city>
-    <city>Знаменск</city>
-    <city>Зубцов</city>
-    <city>Зуевка</city>
-    <city>Иван-Гора</city>
-    <city>Ивангород</city>
-    <city>Иваново</city>
-    <city>Ивдель</city>
-    <city>Игарка</city>
-    <city>Игнашино</city>
-    <city>Ижевск</city>
-    <city>Избербаш</city>
-    <city>Изобильный</city>
-    <city>Иланский</city>
-    <city>Иловля</city>
-    <city>Инза</city>
-    <city>Инкерман</city>
-    <city>Инсар</city>
-    <city>Инта</city>
-    <city>Ипатово</city>
-    <city>Ирбит</city>
-    <city>Иркутск</city>
-    <city>Исилькуль</city>
-    <city>Искитим</city>
-    <city>Истра</city>
-    <city>Ишим</city>
-    <city>Ишимбай</city>
-    <city>Йошкар-Ола</city>
-    <city>Кабанск</city>
-    <city>Кадников</city>
-    <city>Кажим</city>
-    <city>Казань</city>
-    <city>Калач</city>
-    <city>Калачинск</city>
-    <city>Калач-на-Дону</city>
-    <city>Калевала</city>
-    <city>Калининград</city>
-    <city>Калининск</city>
-    <city>Калтан</city>
-    <city>Калуга</city>
-    <city>Калязин</city>
-    <city>Камбарка</city>
-    <city>Каменка</city>
-    <city>Каменногорск</city>
-    <city>Каменномостский</city>
-    <city>Каменск-Уральский</city>
-    <city>Каменск-Шахтинский</city>
-    <city>Камень-на-Оби</city>
-    <city>Камешково</city>
-    <city>Камызяк</city>
-    <city>Камышин</city>
-    <city>Камышлов</city>
-    <city>Канаш</city>
-    <city>Кандалакша</city>
-    <city>Канск</city>
-    <city>Карабаш</city>
-    <city>Карабудахкент</city>
-    <city>Карабулак</city>
-    <city>Карасук</city>
-    <city>Карачаевск</city>
-    <city>Карачев</city>
-    <city>Каргасок</city>
-    <city>Каргат</city>
-    <city>Каргополь</city>
-    <city>Карпинск</city>
-    <city>Карталы</city>
-    <city>Касимов</city>
-    <city>Касли</city>
-    <city>Каспийск</city>
-    <city>Катав-Ивановск</city>
-    <city>Катайск</city>
-    <city>Качканар</city>
-    <city>Кашин</city>
-    <city>Кашира</city>
-    <city>Кашхатау</city>
-    <city>Кедровый</city>
-    <city>Кежма</city>
-    <city>Кемерово</city>
-    <city>Кемь-Порт</city>
-    <city>Керчь</city>
-    <city>Кетченеры</city>
-    <city>Кижи</city>
-    <city>Кизел</city>
-    <city>Кизилюрт</city>
-    <city>Кизляр</city>
-    <city>Кимовск</city>
-    <city>Кимры</city>
-    <city>Кингисепп</city>
-    <city>Кинель</city>
-    <city>Кинешма</city>
-    <city>Киреевск</city>
-    <city>Киренск</city>
-    <city>Киржач</city>
-    <city>Кириллов</city>
-    <city>Кириши</city>
-    <city>Киров</city>
-    <city>Киров</city>
-    <city>Кировград</city>
-    <city>Кирово-Чепецк</city>
-    <city>Кировск</city>
-    <city>Кировск</city>
-    <city>Кировское</city>
-    <city>Кирс</city>
-    <city>Кирсанов</city>
-    <city>Киселевск</city>
-    <city>Кисловодск</city>
-    <city>Климовск</city>
-    <city>Клин</city>
-    <city>Клинцы</city>
-    <city>Княгинино</city>
-    <city>Ковдор</city>
-    <city>Ковров</city>
-    <city>Ковылкино</city>
-    <city>Когалым</city>
-    <city>Кодинск</city>
-    <city>Козельск</city>
-    <city>Козловка</city>
-    <city>Козьмодемьянск</city>
-    <city>Кола</city>
-    <city>Кологрив</city>
-    <city>Коломна</city>
-    <city>Колпашево</city>
-    <city>Колпино</city>
-    <city>Кольчугино</city>
-    <city>Комсомольск</city>
-    <city>Комсомольск-на-Амуре</city>
-    <city>Конаково</city>
-    <city>Кондопога</city>
-    <city>Кондрово</city>
-    <city>Константиновск</city>
-    <city>Копейск</city>
-    <city>Кораблино</city>
-    <city>Кореновск</city>
-    <city>Коркино</city>
-    <city>Королев</city>
-    <city>Короча</city>
-    <city>Корсаков</city>
-    <city>Коряжма</city>
-    <city>Костомукша</city>
-    <city>Кострома</city>
-    <city>Котельниково</city>
-    <city>Котельнич</city>
-    <city>Котлас</city>
-    <city>Котово</city>
-    <city>Котовск</city>
-    <city>Кохма</city>
-    <city>Кош-Агач</city>
-    <city>Красавино</city>
-    <city>Красная Поляна</city>
-    <city>Красноармейск</city>
-    <city>Красноармейск</city>
-    <city>Красновишерск</city>
-    <city>Красногвардейское</city>
-    <city>Красногорск</city>
-    <city>Краснодар</city>
-    <city>Краснознаменск</city>
-    <city>Краснознаменск</city>
-    <city>Краснокаменск</city>
-    <city>Краснокамск</city>
-    <city>Красноперекопск</city>
-    <city>Красноселькуп</city>
-    <city>Краснослободск</city>
-    <city>Краснослободск</city>
-    <city>Краснотурьинск</city>
-    <city>Красноуральск</city>
-    <city>Красноуфимск</city>
-    <city>Красноярск</city>
-    <city>Красный Кут</city>
-    <city>Красный Сулин</city>
-    <city>Красный Холм</city>
-    <city>Кременки</city>
-    <city>Крестцы</city>
-    <city>Кронштадт</city>
-    <city>Кропоткин</city>
-    <city>Крымск</city>
-    <city>Кстово</city>
-    <city>Кубинка</city>
-    <city>Кувандык</city>
-    <city>Кувшиново</city>
-    <city>Кудымкар</city>
-    <city>Кузнецк</city>
-    <city>Куйбышев</city>
-    <city>Кулебаки</city>
-    <city>Кулу</city>
-    <city>Кулунда</city>
-    <city>Кумертау</city>
-    <city>Кунгур</city>
-    <city>Купино</city>
-    <city>Курган</city>
-    <city>Курганинск</city>
-    <city>Курильск</city>
-    <city>Курлово</city>
-    <city>Куровское</city>
-    <city>Курск</city>
-    <city>Куртамыш</city>
-    <city>Курумкан</city>
-    <city>Курчатов</city>
-    <city>Куса</city>
-    <city>Кушва</city>
-    <city>Кущевская</city>
-    <city>Кызыл</city>
-    <city>Кырен</city>
-    <city>Кыштым</city>
-    <city>Кяхта</city>
-    <city>Лабинск</city>
-    <city>Лабытнанги</city>
-    <city>Лагань</city>
-    <city>Ладушкин</city>
-    <city>Лазаревское</city>
-    <city>Лаишево</city>
-    <city>Лакинск</city>
-    <city>Лангепас</city>
-    <city>Лахденпохья</city>
-    <city>Лебедянь</city>
-    <city>Лениногорск</city>
-    <city>Ленинск</city>
-    <city>Ленинск-Кузнецкий</city>
-    <city>Ленск</city>
-    <city>Лермонтов</city>
-    <city>Лесной</city>
-    <city>Лесогорский</city>
-    <city>Лесозаводск</city>
-    <city>Лесосибирск</city>
-    <city>Ливадия</city>
-    <city>Ливны</city>
-    <city>Ликино-Дулево</city>
-    <city>Липецк</city>
-    <city>Липки</city>
-    <city>Лиски</city>
-    <city>Листвянка</city>
-    <city>Лихославль</city>
-    <city>Лодейное поле</city>
-    <city>Ломоносов</city>
-    <city>Лосино-Петровский</city>
-    <city>Лотошино</city>
-    <city>Луга</city>
-    <city>Луза</city>
-    <city>Лукоянов</city>
-    <city>Луховицы</city>
-    <city>Лысково</city>
-    <city>Лысьва</city>
-    <city>Лыткарино</city>
-    <city>Льгов</city>
-    <city>Любань</city>
-    <city>Люберцы</city>
-    <city>Любим</city>
-    <city>Людиново</city>
-    <city>Лянтор</city>
-    <city>Магадан</city>
-    <city>Магас</city>
-    <city>Магнитогорск</city>
-    <city>Майкоп</city>
-    <city>Майский</city>
-    <city>Макаров</city>
-    <city>Макарьев</city>
-    <city>Макушино</city>
-    <city>Малая Вишера</city>
-    <city>Малгобек</city>
-    <city>Малмыж</city>
-    <city>Малоархангельск</city>
-    <city>Малоярославец</city>
-    <city>Мамадыш</city>
-    <city>Мамоново</city>
-    <city>Мантурово</city>
-    <city>Мариинск</city>
-    <city>Мариинский Посад</city>
-    <city>Маркс</city>
-    <city>Массандра</city>
-    <city>Махачкала</city>
-    <city>Мглин</city>
-    <city>Мегион</city>
-    <city>Медвежьегорск</city>
-    <city>Медногорск</city>
-    <city>Медынь</city>
-    <city>Межгорье</city>
-    <city>Междуреченск</city>
-    <city>Междуреченский</city>
-    <city>Мезень</city>
-    <city>Меленки</city>
-    <city>Мелеуз</city>
-    <city>Менделеевск</city>
-    <city>Мензелинск</city>
-    <city>Меренга</city>
-    <city>Мещовск</city>
-    <city>Миасс</city>
-    <city>Микунь</city>
-    <city>Миллерово</city>
-    <city>Минеральные Воды</city>
-    <city>Минусинск</city>
-    <city>Миньяр</city>
-    <city>Мирный</city>
-    <city>Мирный</city>
-    <city>Михайлов</city>
-    <city>Михайловка</city>
-    <city>Михайловск</city>
-    <city>Михайловск</city>
-    <city>Мичуринск</city>
-    <city>Могоча</city>
-    <city>Можайск</city>
-    <city>Можга</city>
-    <city>Моздок</city>
-    <city>Мокшан</city>
-    <city>Мончегорск</city>
-    <city>Морозовск</city>
-    <city>Моршанск</city>
-    <city>Мосальск</city>
-    <city>Москва</city>
-    <city>Мостовской</city>
-    <city>Муравленко</city>
-    <city>Мураши</city>
-    <city>Мурманск</city>
-    <city>Муром</city>
-    <city>Мценск</city>
-    <city>Мыс Шмидта</city>
-    <city>Мыски</city>
-    <city>Мытищи</city>
-    <city>Мышкин</city>
-    <city>Набережные Челны</city>
-    <city>Навашино</city>
-    <city>Наволоки</city>
-    <city>Надым</city>
-    <city>Назарово</city>
-    <city>Назрань</city>
-    <city>Называевск</city>
-    <city>Нальчик</city>
-    <city>Нариманов</city>
-    <city>Наро-Фоминск</city>
-    <city>Нарткала</city>
-    <city>Нарым</city>
-    <city>Нарьян-Мар</city>
-    <city>Находка</city>
-    <city>Невель</city>
-    <city>Невельск</city>
-    <city>Невинномысск</city>
-    <city>Невьянск</city>
-    <city>Нелидово</city>
-    <city>Неман</city>
-    <city>Нерехта</city>
-    <city>Нерчинск</city>
-    <city>Нерюнгри</city>
-    <city>Нестеров</city>
-    <city>Нефедова</city>
-    <city>Нефтегорск</city>
-    <city>Нефтекамск</city>
-    <city>Нефтекумск</city>
-    <city>Нефтеюганск</city>
-    <city>Нечкино</city>
-    <city>Нея</city>
-    <city>Нижневартовск</city>
-    <city>Нижнекамск</city>
-    <city>Нижнеудинск</city>
-    <city>Нижние Серги</city>
-    <city>Нижний Ломов</city>
-    <city>Нижний Новгород</city>
-    <city>Нижний Тагил</city>
-    <city>Нижняя Салда</city>
-    <city>Нижняя Тура</city>
-    <city>Николаевск</city>
-    <city>Николаевск-на-Амуре</city>
-    <city>Никольск</city>
-    <city>Никольск</city>
-    <city>Новая Игирма</city>
-    <city>Новая Ладога</city>
-    <city>Новая Ляля</city>
-    <city>Новоалександровск</city>
-    <city>Новоалтайск</city>
-    <city>Новоаннинский</city>
-    <city>Нововоронеж</city>
-    <city>Новодвинск</city>
-    <city>Новозыбков</city>
-    <city>Новокубанск</city>
-    <city>Новокузнецк</city>
-    <city>Новокуйбышевск</city>
-    <city>Новомичуринск</city>
-    <city>Новомосковск</city>
-    <city>Новониколаевский</city>
-    <city>Новопавловск</city>
-    <city>Новоржев</city>
-    <city>Новороссийка</city>
-    <city>Новороссийск</city>
-    <city>Новосибирск</city>
-    <city>Новосиль</city>
-    <city>Новосокольники</city>
-    <city>Новоспасское</city>
-    <city>Новотроицк</city>
-    <city>Новоузенск</city>
-    <city>Новоульяновск</city>
-    <city>Новоуральск</city>
-    <city>Новохоперск</city>
-    <city>Новочебоксарск</city>
-    <city>Новочеркасск</city>
-    <city>Новошахтинск</city>
-    <city>Новый Оскол</city>
-    <city>Новый Уренгой</city>
-    <city>Ногинск</city>
-    <city>Ноглики</city>
-    <city>Нолинск</city>
-    <city>Норильск</city>
-    <city>Ноябрьск</city>
-    <city>Нурлат</city>
-    <city>Нытва</city>
-    <city>Нюрба</city>
-    <city>Нягань</city>
-    <city>Нязепетровск</city>
-    <city>Няндома</city>
-    <city>Облучье</city>
-    <city>Обнинск</city>
-    <city>Обоянь</city>
-    <city>Объячево</city>
-    <city>Обь</city>
-    <city>Одинцово</city>
-    <city>Озерки</city>
-    <city>Озерск</city>
-    <city>Озерск</city>
-    <city>Озеры</city>
-    <city>Оймякон</city>
-    <city>Октябрьск</city>
-    <city>Октябрьский</city>
-    <city>Октябрьский</city>
-    <city>Октябрьское</city>
-    <city>Октябрьское</city>
-    <city>Окуловка</city>
-    <city>Олекминск</city>
-    <city>Оленегорск</city>
-    <city>Оленек</city>
-    <city>Олонец</city>
-    <city>Омск</city>
-    <city>Омутнинск</city>
-    <city>Онега</city>
-    <city>Опочка</city>
-    <city>Орел</city>
-    <city>Оренбург</city>
-    <city>Орехово-Зуево</city>
-    <city>Орлов</city>
-    <city>Орск</city>
-    <city>Оса</city>
-    <city>Осинники</city>
-    <city>Осташков</city>
-    <city>Остров</city>
-    <city>Островной</city>
-    <city>Острогожск</city>
-    <city>Отрадное</city>
-    <city>Отрадный</city>
-    <city>Оха</city>
-    <city>Оханск</city>
-    <city>Охотск</city>
-    <city>Очер</city>
-    <city>Павлово</city>
-    <city>Павловск</city>
-    <city>Павловская</city>
-    <city>Павловский Посад</city>
-    <city>Палана</city>
-    <city>Палласовка</city>
-    <city>Партизанск</city>
-    <city>Певек</city>
-    <city>Пенза</city>
-    <city>Первомайск</city>
-    <city>Первомайское</city>
-    <city>Первоуральск</city>
-    <city>Перевоз</city>
-    <city>Переславль-Залесский</city>
-    <city>Пермь</city>
-    <city>Пестово</city>
-    <city>Петергоф</city>
-    <city>Петров Вал</city>
-    <city>Петровск</city>
-    <city>Петровск-Забайкальский</city>
-    <city>Петрозаводск</city>
-    <city>Петропавловск-Камчатский</city>
-    <city>Петухово</city>
-    <city>Петушки</city>
-    <city>Печенга</city>
-    <city>Печора</city>
-    <city>Печоры</city>
-    <city>Пикалево</city>
-    <city>Пинега</city>
-    <city>Пионерский</city>
-    <city>Питкяранта</city>
-    <city>Плавск</city>
-    <city>Пласт</city>
-    <city>Плёс</city>
-    <city>Плесецк</city>
-    <city>Поворино</city>
-    <city>Подольск</city>
-    <city>Подпорожье</city>
-    <city>Покачи</city>
-    <city>Покров</city>
-    <city>Покровск</city>
-    <city>Полевской</city>
-    <city>Полесск</city>
-    <city>Полысаево</city>
-    <city>Полярные Зори</city>
-    <city>Полярный</city>
-    <city>Поронайск</city>
-    <city>Порхов</city>
-    <city>Похвистнево</city>
-    <city>Почеп</city>
-    <city>Починок</city>
-    <city>Пошехонье</city>
-    <city>Поярково</city>
-    <city>Правдинск</city>
-    <city>Приволжск</city>
-    <city>Приморск</city>
-    <city>Приморско-Ахтарск</city>
-    <city>Приозерск</city>
-    <city>Прокопьевск</city>
-    <city>Пролетарск</city>
-    <city>Протвино</city>
-    <city>Прохладный</city>
-    <city>Псебай</city>
-    <city>Псков</city>
-    <city>Пугачев</city>
-    <city>Пудож</city>
-    <city>Пустошка</city>
-    <city>Пучеж</city>
-    <city>Пушкин</city>
-    <city>Пушкино</city>
-    <city>Пушкинские Горы</city>
-    <city>Пущино</city>
-    <city>Пыталово</city>
-    <city>Пыть-Ях</city>
-    <city>Пышма</city>
-    <city>Пятигорск</city>
-    <city>Радужный</city>
-    <city>Радужный</city>
-    <city>Райчихинск</city>
-    <city>Раменское</city>
-    <city>Рассказово</city>
-    <city>Ребриха</city>
-    <city>Ревда</city>
-    <city>Реж</city>
-    <city>Ржев</city>
-    <city>Родники</city>
-    <city>Рославль</city>
-    <city>Россошь</city>
-    <city>Ростов</city>
-    <city>Ростов-на-Дону</city>
-    <city>Рошаль</city>
-    <city>Ртищево</city>
-    <city>Рубцовск</city>
-    <city>Рудня</city>
-    <city>Руза</city>
-    <city>Рузаевка</city>
-    <city>Рыбинск</city>
-    <city>Рыбное</city>
-    <city>Рыльск</city>
-    <city>Ряжск</city>
-    <city>Рязань</city>
-    <city>Саки</city>
-    <city>Салават</city>
-    <city>Салаир</city>
-    <city>Салехард</city>
-    <city>Сальск</city>
-    <city>Самара</city>
-    <city>Санкт-Петербург</city>
-    <city>Саранск</city>
-    <city>Сарапул</city>
-    <city>Саратов</city>
-    <city>Саров</city>
-    <city>Сасово</city>
-    <city>Сатка</city>
-    <city>Сафоново</city>
-    <city>Саяногорск</city>
-    <city>Саянск</city>
-    <city>Светлогорск</city>
-    <city>Светлоград</city>
-    <city>Светлый</city>
-    <city>Светлый Яр</city>
-    <city>Светогорск</city>
-    <city>Свирск</city>
-    <city>Свободный</city>
-    <city>Себеж</city>
-    <city>Севастополь</city>
-    <city>Северобайкальск</city>
-    <city>Северодвинск</city>
-    <city>Северо-Курильск</city>
-    <city>Североморск</city>
-    <city>Североуральск</city>
-    <city>Северск</city>
-    <city>Севск</city>
-    <city>Сегежа</city>
-    <city>Сеймчан</city>
-    <city>Сельцо</city>
-    <city>Семенов</city>
-    <city>Семикаракорск</city>
-    <city>Семилуки</city>
-    <city>Семячики</city>
-    <city>Сенгилей</city>
-    <city>Серафимович</city>
-    <city>Сергач</city>
-    <city>Сергиев Посад</city>
-    <city>Сердобск</city>
-    <city>Серебряные Пруды</city>
-    <city>Середниково</city>
-    <city>Серов</city>
-    <city>Серпухов</city>
-    <city>Сертолово</city>
-    <city>Сибай</city>
-    <city>Сим</city>
-    <city>Симеиз</city>
-    <city>Симферополь</city>
-    <city>Сковородино</city>
-    <city>Скопин</city>
-    <city>Славгород</city>
-    <city>Славск</city>
-    <city>Славянск-на-Кубани</city>
-    <city>Сладково</city>
-    <city>Сланцы</city>
-    <city>Слободской</city>
-    <city>Слюдянка</city>
-    <city>Смирных</city>
-    <city>Смоленск</city>
-    <city>Снежинск</city>
-    <city>Снежногорск</city>
-    <city>Соболево</city>
-    <city>Советск</city>
-    <city>Советск</city>
-    <city>Советск</city>
-    <city>Советская Гавань</city>
-    <city>Советский</city>
-    <city>Советский</city>
-    <city>Сокол</city>
-    <city>Сокольники</city>
-    <city>Солигалич</city>
-    <city>Соликамск</city>
-    <city>Солнечногорск</city>
-    <city>Соловки</city>
-    <city>Сольвычегодск</city>
-    <city>Соль-Илецк</city>
-    <city>Сольцы</city>
-    <city>Сорочинск</city>
-    <city>Сорск</city>
-    <city>Сортавала</city>
-    <city>Сосенский</city>
-    <city>Сосновка</city>
-    <city>Сосново</city>
-    <city>Сосновоборск</city>
-    <city>Сосновый Бор</city>
-    <city>Сосногорск</city>
-    <city>Сосьва</city>
-    <city>Сочи</city>
-    <city>Спас-Деменск</city>
-    <city>Спас-Клепики</city>
-    <city>Спасск</city>
-    <city>Спасск-Дальний</city>
-    <city>Спасск-Рязанский</city>
-    <city>Среднеколымск</city>
-    <city>Среднеуральск</city>
-    <city>Средняя Ахтуба</city>
-    <city>Сретенск</city>
-    <city>Ставрополь</city>
-    <city>Станица Каневская</city>
-    <city>Старая Русса</city>
-    <city>Старица</city>
-    <city>Стародуб</city>
-    <city>Старый Крым</city>
-    <city>Старый Оскол</city>
-    <city>Стерлитамак</city>
-    <city>Стрежевой</city>
-    <city>Строитель</city>
-    <city>Ступино</city>
-    <city>Суворов</city>
-    <city>Судак</city>
-    <city>Суджа</city>
-    <city>Судогда</city>
-    <city>Суздаль</city>
-    <city>Сузун</city>
-    <city>Сунтар</city>
-    <city>Суоярви</city>
-    <city>Сураж</city>
-    <city>Сургут</city>
-    <city>Суровикино</city>
-    <city>Сурск</city>
-    <city>Сусуман</city>
-    <city>Сухиничи</city>
-    <city>Сухой Лог</city>
-    <city>Сызрань</city>
-    <city>Сыктывкар</city>
-    <city>Сыростан</city>
-    <city>Сысерть</city>
-    <city>Сычевка</city>
-    <city>Сясьстрой</city>
-    <city>Тавда</city>
-    <city>Таганрог</city>
-    <city>Тайга</city>
-    <city>Тайшет</city>
-    <city>Талдом</city>
-    <city>Талица</city>
-    <city>Тамбей</city>
-    <city>Тамбов</city>
-    <city>Тара</city>
-    <city>Тарко Сале</city>
-    <city>Таруса</city>
-    <city>Татарск</city>
-    <city>Таштагол</city>
-    <city>Тверь</city>
-    <city>Теберда</city>
-    <city>Тейково</city>
-    <city>Темников</city>
-    <city>Темрюк</city>
-    <city>Терек</city>
-    <city>Териберка</city>
-    <city>Терней</city>
-    <city>Терскол</city>
-    <city>Тетюши</city>
-    <city>Тикси</city>
-    <city>Тимашевск</city>
-    <city>Тихвин</city>
-    <city>Тихорецк</city>
-    <city>Тобольск</city>
-    <city>Тогучин</city>
-    <city>Токма</city>
-    <city>Токсово</city>
-    <city>Тольятти</city>
-    <city>Томари</city>
-    <city>Томмот</city>
-    <city>Томпа</city>
-    <city>Томск</city>
-    <city>Топки</city>
-    <city>Торжок</city>
-    <city>Торопец</city>
-    <city>Тосно</city>
-    <city>Тотьма</city>
-    <city>Трехгорный</city>
-    <city>Троицк</city>
-    <city>Троицк</city>
-    <city>Троицко-Печорск</city>
-    <city>Трубчевск</city>
-    <city>Туапсе</city>
-    <city>Туймазы</city>
-    <city>Тула</city>
-    <city>Тулпан</city>
-    <city>Тулун</city>
-    <city>Тура</city>
-    <city>Туран</city>
-    <city>Туринск</city>
-    <city>Туруханск</city>
-    <city>Тутаев</city>
-    <city>Тутончаны</city>
-    <city>Тымовское</city>
-    <city>Тында</city>
-    <city>Тырныауз</city>
-    <city>Тюкалинск</city>
-    <city>Тюмень</city>
-    <city>Уварово</city>
-    <city>Углегорск</city>
-    <city>Углич</city>
-    <city>Удачный</city>
-    <city>Удомля</city>
-    <city>Ужур</city>
-    <city>Узловая</city>
-    <city>Улан-Удэ</city>
-    <city>Ульяновск</city>
-    <city>Унеча</city>
-    <city>Урай</city>
-    <city>Уренгой</city>
-    <city>Урень</city>
-    <city>Уржум</city>
-    <city>Урус-Мартан</city>
-    <city>Урюпинск</city>
-    <city>Усинск</city>
-    <city>Усмань</city>
-    <city>Усолье</city>
-    <city>Усолье-Сибирское</city>
-    <city>Уссурийск</city>
-    <city>Усть Калманка</city>
-    <city>Усть-Баргузин</city>
-    <city>Усть-Джегута</city>
-    <city>Усть-Илимск</city>
-    <city>Усть-Ишим</city>
-    <city>Усть-Камчатск</city>
-    <city>Усть-Катав</city>
-    <city>Усть-Кулом</city>
-    <city>Усть-Кут</city>
-    <city>Усть-Лабинск</city>
-    <city>Усть-Ордынский</city>
-    <city>Устюжна</city>
-    <city>Уфа</city>
-    <city>Ухта</city>
-    <city>Учалы</city>
-    <city>Уэлен</city>
-    <city>Уяр</city>
-    <city>Фатеж</city>
-    <city>Феодосия</city>
-    <city>Фокино</city>
-    <city>Фокино</city>
-    <city>Фролово</city>
-    <city>Фурманов</city>
-    <city>Хабаровск</city>
-    <city>Хадыженск</city>
-    <city>Ханты-Мансийск</city>
-    <city>Харабали</city>
-    <city>Харовск</city>
-    <city>Хасавюрт</city>
-    <city>Хасан</city>
-    <city>Хатанга</city>
-    <city>Хвалынск</city>
-    <city>Хилок</city>
-    <city>Химки</city>
-    <city>Холм</city>
-    <city>Холмогоры</city>
-    <city>Холмск</city>
-    <city>Хоста</city>
-    <city>Хужир</city>
-    <city>Цивильск</city>
-    <city>Цимлянск</city>
-    <city>Чайковский</city>
-    <city>Чапаевск</city>
-    <city>Чаплыгин</city>
-    <city>Чебаркуль</city>
-    <city>Чебоксары</city>
-    <city>Чегем</city>
-    <city>Чекалин</city>
-    <city>Челюскин</city>
-    <city>Челябинск</city>
-    <city>Чердынь</city>
-    <city>Черемхово</city>
-    <city>Черепаново</city>
-    <city>Череповец</city>
-    <city>Черкесск</city>
-    <city>Чермоз</city>
-    <city>Черноголовка</city>
-    <city>Черногорск</city>
-    <city>Черноморское</city>
-    <city>Чернушка</city>
-    <city>Чернышковский</city>
-    <city>Черняховск</city>
-    <city>Черский</city>
-    <city>Черусти</city>
-    <city>Чехов</city>
-    <city>Чикола</city>
-    <city>Чистополь</city>
-    <city>Чита</city>
-    <city>Чкаловск</city>
-    <city>Чокурдах</city>
-    <city>Чудово</city>
-    <city>Чулым</city>
-    <city>Чусовой</city>
-    <city>Чухлома</city>
-    <city>Шадринск</city>
-    <city>Шали</city>
-    <city>Шамары</city>
-    <city>Шарыпово</city>
-    <city>Шарья</city>
-    <city>Шатки</city>
-    <city>Шатой</city>
-    <city>Шатура</city>
-    <city>Шаховская</city>
-    <city>Шахтерск</city>
-    <city>Шахты</city>
-    <city>Шахунья</city>
-    <city>Шацк</city>
-    <city>Шебекино</city>
-    <city>Шелагонцы</city>
-    <city>Шелехов</city>
-    <city>Шенкурск</city>
-    <city>Шерегеш</city>
-    <city>Шереметьево</city>
-    <city>Шилка</city>
-    <city>Шимановск</city>
-    <city>Шиханы</city>
-    <city>Шлиссельбург</city>
-    <city>Шумерля</city>
-    <city>Шумиха</city>
-    <city>Шуя</city>
-    <city>Щекино</city>
-    <city>Щелкино</city>
-    <city>Щелково</city>
-    <city>Щельяюр</city>
-    <city>Щигры</city>
-    <city>Щучье</city>
-    <city>Электрогорск</city>
-    <city>Электросталь</city>
-    <city>Электроугли</city>
-    <city>Элиста</city>
-    <city>Эльбрус</city>
-    <city>Эльтон</city>
-    <city>Энгельс</city>
-    <city>Эртиль</city>
-    <city>Югорск</city>
-    <city>Южа</city>
-    <city>Южно-Курильск</city>
-    <city>Южно-Сахалинск</city>
-    <city>Южноуральск</city>
-    <city>Юрга</city>
-    <city>Юровск</city>
-    <city>Юрьевец</city>
-    <city>Юрьев-Польский</city>
-    <city>Юрюзань</city>
-    <city>Юхнов</city>
-    <city>Ядрин</city>
-    <city>Якутск</city>
-    <city>Якша </city>
-    <city>Ялта</city>
-    <city>Ялуторовск</city>
-    <city>Ямбург </city>
-    <city>Янаул</city>
-    <city>Яранск</city>
-    <city>Яровое</city>
-    <city>Ярославль</city>
-    <city>Яр-Сале</city>
-    <city>Ярцево</city>
-    <city>Ясногорск</city>
-    <city>Ясный</city>
-    <city>Яхрома</city>
-    <city>Яшалта</city>
-    <city>Яшкуль</city>
-  </country>
-  <country name="Руанда">
-    <city>Кигали</city>
-  </country>
-  <country name="Румыния">
-    <city>Брашов</city>
-    <city>Бухарест</city>
-    <city>Галац</city>
-    <city>Констанца</city>
-    <city>Мамая</city>
-    <city>Синая</city>
-    <city>Яссы</city>
-  </country>
-  <country name="США">
-    <city>Абердин, шт. Южная Дакота</city>
-    <city>Агуадилья, шт. Пуэрто-Рико</city>
-    <city>Альбукерке, шт. Нью-Мексико</city>
-    <city>Анкоридж</city>
-    <city>Атланта, шт. Джорджия</city>
-    <city>Балтимор, шт. Мэриленд</city>
-    <city>Берлингтон, шт. Вермонт</city>
-    <city>Бисмарк, шт. Северная Дакота</city>
-    <city>Бойсе, шт. Айдахо</city>
-    <city>Бостон, шт. Массачусетс</city>
-    <city>Вашингтон, Федеральный округ Колумбия</city>
-    <city>Гонолулу, шт. Гавайские острова</city>
-    <city>Даллас</city>
-    <city>Де-Мойн, шт. Айова</city>
-    <city>Денвер, шт. Колорадо</city>
-    <city>Детройт, шт. Мичиган</city>
-    <city>Джексон, шт. Миссисипи</city>
-    <city>Джуно, шт. Аляска</city>
-    <city>Индианаполис, шт. Индиана</city>
-    <city>Канзас-Сити, шт. Миссури</city>
-    <city>Колумбия, шт. Южная Каролина</city>
-    <city>Колумбус, шт. Огайо</city>
-    <city>Конкорд, шт. Нью-Гэмпшир</city>
-    <city>Лансинг, шт. Мичиган</city>
-    <city>Лас-Вегас, шт. Невада</city>
-    <city>Линкольн, шт. Небраска</city>
-    <city>Литл-Рок, шт. Арканзас</city>
-    <city>Лос-Анджелес, шт. Калифорния</city>
-    <city>Луисвилл, шт. Кентукки</city>
-    <city>Мадисон, шт. Висконсин</city>
-    <city>Майами, шт. Флорида</city>
-    <city>Милуоки, шт. Висконсин</city>
-    <city>Миннеаполис, шт. Миннесота</city>
-    <city>Монтгомери, шт. Алабама</city>
-    <city>Нашвилл, шт. Теннесси</city>
-    <city>Новый Орлеан, шт. Луизиана</city>
-    <city>Ньюарк, шт. Нью-Джерси</city>
-    <city>Нью-Йорк, шт. Нью-Йорк</city>
-    <city>Оклахома-Сити, шт. Оклахома</city>
-    <city>Олбани, шт. Нью-Йорк</city>
-    <city>Олимпия, шт. Вашингтон</city>
-    <city>Остин, шт. Техас</city>
-    <city>Питтсбург, шт. Пенсильвания</city>
-    <city>Портленд, шт. Мэн</city>
-    <city>Провиденс, шт. Род-Айленд</city>
-    <city>Рино, шт. Невада</city>
-    <city>Ричмонд, шт. Виргиния</city>
-    <city>Роли, шт. Северная Каролина</city>
-    <city>Сакраменто, шт. Калифорния</city>
-    <city>Сан-Франциско, шт. Калифорния</city>
-    <city>Сейлем, шт. Орегон</city>
-    <city>Сент-Луис, шт. Миссури</city>
-    <city>Сиэтл, шт. Вашингтон</city>
-    <city>Солт-Лейк-Сити, шт. Юта</city>
-    <city>Спрингфилд, шт. Иллинойс</city>
-    <city>Топика, шт. Канзас</city>
-    <city>Филадельфия, шт. Пенсильвания</city>
-    <city>Финикс, шт. Аризона</city>
-    <city>Хартфорд, шт. Коннектикут</city>
-    <city>Хелина, шт. Монтана</city>
-    <city>Хьюстон, шт. Техас</city>
-    <city>Чарлстон, шт. Западная Виргиния</city>
-    <city>Чикаго, шт. Иллинойс</city>
-    <city>Шайенн, шт. Вайоминг</city>
-  </country>
-  <country name="Сальвадор">
-    <city>Сан-Мигель</city>
-    <city>Сан-Сальвадор</city>
-  </country>
-  <country name="Самоа">
-    <city>Апиа</city>
-  </country>
-  <country name="Сан-Марино">
-    <city>Сан-Марино</city>
-  </country>
-  <country name="Сан-Томе и Принсипи">
-    <city>Сан-Томе</city>
-  </country>
-  <country name="Саудовская Аравия">
-    <city>Даммам</city>
-    <city>Медина</city>
-    <city>Мекка</city>
-    <city>Эр-Рияд</city>
-  </country>
-  <country name="Свазиленд">
-    <city>Манзини</city>
-  </country>
-  <country name="Северная Корея">
-    <city>Пхеньян</city>
-    <city>Чхонджин</city>
-  </country>
-  <country name="Северные Марианские острова">
-    <city>Сайпан</city>
-  </country>
-  <country name="Сейшельские острова">
-    <city>Виктория</city>
-  </country>
-  <country name="Сенегал">
-    <city>Дакар</city>
-  </country>
-  <country name="Сент-Винсент и Гренадины">
-    <city>Кингстаун</city>
-  </country>
-  <country name="Сент-Китс и Невис">
-    <city>Бастер</city>
-  </country>
-  <country name="Сент-Люсия">
-    <city>Кастри</city>
-  </country>
-  <country name="Сербия">
-    <city>Белград</city>
-    <city>Димитровград</city>
-    <city>Печ</city>
-    <city>Приштина</city>
-  </country>
-  <country name="Сеута">
-    <city>Сеута</city>
-  </country>
-  <country name="Сингапур">
-    <city>Сингапур</city>
-  </country>
-  <country name="Сирия">
-    <city>Алеппо (Халеб)</city>
-    <city>Дамаск</city>
-    <city>Латакия</city>
-    <city>Пальмира (Тадмор)</city>
-    <city>Хама</city>
-  </country>
-  <country name="Словакия">
-    <city>Братислава</city>
-    <city>Высокие Татры</city>
-    <city>Кошице</city>
-    <city>Попрад</city>
-    <city>Хопок</city>
-    <city>Ясна</city>
-  </country>
-  <country name="Словения">
-    <city>Вогель</city>
-    <city>Любляна</city>
-  </country>
-  <country name="Соломоновы острова">
-    <city>Хониара</city>
-  </country>
-  <country name="Сомали">
-    <city>Могадишо</city>
-  </country>
-  <country name="Судан">
-    <city>Хартум</city>
-  </country>
-  <country name="Суринам">
-    <city>Парамарибо</city>
-  </country>
-  <country name="Сьерра-Леоне">
-    <city>Макени</city>
-  </country>
-  <country name="Таджикистан">
-    <city>Гарм</city>
-    <city>Душанбе</city>
-    <city>Кулоб</city>
-    <city>Курган Тюбе</city>
-    <city>Турсунзода</city>
-    <city>Хорог</city>
-    <city>Худжанд</city>
-  </country>
-  <country name="Таиланд">
-    <city>Бангкок</city>
-    <city>Ко Чанг</city>
-    <city>Краби</city>
-    <city>Паттая</city>
-    <city>Прачуап Кхирикхан</city>
-    <city>Пхукет</city>
-    <city>Самуи</city>
-    <city>Саттанхип</city>
-    <city>Сурин</city>
-    <city>Чиангмай</city>
-  </country>
-  <country name="Тайвань">
-    <city>Тайбей</city>
-    <city>Тайнань</city>
-  </country>
-  <country name="Танзания">
-    <city>Дар-эс-Салам</city>
-    <city>Додома</city>
-    <city>Занзибар</city>
-    <city>Чаки-Чаки</city>
-  </country>
-  <country name="Того">
-    <city>Ломе</city>
-  </country>
-  <country name="Тонга">
-    <city>Нукуалофа</city>
-  </country>
-  <country name="Тринидад и Тобаго">
-    <city>Тобаго</city>
-    <city>Тринидад</city>
-  </country>
-  <country name="Тувалу">
-    <city>Фунафути</city>
-  </country>
-  <country name="Тунис">
-    <city>Джерба</city>
-    <city>Монастир</city>
-    <city>Сусс</city>
-    <city>Сфакс</city>
-    <city>Тунис</city>
-    <city>Хаммамет</city>
-  </country>
-  <country name="Туркмения">
-    <city>Ашхабад</city>
-    <city>Дашховуз (Ташауз)</city>
-    <city>Туркменбаши (Красноводск)</city>
-  </country>
-  <country name="Турция">
-    <city>Авсаллар</city>
-    <city>Адана</city>
-    <city>Аксу</city>
-    <city>Аланья</city>
-    <city>Анкара</city>
-    <city>Анталья</city>
-    <city>Белек</city>
-    <city>Бельдиби</city>
-    <city>Бодрум</city>
-    <city>Болу</city>
-    <city>Бурса</city>
-    <city>Даламан</city>
-    <city>Измир</city>
-    <city>Ичмелер</city>
-    <city>Кемер</city>
-    <city>Кумкой</city>
-    <city>Кушадасы</city>
-    <city>Манавгат</city>
-    <city>Мармарис</city>
-    <city>Сиде</city>
-    <city>Силифке</city>
-    <city>Синоп</city>
-    <city>Стамбул</city>
-    <city>Текирдаг</city>
-    <city>Текирова</city>
-    <city>Улудаг</city>
-    <city>Фетхие</city>
-    <city>Чешме</city>
-    <city>Эдирне</city>
-    <city>Эрзурум</city>
-  </country>
-  <country name="Тёркс и Кайкос">
-    <city>Кокберн-Таун</city>
-    <city>Остров Провидения</city>
-  </country>
-  <country name="Уганда">
-    <city>Кампала</city>
-  </country>
-  <country name="Узбекистан">
-    <city>Андижан</city>
-    <city>Бухара</city>
-    <city>Гулистан</city>
-    <city>Джизак</city>
-    <city>Карши</city>
-    <city>Навои</city>
-    <city>Наманган</city>
-    <city>Нукус</city>
-    <city>Самарканд</city>
-    <city>Сырдарья</city>
-    <city>Тахтакупыр</city>
-    <city>Ташкент</city>
-    <city>Термез</city>
-    <city>Ургенч</city>
-    <city>Федченко</city>
-    <city>Фергана</city>
-    <city>Хива</city>
-  </country>
-  <country name="Украина">
-    <city>Александрия</city>
-    <city>Алчевск</city>
-    <city>Артемовск</city>
-    <city>Арциз</city>
-    <city>Аскания-Нова</city>
-    <city>Ахтырка</city>
-    <city>Балаклея</city>
-    <city>Балта</city>
-    <city>Бахмач</city>
-    <city>Белая Церковь</city>
-    <city>Белгород-Днестровский</city>
-    <city>Бердичев</city>
-    <city>Бердянск</city>
-    <city>Болград</city>
-    <city>Борисполь</city>
-    <city>Буковель</city>
-    <city>Васильков</city>
-    <city>Верховина</city>
-    <city>Вилково</city>
-    <city>Винница</city>
-    <city>Вознесенск</city>
-    <city>Ворохта</city>
-    <city>Гайворон</city>
-    <city>Гайсин</city>
-    <city>Геническ</city>
-    <city>Глухов</city>
-    <city>Горловка</city>
-    <city>Гребёнка</city>
-    <city>Гуляйполе</city>
-    <city>Диканька</city>
-    <city>Днепродзержинск</city>
-    <city>Днепропетровск</city>
-    <city>Долинская</city>
-    <city>Донецк</city>
-    <city>Драгобрат</city>
-    <city>Дрогобыч</city>
-    <city>Енакиево</city>
-    <city>Жашков</city>
-    <city>Житомир</city>
-    <city>Жмеринка</city>
-    <city>Запорожье</city>
-    <city>Затока</city>
-    <city>Звенигородка</city>
-    <city>Здолбунов</city>
-    <city>Змиёв</city>
-    <city>Золочев</city>
-    <city>Ивано-Франковск</city>
-    <city>Измаил</city>
-    <city>Изюм</city>
-    <city>Ильичёвск</city>
-    <city>Ирпень</city>
-    <city>Казатин</city>
-    <city>Калуш</city>
-    <city>Каменец-Подольский</city>
-    <city>Канев</city>
-    <city>Каховка</city>
-    <city>Киев</city>
-    <city>Кировоград</city>
-    <city>Коблево</city>
-    <city>Ковель</city>
-    <city>Конотоп</city>
-    <city>Коростень</city>
-    <city>Котовск</city>
-    <city>Краматорск</city>
-    <city>Красноармейск</city>
-    <city>Краснодон</city>
-    <city>Кременчуг</city>
-    <city>Кривой Рог</city>
-    <city>Купянск</city>
-    <city>Лисичанск</city>
-    <city>Лозовая</city>
-    <city>Луганск</city>
-    <city>Луцк</city>
-    <city>Львов</city>
-    <city>Мариуполь</city>
-    <city>Мелитополь</city>
-    <city>Миргород</city>
-    <city>Могилев-Подольский</city>
-    <city>Моршин</city>
-    <city>Мостиска</city>
-    <city>Мукачево</city>
-    <city>Немиров</city>
-    <city>Николаев</city>
-    <city>Никополь</city>
-    <city>Новая Каховка</city>
-    <city>Новгород-Северский</city>
-    <city>Новоград-Волынский</city>
-    <city>Новомосковск</city>
-    <city>Новоукраинка</city>
-    <city>Обухов</city>
-    <city>Овидиополь</city>
-    <city>Овруч</city>
-    <city>Одесса</city>
-    <city>Орджоникидзе</city>
-    <city>Очаков</city>
-    <city>Павлоград</city>
-    <city>Первомайск</city>
-    <city>Первомайск</city>
-    <city>Переяслав-Хмельницкий</city>
-    <city>Пирятин</city>
-    <city>Подволочиск</city>
-    <city>Пологи</city>
-    <city>Полтава</city>
-    <city>Помошная</city>
-    <city>Попасная</city>
-    <city>Почаев</city>
-    <city>Прилуки</city>
-    <city>Радомышль</city>
-    <city>Раздельная</city>
-    <city>Рени</city>
-    <city>Ровно</city>
-    <city>Сарны</city>
-    <city>Свалява</city>
-    <city>Северодонецк</city>
-    <city>Скадовск</city>
-    <city>Славское</city>
-    <city>Славутич</city>
-    <city>Смела</city>
-    <city>Стрый</city>
-    <city>Сумы</city>
-    <city>Тернополь</city>
-    <city>Трускавец</city>
-    <city>Тульчин</city>
-    <city>Ужгород</city>
-    <city>Ульяновка</city>
-    <city>Умань</city>
-    <city>Фастов</city>
-    <city>Харцызск</city>
-    <city>Харьков</city>
-    <city>Херсон</city>
-    <city>Хмельницкий</city>
-    <city>Хотин</city>
-    <city>Хуст</city>
-    <city>Цюрупинск</city>
-    <city>Черкассы</city>
-    <city>Чернигов</city>
-    <city>Чернобыль</city>
-    <city>Черновцы</city>
-    <city>Чигирин</city>
-    <city>Чоп</city>
-    <city>Чугуев</city>
-    <city>Шепетовка</city>
-    <city>Шостка</city>
-    <city>Шпола</city>
-    <city>Энергодар</city>
-    <city>Южноукраинск</city>
-    <city>Яремча</city>
-  </country>
-  <country name="Уругвай">
-    <city>Монтевидео</city>
-  </country>
-  <country name="Фарерские острова">
-    <city>Торсхавн</city>
-  </country>
-  <country name="Фиджи">
-    <city>Лабаса</city>
-    <city>Нанди</city>
-    <city>Сува</city>
-  </country>
-  <country name="Филиппины">
-    <city>Апарри</city>
-    <city>Боракай</city>
-    <city>Виган</city>
-    <city>Давао</city>
-    <city>Дагупан</city>
-    <city>Инфанта</city>
-    <city>Кабанатуан</city>
-    <city>Калапан</city>
-    <city>Катарман</city>
-    <city>Корон</city>
-    <city>Ламбиа</city>
-    <city>Манила</city>
-    <city>Пуэрто-Принсеса</city>
-    <city>Сан-Хосе</city>
-  </country>
-  <country name="Финляндия">
-    <city>Куусамо</city>
-    <city>Лахти</city>
-    <city>Леви</city>
-    <city>Рованиеми</city>
-    <city>Турку</city>
-    <city>Халли</city>
-    <city>Хельсинки</city>
-  </country>
-  <country name="Франция">
-    <city>Аяччо</city>
-    <city>Биарриц</city>
-    <city>Бордо</city>
-    <city>Брест</city>
-    <city>Валь-д'Изер</city>
-    <city>Виши</city>
-    <city>Дижон</city>
-    <city>Довиль</city>
-    <city>Канны</city>
-    <city>Куршевель</city>
-    <city>Лилль</city>
-    <city>Лион</city>
-    <city>Марсель</city>
-    <city>Нант</city>
-    <city>Ницца</city>
-    <city>Париж</city>
-    <city>Перпиньян</city>
-    <city>Сен-Тропе</city>
-    <city>Страсбург</city>
-    <city>Тулуза</city>
-    <city>Шамони</city>
-  </country>
-  <country name="Французская Гвиана">
-    <city>Кайенна</city>
-  </country>
-  <country name="Французская Полинезия">
-    <city>Папеэте</city>
-  </country>
-  <country name="Хорватия">
-    <city>Дубровник</city>
-    <city>Загреб</city>
-    <city>Пула</city>
-    <city>Сплит</city>
-  </country>
-  <country name="Центральноафриканская республика">
-    <city>Банги</city>
-  </country>
-  <country name="Чад">
-    <city>Нджамена</city>
-  </country>
-  <country name="Черногория">
-    <city>Бар</city>
-    <city>Будва</city>
-    <city>Герцег-Нови</city>
-    <city>Жабляк</city>
-    <city>Колашин</city>
-    <city>Котор</city>
-    <city>Никшич</city>
-    <city>Подгорица</city>
-    <city>Тиват</city>
-    <city>Цетинье</city>
-  </country>
-  <country name="Чехия">
-    <city>Брно</city>
-    <city>Карловы Вары</city>
-    <city>Марианские Лазни</city>
-    <city>Пльзень</city>
-    <city>Прага</city>
-    <city>Черный Дул</city>
-    <city>Яхимов</city>
-  </country>
-  <country name="Чили">
-    <city>Арика</city>
-    <city>Вальпараисо</city>
-    <city>Винья-дель-Мар</city>
-    <city>Остров Пасхи</city>
-    <city>Пунта-Аренас</city>
-    <city>Пуэрто-Монт</city>
-    <city>Сантьяго</city>
-  </country>
-  <country name="Швейцария">
-    <city>Баден</city>
-    <city>Берн</city>
-    <city>Вербье</city>
-    <city>Гриндельвальд</city>
-    <city>Давос</city>
-    <city>Женева</city>
-    <city>Кран-Монтана</city>
-    <city>Кур</city>
-    <city>Лозанна</city>
-    <city>Саас-Фэ</city>
-    <city>Санкт-Мориц</city>
-    <city>Церматт</city>
-    <city>Цюрих</city>
-  </country>
-  <country name="Швеция">
-    <city>Гетеборг</city>
-    <city>Мальмё</city>
-    <city>Оре</city>
-    <city>Стокгольм</city>
-    <city>Тимро</city>
-  </country>
-  <country name="Шри-Ланка">
-    <city>Анурадхапура</city>
-    <city>Галле</city>
-    <city>Канди</city>
-    <city>Коломбо</city>
-    <city>Маннар</city>
-  </country>
-  <country name="Эквадор">
-    <city>Гуаякиль</city>
-    <city>Кито</city>
-    <city>Куэнка</city>
-  </country>
-  <country name="Экваториальная Гвинея">
-    <city>Бата</city>
-    <city>Малабо</city>
-  </country>
-  <country name="Эритрея">
-    <city>Асмэра</city>
-  </country>
-  <country name="Эстония">
-    <city>Валга</city>
-    <city>Выру</city>
-    <city>Курессааре</city>
-    <city>Кярдла</city>
-    <city>Лауласмаа</city>
-    <city>Нарва</city>
-    <city>Нарва-Йыэсуу</city>
-    <city>Оттепя</city>
-    <city>Пярну</city>
-    <city>Силламяэ</city>
-    <city>Таллин</city>
-    <city>Тарту</city>
-    <city>Хаапсалу</city>
-  </country>
-  <country name="Эфиопия">
-    <city>Аддис-Абеба</city>
-  </country>
-  <country name="ЮАР">
-    <city>Дурбан</city>
-    <city>Йоханнесбург</city>
-    <city>Кейптаун</city>
-    <city>Тсване (Претория)</city>
-  </country>
-  <country name="Южная Корея">
-    <city>Масан</city>
-    <city>Пусан</city>
-    <city>Сеул</city>
-    <city>Сокчо</city>
-  </country>
-  <country name="Южная Осетия">
-    <city>Цхинвал</city>
-  </country>
-  <country name="Ямайка">
-    <city>Кингстон</city>
-    <city>Монтего-Бэй</city>
-  </country>
-  <country name="Япония">
-    <city>Абасири</city>
-    <city>Асахикава</city>
-    <city>Вакканай</city>
-    <city>Йокогама</city>
-    <city>Камакура</city>
-    <city>Киото</city>
-    <city>Кобе</city>
-    <city>Кусиро</city>
-    <city>Нагасаки</city>
-    <city>Нара</city>
-    <city>Наха</city>
-    <city>Ниигата</city>
-    <city>Никко</city>
-    <city>Нэмуро</city>
-    <city>Осака</city>
-    <city>Саппоро</city>
-    <city>Суцу</city>
-    <city>Такамацу</city>
-    <city>Токио</city>
-    <city>Уракава</city>
-    <city>Фукуока</city>
-  </country>
+    <country name="Абхазия">
+        <city>Гагра</city>
+        <city>Гудаута</city>
+        <city>Новый Афон</city>
+        <city>Пицунда</city>
+        <city>Сухум</city>
+    </country>
+    <country name="Австралия">
+        <city>Аделаида</city>
+        <city>Алис-Спрингс</city>
+        <city>Брисбен</city>
+        <city>Дарвин</city>
+        <city>Канберра</city>
+        <city>Кэрнс</city>
+        <city>Мельбурн</city>
+        <city>Ньюкасл</city>
+        <city>Перт</city>
+        <city>Сидней</city>
+        <city>Таунсвилл</city>
+        <city>Хобарт</city>
+    </country>
+    <country name="Австрия">
+        <city>Айзенштадт</city>
+        <city>Баден</city>
+        <city>Вена</city>
+        <city>Зальцбург</city>
+        <city>Зельден</city>
+        <city>Инсбрук</city>
+        <city>Ишгль</city>
+        <city>Капрун</city>
+        <city>Лех</city>
+        <city>Линц</city>
+        <city>Сан-Антон</city>
+        <city>Цель-Ам-Зе</city>
+    </country>
+    <country name="Азербайджан">
+        <city>Баку</city>
+        <city>Гянджа</city>
+        <city>Ханкенди (Степанакерт)</city>
+    </country>
+    <country name="Азорские острова">
+        <city>Вила-ду-Порту</city>
+        <city>Орта</city>
+        <city>Понта-Делгада</city>
+        <city>Санта-Круш-даш-Флориш</city>
+    </country>
+    <country name="Албания">
+        <city>Тирана</city>
+    </country>
+    <country name="Алжир">
+        <city>Алжир</city>
+        <city>Оран</city>
+    </country>
+    <country name="Американские Виргинские острова">
+        <city>Шарлотта-Амалия</city>
+    </country>
+    <country name="Ангилья">
+        <city>Ангилья</city>
+    </country>
+    <country name="Ангола">
+        <city>Луанда</city>
+    </country>
+    <country name="Андорра">
+        <city>Андорра-ла-Велья</city>
+        <city>Аринсал</city>
+        <city>Аркалис</city>
+        <city>Ордино</city>
+        <city>Пал</city>
+        <city>Пас-де-ла-Каса</city>
+        <city>Сольдеу</city>
+        <city>Энкамп</city>
+        <city>Эскальдес</city>
+    </country>
+    <country name="Антарктика">
+        <city>Беллинсгаузен</city>
+    </country>
+    <country name="Антигуа и Барбуда">
+        <city>Антигуа</city>
+    </country>
+    <country name="Аргентина">
+        <city>Буэнос-Айрес</city>
+        <city>Калафате</city>
+        <city>Кордова</city>
+        <city>Мар-дель-Плата</city>
+        <city>Мирамар</city>
+        <city>Пуэрто-Игуасу</city>
+        <city>Сальта</city>
+        <city>Сан-Карлос-де-Барилоче</city>
+        <city>Ушуайя</city>
+    </country>
+    <country name="Армения">
+        <city>Гюмри</city>
+        <city>Ереван</city>
+        <city>Раздан</city>
+    </country>
+    <country name="Аруба">
+        <city>Ораньестад</city>
+    </country>
+    <country name="Афганистан">
+        <city>Кабул</city>
+    </country>
+    <country name="Багамские острова">
+        <city>Нассау</city>
+    </country>
+    <country name="Балеарские острова">
+        <city>Ибица</city>
+        <city>Майорка</city>
+        <city>Менорка</city>
+    </country>
+    <country name="Бангладеш">
+        <city>Барисал</city>
+        <city>Богра</city>
+        <city>Дакка</city>
+        <city>Джессор</city>
+        <city>Исхурди</city>
+        <city>Кокс-Базар</city>
+        <city>Рангпур</city>
+        <city>Силхет</city>
+        <city>Фени</city>
+        <city>Читтагонг</city>
+    </country>
+    <country name="Барбадос">
+        <city>Барбадос</city>
+        <city>Бриджтаун</city>
+    </country>
+    <country name="Бахрейн">
+        <city>Бахрейн</city>
+        <city>Манама</city>
+    </country>
+    <country name="Беларусь">
+        <city>Барановичи</city>
+        <city>Белыничи</city>
+        <city>Березино</city>
+        <city>Бобруйск</city>
+        <city>Борисов</city>
+        <city>Брагин</city>
+        <city>Браслав</city>
+        <city>Брест</city>
+        <city>Быхов</city>
+        <city>Василевичи</city>
+        <city>Верхнедвинск</city>
+        <city>Вилейка</city>
+        <city>Витебск</city>
+        <city>Волковыск</city>
+        <city>Воложин</city>
+        <city>Высокое</city>
+        <city>Ганцевичи</city>
+        <city>Глубокое</city>
+        <city>Гомель</city>
+        <city>Горки</city>
+        <city>Гродно</city>
+        <city>Дзержинск</city>
+        <city>Докшицы</city>
+        <city>Дрогичин</city>
+        <city>Дятлово</city>
+        <city>Езерище</city>
+        <city>Житковичи</city>
+        <city>Жлобин</city>
+        <city>Жодино</city>
+        <city>Заславль</city>
+        <city>Ивацевичи</city>
+        <city>Климовичи</city>
+        <city>Кличев</city>
+        <city>Кобрин</city>
+        <city>Костюковичи</city>
+        <city>Кричев</city>
+        <city>Крупки</city>
+        <city>Лельчицы</city>
+        <city>Лепель</city>
+        <city>Лида</city>
+        <city>Логойск</city>
+        <city>Любань</city>
+        <city>Марьина Горка</city>
+        <city>Минск</city>
+        <city>Миоры</city>
+        <city>Могилев</city>
+        <city>Мозырь</city>
+        <city>Молодечно</city>
+        <city>Мосты</city>
+        <city>Мстиславль</city>
+        <city>Мядель</city>
+        <city>Нарочь</city>
+        <city>Несвиж</city>
+        <city>Новогрудок</city>
+        <city>Новополоцк</city>
+        <city>Октябрь</city>
+        <city>Орша</city>
+        <city>Осиповичи</city>
+        <city>Ошмяны</city>
+        <city>Петриков</city>
+        <city>Пинск</city>
+        <city>Плещеницы</city>
+        <city>Полоцк</city>
+        <city>Поставы</city>
+        <city>Пружаны</city>
+        <city>Радошковичи</city>
+        <city>Речица</city>
+        <city>Рогачев</city>
+        <city>Светлогорск</city>
+        <city>Сенно</city>
+        <city>Славгород</city>
+        <city>Слоним</city>
+        <city>Слуцк</city>
+        <city>Сморгонь</city>
+        <city>Солигорск</city>
+        <city>Столбцы</city>
+        <city>Толочин</city>
+        <city>Туров</city>
+        <city>Ушачи</city>
+        <city>Хойники</city>
+        <city>Чечерск</city>
+        <city>Шарковщина</city>
+        <city>Шклов</city>
+        <city>Щучин</city>
+    </country>
+    <country name="Белиз">
+        <city>Белиз</city>
+        <city>Сан-Педро</city>
+    </country>
+    <country name="Бельгия">
+        <city>Антверпен</city>
+        <city>Бовшен</city>
+        <city>Брюгге</city>
+        <city>Брюссель</city>
+        <city>Ватерлоо</city>
+        <city>Гент</city>
+        <city>Льеж</city>
+        <city>Остенде</city>
+        <city>Хасселт</city>
+    </country>
+    <country name="Бенин">
+        <city>Котону</city>
+    </country>
+    <country name="Бермудские Острова">
+        <city>Сент-Джордж</city>
+    </country>
+    <country name="Болгария">
+        <city>Албена</city>
+        <city>Ахтополь</city>
+        <city>Банско</city>
+        <city>Бургас</city>
+        <city>Варна</city>
+        <city>Велико-Тырново</city>
+        <city>Видин</city>
+        <city>Враца</city>
+        <city>Габрово</city>
+        <city>Дрогоман</city>
+        <city>Золотые Пески</city>
+        <city>Ивайловград</city>
+        <city>Калиакра</city>
+        <city>Кырджали</city>
+        <city>Кюстендил</city>
+        <city>Ловеч</city>
+        <city>Лом</city>
+        <city>Монтана</city>
+        <city>Мургаш</city>
+        <city>Мусала</city>
+        <city>Новосело</city>
+        <city>Оряхово</city>
+        <city>Плевен</city>
+        <city>Пловдив</city>
+        <city>Приморско</city>
+        <city>Разград</city>
+        <city>Русе</city>
+        <city>Сандански</city>
+        <city>Свиленград</city>
+        <city>Свиштов</city>
+        <city>Силистра</city>
+        <city>Снежанка</city>
+        <city>Солнечный Берег</city>
+        <city>Сопот</city>
+        <city>София</city>
+        <city>Черни-Врых</city>
+        <city>Чирпан</city>
+        <city>Шабла</city>
+        <city>Элхово</city>
+    </country>
+    <country name="Боливия">
+        <city>Копакабана</city>
+        <city>Ла-Пас</city>
+        <city>Санта-Крус</city>
+        <city>Сукре</city>
+        <city>Тринидад</city>
+    </country>
+    <country name="Босния и Герцеговина">
+        <city>Ливно</city>
+        <city>Сараево</city>
+    </country>
+    <country name="Ботсвана">
+        <city>Габороне</city>
+    </country>
+    <country name="Бразилия">
+        <city>Бразилиа</city>
+        <city>Манаус</city>
+        <city>Рио-Де-Жанейро</city>
+        <city>Сальвадор</city>
+        <city>Сан-Паулу</city>
+        <city>Фос-ду-Игуасу</city>
+    </country>
+    <country name="Британские Виргинские острова">
+        <city>Роуд-Таун</city>
+    </country>
+    <country name="Бруней">
+        <city>Бандар-Сери-Бегаван</city>
+        <city>Куала-Белаит</city>
+    </country>
+    <country name="Буркина-Фасо">
+        <city>Уагадугу</city>
+    </country>
+    <country name="Бурунди">
+        <city>Бужумбура</city>
+    </country>
+    <country name="Бутан">
+        <city>Тхимпху</city>
+    </country>
+    <country name="Ватикан">
+        <city>Ватикан</city>
+    </country>
+    <country name="Великобритания">
+        <city>Абердин</city>
+        <city>Белфаст</city>
+        <city>Бирмингем</city>
+        <city>Бристоль</city>
+        <city>Глазго</city>
+        <city>Дерби</city>
+        <city>Дувр</city>
+        <city>Кембридж</city>
+        <city>Ливерпуль</city>
+        <city>Лондон</city>
+        <city>Манчестер</city>
+        <city>Оксфорд</city>
+        <city>Плимут</city>
+        <city>Скапа</city>
+        <city>Эдинбург</city>
+    </country>
+    <country name="Венгрия">
+        <city>Будапешт</city>
+        <city>Дебрецен</city>
+        <city>Кестхей</city>
+        <city>Папа</city>
+        <city>Сегед</city>
+        <city>Тата</city>
+        <city>Эгер</city>
+    </country>
+    <country name="Венесуэла">
+        <city>Каракас</city>
+        <city>Порламар (остров Маргарита)</city>
+    </country>
+    <country name="Восточное Самоа">
+        <city>Паго-Паго</city>
+    </country>
+    <country name="Восточный Тимор">
+        <city>Дили</city>
+    </country>
+    <country name="Вьетнам">
+        <city>Батьлонгви, о-в</city>
+        <city>Винь</city>
+        <city>Далат</city>
+        <city>Дананг</city>
+        <city>Донгхой</city>
+        <city>Камау</city>
+        <city>Каобанг</city>
+        <city>Кондао, о-в</city>
+        <city>Куиньон</city>
+        <city>Лангшон</city>
+        <city>Лаокай</city>
+        <city>Намдинь</city>
+        <city>Нячанг</city>
+        <city>Сапа (Шапа)</city>
+        <city>Тханьхоа</city>
+        <city>Тхотю, о-в</city>
+        <city>Фантхьет</city>
+        <city>Фукуок</city>
+        <city>Фульен</city>
+        <city>Хайфон</city>
+        <city>Ханой</city>
+        <city>Хойан</city>
+        <city>Хошимин</city>
+        <city>Хюэ</city>
+        <city>Шонла</city>
+    </country>
+    <country name="Габон">
+        <city>Либревиль</city>
+    </country>
+    <country name="Гаити">
+        <city>Порт-о-Пренс</city>
+    </country>
+    <country name="Гайана">
+        <city>Джорджтаун</city>
+    </country>
+    <country name="Гамбия">
+        <city>Банжул</city>
+    </country>
+    <country name="Гана">
+        <city>Аккра</city>
+    </country>
+    <country name="Гваделупа">
+        <city>Густавия</city>
+        <city>Пуэнт-а-Питр</city>
+    </country>
+    <country name="Гватемала">
+        <city>Гватемала Сити</city>
+        <city>Флорес</city>
+    </country>
+    <country name="Гвинея">
+        <city>Конакри</city>
+    </country>
+    <country name="Гвинея-Бисау">
+        <city>Бисау</city>
+    </country>
+    <country name="Германия">
+        <city>Баден-Баден</city>
+        <city>Берген</city>
+        <city>Берлин</city>
+        <city>Бонн</city>
+        <city>Бремен</city>
+        <city>Веймар</city>
+        <city>Гамбург</city>
+        <city>Ганновер</city>
+        <city>Гармиш-Партенкирхен</city>
+        <city>Дрезден</city>
+        <city>Дюссельдорф</city>
+        <city>Карлштадт</city>
+        <city>Кельн</city>
+        <city>Киль</city>
+        <city>Лейпциг</city>
+        <city>Мюнхен</city>
+        <city>Нюрнберг</city>
+        <city>Потсдам</city>
+        <city>Росток</city>
+        <city>Франкфурт-на-Майне</city>
+        <city>Хайдельберг</city>
+        <city>Эссен</city>
+    </country>
+    <country name="Гибралтар">
+        <city>Гибралтар</city>
+    </country>
+    <country name="Гондурас">
+        <city>Тегусигальпа</city>
+    </country>
+    <country name="Гренада">
+        <city>Гренада</city>
+    </country>
+    <country name="Гренландия">
+        <city>Нуук (Готхоб)</city>
+    </country>
+    <country name="Греция">
+        <city>Афины</city>
+        <city>Ираклион</city>
+        <city>Кастория</city>
+        <city>Керкира (Корфу)</city>
+        <city>Лимнос</city>
+        <city>Парос</city>
+        <city>Ретимно</city>
+        <city>Родос</city>
+        <city>Салоники</city>
+        <city>Халкидики</city>
+        <city>Херсонисос</city>
+    </country>
+    <country name="Грузия">
+        <city>Батуми</city>
+        <city>Кутаиси</city>
+        <city>Тбилиси</city>
+    </country>
+    <country name="Дания">
+        <city>Варде</city>
+        <city>Копенгаген</city>
+        <city>Оденсе</city>
+    </country>
+    <country name="Демократическая республика Конго">
+        <city>Киншаса</city>
+    </country>
+    <country name="Джибути">
+        <city>Джибути</city>
+    </country>
+    <country name="Доминика">
+        <city>Розо</city>
+    </country>
+    <country name="Доминиканская Республика">
+        <city>Санто-Доминго</city>
+    </country>
+    <country name="Египет">
+        <city>Абу-Симбел</city>
+        <city>Александрия</city>
+        <city>Асуан</city>
+        <city>Дахаб</city>
+        <city>Каир</city>
+        <city>Луксор</city>
+        <city>Макади-Бэй</city>
+        <city>Марса-Алам</city>
+        <city>Нувейба</city>
+        <city>Сафага</city>
+        <city>Таба</city>
+        <city>Хургада</city>
+        <city>Шарм-эль-Шейх</city>
+        <city>Эль-Гуна</city>
+    </country>
+    <country name="Замбия">
+        <city>Ливингстон</city>
+        <city>Лусака</city>
+    </country>
+    <country name="Западная Сахара">
+        <city>Эль-Аюн</city>
+    </country>
+    <country name="Зимбабве">
+        <city>Кариба</city>
+        <city>Хараре</city>
+    </country>
+    <country name="Израиль">
+        <city>Беэр-Шева</city>
+        <city>Иерусалим</city>
+        <city>Тверия</city>
+        <city>Тель-Авив</city>
+        <city>Хайфа</city>
+        <city>Цфат</city>
+        <city>Эйлат</city>
+        <city>Эйн-Бокек</city>
+    </country>
+    <country name="Индия">
+        <city>Агра</city>
+        <city>Аллахабад</city>
+        <city>Ахмадабад</city>
+        <city>Балешвар</city>
+        <city>Баллари</city>
+        <city>Бангалор</city>
+        <city>Барейли</city>
+        <city>Бармер</city>
+        <city>Биканер</city>
+        <city>Бхагалпур</city>
+        <city>Бхопал</city>
+        <city>Бхубанешвар</city>
+        <city>Бхудж</city>
+        <city>Варанаси</city>
+        <city>Веравал</city>
+        <city>Виджаявада</city>
+        <city>Ганганагар</city>
+        <city>Гая</city>
+        <city>Гвалияр</city>
+        <city>Гоа</city>
+        <city>Горанкпур</city>
+        <city>Гуна</city>
+        <city>Дели</city>
+        <city>Дехра-Дун</city>
+        <city>Джабалпур</city>
+        <city>Джайпур</city>
+        <city>Джайсалмер</city>
+        <city>Джамшедпур</city>
+        <city>Джхасугуда</city>
+        <city>Индаур</city>
+        <city>Калькутта</city>
+        <city>Канниякумари</city>
+        <city>Кота</city>
+        <city>Коямпуттур</city>
+        <city>Лакнау</city>
+        <city>Мадурай</city>
+        <city>Мумбай (Бомбей)</city>
+        <city>Нагпур</city>
+        <city>Патна</city>
+        <city>Пендра-Роуд</city>
+        <city>Порт Блэр</city>
+        <city>Раджкот</city>
+        <city>Райпур</city>
+        <city>Ранчи</city>
+        <city>Сатна</city>
+        <city>Сурат</city>
+        <city>Тривандрам</city>
+        <city>Тутикорин</city>
+        <city>Удайпур</city>
+        <city>Хайдарабад</city>
+        <city>Хисар</city>
+        <city>Ченнай (Мадрас)</city>
+    </country>
+    <country name="Индонезия">
+        <city>Амбон</city>
+        <city>Амед</city>
+        <city>Баликпапан</city>
+        <city>Банда-Ачех</city>
+        <city>Батам</city>
+        <city>Баубау</city>
+        <city>Бима</city>
+        <city>Битунг</city>
+        <city>Веда</city>
+        <city>Денпасар (Бали)</city>
+        <city>Джакарта</city>
+        <city>Джативанги</city>
+        <city>Катабару</city>
+        <city>Кетапанг</city>
+        <city>Китеко</city>
+        <city>Коконау</city>
+        <city>Кута</city>
+        <city>Лхоксемаве</city>
+        <city>Матарам</city>
+        <city>Медан</city>
+        <city>Мерауке</city>
+        <city>Набире</city>
+        <city>Намлеа</city>
+        <city>Нуса-Дуа</city>
+        <city>Паданг</city>
+        <city>Самаринда</city>
+        <city>Сангкапура</city>
+        <city>Санур</city>
+        <city>Семаранг</city>
+        <city>Серанг</city>
+        <city>Сиболга</city>
+        <city>Синтанг</city>
+        <city>Сурабая</city>
+        <city>Таракан</city>
+        <city>Толитоли</city>
+        <city>Убуд</city>
+        <city>Уджунгпанданг</city>
+        <city>Энде</city>
+    </country>
+    <country name="Иордания">
+        <city>Акаба</city>
+        <city>Амман</city>
+        <city>Петра</city>
+    </country>
+    <country name="Ирак">
+        <city>Багдад</city>
+        <city>Басра</city>
+    </country>
+    <country name="Иран">
+        <city>Керман</city>
+        <city>Семнан</city>
+        <city>Тегеран</city>
+        <city>Шираз</city>
+    </country>
+    <country name="Ирландия">
+        <city>Бирр</city>
+        <city>Дублин</city>
+        <city>Корк</city>
+        <city>Лимерик</city>
+    </country>
+    <country name="Исландия">
+        <city>Рейкьявик</city>
+    </country>
+    <country name="Испания">
+        <city>Аликанте</city>
+        <city>Барселона</city>
+        <city>Бенидорм</city>
+        <city>Валенсия</city>
+        <city>Гвадалахара</city>
+        <city>Картахена</city>
+        <city>Кордова</city>
+        <city>Коста-Брава</city>
+        <city>Коста-дель-Соль</city>
+        <city>Коста-Дорада</city>
+        <city>Ла-Корунья</city>
+        <city>Ла-Молина</city>
+        <city>Мадрид</city>
+        <city>Малага</city>
+        <city>Марбелья</city>
+        <city>Сарагоса</city>
+        <city>Севилья</city>
+        <city>Сьерра-Невада</city>
+        <city>Эстепона</city>
+    </country>
+    <country name="Италия">
+        <city>Аоста</city>
+        <city>Бари</city>
+        <city>Бергамо</city>
+        <city>Болонья</city>
+        <city>Бормио</city>
+        <city>Бриндизи</city>
+        <city>Венеция</city>
+        <city>Верона</city>
+        <city>Генуя</city>
+        <city>Кальяри</city>
+        <city>Капри</city>
+        <city>Катания</city>
+        <city>Кортина-д'Ампеццо</city>
+        <city>Курмайор</city>
+        <city>Ливиньо</city>
+        <city>Милан</city>
+        <city>Неаполь</city>
+        <city>Ольбия</city>
+        <city>Палермо</city>
+        <city>Пиза</city>
+        <city>Рим</city>
+        <city>Римини</city>
+        <city>Сан-Ремо</city>
+        <city>Сестриере</city>
+        <city>Сиена</city>
+        <city>Триест</city>
+        <city>Турин</city>
+        <city>Флоренция</city>
+        <city>Червиния</city>
+    </country>
+    <country name="Йемен">
+        <city>Аден</city>
+        <city>Сана</city>
+    </country>
+    <country name="Кабо-Верде">
+        <city>Прая</city>
+    </country>
+    <country name="Казахстан">
+        <city>Актау</city>
+        <city>Актобе</city>
+        <city>Алматы</city>
+        <city>Аральск</city>
+        <city>Аркалык</city>
+        <city>Астана</city>
+        <city>Атырау (Гурьев)</city>
+        <city>Балхаш</city>
+        <city>Большенарымское</city>
+        <city>Жезказган (Джезказган)</city>
+        <city>Казалинск</city>
+        <city>Караганда</city>
+        <city>Кокшетау</city>
+        <city>Костанай</city>
+        <city>Кызылорда</city>
+        <city>Павлодар</city>
+        <city>Петропавловск</city>
+        <city>Рузаевка</city>
+        <city>Семей</city>
+        <city>Талдыкорган</city>
+        <city>Тараз</city>
+        <city>Темир</city>
+        <city>Темиртау</city>
+        <city>Туркестан</city>
+        <city>Уральск</city>
+        <city>Усть-Каменогорск</city>
+        <city>Форт Шевченко</city>
+        <city>Шымкент</city>
+    </country>
+    <country name="Каймановы острова">
+        <city>Джорджтаун</city>
+    </country>
+    <country name="Камбоджа">
+        <city>Пномпень</city>
+        <city>Сиануквиль</city>
+        <city>Сием-Реап</city>
+    </country>
+    <country name="Камерун">
+        <city>Яунде</city>
+    </country>
+    <country name="Канада">
+        <city>Алерт</city>
+        <city>Бейкер-Лейк</city>
+        <city>Ванкувер</city>
+        <city>Виктория</city>
+        <city>Виннипег</city>
+        <city>Вистлер</city>
+        <city>Галифакс</city>
+        <city>Гиллам</city>
+        <city>Голден</city>
+        <city>Джаспер</city>
+        <city>Доусон</city>
+        <city>Икалуик</city>
+        <city>Инукджуак</city>
+        <city>Йеллоунайф</city>
+        <city>Калгари</city>
+        <city>Квебек</city>
+        <city>Кингстон</city>
+        <city>Кууджуак</city>
+        <city>Монреаль</city>
+        <city>Нейн</city>
+        <city>Оттава</city>
+        <city>Реджайна</city>
+        <city>Сакс-Харбор</city>
+        <city>Саскатун</city>
+        <city>Сент-Джонс</city>
+        <city>Тандер-Бей</city>
+        <city>Торонто</city>
+        <city>Уайтхорс</city>
+        <city>Форт-Нельсон</city>
+        <city>Фредериктон</city>
+        <city>Шарлоттаун</city>
+        <city>Эдмонтон</city>
+    </country>
+    <country name="Канарские острова">
+        <city>Санта-Крус</city>
+        <city>Тенерифе</city>
+    </country>
+    <country name="Катар">
+        <city>Доха</city>
+    </country>
+    <country name="Кения">
+        <city>Ламу</city>
+        <city>Момбаса</city>
+        <city>Найроби</city>
+        <city>Накуру</city>
+    </country>
+    <country name="Кипр">
+        <city>Айя-Напа</city>
+        <city>Ларнака</city>
+        <city>Лимасол</city>
+        <city>Никосия</city>
+        <city>Пафос</city>
+        <city>Протарас</city>
+    </country>
+    <country name="Киргизия">
+        <city>Балыкчи (Иссык-Куль)</city>
+        <city>Бишкек</city>
+        <city>Джалал-Абад</city>
+        <city>Каракол</city>
+        <city>Нарын</city>
+        <city>Ош</city>
+        <city>Талас</city>
+        <city>Тянь-Шань</city>
+        <city>Чолпон-Ата</city>
+    </country>
+    <country name="Кирибати">
+        <city>Байрики</city>
+    </country>
+    <country name="Китай">
+        <city>Байи, Тибет</city>
+        <city>Баодин, пров. Хэбэй</city>
+        <city>Бейхай, Гуанси-Чжуанский авт. р.</city>
+        <city>Голмуд, Тибет</city>
+        <city>Гонконг</city>
+        <city>Гуанчжоу, пров. Гуандун</city>
+        <city>Гуйлинь, Гуанси-Чжуанский авт. р.</city>
+        <city>Гуйян, пров. Гуйчжоу</city>
+        <city>Гянтзе, Тибет</city>
+        <city>Дадунхай</city>
+        <city>Далянь, пров. Ляонин</city>
+        <city>Даньдун, пров. Ляонин</city>
+        <city>Дуншэн, Вн. Монголия</city>
+        <city>Дуньхуан, пров. Ганьсу</city>
+        <city>Жабдун, Тибет</city>
+        <city>Инин, Синьцзян-Уйгурский авт. р.</city>
+        <city>Иньчуань, Нинся-Хуэйский авт. р.</city>
+        <city>Карамай, Синьцзян-Уйгурский авт. р.</city>
+        <city>Кашгар (Каши), Синьцзян-Уйгурский авт. р.</city>
+        <city>Куньмин, пров. Юньнань</city>
+        <city>Ланьчжоу, пров. Ганьсу</city>
+        <city>Лау-Фау-Шань (Люфушань), Гонконг</city>
+        <city>Лоян, пров. Хэнань</city>
+        <city>Лхаса, Тибет</city>
+        <city>Лючжоу, Гуанси-Чжуанский авт. р.</city>
+        <city>Макао</city>
+        <city>Мандал, Вн. Монголия</city>
+        <city>Нанкин, пров. Цзянсу</city>
+        <city>Наньнин, Гуанси-Чжуанский авт. р.</city>
+        <city>Наньчан, пров. Цзянси</city>
+        <city>Пекин</city>
+        <city>Санья, о-в Хайнань</city>
+        <city>Сиань, пров. Шаньси</city>
+        <city>Синань, пров. Гуандун</city>
+        <city>Синин, пров. Цинхай</city>
+        <city>Сифэнчжэнь, пров. Ганьсу</city>
+        <city>Сучжоу, пров. Цзянсу</city>
+        <city>Сямынь, пров. Фуцзянь</city>
+        <city>Тайпа (Данцзай-Дао), Макао</city>
+        <city>Тайюань, пров. Шэньси</city>
+        <city>Та-Ку-Лин (Дагулин), Гонконг</city>
+        <city>Тингри, Тибет</city>
+        <city>Тсетанг, Тибет</city>
+        <city>Турфан, Синьцзян-Уйгурский авт. р.</city>
+        <city>Тяньцзинь</city>
+        <city>Урумчи, Синьцзян-Уйгурский авт. р.</city>
+        <city>Уси, пров. Цзянсу</city>
+        <city>Ухань, пров. Хубэй</city>
+        <city>Фучжоу, пров. Фуцзянь</city>
+        <city>Фэннин, пров. Хэбэй</city>
+        <city>Хайкоу, о-в Хайнань</city>
+        <city>Хайлар, Вн. Монголия</city>
+        <city>Ханчжоу, пров. Чжэцзян</city>
+        <city>Ханьчжун, пров. Шаньси</city>
+        <city>Харбин, пров. Хэйлунцзян</city>
+        <city>Хотан, Синьцзян-Уйгурский авт. р.</city>
+        <city>Хух-Хото, Вн. Монголия</city>
+        <city>Хэфэй, пров. Аньхой</city>
+        <city>Цзинань, пров. Шаньдун</city>
+        <city>Циндао, пров. Шаньдун</city>
+        <city>Цицикар, пров. Хэйлунцзян</city>
+        <city>Чанхуань-Дао, Гонконг</city>
+        <city>Чанчжоу, пров. Цзянсу</city>
+        <city>Чанчунь, пров. Цзилинь</city>
+        <city>Чанша, пров. Хунань</city>
+        <city>Чжэнчжоу, пров. Хэнань</city>
+        <city>Чунцин, пров. Сычуань</city>
+        <city>Чэнду, пров. Сычуань</city>
+        <city>Чэндэ, пров. Хэбэй</city>
+        <city>Шанхай</city>
+        <city>Шигадзе, Тибет</city>
+        <city>Шицзячжуан, пров. Хэбэй</city>
+        <city>Шицюаньхэ, Тибет</city>
+        <city>Шэньян, пров. Ляонин</city>
+        <city>Эньши, пров. Хубэй</city>
+        <city>Эренхот, Вн. Монголия</city>
+        <city>Ялунвань</city>
+        <city>Яньчи, Нинся-Хуэйский авт. р.</city>
+    </country>
+    <country name="Кокосовые острова">
+        <city>Кокосовые острова (Килинг)</city>
+    </country>
+    <country name="Колумбия">
+        <city>Богота</city>
+    </country>
+    <country name="Коморские острова">
+        <city>Морони</city>
+    </country>
+    <country name="Коста-Рика">
+        <city>Либериа</city>
+        <city>Остров Кокос</city>
+        <city>Пунтаренас</city>
+        <city>Пуэрто-Лимон</city>
+        <city>Сан-Хосе</city>
+    </country>
+    <country name="Кот-д'Ивуар">
+        <city>Абиджан</city>
+    </country>
+    <country name="Куба">
+        <city>Варадеро</city>
+        <city>Гавана</city>
+        <city>Сантьяго-де-Куба</city>
+        <city>Тринидад</city>
+    </country>
+    <country name="Кувейт">
+        <city>Эль-Кувейт</city>
+    </country>
+    <country name="Лаос">
+        <city>Ванг-Виенг</city>
+        <city>Вьентьян</city>
+        <city>Луангпрабанг</city>
+        <city>Паксе (пров. Чампасак)</city>
+        <city>Пхонсаван</city>
+        <city>Сараван</city>
+        <city>Сиенкхуанг</city>
+    </country>
+    <country name="Латвия">
+        <city>Вентспилс</city>
+        <city>Даугавпилс</city>
+        <city>Краслава</city>
+        <city>Ливаны</city>
+        <city>Лиепая</city>
+        <city>Резекне</city>
+        <city>Рига</city>
+        <city>Цесис</city>
+        <city>Юрмала</city>
+    </country>
+    <country name="Лесото">
+        <city>Масеру</city>
+    </country>
+    <country name="Либерия">
+        <city>Монровия</city>
+    </country>
+    <country name="Ливан">
+        <city>Баальбек</city>
+        <city>Бейрут</city>
+        <city>Кедры</city>
+        <city>Триполи</city>
+    </country>
+    <country name="Ливия">
+        <city>Бенгази</city>
+        <city>Гадамес</city>
+        <city>Себха</city>
+        <city>Триполи</city>
+    </country>
+    <country name="Литва">
+        <city>Вильнюс</city>
+        <city>Друскининкай</city>
+        <city>Каунас</city>
+        <city>Клайпеда</city>
+        <city>Нида</city>
+        <city>Паланга</city>
+        <city>Тракай</city>
+        <city>Шяуляй</city>
+    </country>
+    <country name="Лихтенштейн">
+        <city>Вадуц</city>
+    </country>
+    <country name="Люксембург">
+        <city>Люксембург</city>
+        <city>Шенген</city>
+    </country>
+    <country name="Маврикий">
+        <city>Вакоас</city>
+    </country>
+    <country name="Мавритания">
+        <city>Нуакшот</city>
+    </country>
+    <country name="Мадагаскар">
+        <city>Антананариву</city>
+    </country>
+    <country name="Майотта">
+        <city>Дзаудзи</city>
+    </country>
+    <country name="Македония">
+        <city>Попова-Шапка</city>
+        <city>Скопье</city>
+    </country>
+    <country name="Малави">
+        <city>Лилонгве</city>
+    </country>
+    <country name="Малайзия">
+        <city>Куала-Лумпур</city>
+        <city>Куантан</city>
+        <city>Кудат</city>
+        <city>Кучинг</city>
+        <city>Лангкави</city>
+        <city>Малакка</city>
+        <city>Пенанг</city>
+        <city>Сибу</city>
+        <city>Субанг</city>
+    </country>
+    <country name="Мали">
+        <city>Бамако</city>
+    </country>
+    <country name="Мальдивские острова">
+        <city>Мале</city>
+    </country>
+    <country name="Мальта">
+        <city>Валлетта</city>
+    </country>
+    <country name="Марокко">
+        <city>Агадир</city>
+        <city>Касабланка</city>
+        <city>Марракеш</city>
+        <city>Рабат</city>
+        <city>Танжер</city>
+        <city>Фес</city>
+    </country>
+    <country name="Маршалловы Острова">
+        <city>Маджуро</city>
+    </country>
+    <country name="Мексика">
+        <city>Акапулько</city>
+        <city>Гвадалахара</city>
+        <city>Канкун</city>
+        <city>Мансанильо</city>
+        <city>Мехико</city>
+        <city>Монтеррей</city>
+        <city>Пуэрто-Вальярта</city>
+        <city>Сан-Лукас</city>
+        <city>Танголунда</city>
+        <city>Чиуауа</city>
+    </country>
+    <country name="Мелилья">
+        <city>Мелилья</city>
+    </country>
+    <country name="Микронезия">
+        <city>Паликир</city>
+    </country>
+    <country name="Мозамбик">
+        <city>Мапуту</city>
+    </country>
+    <country name="Молдова">
+        <city>Бельцы</city>
+        <city>Бендеры (Тигина)</city>
+        <city>Кишинев</city>
+        <city>Комрат</city>
+        <city>Сороки</city>
+        <city>Тирасполь</city>
+    </country>
+    <country name="Монако">
+        <city>Монако</city>
+        <city>Монте-Карло</city>
+    </country>
+    <country name="Монголия">
+        <city>Алтай</city>
+        <city>Баянхонгор</city>
+        <city>Даландзадгад</city>
+        <city>Мандалговь</city>
+        <city>Улаангом</city>
+        <city>Улан-Батор</city>
+        <city>Улгий</city>
+        <city>Ундерхаан</city>
+        <city>Ховд</city>
+        <city>Хутаг</city>
+        <city>Чойбалсан</city>
+    </country>
+    <country name="Монтсеррат">
+        <city>Плимут</city>
+    </country>
+    <country name="Мьянма">
+        <city>Баган</city>
+        <city>Кокосовые острова</city>
+        <city>Мандалай</city>
+        <city>Мейтхила</city>
+        <city>Мергуй</city>
+        <city>Мьичина</city>
+        <city>Патейн</city>
+        <city>Проме</city>
+        <city>Пьинмана</city>
+        <city>Сандовай</city>
+        <city>Ситуэ</city>
+        <city>Тауннгу</city>
+        <city>Янгон</city>
+    </country>
+    <country name="Намибия">
+        <city>Виндхук</city>
+    </country>
+    <country name="Науру">
+        <city>Айво (Янгор)</city>
+    </country>
+    <country name="Непал">
+        <city>Бхайрава</city>
+        <city>Дханкута</city>
+        <city>Катманду</city>
+        <city>Покхара</city>
+        <city>Сургхет</city>
+    </country>
+    <country name="Нигер">
+        <city>Ниамей</city>
+    </country>
+    <country name="Нигерия">
+        <city>Абуджа</city>
+        <city>Лагос</city>
+    </country>
+    <country name="Нидерландские Антильские острова">
+        <city>Виллемстад</city>
+        <city>Кралендейк</city>
+    </country>
+    <country name="Нидерланды">
+        <city>Амстердам</city>
+        <city>Берген-ан-Зее</city>
+        <city>Гаага</city>
+        <city>Де-Коог</city>
+        <city>Маастрихт</city>
+        <city>Роттердам</city>
+        <city>Эйндховен</city>
+    </country>
+    <country name="Никарагуа">
+        <city>Манагуа</city>
+    </country>
+    <country name="Новая Зеландия">
+        <city>Веллингтон</city>
+        <city>Крайстчерч</city>
+        <city>Окленд</city>
+    </country>
+    <country name="Новая Каледония">
+        <city>Нумеа</city>
+    </country>
+    <country name="Норвегия">
+        <city>Берген</city>
+        <city>Киркенес</city>
+        <city>Лиллехаммер</city>
+        <city>Ню-Олесунн</city>
+        <city>Осло</city>
+    </country>
+    <country name="Норфолк">
+        <city>Кингстон</city>
+    </country>
+    <country name="ОАЭ">
+        <city>Абу-Даби</city>
+        <city>Аджман</city>
+        <city>Дубай</city>
+        <city>Фуджейра</city>
+        <city>Шарджа</city>
+    </country>
+    <country name="Оман">
+        <city>Маскат</city>
+        <city>Салала</city>
+    </country>
+    <country name="Остров Гуам">
+        <city>Аганья</city>
+    </country>
+    <country name="Остров Рождества">
+        <city>Остров Рождества</city>
+    </country>
+    <country name="Остров Ян-Майен">
+        <city>Ян-Майен</city>
+    </country>
+    <country name="Острова Кука">
+        <city>Аваруа</city>
+    </country>
+    <country name="Острова Свальбард">
+        <city>Остров Надежды (Хупен)</city>
+        <city>Свальбард</city>
+        <city>Хорнсунн</city>
+    </country>
+    <country name="Пакистан">
+        <city>Исламабад</city>
+        <city>Карачи</city>
+        <city>Лахор</city>
+    </country>
+    <country name="Палау">
+        <city>Корор</city>
+    </country>
+    <country name="Палестинская автономия">
+        <city>Вифлеем</city>
+        <city>Газа</city>
+    </country>
+    <country name="Панама">
+        <city>Бокас-дель-Торо</city>
+        <city>Буке</city>
+        <city>Давид</city>
+        <city>Колон</city>
+        <city>Панама</city>
+    </country>
+    <country name="Папуа - Новая Гвинея">
+        <city>Ванимо</city>
+        <city>Вевак</city>
+        <city>Гурни</city>
+        <city>Дару</city>
+        <city>Киета</city>
+        <city>Киунга</city>
+        <city>Маданг</city>
+        <city>Маунт-Хаген</city>
+        <city>Наматанай</city>
+        <city>Порт-Морсби</city>
+        <city>Туфи</city>
+        <city>Хоскинс</city>
+    </country>
+    <country name="Парагвай">
+        <city>Асунсьон</city>
+    </country>
+    <country name="Перу">
+        <city>Куско</city>
+        <city>Лима</city>
+        <city>Наска</city>
+        <city>Трухильо</city>
+    </country>
+    <country name="Польша">
+        <city>Белосток</city>
+        <city>Варшава</city>
+        <city>Вроцлав</city>
+        <city>Гданьск</city>
+        <city>Закопане</city>
+        <city>Катовице</city>
+        <city>Краков</city>
+        <city>Крыница</city>
+        <city>Лодзь</city>
+        <city>Плоцк</city>
+        <city>Познань</city>
+        <city>Сопот</city>
+    </country>
+    <country name="Португалия">
+        <city>Алгарви</city>
+        <city>Брага</city>
+        <city>Браганса</city>
+        <city>Коимбра</city>
+        <city>Лиссабон</city>
+        <city>Порту</city>
+        <city>Синтра</city>
+        <city>Фару</city>
+        <city>Фуншал (Мадейра)</city>
+        <city>Эвора</city>
+    </country>
+    <country name="Республика Вануату">
+        <city>Порт-Вила</city>
+    </country>
+    <country name="Республика Конго">
+        <city>Браззавиль</city>
+    </country>
+    <country name="Реюньон">
+        <city>Сен-Дени</city>
+        <city>Сен-Пьер</city>
+    </country>
+    <country name="Россия">
+        <city>Абаза</city>
+        <city>Абакан</city>
+        <city>Абдулино</city>
+        <city>Абзаково</city>
+        <city>Абинск</city>
+        <city>Агата</city>
+        <city>Агидель</city>
+        <city>Агинское</city>
+        <city>Агрыз</city>
+        <city>Аджигардак</city>
+        <city>Адлер</city>
+        <city>Адыгейск</city>
+        <city>Азнакаево</city>
+        <city>Азов</city>
+        <city>Ак-Довурак</city>
+        <city>Аксай</city>
+        <city>Алагир</city>
+        <city>Алапаевск</city>
+        <city>Алатырь</city>
+        <city>Алдан</city>
+        <city>Алейск</city>
+        <city>Александров</city>
+        <city>Александров-Гай</city>
+        <city>Александров-Сахалинский</city>
+        <city>Александровск</city>
+        <city>Алексеевка</city>
+        <city>Алексин</city>
+        <city>Алзамай</city>
+        <city>Алушта</city>
+        <city>Альметьевск</city>
+        <city>Амдерма</city>
+        <city>Амурск</city>
+        <city>Анадырь</city>
+        <city>Анапа</city>
+        <city>Ангарск</city>
+        <city>Андреаполь</city>
+        <city>Анжеро-Судженск</city>
+        <city>Анива</city>
+        <city>Апатиты</city>
+        <city>Апрелевка</city>
+        <city>Апшеронск</city>
+        <city>Арамиль</city>
+        <city>Аргаяш</city>
+        <city>Аргун</city>
+        <city>Ардатов</city>
+        <city>Ардон</city>
+        <city>Арзамас</city>
+        <city>Аркадак</city>
+        <city>Армавир</city>
+        <city>Армянск</city>
+        <city>Арсеньев</city>
+        <city>Артем</city>
+        <city>Артемовск</city>
+        <city>Артемовский</city>
+        <city>Архангельск</city>
+        <city>Архыз</city>
+        <city>Аршан</city>
+        <city>Аршан</city>
+        <city>Асбест</city>
+        <city>Асино</city>
+        <city>Астрахань</city>
+        <city>Аткарск</city>
+        <city>Ахтубинск</city>
+        <city>Ачинск</city>
+        <city>Ачхой-Мартан</city>
+        <city>Аша</city>
+        <city>Ашатли</city>
+        <city>Бабаево</city>
+        <city>Бабушкин</city>
+        <city>Бавлы</city>
+        <city>Багратионовск</city>
+        <city>Байкальск</city>
+        <city>Баймак</city>
+        <city>Бакал</city>
+        <city>Баксан</city>
+        <city>Балабаново</city>
+        <city>Балаково</city>
+        <city>Балахна</city>
+        <city>Балашиха</city>
+        <city>Балашов</city>
+        <city>Балей</city>
+        <city>Балтийск</city>
+        <city>Банное</city>
+        <city>Барабинск</city>
+        <city>Баргузин</city>
+        <city>Барнаул</city>
+        <city>Барыш</city>
+        <city>Батайск</city>
+        <city>Бахчисарай</city>
+        <city>Бежецк</city>
+        <city>Белая Калитва</city>
+        <city>Белая Холуница</city>
+        <city>Белгород</city>
+        <city>Белебей</city>
+        <city>Белев</city>
+        <city>Белинский</city>
+        <city>Белово</city>
+        <city>Белогорка</city>
+        <city>Белогорск</city>
+        <city>Белогорск</city>
+        <city>Белозерск</city>
+        <city>Белокуриха</city>
+        <city>Беломорск</city>
+        <city>Белорецк</city>
+        <city>Белореченск</city>
+        <city>Белоусово</city>
+        <city>Белоярский</city>
+        <city>Белый</city>
+        <city>Белый Яр</city>
+        <city>Бердск</city>
+        <city>Березники</city>
+        <city>Березовский</city>
+        <city>Березовский</city>
+        <city>Беслан</city>
+        <city>Бийск</city>
+        <city>Бикин</city>
+        <city>Билибино</city>
+        <city>Биробиджан</city>
+        <city>Бирск</city>
+        <city>Бирюсинск</city>
+        <city>Бирюч</city>
+        <city>Благовещенск</city>
+        <city>Благовещенск</city>
+        <city>Благодарный</city>
+        <city>Бобров</city>
+        <city>Богданович</city>
+        <city>Богородицк</city>
+        <city>Богородск</city>
+        <city>Боготол</city>
+        <city>Богучар</city>
+        <city>Бодайбо</city>
+        <city>Бокситогорск</city>
+        <city>Болгар</city>
+        <city>Бологое</city>
+        <city>Болотное</city>
+        <city>Болохово</city>
+        <city>Болхов</city>
+        <city>Большой Камень</city>
+        <city>Бомнак</city>
+        <city>Бор</city>
+        <city>Борзя</city>
+        <city>Борисоглебск</city>
+        <city>Боровичи</city>
+        <city>Боровск</city>
+        <city>Бородино</city>
+        <city>Братск</city>
+        <city>Бреды</city>
+        <city>Бронницы</city>
+        <city>Брянск</city>
+        <city>Бугульма</city>
+        <city>Бугуруслан</city>
+        <city>Буденновск</city>
+        <city>Бузулук</city>
+        <city>Буинск</city>
+        <city>Буй</city>
+        <city>Буйнакск</city>
+        <city>Бутурлиновка</city>
+        <city>Быково</city>
+        <city>Быково</city>
+        <city>Валаам</city>
+        <city>Валдай</city>
+        <city>Валуйки</city>
+        <city>Ведено</city>
+        <city>Велиж</city>
+        <city>Великие Луки</city>
+        <city>Великий Новгород</city>
+        <city>Великий Устюг</city>
+        <city>Вельск</city>
+        <city>Вендинга</city>
+        <city>Венёв</city>
+        <city>Верещагино</city>
+        <city>Верея</city>
+        <city>Верхнее Пенжино</city>
+        <city>Верхнеуральск</city>
+        <city>Верхний Баскунчак</city>
+        <city>Верхний Тагил</city>
+        <city>Верхний Уфалей</city>
+        <city>Верхняя Пышма</city>
+        <city>Верхняя Салда</city>
+        <city>Верхняя Тура</city>
+        <city>Верхотурье</city>
+        <city>Верхоянск</city>
+        <city>Весьегонск</city>
+        <city>Ветлуга</city>
+        <city>Видное</city>
+        <city>Вилюйск</city>
+        <city>Вилючинск</city>
+        <city>Винницы</city>
+        <city>Витим</city>
+        <city>Вихоревка</city>
+        <city>Вичуга</city>
+        <city>Владивосток</city>
+        <city>Владикавказ</city>
+        <city>Владимир</city>
+        <city>Внуково</city>
+        <city>Вознесенье</city>
+        <city>Волгоград</city>
+        <city>Волгодонск</city>
+        <city>Волгореченск</city>
+        <city>Волжск</city>
+        <city>Волжский</city>
+        <city>Вологда</city>
+        <city>Володарск</city>
+        <city>Волоколамск</city>
+        <city>Волосово</city>
+        <city>Волхов</city>
+        <city>Волчанск</city>
+        <city>Вольск</city>
+        <city>Воркута</city>
+        <city>Воронеж</city>
+        <city>Ворсма</city>
+        <city>Воскресенск</city>
+        <city>Воткинск</city>
+        <city>Всеволожск</city>
+        <city>Вуктыл</city>
+        <city>Выборг</city>
+        <city>Выкса</city>
+        <city>Высоцк</city>
+        <city>Вытегра</city>
+        <city>Вышний Волочек</city>
+        <city>Вяземский</city>
+        <city>Вязники</city>
+        <city>Вязьма</city>
+        <city>Вятские Поляны</city>
+        <city>Гаврилов Посад</city>
+        <city>Гаврилов-Ям</city>
+        <city>Гагарин</city>
+        <city>Гаджиево</city>
+        <city>Гай</city>
+        <city>Галич</city>
+        <city>Гатчина</city>
+        <city>Гвардейск</city>
+        <city>Гдов</city>
+        <city>Геленджик</city>
+        <city>Георгиевск</city>
+        <city>Глазов</city>
+        <city>Голицыно</city>
+        <city>Горбатов</city>
+        <city>Горно-Алтайск</city>
+        <city>Горнозаводск</city>
+        <city>Горняк</city>
+        <city>Городец</city>
+        <city>Городище</city>
+        <city>Городовиковск</city>
+        <city>Гороховец</city>
+        <city>Горячий Ключ</city>
+        <city>Горячинск</city>
+        <city>Грайворон</city>
+        <city>Гремячинск</city>
+        <city>Гремячинск</city>
+        <city>Грозный</city>
+        <city>Грязи</city>
+        <city>Грязовец</city>
+        <city>Губаха</city>
+        <city>Губкин</city>
+        <city>Губкинский</city>
+        <city>Гудермес</city>
+        <city>Гуково</city>
+        <city>Гулькевичи</city>
+        <city>Гурзуф</city>
+        <city>Гурьевск</city>
+        <city>Гурьевск</city>
+        <city>Гусев</city>
+        <city>Гусиноозерск</city>
+        <city>Гусь-Хрустальный</city>
+        <city>Давлеканово</city>
+        <city>Дагестанские Огни</city>
+        <city>Дагомыс</city>
+        <city>Далматово</city>
+        <city>Дальнегорск</city>
+        <city>Дальнереченск</city>
+        <city>Данилов</city>
+        <city>Даниловка</city>
+        <city>Данков</city>
+        <city>Двинской Березник</city>
+        <city>Дегтярск</city>
+        <city>Дедовск</city>
+        <city>Демидов</city>
+        <city>Демянск</city>
+        <city>Дербент</city>
+        <city>Десногорск</city>
+        <city>Джанкой</city>
+        <city>Джейрах</city>
+        <city>Джубга</city>
+        <city>Дзержинск</city>
+        <city>Дивногорск</city>
+        <city>Дигора</city>
+        <city>Диксон</city>
+        <city>Димитровград</city>
+        <city>Дмитриев-Льговский</city>
+        <city>Дмитров</city>
+        <city>Дмитровск</city>
+        <city>Дно</city>
+        <city>Добрянка</city>
+        <city>Долинск</city>
+        <city>Домбай</city>
+        <city>Домодедово</city>
+        <city>Донецк</city>
+        <city>Донской</city>
+        <city>Дорогобуж</city>
+        <city>Дубна</city>
+        <city>Дубовка</city>
+        <city>Дудинка</city>
+        <city>Духовщина</city>
+        <city>Дюртюли</city>
+        <city>Дятьково</city>
+        <city>Евпатория</city>
+        <city>Егорьевск</city>
+        <city>Ейск</city>
+        <city>Екатеринбург</city>
+        <city>Елабуга</city>
+        <city>Елань</city>
+        <city>Елатьма</city>
+        <city>Елец</city>
+        <city>Елизово</city>
+        <city>Ельня</city>
+        <city>Еманжелинск</city>
+        <city>Емва</city>
+        <city>Енисейск</city>
+        <city>Ербогачен</city>
+        <city>Ермолино</city>
+        <city>Ершов</city>
+        <city>Ессентуки</city>
+        <city>Ефимовский</city>
+        <city>Ефремов</city>
+        <city>Железноводск</city>
+        <city>Железногорск</city>
+        <city>Железногорск</city>
+        <city>Железногорск-Илимский</city>
+        <city>Жердевка</city>
+        <city>Жиганск</city>
+        <city>Жигулевск</city>
+        <city>Жиздра</city>
+        <city>Жирновск</city>
+        <city>Жуков</city>
+        <city>Жуковка</city>
+        <city>Жуковский</city>
+        <city>Забайкальск</city>
+        <city>Завитинск</city>
+        <city>Заводоуковск</city>
+        <city>Заволжск</city>
+        <city>Заволжье</city>
+        <city>Завьялиха</city>
+        <city>Задонск</city>
+        <city>Заинск</city>
+        <city>Закаменск</city>
+        <city>Заозерный</city>
+        <city>Заозерск</city>
+        <city>Западная Двина</city>
+        <city>Заполярный</city>
+        <city>Зарайск</city>
+        <city>Заречный</city>
+        <city>Заречный</city>
+        <city>Заринск</city>
+        <city>Звенигово</city>
+        <city>Звенигород</city>
+        <city>Зверево</city>
+        <city>Зеленогорск</city>
+        <city>Зеленогорск</city>
+        <city>Зеленоград</city>
+        <city>Зеленоградск</city>
+        <city>Зеленодольск</city>
+        <city>Зеленокумск</city>
+        <city>Зерноград</city>
+        <city>Зея</city>
+        <city>Зима</city>
+        <city>Зирган</city>
+        <city>Златоуст</city>
+        <city>Злынка</city>
+        <city>Змеиногорск</city>
+        <city>Знаменск</city>
+        <city>Зубцов</city>
+        <city>Зуевка</city>
+        <city>Иван-Гора</city>
+        <city>Ивангород</city>
+        <city>Иваново</city>
+        <city>Ивдель</city>
+        <city>Игарка</city>
+        <city>Игнашино</city>
+        <city>Ижевск</city>
+        <city>Избербаш</city>
+        <city>Изобильный</city>
+        <city>Иланский</city>
+        <city>Иловля</city>
+        <city>Инза</city>
+        <city>Инкерман</city>
+        <city>Инсар</city>
+        <city>Инта</city>
+        <city>Ипатово</city>
+        <city>Ирбит</city>
+        <city>Иркутск</city>
+        <city>Исилькуль</city>
+        <city>Искитим</city>
+        <city>Истра</city>
+        <city>Ишим</city>
+        <city>Ишимбай</city>
+        <city>Йошкар-Ола</city>
+        <city>Кабанск</city>
+        <city>Кадников</city>
+        <city>Кажим</city>
+        <city>Казань</city>
+        <city>Калач</city>
+        <city>Калачинск</city>
+        <city>Калач-на-Дону</city>
+        <city>Калевала</city>
+        <city>Калининград</city>
+        <city>Калининск</city>
+        <city>Калтан</city>
+        <city>Калуга</city>
+        <city>Калязин</city>
+        <city>Камбарка</city>
+        <city>Каменка</city>
+        <city>Каменногорск</city>
+        <city>Каменномостский</city>
+        <city>Каменск-Уральский</city>
+        <city>Каменск-Шахтинский</city>
+        <city>Камень-на-Оби</city>
+        <city>Камешково</city>
+        <city>Камызяк</city>
+        <city>Камышин</city>
+        <city>Камышлов</city>
+        <city>Канаш</city>
+        <city>Кандалакша</city>
+        <city>Канск</city>
+        <city>Карабаш</city>
+        <city>Карабудахкент</city>
+        <city>Карабулак</city>
+        <city>Карасук</city>
+        <city>Карачаевск</city>
+        <city>Карачев</city>
+        <city>Каргасок</city>
+        <city>Каргат</city>
+        <city>Каргополь</city>
+        <city>Карпинск</city>
+        <city>Карталы</city>
+        <city>Касимов</city>
+        <city>Касли</city>
+        <city>Каспийск</city>
+        <city>Катав-Ивановск</city>
+        <city>Катайск</city>
+        <city>Качканар</city>
+        <city>Кашин</city>
+        <city>Кашира</city>
+        <city>Кашхатау</city>
+        <city>Кедровый</city>
+        <city>Кежма</city>
+        <city>Кемерово</city>
+        <city>Кемь-Порт</city>
+        <city>Керчь</city>
+        <city>Кетченеры</city>
+        <city>Кижи</city>
+        <city>Кизел</city>
+        <city>Кизилюрт</city>
+        <city>Кизляр</city>
+        <city>Кимовск</city>
+        <city>Кимры</city>
+        <city>Кингисепп</city>
+        <city>Кинель</city>
+        <city>Кинешма</city>
+        <city>Киреевск</city>
+        <city>Киренск</city>
+        <city>Киржач</city>
+        <city>Кириллов</city>
+        <city>Кириши</city>
+        <city>Киров</city>
+        <city>Киров</city>
+        <city>Кировград</city>
+        <city>Кирово-Чепецк</city>
+        <city>Кировск</city>
+        <city>Кировск</city>
+        <city>Кировское</city>
+        <city>Кирс</city>
+        <city>Кирсанов</city>
+        <city>Киселевск</city>
+        <city>Кисловодск</city>
+        <city>Климовск</city>
+        <city>Клин</city>
+        <city>Клинцы</city>
+        <city>Княгинино</city>
+        <city>Ковдор</city>
+        <city>Ковров</city>
+        <city>Ковылкино</city>
+        <city>Когалым</city>
+        <city>Кодинск</city>
+        <city>Козельск</city>
+        <city>Козловка</city>
+        <city>Козьмодемьянск</city>
+        <city>Кола</city>
+        <city>Кологрив</city>
+        <city>Коломна</city>
+        <city>Колпашево</city>
+        <city>Колпино</city>
+        <city>Кольчугино</city>
+        <city>Комсомольск</city>
+        <city>Комсомольск-на-Амуре</city>
+        <city>Конаково</city>
+        <city>Кондопога</city>
+        <city>Кондрово</city>
+        <city>Константиновск</city>
+        <city>Копейск</city>
+        <city>Кораблино</city>
+        <city>Кореновск</city>
+        <city>Коркино</city>
+        <city>Королев</city>
+        <city>Короча</city>
+        <city>Корсаков</city>
+        <city>Коряжма</city>
+        <city>Костомукша</city>
+        <city>Кострома</city>
+        <city>Котельниково</city>
+        <city>Котельнич</city>
+        <city>Котлас</city>
+        <city>Котово</city>
+        <city>Котовск</city>
+        <city>Кохма</city>
+        <city>Кош-Агач</city>
+        <city>Красавино</city>
+        <city>Красная Поляна</city>
+        <city>Красноармейск</city>
+        <city>Красноармейск</city>
+        <city>Красновишерск</city>
+        <city>Красногвардейское</city>
+        <city>Красногорск</city>
+        <city>Краснодар</city>
+        <city>Краснознаменск</city>
+        <city>Краснознаменск</city>
+        <city>Краснокаменск</city>
+        <city>Краснокамск</city>
+        <city>Красноперекопск</city>
+        <city>Красноселькуп</city>
+        <city>Краснослободск</city>
+        <city>Краснослободск</city>
+        <city>Краснотурьинск</city>
+        <city>Красноуральск</city>
+        <city>Красноуфимск</city>
+        <city>Красноярск</city>
+        <city>Красный Кут</city>
+        <city>Красный Сулин</city>
+        <city>Красный Холм</city>
+        <city>Кременки</city>
+        <city>Крестцы</city>
+        <city>Кронштадт</city>
+        <city>Кропоткин</city>
+        <city>Крымск</city>
+        <city>Кстово</city>
+        <city>Кубинка</city>
+        <city>Кувандык</city>
+        <city>Кувшиново</city>
+        <city>Кудымкар</city>
+        <city>Кузнецк</city>
+        <city>Куйбышев</city>
+        <city>Кулебаки</city>
+        <city>Кулу</city>
+        <city>Кулунда</city>
+        <city>Кумертау</city>
+        <city>Кунгур</city>
+        <city>Купино</city>
+        <city>Курган</city>
+        <city>Курганинск</city>
+        <city>Курильск</city>
+        <city>Курлово</city>
+        <city>Куровское</city>
+        <city>Курск</city>
+        <city>Куртамыш</city>
+        <city>Курумкан</city>
+        <city>Курчатов</city>
+        <city>Куса</city>
+        <city>Кушва</city>
+        <city>Кущевская</city>
+        <city>Кызыл</city>
+        <city>Кырен</city>
+        <city>Кыштым</city>
+        <city>Кяхта</city>
+        <city>Лабинск</city>
+        <city>Лабытнанги</city>
+        <city>Лагань</city>
+        <city>Ладушкин</city>
+        <city>Лазаревское</city>
+        <city>Лаишево</city>
+        <city>Лакинск</city>
+        <city>Лангепас</city>
+        <city>Лахденпохья</city>
+        <city>Лебедянь</city>
+        <city>Лениногорск</city>
+        <city>Ленинск</city>
+        <city>Ленинск-Кузнецкий</city>
+        <city>Ленск</city>
+        <city>Лермонтов</city>
+        <city>Лесной</city>
+        <city>Лесогорский</city>
+        <city>Лесозаводск</city>
+        <city>Лесосибирск</city>
+        <city>Ливадия</city>
+        <city>Ливны</city>
+        <city>Ликино-Дулево</city>
+        <city>Липецк</city>
+        <city>Липки</city>
+        <city>Лиски</city>
+        <city>Листвянка</city>
+        <city>Лихославль</city>
+        <city>Лодейное поле</city>
+        <city>Ломоносов</city>
+        <city>Лосино-Петровский</city>
+        <city>Лотошино</city>
+        <city>Луга</city>
+        <city>Луза</city>
+        <city>Лукоянов</city>
+        <city>Луховицы</city>
+        <city>Лысково</city>
+        <city>Лысьва</city>
+        <city>Лыткарино</city>
+        <city>Льгов</city>
+        <city>Любань</city>
+        <city>Люберцы</city>
+        <city>Любим</city>
+        <city>Людиново</city>
+        <city>Лянтор</city>
+        <city>Магадан</city>
+        <city>Магас</city>
+        <city>Магнитогорск</city>
+        <city>Майкоп</city>
+        <city>Майский</city>
+        <city>Макаров</city>
+        <city>Макарьев</city>
+        <city>Макушино</city>
+        <city>Малая Вишера</city>
+        <city>Малгобек</city>
+        <city>Малмыж</city>
+        <city>Малоархангельск</city>
+        <city>Малоярославец</city>
+        <city>Мамадыш</city>
+        <city>Мамоново</city>
+        <city>Мантурово</city>
+        <city>Мариинск</city>
+        <city>Мариинский Посад</city>
+        <city>Маркс</city>
+        <city>Массандра</city>
+        <city>Махачкала</city>
+        <city>Мглин</city>
+        <city>Мегион</city>
+        <city>Медвежьегорск</city>
+        <city>Медногорск</city>
+        <city>Медынь</city>
+        <city>Межгорье</city>
+        <city>Междуреченск</city>
+        <city>Междуреченский</city>
+        <city>Мезень</city>
+        <city>Меленки</city>
+        <city>Мелеуз</city>
+        <city>Менделеевск</city>
+        <city>Мензелинск</city>
+        <city>Меренга</city>
+        <city>Мещовск</city>
+        <city>Миасс</city>
+        <city>Микунь</city>
+        <city>Миллерово</city>
+        <city>Минеральные Воды</city>
+        <city>Минусинск</city>
+        <city>Миньяр</city>
+        <city>Мирный</city>
+        <city>Мирный</city>
+        <city>Михайлов</city>
+        <city>Михайловка</city>
+        <city>Михайловск</city>
+        <city>Михайловск</city>
+        <city>Мичуринск</city>
+        <city>Могоча</city>
+        <city>Можайск</city>
+        <city>Можга</city>
+        <city>Моздок</city>
+        <city>Мокшан</city>
+        <city>Мончегорск</city>
+        <city>Морозовск</city>
+        <city>Моршанск</city>
+        <city>Мосальск</city>
+        <city>Москва</city>
+        <city>Мостовской</city>
+        <city>Муравленко</city>
+        <city>Мураши</city>
+        <city>Мурманск</city>
+        <city>Муром</city>
+        <city>Мценск</city>
+        <city>Мыс Шмидта</city>
+        <city>Мыски</city>
+        <city>Мытищи</city>
+        <city>Мышкин</city>
+        <city>Набережные Челны</city>
+        <city>Навашино</city>
+        <city>Наволоки</city>
+        <city>Надым</city>
+        <city>Назарово</city>
+        <city>Назрань</city>
+        <city>Называевск</city>
+        <city>Нальчик</city>
+        <city>Нариманов</city>
+        <city>Наро-Фоминск</city>
+        <city>Нарткала</city>
+        <city>Нарым</city>
+        <city>Нарьян-Мар</city>
+        <city>Находка</city>
+        <city>Невель</city>
+        <city>Невельск</city>
+        <city>Невинномысск</city>
+        <city>Невьянск</city>
+        <city>Нелидово</city>
+        <city>Неман</city>
+        <city>Нерехта</city>
+        <city>Нерчинск</city>
+        <city>Нерюнгри</city>
+        <city>Нестеров</city>
+        <city>Нефедова</city>
+        <city>Нефтегорск</city>
+        <city>Нефтекамск</city>
+        <city>Нефтекумск</city>
+        <city>Нефтеюганск</city>
+        <city>Нечкино</city>
+        <city>Нея</city>
+        <city>Нижневартовск</city>
+        <city>Нижнекамск</city>
+        <city>Нижнеудинск</city>
+        <city>Нижние Серги</city>
+        <city>Нижний Ломов</city>
+        <city>Нижний Новгород</city>
+        <city>Нижний Тагил</city>
+        <city>Нижняя Салда</city>
+        <city>Нижняя Тура</city>
+        <city>Николаевск</city>
+        <city>Николаевск-на-Амуре</city>
+        <city>Никольск</city>
+        <city>Никольск</city>
+        <city>Новая Игирма</city>
+        <city>Новая Ладога</city>
+        <city>Новая Ляля</city>
+        <city>Новоалександровск</city>
+        <city>Новоалтайск</city>
+        <city>Новоаннинский</city>
+        <city>Нововоронеж</city>
+        <city>Новодвинск</city>
+        <city>Новозыбков</city>
+        <city>Новокубанск</city>
+        <city>Новокузнецк</city>
+        <city>Новокуйбышевск</city>
+        <city>Новомичуринск</city>
+        <city>Новомосковск</city>
+        <city>Новониколаевский</city>
+        <city>Новопавловск</city>
+        <city>Новоржев</city>
+        <city>Новороссийка</city>
+        <city>Новороссийск</city>
+        <city>Новосибирск</city>
+        <city>Новосиль</city>
+        <city>Новосокольники</city>
+        <city>Новоспасское</city>
+        <city>Новотроицк</city>
+        <city>Новоузенск</city>
+        <city>Новоульяновск</city>
+        <city>Новоуральск</city>
+        <city>Новохоперск</city>
+        <city>Новочебоксарск</city>
+        <city>Новочеркасск</city>
+        <city>Новошахтинск</city>
+        <city>Новый Оскол</city>
+        <city>Новый Уренгой</city>
+        <city>Ногинск</city>
+        <city>Ноглики</city>
+        <city>Нолинск</city>
+        <city>Норильск</city>
+        <city>Ноябрьск</city>
+        <city>Нурлат</city>
+        <city>Нытва</city>
+        <city>Нюрба</city>
+        <city>Нягань</city>
+        <city>Нязепетровск</city>
+        <city>Няндома</city>
+        <city>Облучье</city>
+        <city>Обнинск</city>
+        <city>Обоянь</city>
+        <city>Объячево</city>
+        <city>Обь</city>
+        <city>Одинцово</city>
+        <city>Озерки</city>
+        <city>Озерск</city>
+        <city>Озерск</city>
+        <city>Озеры</city>
+        <city>Оймякон</city>
+        <city>Октябрьск</city>
+        <city>Октябрьский</city>
+        <city>Октябрьский</city>
+        <city>Октябрьское</city>
+        <city>Октябрьское</city>
+        <city>Окуловка</city>
+        <city>Олекминск</city>
+        <city>Оленегорск</city>
+        <city>Оленек</city>
+        <city>Олонец</city>
+        <city>Омск</city>
+        <city>Омутнинск</city>
+        <city>Онега</city>
+        <city>Опочка</city>
+        <city>Орел</city>
+        <city>Оренбург</city>
+        <city>Орехово-Зуево</city>
+        <city>Орлов</city>
+        <city>Орск</city>
+        <city>Оса</city>
+        <city>Осинники</city>
+        <city>Осташков</city>
+        <city>Остров</city>
+        <city>Островной</city>
+        <city>Острогожск</city>
+        <city>Отрадное</city>
+        <city>Отрадный</city>
+        <city>Оха</city>
+        <city>Оханск</city>
+        <city>Охотск</city>
+        <city>Очер</city>
+        <city>Павлово</city>
+        <city>Павловск</city>
+        <city>Павловская</city>
+        <city>Павловский Посад</city>
+        <city>Палана</city>
+        <city>Палласовка</city>
+        <city>Партизанск</city>
+        <city>Певек</city>
+        <city>Пенза</city>
+        <city>Первомайск</city>
+        <city>Первомайское</city>
+        <city>Первоуральск</city>
+        <city>Перевоз</city>
+        <city>Переславль-Залесский</city>
+        <city>Пермь</city>
+        <city>Пестово</city>
+        <city>Петергоф</city>
+        <city>Петров Вал</city>
+        <city>Петровск</city>
+        <city>Петровск-Забайкальский</city>
+        <city>Петрозаводск</city>
+        <city>Петропавловск-Камчатский</city>
+        <city>Петухово</city>
+        <city>Петушки</city>
+        <city>Печенга</city>
+        <city>Печора</city>
+        <city>Печоры</city>
+        <city>Пикалево</city>
+        <city>Пинега</city>
+        <city>Пионерский</city>
+        <city>Питкяранта</city>
+        <city>Плавск</city>
+        <city>Пласт</city>
+        <city>Плёс</city>
+        <city>Плесецк</city>
+        <city>Поворино</city>
+        <city>Подольск</city>
+        <city>Подпорожье</city>
+        <city>Покачи</city>
+        <city>Покров</city>
+        <city>Покровск</city>
+        <city>Полевской</city>
+        <city>Полесск</city>
+        <city>Полысаево</city>
+        <city>Полярные Зори</city>
+        <city>Полярный</city>
+        <city>Поронайск</city>
+        <city>Порхов</city>
+        <city>Похвистнево</city>
+        <city>Почеп</city>
+        <city>Починок</city>
+        <city>Пошехонье</city>
+        <city>Поярково</city>
+        <city>Правдинск</city>
+        <city>Приволжск</city>
+        <city>Приморск</city>
+        <city>Приморско-Ахтарск</city>
+        <city>Приозерск</city>
+        <city>Прокопьевск</city>
+        <city>Пролетарск</city>
+        <city>Протвино</city>
+        <city>Прохладный</city>
+        <city>Псебай</city>
+        <city>Псков</city>
+        <city>Пугачев</city>
+        <city>Пудож</city>
+        <city>Пустошка</city>
+        <city>Пучеж</city>
+        <city>Пушкин</city>
+        <city>Пушкино</city>
+        <city>Пушкинские Горы</city>
+        <city>Пущино</city>
+        <city>Пыталово</city>
+        <city>Пыть-Ях</city>
+        <city>Пышма</city>
+        <city>Пятигорск</city>
+        <city>Радужный</city>
+        <city>Радужный</city>
+        <city>Райчихинск</city>
+        <city>Раменское</city>
+        <city>Рассказово</city>
+        <city>Ребриха</city>
+        <city>Ревда</city>
+        <city>Реж</city>
+        <city>Ржев</city>
+        <city>Родники</city>
+        <city>Рославль</city>
+        <city>Россошь</city>
+        <city>Ростов</city>
+        <city>Ростов-на-Дону</city>
+        <city>Рошаль</city>
+        <city>Ртищево</city>
+        <city>Рубцовск</city>
+        <city>Рудня</city>
+        <city>Руза</city>
+        <city>Рузаевка</city>
+        <city>Рыбинск</city>
+        <city>Рыбное</city>
+        <city>Рыльск</city>
+        <city>Ряжск</city>
+        <city>Рязань</city>
+        <city>Саки</city>
+        <city>Салават</city>
+        <city>Салаир</city>
+        <city>Салехард</city>
+        <city>Сальск</city>
+        <city>Самара</city>
+        <city>Санкт-Петербург</city>
+        <city>Саранск</city>
+        <city>Сарапул</city>
+        <city>Саратов</city>
+        <city>Саров</city>
+        <city>Сасово</city>
+        <city>Сатка</city>
+        <city>Сафоново</city>
+        <city>Саяногорск</city>
+        <city>Саянск</city>
+        <city>Светлогорск</city>
+        <city>Светлоград</city>
+        <city>Светлый</city>
+        <city>Светлый Яр</city>
+        <city>Светогорск</city>
+        <city>Свирск</city>
+        <city>Свободный</city>
+        <city>Себеж</city>
+        <city>Севастополь</city>
+        <city>Северобайкальск</city>
+        <city>Северодвинск</city>
+        <city>Северо-Курильск</city>
+        <city>Североморск</city>
+        <city>Североуральск</city>
+        <city>Северск</city>
+        <city>Севск</city>
+        <city>Сегежа</city>
+        <city>Сеймчан</city>
+        <city>Сельцо</city>
+        <city>Семенов</city>
+        <city>Семикаракорск</city>
+        <city>Семилуки</city>
+        <city>Семячики</city>
+        <city>Сенгилей</city>
+        <city>Серафимович</city>
+        <city>Сергач</city>
+        <city>Сергиев Посад</city>
+        <city>Сердобск</city>
+        <city>Серебряные Пруды</city>
+        <city>Середниково</city>
+        <city>Серов</city>
+        <city>Серпухов</city>
+        <city>Сертолово</city>
+        <city>Сибай</city>
+        <city>Сим</city>
+        <city>Симеиз</city>
+        <city>Симферополь</city>
+        <city>Сковородино</city>
+        <city>Скопин</city>
+        <city>Славгород</city>
+        <city>Славск</city>
+        <city>Славянск-на-Кубани</city>
+        <city>Сладково</city>
+        <city>Сланцы</city>
+        <city>Слободской</city>
+        <city>Слюдянка</city>
+        <city>Смирных</city>
+        <city>Смоленск</city>
+        <city>Снежинск</city>
+        <city>Снежногорск</city>
+        <city>Соболево</city>
+        <city>Советск</city>
+        <city>Советск</city>
+        <city>Советск</city>
+        <city>Советская Гавань</city>
+        <city>Советский</city>
+        <city>Советский</city>
+        <city>Сокол</city>
+        <city>Сокольники</city>
+        <city>Солигалич</city>
+        <city>Соликамск</city>
+        <city>Солнечногорск</city>
+        <city>Соловки</city>
+        <city>Сольвычегодск</city>
+        <city>Соль-Илецк</city>
+        <city>Сольцы</city>
+        <city>Сорочинск</city>
+        <city>Сорск</city>
+        <city>Сортавала</city>
+        <city>Сосенский</city>
+        <city>Сосновка</city>
+        <city>Сосново</city>
+        <city>Сосновоборск</city>
+        <city>Сосновый Бор</city>
+        <city>Сосногорск</city>
+        <city>Сосьва</city>
+        <city>Сочи</city>
+        <city>Спас-Деменск</city>
+        <city>Спас-Клепики</city>
+        <city>Спасск</city>
+        <city>Спасск-Дальний</city>
+        <city>Спасск-Рязанский</city>
+        <city>Среднеколымск</city>
+        <city>Среднеуральск</city>
+        <city>Средняя Ахтуба</city>
+        <city>Сретенск</city>
+        <city>Ставрополь</city>
+        <city>Станица Каневская</city>
+        <city>Старая Русса</city>
+        <city>Старица</city>
+        <city>Стародуб</city>
+        <city>Старый Крым</city>
+        <city>Старый Оскол</city>
+        <city>Стерлитамак</city>
+        <city>Стрежевой</city>
+        <city>Строитель</city>
+        <city>Ступино</city>
+        <city>Суворов</city>
+        <city>Судак</city>
+        <city>Суджа</city>
+        <city>Судогда</city>
+        <city>Суздаль</city>
+        <city>Сузун</city>
+        <city>Сунтар</city>
+        <city>Суоярви</city>
+        <city>Сураж</city>
+        <city>Сургут</city>
+        <city>Суровикино</city>
+        <city>Сурск</city>
+        <city>Сусуман</city>
+        <city>Сухиничи</city>
+        <city>Сухой Лог</city>
+        <city>Сызрань</city>
+        <city>Сыктывкар</city>
+        <city>Сыростан</city>
+        <city>Сысерть</city>
+        <city>Сычевка</city>
+        <city>Сясьстрой</city>
+        <city>Тавда</city>
+        <city>Таганрог</city>
+        <city>Тайга</city>
+        <city>Тайшет</city>
+        <city>Талдом</city>
+        <city>Талица</city>
+        <city>Тамбей</city>
+        <city>Тамбов</city>
+        <city>Тара</city>
+        <city>Тарко Сале</city>
+        <city>Таруса</city>
+        <city>Татарск</city>
+        <city>Таштагол</city>
+        <city>Тверь</city>
+        <city>Теберда</city>
+        <city>Тейково</city>
+        <city>Темников</city>
+        <city>Темрюк</city>
+        <city>Терек</city>
+        <city>Териберка</city>
+        <city>Терней</city>
+        <city>Терскол</city>
+        <city>Тетюши</city>
+        <city>Тикси</city>
+        <city>Тимашевск</city>
+        <city>Тихвин</city>
+        <city>Тихорецк</city>
+        <city>Тобольск</city>
+        <city>Тогучин</city>
+        <city>Токма</city>
+        <city>Токсово</city>
+        <city>Тольятти</city>
+        <city>Томари</city>
+        <city>Томмот</city>
+        <city>Томпа</city>
+        <city>Томск</city>
+        <city>Топки</city>
+        <city>Торжок</city>
+        <city>Торопец</city>
+        <city>Тосно</city>
+        <city>Тотьма</city>
+        <city>Трехгорный</city>
+        <city>Троицк</city>
+        <city>Троицк</city>
+        <city>Троицко-Печорск</city>
+        <city>Трубчевск</city>
+        <city>Туапсе</city>
+        <city>Туймазы</city>
+        <city>Тула</city>
+        <city>Тулпан</city>
+        <city>Тулун</city>
+        <city>Тура</city>
+        <city>Туран</city>
+        <city>Туринск</city>
+        <city>Туруханск</city>
+        <city>Тутаев</city>
+        <city>Тутончаны</city>
+        <city>Тымовское</city>
+        <city>Тында</city>
+        <city>Тырныауз</city>
+        <city>Тюкалинск</city>
+        <city>Тюмень</city>
+        <city>Уварово</city>
+        <city>Углегорск</city>
+        <city>Углич</city>
+        <city>Удачный</city>
+        <city>Удомля</city>
+        <city>Ужур</city>
+        <city>Узловая</city>
+        <city>Улан-Удэ</city>
+        <city>Ульяновск</city>
+        <city>Унеча</city>
+        <city>Урай</city>
+        <city>Уренгой</city>
+        <city>Урень</city>
+        <city>Уржум</city>
+        <city>Урус-Мартан</city>
+        <city>Урюпинск</city>
+        <city>Усинск</city>
+        <city>Усмань</city>
+        <city>Усолье</city>
+        <city>Усолье-Сибирское</city>
+        <city>Уссурийск</city>
+        <city>Усть Калманка</city>
+        <city>Усть-Баргузин</city>
+        <city>Усть-Джегута</city>
+        <city>Усть-Илимск</city>
+        <city>Усть-Ишим</city>
+        <city>Усть-Камчатск</city>
+        <city>Усть-Катав</city>
+        <city>Усть-Кулом</city>
+        <city>Усть-Кут</city>
+        <city>Усть-Лабинск</city>
+        <city>Усть-Ордынский</city>
+        <city>Устюжна</city>
+        <city>Уфа</city>
+        <city>Ухта</city>
+        <city>Учалы</city>
+        <city>Уэлен</city>
+        <city>Уяр</city>
+        <city>Фатеж</city>
+        <city>Феодосия</city>
+        <city>Фокино</city>
+        <city>Фокино</city>
+        <city>Фролово</city>
+        <city>Фурманов</city>
+        <city>Хабаровск</city>
+        <city>Хадыженск</city>
+        <city>Ханты-Мансийск</city>
+        <city>Харабали</city>
+        <city>Харовск</city>
+        <city>Хасавюрт</city>
+        <city>Хасан</city>
+        <city>Хатанга</city>
+        <city>Хвалынск</city>
+        <city>Хилок</city>
+        <city>Химки</city>
+        <city>Холм</city>
+        <city>Холмогоры</city>
+        <city>Холмск</city>
+        <city>Хоста</city>
+        <city>Хужир</city>
+        <city>Цивильск</city>
+        <city>Цимлянск</city>
+        <city>Чайковский</city>
+        <city>Чапаевск</city>
+        <city>Чаплыгин</city>
+        <city>Чебаркуль</city>
+        <city>Чебоксары</city>
+        <city>Чегем</city>
+        <city>Чекалин</city>
+        <city>Челюскин</city>
+        <city>Челябинск</city>
+        <city>Чердынь</city>
+        <city>Черемхово</city>
+        <city>Черепаново</city>
+        <city>Череповец</city>
+        <city>Черкесск</city>
+        <city>Чермоз</city>
+        <city>Черноголовка</city>
+        <city>Черногорск</city>
+        <city>Черноморское</city>
+        <city>Чернушка</city>
+        <city>Чернышковский</city>
+        <city>Черняховск</city>
+        <city>Черский</city>
+        <city>Черусти</city>
+        <city>Чехов</city>
+        <city>Чикола</city>
+        <city>Чистополь</city>
+        <city>Чита</city>
+        <city>Чкаловск</city>
+        <city>Чокурдах</city>
+        <city>Чудово</city>
+        <city>Чулым</city>
+        <city>Чусовой</city>
+        <city>Чухлома</city>
+        <city>Шадринск</city>
+        <city>Шали</city>
+        <city>Шамары</city>
+        <city>Шарыпово</city>
+        <city>Шарья</city>
+        <city>Шатки</city>
+        <city>Шатой</city>
+        <city>Шатура</city>
+        <city>Шаховская</city>
+        <city>Шахтерск</city>
+        <city>Шахты</city>
+        <city>Шахунья</city>
+        <city>Шацк</city>
+        <city>Шебекино</city>
+        <city>Шелагонцы</city>
+        <city>Шелехов</city>
+        <city>Шенкурск</city>
+        <city>Шерегеш</city>
+        <city>Шереметьево</city>
+        <city>Шилка</city>
+        <city>Шимановск</city>
+        <city>Шиханы</city>
+        <city>Шлиссельбург</city>
+        <city>Шумерля</city>
+        <city>Шумиха</city>
+        <city>Шуя</city>
+        <city>Щекино</city>
+        <city>Щелкино</city>
+        <city>Щелково</city>
+        <city>Щельяюр</city>
+        <city>Щигры</city>
+        <city>Щучье</city>
+        <city>Электрогорск</city>
+        <city>Электросталь</city>
+        <city>Электроугли</city>
+        <city>Элиста</city>
+        <city>Эльбрус</city>
+        <city>Эльтон</city>
+        <city>Энгельс</city>
+        <city>Эртиль</city>
+        <city>Югорск</city>
+        <city>Южа</city>
+        <city>Южно-Курильск</city>
+        <city>Южно-Сахалинск</city>
+        <city>Южноуральск</city>
+        <city>Юрга</city>
+        <city>Юровск</city>
+        <city>Юрьевец</city>
+        <city>Юрьев-Польский</city>
+        <city>Юрюзань</city>
+        <city>Юхнов</city>
+        <city>Ядрин</city>
+        <city>Якутск</city>
+        <city>Якша </city>
+        <city>Ялта</city>
+        <city>Ялуторовск</city>
+        <city>Ямбург </city>
+        <city>Янаул</city>
+        <city>Яранск</city>
+        <city>Яровое</city>
+        <city>Ярославль</city>
+        <city>Яр-Сале</city>
+        <city>Ярцево</city>
+        <city>Ясногорск</city>
+        <city>Ясный</city>
+        <city>Яхрома</city>
+        <city>Яшалта</city>
+        <city>Яшкуль</city>
+    </country>
+    <country name="Руанда">
+        <city>Кигали</city>
+    </country>
+    <country name="Румыния">
+        <city>Брашов</city>
+        <city>Бухарест</city>
+        <city>Галац</city>
+        <city>Констанца</city>
+        <city>Мамая</city>
+        <city>Синая</city>
+        <city>Яссы</city>
+    </country>
+    <country name="США">
+        <city>Абердин, шт. Южная Дакота</city>
+        <city>Агуадилья, шт. Пуэрто-Рико</city>
+        <city>Альбукерке, шт. Нью-Мексико</city>
+        <city>Анкоридж</city>
+        <city>Атланта, шт. Джорджия</city>
+        <city>Балтимор, шт. Мэриленд</city>
+        <city>Берлингтон, шт. Вермонт</city>
+        <city>Бисмарк, шт. Северная Дакота</city>
+        <city>Бойсе, шт. Айдахо</city>
+        <city>Бостон, шт. Массачусетс</city>
+        <city>Вашингтон, Федеральный округ Колумбия</city>
+        <city>Гонолулу, шт. Гавайские острова</city>
+        <city>Даллас</city>
+        <city>Де-Мойн, шт. Айова</city>
+        <city>Денвер, шт. Колорадо</city>
+        <city>Детройт, шт. Мичиган</city>
+        <city>Джексон, шт. Миссисипи</city>
+        <city>Джуно, шт. Аляска</city>
+        <city>Индианаполис, шт. Индиана</city>
+        <city>Канзас-Сити, шт. Миссури</city>
+        <city>Колумбия, шт. Южная Каролина</city>
+        <city>Колумбус, шт. Огайо</city>
+        <city>Конкорд, шт. Нью-Гэмпшир</city>
+        <city>Лансинг, шт. Мичиган</city>
+        <city>Лас-Вегас, шт. Невада</city>
+        <city>Линкольн, шт. Небраска</city>
+        <city>Литл-Рок, шт. Арканзас</city>
+        <city>Лос-Анджелес, шт. Калифорния</city>
+        <city>Луисвилл, шт. Кентукки</city>
+        <city>Мадисон, шт. Висконсин</city>
+        <city>Майами, шт. Флорида</city>
+        <city>Милуоки, шт. Висконсин</city>
+        <city>Миннеаполис, шт. Миннесота</city>
+        <city>Монтгомери, шт. Алабама</city>
+        <city>Нашвилл, шт. Теннесси</city>
+        <city>Новый Орлеан, шт. Луизиана</city>
+        <city>Ньюарк, шт. Нью-Джерси</city>
+        <city>Нью-Йорк, шт. Нью-Йорк</city>
+        <city>Оклахома-Сити, шт. Оклахома</city>
+        <city>Олбани, шт. Нью-Йорк</city>
+        <city>Олимпия, шт. Вашингтон</city>
+        <city>Остин, шт. Техас</city>
+        <city>Питтсбург, шт. Пенсильвания</city>
+        <city>Портленд, шт. Мэн</city>
+        <city>Провиденс, шт. Род-Айленд</city>
+        <city>Рино, шт. Невада</city>
+        <city>Ричмонд, шт. Виргиния</city>
+        <city>Роли, шт. Северная Каролина</city>
+        <city>Сакраменто, шт. Калифорния</city>
+        <city>Сан-Франциско, шт. Калифорния</city>
+        <city>Сейлем, шт. Орегон</city>
+        <city>Сент-Луис, шт. Миссури</city>
+        <city>Сиэтл, шт. Вашингтон</city>
+        <city>Солт-Лейк-Сити, шт. Юта</city>
+        <city>Спрингфилд, шт. Иллинойс</city>
+        <city>Топика, шт. Канзас</city>
+        <city>Филадельфия, шт. Пенсильвания</city>
+        <city>Финикс, шт. Аризона</city>
+        <city>Хартфорд, шт. Коннектикут</city>
+        <city>Хелина, шт. Монтана</city>
+        <city>Хьюстон, шт. Техас</city>
+        <city>Чарлстон, шт. Западная Виргиния</city>
+        <city>Чикаго, шт. Иллинойс</city>
+        <city>Шайенн, шт. Вайоминг</city>
+    </country>
+    <country name="Сальвадор">
+        <city>Сан-Мигель</city>
+        <city>Сан-Сальвадор</city>
+    </country>
+    <country name="Самоа">
+        <city>Апиа</city>
+    </country>
+    <country name="Сан-Марино">
+        <city>Сан-Марино</city>
+    </country>
+    <country name="Сан-Томе и Принсипи">
+        <city>Сан-Томе</city>
+    </country>
+    <country name="Саудовская Аравия">
+        <city>Даммам</city>
+        <city>Медина</city>
+        <city>Мекка</city>
+        <city>Эр-Рияд</city>
+    </country>
+    <country name="Свазиленд">
+        <city>Манзини</city>
+    </country>
+    <country name="Северная Корея">
+        <city>Пхеньян</city>
+        <city>Чхонджин</city>
+    </country>
+    <country name="Северные Марианские острова">
+        <city>Сайпан</city>
+    </country>
+    <country name="Сейшельские острова">
+        <city>Виктория</city>
+    </country>
+    <country name="Сенегал">
+        <city>Дакар</city>
+    </country>
+    <country name="Сент-Винсент и Гренадины">
+        <city>Кингстаун</city>
+    </country>
+    <country name="Сент-Китс и Невис">
+        <city>Бастер</city>
+    </country>
+    <country name="Сент-Люсия">
+        <city>Кастри</city>
+    </country>
+    <country name="Сербия">
+        <city>Белград</city>
+        <city>Димитровград</city>
+        <city>Печ</city>
+        <city>Приштина</city>
+    </country>
+    <country name="Сеута">
+        <city>Сеута</city>
+    </country>
+    <country name="Сингапур">
+        <city>Сингапур</city>
+    </country>
+    <country name="Сирия">
+        <city>Алеппо (Халеб)</city>
+        <city>Дамаск</city>
+        <city>Латакия</city>
+        <city>Пальмира (Тадмор)</city>
+        <city>Хама</city>
+    </country>
+    <country name="Словакия">
+        <city>Братислава</city>
+        <city>Высокие Татры</city>
+        <city>Кошице</city>
+        <city>Попрад</city>
+        <city>Хопок</city>
+        <city>Ясна</city>
+    </country>
+    <country name="Словения">
+        <city>Вогель</city>
+        <city>Любляна</city>
+    </country>
+    <country name="Соломоновы острова">
+        <city>Хониара</city>
+    </country>
+    <country name="Сомали">
+        <city>Могадишо</city>
+    </country>
+    <country name="Судан">
+        <city>Хартум</city>
+    </country>
+    <country name="Суринам">
+        <city>Парамарибо</city>
+    </country>
+    <country name="Сьерра-Леоне">
+        <city>Макени</city>
+    </country>
+    <country name="Таджикистан">
+        <city>Гарм</city>
+        <city>Душанбе</city>
+        <city>Кулоб</city>
+        <city>Курган Тюбе</city>
+        <city>Турсунзода</city>
+        <city>Хорог</city>
+        <city>Худжанд</city>
+    </country>
+    <country name="Таиланд">
+        <city>Бангкок</city>
+        <city>Ко Чанг</city>
+        <city>Краби</city>
+        <city>Паттая</city>
+        <city>Прачуап Кхирикхан</city>
+        <city>Пхукет</city>
+        <city>Самуи</city>
+        <city>Саттанхип</city>
+        <city>Сурин</city>
+        <city>Чиангмай</city>
+    </country>
+    <country name="Тайвань">
+        <city>Тайбей</city>
+        <city>Тайнань</city>
+    </country>
+    <country name="Танзания">
+        <city>Дар-эс-Салам</city>
+        <city>Додома</city>
+        <city>Занзибар</city>
+        <city>Чаки-Чаки</city>
+    </country>
+    <country name="Того">
+        <city>Ломе</city>
+    </country>
+    <country name="Тонга">
+        <city>Нукуалофа</city>
+    </country>
+    <country name="Тринидад и Тобаго">
+        <city>Тобаго</city>
+        <city>Тринидад</city>
+    </country>
+    <country name="Тувалу">
+        <city>Фунафути</city>
+    </country>
+    <country name="Тунис">
+        <city>Джерба</city>
+        <city>Монастир</city>
+        <city>Сусс</city>
+        <city>Сфакс</city>
+        <city>Тунис</city>
+        <city>Хаммамет</city>
+    </country>
+    <country name="Туркмения">
+        <city>Ашхабад</city>
+        <city>Дашховуз (Ташауз)</city>
+        <city>Туркменбаши (Красноводск)</city>
+    </country>
+    <country name="Турция">
+        <city>Авсаллар</city>
+        <city>Адана</city>
+        <city>Аксу</city>
+        <city>Аланья</city>
+        <city>Анкара</city>
+        <city>Анталья</city>
+        <city>Белек</city>
+        <city>Бельдиби</city>
+        <city>Бодрум</city>
+        <city>Болу</city>
+        <city>Бурса</city>
+        <city>Даламан</city>
+        <city>Измир</city>
+        <city>Ичмелер</city>
+        <city>Кемер</city>
+        <city>Кумкой</city>
+        <city>Кушадасы</city>
+        <city>Манавгат</city>
+        <city>Мармарис</city>
+        <city>Сиде</city>
+        <city>Силифке</city>
+        <city>Синоп</city>
+        <city>Стамбул</city>
+        <city>Текирдаг</city>
+        <city>Текирова</city>
+        <city>Улудаг</city>
+        <city>Фетхие</city>
+        <city>Чешме</city>
+        <city>Эдирне</city>
+        <city>Эрзурум</city>
+    </country>
+    <country name="Тёркс и Кайкос">
+        <city>Кокберн-Таун</city>
+        <city>Остров Провидения</city>
+    </country>
+    <country name="Уганда">
+        <city>Кампала</city>
+    </country>
+    <country name="Узбекистан">
+        <city>Андижан</city>
+        <city>Бухара</city>
+        <city>Гулистан</city>
+        <city>Джизак</city>
+        <city>Карши</city>
+        <city>Навои</city>
+        <city>Наманган</city>
+        <city>Нукус</city>
+        <city>Самарканд</city>
+        <city>Сырдарья</city>
+        <city>Тахтакупыр</city>
+        <city>Ташкент</city>
+        <city>Термез</city>
+        <city>Ургенч</city>
+        <city>Федченко</city>
+        <city>Фергана</city>
+        <city>Хива</city>
+    </country>
+    <country name="Украина">
+        <city>Александрия</city>
+        <city>Алчевск</city>
+        <city>Артемовск</city>
+        <city>Арциз</city>
+        <city>Аскания-Нова</city>
+        <city>Ахтырка</city>
+        <city>Балаклея</city>
+        <city>Балта</city>
+        <city>Бахмач</city>
+        <city>Белая Церковь</city>
+        <city>Белгород-Днестровский</city>
+        <city>Бердичев</city>
+        <city>Бердянск</city>
+        <city>Болград</city>
+        <city>Борисполь</city>
+        <city>Буковель</city>
+        <city>Васильков</city>
+        <city>Верховина</city>
+        <city>Вилково</city>
+        <city>Винница</city>
+        <city>Вознесенск</city>
+        <city>Ворохта</city>
+        <city>Гайворон</city>
+        <city>Гайсин</city>
+        <city>Геническ</city>
+        <city>Глухов</city>
+        <city>Горловка</city>
+        <city>Гребёнка</city>
+        <city>Гуляйполе</city>
+        <city>Диканька</city>
+        <city>Днепродзержинск</city>
+        <city>Днепропетровск</city>
+        <city>Долинская</city>
+        <city>Донецк</city>
+        <city>Драгобрат</city>
+        <city>Дрогобыч</city>
+        <city>Енакиево</city>
+        <city>Жашков</city>
+        <city>Житомир</city>
+        <city>Жмеринка</city>
+        <city>Запорожье</city>
+        <city>Затока</city>
+        <city>Звенигородка</city>
+        <city>Здолбунов</city>
+        <city>Змиёв</city>
+        <city>Золочев</city>
+        <city>Ивано-Франковск</city>
+        <city>Измаил</city>
+        <city>Изюм</city>
+        <city>Ильичёвск</city>
+        <city>Ирпень</city>
+        <city>Казатин</city>
+        <city>Калуш</city>
+        <city>Каменец-Подольский</city>
+        <city>Канев</city>
+        <city>Каховка</city>
+        <city>Киев</city>
+        <city>Кировоград</city>
+        <city>Коблево</city>
+        <city>Ковель</city>
+        <city>Конотоп</city>
+        <city>Коростень</city>
+        <city>Котовск</city>
+        <city>Краматорск</city>
+        <city>Красноармейск</city>
+        <city>Краснодон</city>
+        <city>Кременчуг</city>
+        <city>Кривой Рог</city>
+        <city>Купянск</city>
+        <city>Лисичанск</city>
+        <city>Лозовая</city>
+        <city>Луганск</city>
+        <city>Луцк</city>
+        <city>Львов</city>
+        <city>Мариуполь</city>
+        <city>Мелитополь</city>
+        <city>Миргород</city>
+        <city>Могилев-Подольский</city>
+        <city>Моршин</city>
+        <city>Мостиска</city>
+        <city>Мукачево</city>
+        <city>Немиров</city>
+        <city>Николаев</city>
+        <city>Никополь</city>
+        <city>Новая Каховка</city>
+        <city>Новгород-Северский</city>
+        <city>Новоград-Волынский</city>
+        <city>Новомосковск</city>
+        <city>Новоукраинка</city>
+        <city>Обухов</city>
+        <city>Овидиополь</city>
+        <city>Овруч</city>
+        <city>Одесса</city>
+        <city>Орджоникидзе</city>
+        <city>Очаков</city>
+        <city>Павлоград</city>
+        <city>Первомайск</city>
+        <city>Первомайск</city>
+        <city>Переяслав-Хмельницкий</city>
+        <city>Пирятин</city>
+        <city>Подволочиск</city>
+        <city>Пологи</city>
+        <city>Полтава</city>
+        <city>Помошная</city>
+        <city>Попасная</city>
+        <city>Почаев</city>
+        <city>Прилуки</city>
+        <city>Радомышль</city>
+        <city>Раздельная</city>
+        <city>Рени</city>
+        <city>Ровно</city>
+        <city>Сарны</city>
+        <city>Свалява</city>
+        <city>Северодонецк</city>
+        <city>Скадовск</city>
+        <city>Славское</city>
+        <city>Славутич</city>
+        <city>Смела</city>
+        <city>Стрый</city>
+        <city>Сумы</city>
+        <city>Тернополь</city>
+        <city>Трускавец</city>
+        <city>Тульчин</city>
+        <city>Ужгород</city>
+        <city>Ульяновка</city>
+        <city>Умань</city>
+        <city>Фастов</city>
+        <city>Харцызск</city>
+        <city>Харьков</city>
+        <city>Херсон</city>
+        <city>Хмельницкий</city>
+        <city>Хотин</city>
+        <city>Хуст</city>
+        <city>Цюрупинск</city>
+        <city>Черкассы</city>
+        <city>Чернигов</city>
+        <city>Чернобыль</city>
+        <city>Черновцы</city>
+        <city>Чигирин</city>
+        <city>Чоп</city>
+        <city>Чугуев</city>
+        <city>Шепетовка</city>
+        <city>Шостка</city>
+        <city>Шпола</city>
+        <city>Энергодар</city>
+        <city>Южноукраинск</city>
+        <city>Яремча</city>
+    </country>
+    <country name="Уругвай">
+        <city>Монтевидео</city>
+    </country>
+    <country name="Фарерские острова">
+        <city>Торсхавн</city>
+    </country>
+    <country name="Фиджи">
+        <city>Лабаса</city>
+        <city>Нанди</city>
+        <city>Сува</city>
+    </country>
+    <country name="Филиппины">
+        <city>Апарри</city>
+        <city>Боракай</city>
+        <city>Виган</city>
+        <city>Давао</city>
+        <city>Дагупан</city>
+        <city>Инфанта</city>
+        <city>Кабанатуан</city>
+        <city>Калапан</city>
+        <city>Катарман</city>
+        <city>Корон</city>
+        <city>Ламбиа</city>
+        <city>Манила</city>
+        <city>Пуэрто-Принсеса</city>
+        <city>Сан-Хосе</city>
+    </country>
+    <country name="Финляндия">
+        <city>Куусамо</city>
+        <city>Лахти</city>
+        <city>Леви</city>
+        <city>Рованиеми</city>
+        <city>Турку</city>
+        <city>Халли</city>
+        <city>Хельсинки</city>
+    </country>
+    <country name="Франция">
+        <city>Аяччо</city>
+        <city>Биарриц</city>
+        <city>Бордо</city>
+        <city>Брест</city>
+        <city>Валь-д'Изер</city>
+        <city>Виши</city>
+        <city>Дижон</city>
+        <city>Довиль</city>
+        <city>Канны</city>
+        <city>Куршевель</city>
+        <city>Лилль</city>
+        <city>Лион</city>
+        <city>Марсель</city>
+        <city>Нант</city>
+        <city>Ницца</city>
+        <city>Париж</city>
+        <city>Перпиньян</city>
+        <city>Сен-Тропе</city>
+        <city>Страсбург</city>
+        <city>Тулуза</city>
+        <city>Шамони</city>
+    </country>
+    <country name="Французская Гвиана">
+        <city>Кайенна</city>
+    </country>
+    <country name="Французская Полинезия">
+        <city>Папеэте</city>
+    </country>
+    <country name="Хорватия">
+        <city>Дубровник</city>
+        <city>Загреб</city>
+        <city>Пула</city>
+        <city>Сплит</city>
+    </country>
+    <country name="Центральноафриканская республика">
+        <city>Банги</city>
+    </country>
+    <country name="Чад">
+        <city>Нджамена</city>
+    </country>
+    <country name="Черногория">
+        <city>Бар</city>
+        <city>Будва</city>
+        <city>Герцег-Нови</city>
+        <city>Жабляк</city>
+        <city>Колашин</city>
+        <city>Котор</city>
+        <city>Никшич</city>
+        <city>Подгорица</city>
+        <city>Тиват</city>
+        <city>Цетинье</city>
+    </country>
+    <country name="Чехия">
+        <city>Брно</city>
+        <city>Карловы Вары</city>
+        <city>Марианские Лазни</city>
+        <city>Пльзень</city>
+        <city>Прага</city>
+        <city>Черный Дул</city>
+        <city>Яхимов</city>
+    </country>
+    <country name="Чили">
+        <city>Арика</city>
+        <city>Вальпараисо</city>
+        <city>Винья-дель-Мар</city>
+        <city>Остров Пасхи</city>
+        <city>Пунта-Аренас</city>
+        <city>Пуэрто-Монт</city>
+        <city>Сантьяго</city>
+    </country>
+    <country name="Швейцария">
+        <city>Баден</city>
+        <city>Берн</city>
+        <city>Вербье</city>
+        <city>Гриндельвальд</city>
+        <city>Давос</city>
+        <city>Женева</city>
+        <city>Кран-Монтана</city>
+        <city>Кур</city>
+        <city>Лозанна</city>
+        <city>Саас-Фэ</city>
+        <city>Санкт-Мориц</city>
+        <city>Церматт</city>
+        <city>Цюрих</city>
+    </country>
+    <country name="Швеция">
+        <city>Гетеборг</city>
+        <city>Мальмё</city>
+        <city>Оре</city>
+        <city>Стокгольм</city>
+        <city>Тимро</city>
+    </country>
+    <country name="Шри-Ланка">
+        <city>Анурадхапура</city>
+        <city>Галле</city>
+        <city>Канди</city>
+        <city>Коломбо</city>
+        <city>Маннар</city>
+    </country>
+    <country name="Эквадор">
+        <city>Гуаякиль</city>
+        <city>Кито</city>
+        <city>Куэнка</city>
+    </country>
+    <country name="Экваториальная Гвинея">
+        <city>Бата</city>
+        <city>Малабо</city>
+    </country>
+    <country name="Эритрея">
+        <city>Асмэра</city>
+    </country>
+    <country name="Эстония">
+        <city>Валга</city>
+        <city>Выру</city>
+        <city>Курессааре</city>
+        <city>Кярдла</city>
+        <city>Лауласмаа</city>
+        <city>Нарва</city>
+        <city>Нарва-Йыэсуу</city>
+        <city>Оттепя</city>
+        <city>Пярну</city>
+        <city>Силламяэ</city>
+        <city>Таллин</city>
+        <city>Тарту</city>
+        <city>Хаапсалу</city>
+    </country>
+    <country name="Эфиопия">
+        <city>Аддис-Абеба</city>
+    </country>
+    <country name="ЮАР">
+        <city>Дурбан</city>
+        <city>Йоханнесбург</city>
+        <city>Кейптаун</city>
+        <city>Тсване (Претория)</city>
+    </country>
+    <country name="Южная Корея">
+        <city>Масан</city>
+        <city>Пусан</city>
+        <city>Сеул</city>
+        <city>Сокчо</city>
+    </country>
+    <country name="Южная Осетия">
+        <city>Цхинвал</city>
+    </country>
+    <country name="Ямайка">
+        <city>Кингстон</city>
+        <city>Монтего-Бэй</city>
+    </country>
+    <country name="Япония">
+        <city>Абасири</city>
+        <city>Асахикава</city>
+        <city>Вакканай</city>
+        <city>Йокогама</city>
+        <city>Камакура</city>
+        <city>Киото</city>
+        <city>Кобе</city>
+        <city>Кусиро</city>
+        <city>Нагасаки</city>
+        <city>Нара</city>
+        <city>Наха</city>
+        <city>Ниигата</city>
+        <city>Никко</city>
+        <city>Нэмуро</city>
+        <city>Осака</city>
+        <city>Саппоро</city>
+        <city>Суцу</city>
+        <city>Такамацу</city>
+        <city>Токио</city>
+        <city>Уракава</city>
+        <city>Фукуока</city>
+    </country>
 </locations>
