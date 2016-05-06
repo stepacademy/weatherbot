@@ -1,93 +1,108 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--classification: in the process-->
-<times language="Russian">
 
-    <time name="позавчера" tag="Past" factor="2"/>
-    <time name="вчера" tag="Past" factor="1"/>
-    <time name="сегодня" tag="Present" factor="0"/>
-    <time name="сейчас" tag="Present" factor="0"/>
-    <time name="завтра" tag="Future" factor="1"/>
-    <time name="послезавтра" tag="Future" factor="2"/>
+<TimeData Language="Russian">
 
-    <fixes>
-        <fix name="в">
-            <subnames>
-                <subname>во</subname>
-                <subname>на</subname>
-                <subname>за</subname>
-            </subnames>
-        </fix>
-        <fix name="с">
-            <subnames>
-                <subname>со</subname>
-            </subnames>
-        </fix>
-        <fix name="по">
-            <subnames>
-                <subname>до</subname>
-            </subnames>
-        </fix>
-        <fix name="после">
-            <subnames>
-            </subnames>
-        </fix>
-        <fix name="через">
-            <subnames>
-            </subnames>
-        </fix>
-    </fixes>
+    <Times Class="A">
+        <Time Subcl="A" Name="позавчера" Tag="Past" Factor="2"/>
+        <Time Subcl="B" Name="вчера" Tag="Past" Factor="1"/>
+        <Time Subcl="C" Name="сегодня" Tag="Present" Factor="0"/>
+        <Time Subcl="D" Name="сейчас" Tag="Present" Factor="0"/>
+        <Time Subcl="E" Name="завтра" Tag="Future" Factor="1"/>
+        <Time Subcl="F" Name="послезавтра" Tag="Future" Factor="2"/>
+    </Times>
+    
+    <Fixes Class="B">
+        <Fix Subcl="A" Name="в">
+            <Forms>
+                <Form>во</Form>
+                <Form>на</Form>
+                <Form>за</Form>
+            </Forms>
+        </Fix>
+        <Fix Subcl="B" Name="с">
+            <Forms>
+                <Form>со</Form>
+            </Forms>
+        </Fix>
+        <Fix Subcl="C" Name="по">
+            <Forms>
+                <Form>до</Form>
+            </Forms>
+        </Fix>
+        <Fix Subcl="D" Name="после">
+            <Forms>
+            </Forms>
+        </Fix>
+        <Fix Subcl="E" Name="через">
+            <Forms>
+            </Forms>
+        </Fix>
+    </Fixes>
 
-    <directions>
-        <direction name="позапрошлый" tag="Past" factor="2"/>
-        <direction name="прошлый" tag="Past" factor="1"/>
-        <direction name="предыдущий" tag="Past" factor="1"/>
-        <direction name="текущий" tag="Present" factor="0"/>
-        <direction name="этот" tag="Present" factor="0"/>
-        <direction name="следующий" tag="Future" factor="1"/>
-    </directions>
+    <Directions Class="C">
+        <Direction Subcl="A" Name="позапрошлый" Tag="Past" Factor="2"/>
+        <Direction Subcl="B" Name="прошлый" Tag="Past" Factor="1"/>
+        <Direction Subcl="B" Name="предыдущий" Tag="Past" Factor="1"/>
+        <Direction Subcl="C" Name="текущий" Tag="Present" Factor="0"/>
+        <Direction Subcl="C" Name="этот" Tag="Present" Factor="0"/>
+        <Direction Subcl="D" Name="следующий" Tag="Future" Factor="1"/>
+    </Directions>
 
-    <intervals>
-        <interval name="час" value="1"/>
-        <interval name="день" value="1"/>
-        <interval name="сутки" value="1"/>
-        <interval name="неделя" value="7"/>
-        <interval name="месяц" value="1"/>
-        <interval name="год" value="1"/>
-    </intervals>
+    <Intervals Class="D">
+        <Interval Subcl="A" Name="час" Value="1"/>
+        <Interval Subcl="B" Name="день" Value="1"/>
+        <Interval Subcl="C" Name="сутки" Value="1"/>
+        <Interval Subcl="D" Name="неделя" Value="7"/>
+        <Interval Subcl="E" Name="месяц" Value="1"/>
+        <Interval Subcl="F" Name="год" Value="1"/>
+    </Intervals>
 
-    <daytimes>
-        <daytime name="ночь" value="0"/>
-        <daytime name="полночь" value="0"/>
-        <daytime name="утро" value="6"/>
-        <daytime name="день" value="12"/>
-        <daytime name="обед" value="12"/>
-        <daytime name="полдень" value="12"/>
-        <daytime name="вечер" value="18"/>
-    </daytimes>
+    <Daytimes Class="E">
+        <Daytime Subcl="A" Name="ночь" Value="0"/>
+        <Daytime Subcl="A" Name="полночь" Value="0"/>
+        <Daytime Subcl="B" Name="утро" Value="6"/>
+        <Daytime Subcl="C" Name="день" Value="12"/>
+        <Daytime Subcl="C" Name="обед" Value="12"/>
+        <Daytime Subcl="C" Name="полдень" Value="12"/>
+        <Daytime Subcl="D" Name="вечер" Value="18"/>
+    </Daytimes>
 
-    <weekdays>
-        <weekday name="понедельник" value="1"/>
-        <weekday name="вторник" value="2"/>
-        <weekday name="среда" value="3"/>
-        <weekday name="четверг" value="4"/>
-        <weekday name="пятница" value="5"/>
-        <weekday name="суббота" value="6"/>
-        <weekday name="воскресенье" value="7"/>
-    </weekdays>
+    <Weekdays Class="F">
+        <Weekday Subcl="A" Name="понедельник" Value="1"/>
+        <Weekday Subcl="B" Name="вторник" Value="2"/>
+        <Weekday Subcl="C" Name="среда" Value="3"/>
+        <Weekday Subcl="D" Name="четверг" Value="4"/>
+        <Weekday Subcl="E" Name="пятница" Value="5"/>
+        <Weekday Subcl="F" Name="суббота" Value="6"/>
+        <Weekday Subcl="G" Name="воскресенье" Value="7"/>
+    </Weekdays>
 
-    <months>
-        <month name="январь" value="1"/>
-        <month name="февраль" value="2"/>
-        <month name="март" value="3"/>
-        <month name="апрель" value="4"/>
-        <month name="май" value="5"/>
-        <month name="июнь" value="6"/>
-        <month name="июль" value="7"/>
-        <month name="август" value="8"/>
-        <month name="сентябрь" value="9"/>
-        <month name="октябрь" value="10"/>
-        <month name="ноябрь" value="11"/>
-        <month name="декабрь" value="12"/>
-    </months>
+    <Months Class="G">
+        <Month Subcl="A" Name="январь" Value="1"/>
+        <Month Subcl="B" Name="февраль" Value="2"/>
+        <Month Subcl="C" Name="март" Value="3"/>
+        <Month Subcl="D" Name="апрель" Value="4"/>
+        <Month Subcl="E" Name="май" Value="5"/>
+        <Month Subcl="F" Name="июнь" Value="6"/>
+        <Month Subcl="G" Name="июль" Value="7"/>
+        <Month Subcl="H" Name="август" Value="8"/>
+        <Month Subcl="I" Name="сентябрь" Value="9"/>
+        <Month Subcl="J" Name="октябрь" Value="10"/>
+        <Month Subcl="K" Name="ноябрь" Value="11"/>
+        <Month Subcl="L" Name="декабрь" Value="12"/>
+    </Months>
 
-</times>
+    <Numbers Class="H">
+        <Number Name="ноль"   Comp="false" ElForm="-"        ElOf="0" TForm="-"     TOf="0" HForm="-"      HOf="0"></Number>
+        <Number Name="один"   Comp="true"  ElForm="надцать"  ElOf="0" TForm="-"     TOf="0" HForm="-"      HOf="0"></Number>
+        <Number Name="два"    Comp="true"  ElForm="енадцать" ElOf="1" TForm="дцать" TOf="0" HForm="ести"   HOf="1"></Number>
+        <Number Name="три"    Comp="true"  ElForm="надцать"  ElOf="0" TForm="дцать" TOf="0" HForm="ста"    HOf="0"></Number>
+        <Number Name="четыре" Comp="true"  ElForm="надцать"  ElOf="1" TForm="сорок" TOf="6" HForm="ста"    HOf="0"></Number>
+        <Number Name="пять"   Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
+        <Number Name="шесть"  Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
+        <Number Name="семь"   Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
+        <Number Name="восемь" Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
+        <Number Name="девять" Comp="true"  ElForm="надцать"  ElOf="1" TForm="носто" TOf="2" HForm="сот"    HOf="0"></Number>
+        <Number Name="десять" Comp="true"  ElForm="-"        ElOf="0" TForm="сто"   TOf="6" HForm="тысяча" HOf="6"></Number>        
+    </Numbers>    
+</TimeData>
