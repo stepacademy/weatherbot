@@ -3,93 +3,182 @@
 <TimeData Language="Russian">
 
     <Times Class="A">
-        <Time Subcl="A" Name="позавчера" Tag="Past" Factor="2"/>
-        <Time Subcl="B" Name="вчера" Tag="Past" Factor="1"/>
-        <Time Subcl="C" Name="сегодня" Tag="Present" Factor="0"/>
-        <Time Subcl="D" Name="сейчас" Tag="Present" Factor="0"/>
-        <Time Subcl="E" Name="завтра" Tag="Future" Factor="1"/>
-        <Time Subcl="F" Name="послезавтра" Tag="Future" Factor="2"/>
+        <Time Subcl="A">
+            <Form Formcl="A">позавчера</Form>
+        </Time>
+        <Time Subcl="B">
+            <Form Formcl="A">вчера</Form>
+        </Time>
+        <Time Subcl="C">
+            <Form Formcl="A">сегодня</Form>
+        </Time>
+        <Time Subcl="D">
+            <Form Formcl="A">сейчас</Form>
+        </Time>
+        <Time Subcl="E">
+            <Form Formcl="A">завтра</Form>
+        </Time>
+        <Time Subcl="F">
+            <Form Formcl="A">послезавтра</Form>
+        </Time>
     </Times>
-    
+
     <Fixes Class="B">
-        <Fix Subcl="A" Name="в">
-            <Forms>
-                <Form>во</Form>
-                <Form>на</Form>
-                <Form>за</Form>
-            </Forms>
+        <Fix Subcl="A">
+            <Form Formcl="A">в</Form>
+            <Form Formcl="B">во</Form>
         </Fix>
-        <Fix Subcl="B" Name="с">
-            <Forms>
-                <Form>со</Form>
-            </Forms>
+        <Fix Subcl="B">
+            <Form Formcl="A">на</Form>
         </Fix>
-        <Fix Subcl="C" Name="по">
-            <Forms>
-                <Form>до</Form>
-            </Forms>
+        <Fix Subcl="C">
+            <Form Formcl="A">за</Form>
         </Fix>
-        <Fix Subcl="D" Name="после">
-            <Forms>
-            </Forms>
+        <Fix Subcl="D">
+            <Form Formcl="A">с</Form>
+            <Form Formcl="B">со</Form>
         </Fix>
-        <Fix Subcl="E" Name="через">
-            <Forms>
-            </Forms>
+        <Fix Subcl="E">
+            <Form Formcl="A">по</Form>
+        </Fix>
+        <Fix Subcl="F">
+            <Form Formcl="A">до</Form>
+        </Fix>
+        <Fix Subcl="G">
+            <Form Formcl="A">после</Form>
+        </Fix>
+        <Fix Subcl="H">
+            <Form Formcl="A">через</Form>
         </Fix>
     </Fixes>
 
     <Directions Class="C">
-        <Direction Subcl="A" Name="позапрошлый" Tag="Past" Factor="2"/>
-        <Direction Subcl="B" Name="прошлый" Tag="Past" Factor="1"/>
-        <Direction Subcl="B" Name="предыдущий" Tag="Past" Factor="1"/>
-        <Direction Subcl="C" Name="текущий" Tag="Present" Factor="0"/>
-        <Direction Subcl="C" Name="этот" Tag="Present" Factor="0"/>
-        <Direction Subcl="D" Name="следующий" Tag="Future" Factor="1"/>
+        <Direction Subcl="A">
+            <Form Formcl="A">позапрошлый</Form>
+        </Direction>
+        <Direction Subcl="B">
+            <Form Formcl="A">прошлый</Form>
+        </Direction>
+        <Direction Subcl="C">
+            <Form Formcl="A">предыдущий</Form>
+        </Direction>
+        <Direction Subcl="D">
+            <Form Formcl="A">текущий</Form>
+        </Direction>
+        <Direction Subcl="E">
+            <Form Formcl="A">этот</Form>
+        </Direction>
+        <Direction Subcl="F">
+            <Form Formcl="A">следующий</Form>
+        </Direction>
     </Directions>
 
     <Intervals Class="D">
-        <Interval Subcl="A" Name="час" Value="1"/>
-        <Interval Subcl="B" Name="день" Value="1"/>
-        <Interval Subcl="C" Name="сутки" Value="1"/>
-        <Interval Subcl="D" Name="неделя" Value="7"/>
-        <Interval Subcl="E" Name="месяц" Value="1"/>
-        <Interval Subcl="F" Name="год" Value="1"/>
+        <Interval Subcl="A">
+            <Form Formcl="A">час</Form>
+        </Interval>
+        <Interval Subcl="B">
+            <Form Formcl="A">день</Form>
+        </Interval>
+        <Interval Subcl="C">
+            <Form Formcl="A">сутки</Form>
+        </Interval>
+        <Interval Subcl="D">
+            <Form Formcl="A">неделя</Form>
+        </Interval>
+        <Interval Subcl="E">
+            <Form Formcl="A">месяц</Form>
+        </Interval>
+        <Interval Subcl="F">
+            <Form Formcl="A">год</Form>
+        </Interval>
     </Intervals>
 
     <Daytimes Class="E">
-        <Daytime Subcl="A" Name="ночь" Value="0"/>
-        <Daytime Subcl="A" Name="полночь" Value="0"/>
-        <Daytime Subcl="B" Name="утро" Value="6"/>
-        <Daytime Subcl="C" Name="день" Value="12"/>
-        <Daytime Subcl="C" Name="обед" Value="12"/>
-        <Daytime Subcl="C" Name="полдень" Value="12"/>
-        <Daytime Subcl="D" Name="вечер" Value="18"/>
+        <Daytime Subcl="A">
+            <Form Formcl="A">ночь</Form>
+        </Daytime>
+        <Daytime Subcl="B">
+            <Form Formcl="A">полночь</Form>
+        </Daytime>
+        <Daytime Subcl="C">
+            <Form Formcl="A">утро</Form>
+        </Daytime>
+        <Daytime Subcl="D">
+            <Form Formcl="A">день</Form>
+        </Daytime>
+        <Daytime Subcl="E">
+            <Form Formcl="A">обед</Form>
+        </Daytime>
+        <Daytime Subcl="F">
+            <Form Formcl="A">полдень</Form>
+        </Daytime>
+        <Daytime Subcl="G">
+            <Form Formcl="A">вечер</Form>
+        </Daytime>
     </Daytimes>
 
     <Weekdays Class="F">
-        <Weekday Subcl="A" Name="понедельник" Value="1"/>
-        <Weekday Subcl="B" Name="вторник" Value="2"/>
-        <Weekday Subcl="C" Name="среда" Value="3"/>
-        <Weekday Subcl="D" Name="четверг" Value="4"/>
-        <Weekday Subcl="E" Name="пятница" Value="5"/>
-        <Weekday Subcl="F" Name="суббота" Value="6"/>
-        <Weekday Subcl="G" Name="воскресенье" Value="7"/>
+        <Weekday Subcl="A">
+            <Form Formcl="A">понедельник</Form>
+        </Weekday>
+        <Weekday Subcl="B">
+            <Form Formcl="A">вторник</Form>
+        </Weekday>
+        <Weekday Subcl="C">
+            <Form Formcl="A">среда</Form>
+        </Weekday>
+        <Weekday Subcl="D">
+            <Form Formcl="A">четверг</Form>
+        </Weekday>
+        <Weekday Subcl="E">
+            <Form Formcl="A">пятница</Form>
+        </Weekday>
+        <Weekday Subcl="F">
+            <Form Formcl="A">суббота</Form>
+        </Weekday>
+        <Weekday Subcl="G">
+            <Form Formcl="A">воскресенье</Form>
+        </Weekday>
     </Weekdays>
 
     <Months Class="G">
-        <Month Subcl="A" Name="январь" Value="1"/>
-        <Month Subcl="B" Name="февраль" Value="2"/>
-        <Month Subcl="C" Name="март" Value="3"/>
-        <Month Subcl="D" Name="апрель" Value="4"/>
-        <Month Subcl="E" Name="май" Value="5"/>
-        <Month Subcl="F" Name="июнь" Value="6"/>
-        <Month Subcl="G" Name="июль" Value="7"/>
-        <Month Subcl="H" Name="август" Value="8"/>
-        <Month Subcl="I" Name="сентябрь" Value="9"/>
-        <Month Subcl="J" Name="октябрь" Value="10"/>
-        <Month Subcl="K" Name="ноябрь" Value="11"/>
-        <Month Subcl="L" Name="декабрь" Value="12"/>
+        <Month Subcl="A">
+            <Form Formcl="A">январь</Form>
+        </Month>
+        <Month Subcl="B">
+            <Form Formcl="A">февраль</Form>
+        </Month>
+        <Month Subcl="C">
+            <Form Formcl="A">март</Form>
+        </Month>
+        <Month Subcl="D">
+            <Form Formcl="A">апрель</Form>
+        </Month>
+        <Month Subcl="E">
+            <Form Formcl="A">май</Form>
+        </Month>
+        <Month Subcl="F">
+            <Form Formcl="A">июнь</Form>
+        </Month>
+        <Month Subcl="G">
+            <Form Formcl="A">июль</Form>
+        </Month>
+        <Month Subcl="H">
+            <Form Formcl="A">август</Form>
+        </Month>
+        <Month Subcl="I">
+            <Form Formcl="A">сентябрь</Form>
+        </Month>
+        <Month Subcl="J">
+            <Form Formcl="A">октябрь</Form>
+        </Month>
+        <Month Subcl="K">
+            <Form Formcl="A">ноябрь</Form>
+        </Month>
+        <Month Subcl="L">
+            <Form Formcl="A">декабрь</Form>
+        </Month>
     </Months>
 
     <Numbers Class="H">
@@ -103,6 +192,7 @@
         <Number Name="семь"   Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
         <Number Name="восемь" Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
         <Number Name="девять" Comp="true"  ElForm="надцать"  ElOf="1" TForm="носто" TOf="2" HForm="сот"    HOf="0"></Number>
-        <Number Name="десять" Comp="true"  ElForm="-"        ElOf="0" TForm="сто"   TOf="6" HForm="тысяча" HOf="6"></Number>        
-    </Numbers>    
+        <Number Name="десять" Comp="true"  ElForm="-"        ElOf="0" TForm="сто"   TOf="6" HForm="тысяча" HOf="6"></Number>
+    </Numbers>
+    
 </TimeData>
