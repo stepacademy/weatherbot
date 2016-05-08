@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--until used-->
+<Numbers Class="H">
+    
+    <Number Name="ноль"   Comp="false" ElForm="-"        ElOf="0" TForm="-"     TOf="0" HForm="-"      HOf="0"></Number>
+    <Number Name="один"   Comp="true"  ElForm="надцать"  ElOf="0" TForm="-"     TOf="0" HForm="-"      HOf="0"></Number>
+    <Number Name="два"    Comp="true"  ElForm="енадцать" ElOf="1" TForm="дцать" TOf="0" HForm="ести"   HOf="1"></Number>
+    <Number Name="три"    Comp="true"  ElForm="надцать"  ElOf="0" TForm="дцать" TOf="0" HForm="ста"    HOf="0"></Number>
+    <Number Name="четыре" Comp="true"  ElForm="надцать"  ElOf="1" TForm="сорок" TOf="6" HForm="ста"    HOf="0"></Number>
+    <Number Name="пять"   Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
+    <Number Name="шесть"  Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
+    <Number Name="семь"   Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
+    <Number Name="восемь" Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
+    <Number Name="девять" Comp="true"  ElForm="надцать"  ElOf="1" TForm="носто" TOf="2" HForm="сот"    HOf="0"></Number>
+    <Number Name="десять" Comp="true"  ElForm="-"        ElOf="0" TForm="сто"   TOf="6" HForm="тысяча" HOf="6"></Number>
+    
+</Numbers>

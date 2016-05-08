@@ -20,14 +20,15 @@ namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
         private async void PerformStep(object stateInfo) {
 
             AutoResetEvent autoEvent = (AutoResetEvent)stateInfo;
-            autoEvent.Set();
 
             var updates = await Bot.Api.GetUpdates(_offset);
 
             foreach (var update in updates) {
-                Incoming.Invoke(new Message(update));
                 _offset = update.Id + 1;
+                Incoming.Invoke(new Message(update));                
             }
+
+            autoEvent.Set();
         }
 
         public void Start() {

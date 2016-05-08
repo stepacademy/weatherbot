@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<!--until used-->
+
 <TimesClassification Language="Russian">
 
     <Times Class="A">
@@ -58,18 +60,27 @@
         </Direction>
         <Direction Subcl="B">
             <Form Formcl="A">прошлый</Form>
+            <Form Formcl="B">прошлыe</Form>
         </Direction>
         <Direction Subcl="C">
-            <Form Formcl="A">предыдущий</Form>
+            <Form Formcl="A">прошедший</Form>
+            <Form Formcl="B">прошедшие</Form>
         </Direction>
         <Direction Subcl="D">
-            <Form Formcl="A">текущий</Form>
+            <Form Formcl="A">предыдущий</Form>
+            <Form Formcl="B">предыдущие</Form>
         </Direction>
         <Direction Subcl="E">
-            <Form Formcl="A">этот</Form>
+            <Form Formcl="A">текущий</Form>
+            <Form Formcl="B">текущие</Form>
         </Direction>
         <Direction Subcl="F">
+            <Form Formcl="A">этот</Form>
+            <Form Formcl="B">эти</Form>
+        </Direction>
+        <Direction Subcl="G">
             <Form Formcl="A">следующий</Form>
+            <Form Formcl="B">следующие</Form>
         </Direction>
     </Directions>
 
@@ -85,36 +96,54 @@
         </Interval>
         <Interval Subcl="D">
             <Form Formcl="A">неделя</Form>
+            <Form Formcl="B">неделе</Form>
+            <Form Formcl="C">неделю</Form>
         </Interval>
         <Interval Subcl="E">
             <Form Formcl="A">месяц</Form>
+            <Form Formcl="B">месяце</Form>
         </Interval>
         <Interval Subcl="F">
             <Form Formcl="A">год</Form>
+            <Form Formcl="B">году</Form>
         </Interval>
     </Intervals>
 
     <Daytimes Class="E">
         <Daytime Subcl="A">
             <Form Formcl="A">ночь</Form>
+            <Form Formcl="B">ночи</Form>
+            <Form Formcl="C">ночью</Form>
         </Daytime>
         <Daytime Subcl="B">
             <Form Formcl="A">полночь</Form>
+            <Form Formcl="B">полночи</Form>
+            <Form Formcl="C">полночью</Form>
         </Daytime>
         <Daytime Subcl="C">
             <Form Formcl="A">утро</Form>
+            <Form Formcl="B">утра</Form>
+            <Form Formcl="C">утром</Form>
         </Daytime>
         <Daytime Subcl="D">
             <Form Formcl="A">день</Form>
+            <Form Formcl="B">дня</Form>
+            <Form Formcl="C">днём</Form>
         </Daytime>
         <Daytime Subcl="E">
             <Form Formcl="A">обед</Form>
+            <Form Formcl="B">обеда</Form>
+            <Form Formcl="C">обедом</Form>
         </Daytime>
         <Daytime Subcl="F">
             <Form Formcl="A">полдень</Form>
+            <Form Formcl="B">полудня</Form>
+            <Form Formcl="C">полуднем</Form>
         </Daytime>
         <Daytime Subcl="G">
             <Form Formcl="A">вечер</Form>
+            <Form Formcl="B">вечера</Form>
+            <Form Formcl="C">вечером</Form>
         </Daytime>
     </Daytimes>
 
@@ -127,15 +156,18 @@
         </Weekday>
         <Weekday Subcl="C">
             <Form Formcl="A">среда</Form>
+            <Form Formcl="A">среду</Form>
         </Weekday>
         <Weekday Subcl="D">
             <Form Formcl="A">четверг</Form>
         </Weekday>
         <Weekday Subcl="E">
             <Form Formcl="A">пятница</Form>
+            <Form Formcl="A">пятницу</Form>
         </Weekday>
         <Weekday Subcl="F">
             <Form Formcl="A">суббота</Form>
+            <Form Formcl="A">субботу</Form>
         </Weekday>
         <Weekday Subcl="G">
             <Form Formcl="A">воскресенье</Form>
@@ -145,54 +177,64 @@
     <Months Class="G">
         <Month Subcl="A">
             <Form Formcl="A">январь</Form>
+            <Form Formcl="B">январе</Form>
+            <Form Formcl="C">января</Form>
         </Month>
         <Month Subcl="B">
             <Form Formcl="A">февраль</Form>
+            <Form Formcl="B">феврале</Form>
+            <Form Formcl="C">февраля</Form>
         </Month>
         <Month Subcl="C">
             <Form Formcl="A">март</Form>
+            <Form Formcl="B">марте</Form>
+            <Form Formcl="C">марта</Form>
         </Month>
         <Month Subcl="D">
             <Form Formcl="A">апрель</Form>
+            <Form Formcl="B">апреле</Form>
+            <Form Formcl="C">апреля</Form>
         </Month>
         <Month Subcl="E">
             <Form Formcl="A">май</Form>
+            <Form Formcl="B">мае</Form>
+            <Form Formcl="C">мая</Form>
         </Month>
         <Month Subcl="F">
             <Form Formcl="A">июнь</Form>
+            <Form Formcl="B">июне</Form>
+            <Form Formcl="C">июня</Form>
         </Month>
         <Month Subcl="G">
             <Form Formcl="A">июль</Form>
+            <Form Formcl="B">июле</Form>
+            <Form Formcl="C">июля</Form>
         </Month>
         <Month Subcl="H">
             <Form Formcl="A">август</Form>
+            <Form Formcl="B">августе</Form>
+            <Form Formcl="C">августа</Form>
         </Month>
         <Month Subcl="I">
             <Form Formcl="A">сентябрь</Form>
+            <Form Formcl="B">сентябре</Form>
+            <Form Formcl="C">сентября</Form>
         </Month>
         <Month Subcl="J">
             <Form Formcl="A">октябрь</Form>
+            <Form Formcl="B">октябре</Form>
+            <Form Formcl="C">октября</Form>
         </Month>
         <Month Subcl="K">
             <Form Formcl="A">ноябрь</Form>
+            <Form Formcl="B">ноябре</Form>
+            <Form Formcl="C">ноября</Form>
         </Month>
         <Month Subcl="L">
             <Form Formcl="A">декабрь</Form>
+            <Form Formcl="B">декабре</Form>
+            <Form Formcl="C">декабря</Form>
         </Month>
-    </Months>
-
-    <Numbers Class="H">
-        <Number Name="ноль"   Comp="false" ElForm="-"        ElOf="0" TForm="-"     TOf="0" HForm="-"      HOf="0"></Number>
-        <Number Name="один"   Comp="true"  ElForm="надцать"  ElOf="0" TForm="-"     TOf="0" HForm="-"      HOf="0"></Number>
-        <Number Name="два"    Comp="true"  ElForm="енадцать" ElOf="1" TForm="дцать" TOf="0" HForm="ести"   HOf="1"></Number>
-        <Number Name="три"    Comp="true"  ElForm="надцать"  ElOf="0" TForm="дцать" TOf="0" HForm="ста"    HOf="0"></Number>
-        <Number Name="четыре" Comp="true"  ElForm="надцать"  ElOf="1" TForm="сорок" TOf="6" HForm="ста"    HOf="0"></Number>
-        <Number Name="пять"   Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
-        <Number Name="шесть"  Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
-        <Number Name="семь"   Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
-        <Number Name="восемь" Comp="true"  ElForm="надцать"  ElOf="1" TForm="десят" TOf="0" HForm="сот"    HOf="0"></Number>
-        <Number Name="девять" Comp="true"  ElForm="надцать"  ElOf="1" TForm="носто" TOf="2" HForm="сот"    HOf="0"></Number>
-        <Number Name="десять" Comp="true"  ElForm="-"        ElOf="0" TForm="сто"   TOf="6" HForm="тысяча" HOf="6"></Number>
-    </Numbers>
+    </Months>    
     
 </TimesClassification>

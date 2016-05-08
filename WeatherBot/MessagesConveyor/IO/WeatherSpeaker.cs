@@ -25,12 +25,13 @@ namespace WeatherBot.MessagesConveyor.IO {
                 string date = weather.Key.ToLocalTime().ToShortDateString();
                 string time = weather.Key.ToLocalTime().ToShortTimeString();
 
-                result.Append(date + " - " + time + "\n\n");
-                result.Append("Ожидается: " + weather.Value.State + '\n');
-                result.Append("Температура: " + weather.Value.Temperature + " °C\n");
-                result.Append("Ветер: " + weather.Value.WindDirection.ToString() + ' ' + weather.Value.WindSpeed + " м/с\n");
-                result.Append("Относительная влажность: " + weather.Value.Humidity + " %\n");
-                result.Append("Атмосферное давление: " + weather.Value.Pressure + " мм рт. ст. \n");
+                result
+                    .Append(date + " - " + time + "\n\n")
+                    //.Append("Ожидается: " + weather.Value.State + '\n')
+                    .Append("Температура: " + weather.Value.Temperature + " °C\n")
+                    .Append("Ветер: " + weather.Value.WindDirection.ToString() + ' ' + weather.Value.WindSpeed + " м/с\n")
+                    .Append("Относительная влажность: " + weather.Value.Humidity + " %\n")
+                    .Append("Атмосферное давление: " + weather.Value.Pressure + " мм рт. ст. \n");
             }
             return result.ToString();
         }

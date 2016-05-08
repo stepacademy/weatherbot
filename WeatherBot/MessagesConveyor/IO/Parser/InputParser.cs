@@ -6,28 +6,33 @@ using System.Collections.Generic;
 
 namespace WeatherBot.MessagesConveyor.IO.Parser {
 
-    using DatabaseWorker.QueryComponents;
-
+    using Data;
+    
     internal sealed class InputParser {
 
-        private StringSimilarityMetric _metric;
-        private List<string>      _incomingSet;
+        private Locations      _locations;
 
-        private void ExtractCities() {
+        public string ExtractFirstCity(string incomingText) {
 
-        }
+            List<string> incomingSet = new List<string>(incomingText.Split(new char [] {',', ' '}));
 
-        private void ExtractTimes() {
+            KeyValuePair<string, int> result = new KeyValuePair<string, int>(null, int.MaxValue);
 
-        }
+            foreach (var item in incomingSet) {                
+                KeyValuePair<string, int> localResult = _locations.GetEntry(item);
 
-        public QueryData GetQuery(string incomingText) {
+                if (localResult.Value < result.Value)
+                    result = localResult;
 
-            return new QueryData();
+                if (result.Value == 0)
+                    return result.Key;
+
+            }
+            return result.Key;
         }
 
         public InputParser() {
-            _metric = new StringSimilarityMetric();
+            _locations = new Locations("WeatherBot.MessagesConveyor.IO.Parser.Data", "Locations.xml", 50.0);
         }
     }
 }
