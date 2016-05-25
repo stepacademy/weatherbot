@@ -15,15 +15,21 @@ namespace LocalhostWeatherBot {
 
             ManagementContractClient proxy = new ManagementContractClient();
             string botToken;
+            string owmToken;
 
             try {
                 using (StreamReader file = new StreamReader("botToken.txt")) {
-
-                    if ((botToken = file.ReadLine()) != null) {
-                        proxy.Start(botToken, InteractionMode.GetUpdatesBased);
-                        serviceStatus.Content = "Ready...";
-                    }
+                    botToken = file.ReadLine();                    
                     file.Close();
+                }
+                using (StreamReader file = new StreamReader("owmToken.txt")) {
+                    owmToken = file.ReadLine();
+                    file.Close();
+                }
+
+                if (botToken != null && owmToken != null) {
+                    proxy.Start(botToken, owmToken, InteractionMode.GetUpdatesBased);
+                    serviceStatus.Content = "Ready...";
                 }
             }
             catch (FileNotFoundException e) { serviceStatus.Content = e.Message; }

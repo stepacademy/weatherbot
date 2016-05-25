@@ -13,7 +13,7 @@ namespace WeatherBot.MessagesConveyor {
     public interface IManagementContract {
 
         [OperationContract]
-        void Start(string botTokenPath, InteractionMode iMode);
+        void Start(string botToken, string owmToken, InteractionMode iMode);
 
         [OperationContract]
         void Stop();

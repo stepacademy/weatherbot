@@ -5,7 +5,7 @@
 using System;
 using System.IO;
 
-namespace WeatherBot.MessagesConveyor.IO.Parser.Data {
+namespace WeatherBot.MessagesConveyor.Input.Parser.Data {
 
     internal sealed class DataLoader {
 

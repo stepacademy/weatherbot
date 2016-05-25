@@ -8,7 +8,7 @@ using Microsoft.Owin.Hosting;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
-    using IO;
+    using Input;
     using Message = Adapters.Message;
 
     internal sealed class BasedWebHook : IInteractionStrategy {            // WebHook-based interaction mode, NEED TESTS

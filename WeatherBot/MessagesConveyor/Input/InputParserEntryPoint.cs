@@ -5,25 +5,27 @@
 using System;
 using System.Collections.Generic;
 
-namespace WeatherBot.MessagesConveyor.IO {
+namespace WeatherBot.MessagesConveyor.Input {
 
     using Parser;
     using DataInteraction;
+    using WeatherProviders;
     using TeleInteraction.Adapters;
     using TeleInteraction.InteractionStrategy;
     using DatabaseWorker.QueryComponents;
-
+    
     internal sealed class InputParserEntryPoint {
 
         private DatabaseWorkerProxy _database;
         private InputParser           _parser;
-        private WeatherSpeaker _directSpeaker;
+        private OutcomingSender _directSender;
+        private IWeatherProvider     _weather;
 
         private void DirectResponse(int initiatorId, string message) {
-            _directSpeaker.Response(new QueryData { InitiatorId = initiatorId, Error = message});
+            _directSender.Response(new QueryData { InitiatorId = initiatorId, Error = message});
         }
 
-        private void Incoming(Message message) {
+        private async void Incoming(Message message) {
 
             string city = _parser.ExtractFirstCity(message.Text);
 
@@ -34,10 +36,13 @@ namespace WeatherBot.MessagesConveyor.IO {
                     City = city,
                     WeatherAtTimes = new Dictionary<DateTime, WeatherEntities>()
                 };
-                query.WeatherAtTimes.Add(new DateTime(2016, 5, 25, 12, 0, 0), new WeatherEntities());
+                query.WeatherAtTimes.Add(new DateTime(/**/), new WeatherEntities());
 
-                DirectResponse(message.User.Id, "Возможно вы имели в виду: " + city + "?");
-                _database.Query(query);
+                //DirectResponse(message.User.Id, "Возможно вы имели в виду: " + city + "?");
+                //_database.Query(query);
+                await _weather.SetCurrentAsync(query);
+                _directSender.Response(query);
+
             }
             else {
                 DirectResponse(
@@ -47,11 +52,12 @@ namespace WeatherBot.MessagesConveyor.IO {
             }            
         }
 
-        public InputParserEntryPoint(IInteractionStrategy sender, DatabaseWorkerProxy proxy) {
+        public InputParserEntryPoint(IInteractionStrategy sender, DatabaseWorkerProxy proxy, string owmToken) {
             sender.Incoming += Incoming;
-            _database = proxy;
-            _parser = new InputParser();
-            _directSpeaker = new WeatherSpeaker();
+            _database        = proxy;
+            _parser          = new InputParser();
+            _directSender    = new OutcomingSender();
+            _weather         = new OpenWeatherMap(owmToken);
         }
     }
 }

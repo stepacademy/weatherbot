@@ -29,10 +29,10 @@ namespace Checkers.MessageConveyorServiceReference {
     public interface IManagementContract {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManagementContract/Start", ReplyAction="http://tempuri.org/IManagementContract/StartResponse")]
-        void Start(string botTokenPath, Checkers.MessageConveyorServiceReference.InteractionMode iMode);
+        void Start(string botToken, string owmToken, Checkers.MessageConveyorServiceReference.InteractionMode iMode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManagementContract/Start", ReplyAction="http://tempuri.org/IManagementContract/StartResponse")]
-        System.Threading.Tasks.Task StartAsync(string botTokenPath, Checkers.MessageConveyorServiceReference.InteractionMode iMode);
+        System.Threading.Tasks.Task StartAsync(string botToken, string owmToken, Checkers.MessageConveyorServiceReference.InteractionMode iMode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManagementContract/Stop", ReplyAction="http://tempuri.org/IManagementContract/StopResponse")]
         void Stop();
@@ -68,12 +68,12 @@ namespace Checkers.MessageConveyorServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void Start(string botTokenPath, Checkers.MessageConveyorServiceReference.InteractionMode iMode) {
-            base.Channel.Start(botTokenPath, iMode);
+        public void Start(string botToken, string owmToken, Checkers.MessageConveyorServiceReference.InteractionMode iMode) {
+            base.Channel.Start(botToken, owmToken, iMode);
         }
         
-        public System.Threading.Tasks.Task StartAsync(string botTokenPath, Checkers.MessageConveyorServiceReference.InteractionMode iMode) {
-            return base.Channel.StartAsync(botTokenPath, iMode);
+        public System.Threading.Tasks.Task StartAsync(string botToken, string owmToken, Checkers.MessageConveyorServiceReference.InteractionMode iMode) {
+            return base.Channel.StartAsync(botToken, owmToken, iMode);
         }
         
         public void Stop() {

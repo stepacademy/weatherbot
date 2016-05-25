@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
 
-    using IO;
+    using Input;
     using Message = Adapters.Message;
 
     internal sealed class BasedGetUpdates : IInteractionStrategy {

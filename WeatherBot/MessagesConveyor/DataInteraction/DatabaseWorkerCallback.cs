@@ -4,20 +4,21 @@
 
 namespace WeatherBot.MessagesConveyor.DataInteraction {
 
-    using IO;
     using DatabaseQueryHandler;
     using DatabaseWorker.QueryComponents;
+    using TeleInteraction.InteractionStrategy;
 
     internal class DatabaseWorkerCallback : IQueryHandlerContractCallback {
 
-        private WeatherSpeaker  _speaker;
+        private OutcomingSender  _sender;
+
 
         public void Response(QueryData response) {
-            _speaker.Response(response);
+            _sender.Response(response);
         }
 
         public DatabaseWorkerCallback() {
-            _speaker = new WeatherSpeaker();
+            _sender = new OutcomingSender();
         }
     }
 }

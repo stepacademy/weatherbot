@@ -4,7 +4,7 @@
 
 using System.Collections.Generic;
 
-namespace WeatherBot.MessagesConveyor.IO.Parser {
+namespace WeatherBot.MessagesConveyor.Input.Parser {
 
     using Data;
     
@@ -32,7 +32,7 @@ namespace WeatherBot.MessagesConveyor.IO.Parser {
         }
 
         public InputParser() {
-            _locations = new Locations("WeatherBot.MessagesConveyor.IO.Parser.Data", "Locations.xml", 50.0);
+            _locations = new Locations("WeatherBot.MessagesConveyor.Input.Parser.Data", "Locations.xml", 50.0);
         }
     }
 }

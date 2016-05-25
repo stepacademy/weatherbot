@@ -2,7 +2,7 @@
 /// Please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
 ///
 
-namespace WeatherBot.MessagesConveyor.IO.Parser {
+namespace WeatherBot.MessagesConveyor.Input.Parser {
 
     internal sealed class StringSimilarityMetric {
 

@@ -4,7 +4,8 @@
   <xs:element name="Start">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="botTokenPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="botToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="owmToken" nillable="true" type="xs:string" />
         <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy" minOccurs="0" name="iMode" type="q1:InteractionMode" />
       </xs:sequence>
     </xs:complexType>

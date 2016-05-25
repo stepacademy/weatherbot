@@ -5,7 +5,7 @@
 using System.Xml.Linq;
 using System.Collections.Generic;
 
-namespace WeatherBot.MessagesConveyor.IO.Parser.Data {
+namespace WeatherBot.MessagesConveyor.Input.Parser.Data {
 
     internal sealed class Locations {
 

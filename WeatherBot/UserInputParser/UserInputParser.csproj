@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C3BB80E-9499-4FD4-B306-51F9302315C2}</ProjectGuid>
+    <ProjectGuid>{F8B7C24E-D2D3-4BA1-8653-C2BD98DE06CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WeatherBot.WeatherProviders</RootNamespace>
-    <AssemblyName>WeatherProviders</AssemblyName>
+    <RootNamespace>WeatherBot.UserInputParser</RootNamespace>
+    <AssemblyName>UserInputParser</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,20 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IWeatherProvider.cs" />
-    <Compile Include="OpenWeatherMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DatabaseWorker\DatabaseWorker.csproj">
-      <Project>{3639B5A3-9918-4141-B19E-78E83E502B82}</Project>
+      <Project>{3639b5a3-9918-4141-b19e-78e83e502b82}</Project>
       <Name>DatabaseWorker</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="ResponseExamples\current.json" />
+    <ProjectReference Include="..\MessagesConveyor\MessagesConveyor.csproj">
+      <Project>{5662eb76-33fe-4090-9370-30f3fc5b2bf2}</Project>
+      <Name>MessagesConveyor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

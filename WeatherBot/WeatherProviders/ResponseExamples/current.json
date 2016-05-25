@@ -1,0 +1,45 @@
+﻿{
+  "coord": {
+    "lon": 27.57,
+    "lat": 53.9
+  },
+  "weather": [
+    {
+      "id": 741,
+      "main": "Fog",
+      "description": "fog",
+      "icon": "50d"
+    },
+    {
+      "id": 701,
+      "main": "Mist",
+      "description": "mist",
+      "icon": "50d"
+    }
+  ],
+  "base": "cmc stations",
+  "main": {
+    "temp": 14,
+    "pressure": 1008,
+    "humidity": 93,
+    "temp_min": 12,
+    "temp_max": 15.56
+  },
+  "wind": {
+    "speed": 2.66,
+    "deg": 37.0008
+  },
+  "clouds": { "all": 75 },
+  "dt": 1464154181,
+  "sys": {
+    "type": 3,
+    "id": 7378,
+    "message": 0.0035,
+    "country": "BY",
+    "sunrise": 1464141127,
+    "sunset": 1464200534
+  },
+  "id": 625144,
+  "name": "Minsk",
+  "cod": 200
+}

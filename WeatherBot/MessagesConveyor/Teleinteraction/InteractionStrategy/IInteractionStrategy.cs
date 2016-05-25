@@ -4,7 +4,7 @@
 
 namespace WeatherBot.MessagesConveyor.TeleInteraction.InteractionStrategy {
     
-    using IO;
+    using Input;
 
     internal interface IInteractionStrategy {
 

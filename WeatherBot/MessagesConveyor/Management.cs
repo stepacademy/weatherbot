@@ -6,7 +6,7 @@ using System.ServiceModel;
 
 namespace WeatherBot.MessagesConveyor {
 
-    using IO;
+    using Input;
     using DataInteraction;
     using DatabaseQueryHandler;
     using TeleInteraction.InteractionStrategy;
@@ -22,6 +22,7 @@ namespace WeatherBot.MessagesConveyor {
         private DatabaseWorkerProxy           _proxy;        
 
         public static string BotToken;
+        private string _owmToken;
 
         private IInteractionStrategy TeleInteraction(InteractionMode iMode) {
 
@@ -36,13 +37,14 @@ namespace WeatherBot.MessagesConveyor {
             _interaction             = TeleInteraction(iMode);
             _callbackProxy           = new DatabaseWorkerCallback();
             _proxy                   = new DatabaseWorkerProxy(_callbackProxy);
-            _parser                  = new InputParserEntryPoint(_interaction, _proxy);
+            _parser                  = new InputParserEntryPoint(_interaction, _proxy, _owmToken);
             _neuralNetworkEntryPoint = new NeuralNetworkEntryPoint(_interaction);
         }
 
-        public void Start(string botToken, InteractionMode iMode) {
+        public void Start(string botToken, string owmToken, InteractionMode iMode) {
 
             BotToken = botToken;
+            _owmToken = owmToken;
             InteractionInitialize(iMode);
             _interaction.Start();
         }
