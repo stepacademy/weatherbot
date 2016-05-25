@@ -1,5 +1,5 @@
 ﻿///
-/// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
+/// Please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
 ///
 
 using System;
@@ -34,7 +34,7 @@ namespace WeatherBot.MessagesConveyor.IO {
                     City = city,
                     WeatherAtTimes = new Dictionary<DateTime, WeatherEntities>()
                 };
-                query.WeatherAtTimes.Add(new DateTime(2016, 5, 8, 12, 0, 0), new WeatherEntities());
+                query.WeatherAtTimes.Add(new DateTime(2016, 5, 25, 12, 0, 0), new WeatherEntities());
 
                 DirectResponse(message.User.Id, "Возможно вы имели в виду: " + city + "?");
                 _database.Query(query);

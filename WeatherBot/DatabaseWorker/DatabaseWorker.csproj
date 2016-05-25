@@ -62,22 +62,12 @@
     <Compile Include="ICallbackResponseContract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Management.cs" />
-    <Compile Include="WeatherUpdate\FactUpdate.cs" />
-    <Compile Include="WeatherUpdate\ForecastUpdate.cs" />
-    <Compile Include="WeatherUpdate\IWeatherUpdate.cs" />
-    <Compile Include="WeatherUpdate\WeatherUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\Database\Database.csproj">
-      <Project>{3bbd5f5d-0d72-4680-b6d1-ca969c6c4e5f}</Project>
-      <Name>Database</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VSToolsPath Condition="'$(VSToolsPath)' == '' and '$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' != '11.0'">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

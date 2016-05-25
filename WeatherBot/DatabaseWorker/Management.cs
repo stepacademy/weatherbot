@@ -1,4 +1,8 @@
-﻿using System;
+﻿///
+/// Please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
+///
+
+using System;
 using System.ServiceModel;
 
 namespace WeatherBot.DatabaseWorker {

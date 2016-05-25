@@ -1,5 +1,5 @@
 ﻿///
-/// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
+/// Please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
 ///
 
 using System.Xml.Linq;

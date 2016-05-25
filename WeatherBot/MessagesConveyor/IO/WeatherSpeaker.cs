@@ -1,5 +1,5 @@
 ﻿///
-/// Jeka, please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
+/// Please Don't use ReSharper on this source file! Thanks. - Art.Stea1th.
 ///
 
 using System.Text;
@@ -27,7 +27,7 @@ namespace WeatherBot.MessagesConveyor.IO {
 
                 result
                     .Append(date + " - " + time + "\n\n")
-                    //.Append("Ожидается: " + weather.Value.State + '\n')
+                    .Append("Ожидается: " + weather.Value.State + '\n')
                     .Append("Температура: " + weather.Value.Temperature + " °C\n")
                     .Append("Ветер: " + weather.Value.WindDirection.ToString() + ' ' + weather.Value.WindSpeed + " м/с\n")
                     .Append("Относительная влажность: " + weather.Value.Humidity + " %\n")
