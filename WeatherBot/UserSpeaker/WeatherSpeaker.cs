@@ -22,13 +22,23 @@ namespace WeatherBot.UserSpeaker {
                 string date = weather.Key.ToLocalTime().ToShortDateString();
                 string time = weather.Key.ToLocalTime().ToShortTimeString();
 
-                result
+                try {
+                    result
                     .Append("текущая погода" + /*date + " - " + time +*/ "\n\n")
                     //.Append("Ожидается: " + weather.Value.State + '\n')
                     .Append("Температура: " + weather.Value.Temperature + " °C\n")
                     .Append("Ветер: " + weather.Value.WindDirection.ToString() + ' ' + weather.Value.WindSpeed + " м/с\n")
                     .Append("Относительная влажность: " + weather.Value.Humidity + " %\n")
                     .Append("Атмосферное давление: " + weather.Value.Pressure + " мм рт. ст. \n");
+                }
+                catch (System.Exception) {
+                    return
+                        "Опаньки... \n\nПохоже что-то пошло не так, " +
+                        "если вы видите данное сообщение - мы знаем о проблеме " +
+                        "и решим её в кратчайшие сроки.";
+                }
+
+                
             }
             return result.ToString();
         }
