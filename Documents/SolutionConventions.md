@@ -1,6 +1,3 @@
-# WeatherBot
-Бот погоды для Telegram
-
 ### Solution conventions
 Each individual module must be included in the solution WeatherBot.sln
 
