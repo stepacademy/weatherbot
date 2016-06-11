@@ -1,4 +1,4 @@
 # WeatherBot
-Бот погоды для Telegram
+Weather bot for Telegram
 
-### current state: road to ASP.NET MVC
+- current state: road to ASP.NET MVC
